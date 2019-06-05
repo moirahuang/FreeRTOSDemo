@@ -237,7 +237,7 @@ void vApplicationDaemonTaskStartupHook( void )
         writeBuffer[0] = 0xAB;
         writeBuffer[1] = 0xCD;
         writeBuffer[2] = 0xEF;
-        i2cTransaction.slaveAddress = 0x50;
+        i2cTransaction.slaveAddress = OPT_ADDR;
         i2cTransaction.writeBuf = writeBuffer;
         i2cTransaction.writeCount = 3;
         i2cTransaction.readBuf = NULL;
@@ -249,6 +249,20 @@ void vApplicationDaemonTaskStartupHook( void )
             configPRINTF(("unsuccessful I2C transfer"));
         } else{
             configPRINTF(("successful I2C transfer"));
+        }
+
+        //read and write in single transaction
+        uint8_t readBuffer[4];
+        i2cTransaction.slaveAddress = OPT_ADDR;
+        i2cTransaction.writeBuf = writeBuffer;
+        i2cTransaction.writeCount = 2;
+        i2cTransaction.readBuf = readBuffer;
+        i2cTransaction.readCount = 4;
+        status = I2C_transfer(i2cHandle, &i2cTransaction);
+        if (status == false) {
+            configPRINTF(("FAILED READ AND WRITE SAME TIME"));
+        } else {
+            configPRINTF(("success read and write same time"));
         }
 
         DEMO_RUNNER_RunDemos();
