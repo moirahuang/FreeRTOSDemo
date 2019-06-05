@@ -75,7 +75,7 @@
 // Define name for an index of an I2C bus
 #define SENSORS 0
 // Define the slave address of device on the SENSORS bus
-#define OPT_ADDR 0x47
+#define OPT_ADDR 0x18
 
 /* Declare the firmware version structure for all to see. */
 const AppVersion32_t xAppFirmwareVersion =
@@ -188,7 +188,43 @@ void vApplicationDaemonTaskStartupHook( void )
         // One-time init of I2C driver
         I2C_init();
 
-        I2C_Handle i2cHandle;
+        //LO
+        uint8_t rawDataIn[6] = { 0 };
+        uint8_t rawDataOut[1] = { 0x02 };
+
+
+        uint8_t data = 0x00;
+        uint8_t command = 0x00;
+        // initialize optional I2C bus parameters
+        I2C_Params params;
+        I2C_Params_init(&params);
+        params.bitRate = I2C_400kHz;
+        // Open I2C bus for usage
+        I2C_Handle i2cHandle = I2C_open(SENSORS, &params);
+        configPRINTF(("Open handle %08p\r\n", i2cHandle));
+        // Initialize slave address of transaction
+        I2C_Transaction transaction = {0};
+        transaction.slaveAddress = OPT_ADDR;
+        configPRINTF(("OPT ADDR =%02x\r\n", OPT_ADDR));
+        // Write/Read from I2C slave device
+        transaction.writeBuf = (void*)0x20001498;
+        transaction.writeCount = 1;
+        transaction.readBuf = (void*)0x200013F8;
+        transaction.readCount = 1;
+
+        bool readStatus = I2C_transfer(i2cHandle, &transaction);
+        configPRINTF(("Read Status %d\r\n", readStatus));
+
+
+
+        // Write to I2C slave device
+        transaction.writeCount = 1;
+        transaction.readCount = 0;
+        I2C_transfer(i2cHandle, &transaction);
+        // Close I2C
+        I2C_close(i2cHandle);
+
+//        I2C_Handle i2cHandle;
         i2cHandle = I2C_open(0, NULL);
         if (i2cHandle == NULL) {
             // Error opening I2C
@@ -206,7 +242,7 @@ void vApplicationDaemonTaskStartupHook( void )
         i2cTransaction.writeCount = 3;
         i2cTransaction.readBuf = NULL;
         i2cTransaction.readCount = 0;
-        configPRINTF((I2C_transfer(i2cHandle, &i2cTransaction)));
+//        configPRINTF((I2C_transfer(i2cHandle, &i2cTransaction)));
         bool status = I2C_transfer(i2cHandle, &i2cTransaction);
         if (status == false) {
             // Unsuccessful I2C transfer
