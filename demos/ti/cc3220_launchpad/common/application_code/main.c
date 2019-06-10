@@ -70,6 +70,14 @@
 /* Application version info. */
 #include "aws_application_version.h"
 
+// Import I2C Driver definitions
+#include <ti/drivers/I2C.h>
+// Define name for an index of an I2C bus
+#define SENSORS 0
+// Define the slave address of device on the SENSORS bus
+#define OPT_ADDR 0x18
+
+#include <Wire.h>
 /* Declare the firmware version structure for all to see. */
 const AppVersion32_t xAppFirmwareVersion =
 {
@@ -84,14 +92,6 @@ const AppVersion32_t xAppFirmwareVersion =
 /* The task delay for allowing the lower priority logging task to print out Wi-Fi
  * failure status before blocking indefinitely. */
 #define mainLOGGING_WIFI_STATUS_DELAY       pdMS_TO_TICKS( 1000 )
-
-//I2C ADDED CODE
-// Import I2C Driver definitions
-#include <ti/drivers/I2C.h>
-// Define name for an index of an I2C bus
-#define SENSORS 0
-// Define the slave address of device on the SENSORS bus
-#define OPT_ADDR 0x18
 
 void vApplicationDaemonTaskStartupHook( void );
 static void prvWifiConnect( void );
@@ -108,7 +108,6 @@ static void prvShowTiCc3220SecurityAlertCounts( void );
  *
  * @return This function should not return.
  */
-
 int main( void )
 {
     /* Call board init functions. */
@@ -123,6 +122,20 @@ int main( void )
     vTaskStartScheduler();
 
     return( 0 );
+}
+//WIRE CODE
+void setup() {
+  Wire_begin();        // join i2c bus (address optional for master)
+}
+
+void loop() {
+  Wire_requestFrom(8, 6);    // request 6 bytes from slave device #8
+  configPRINTF(("IN LOOP%r\n"));
+  while (Wire_available()) { // slave may send less than requested
+    char c = Wire_read(); // receive a byte as character
+    configPRINTF(("Read Status %c\r\n", c));         // print the character
+  }
+
 }
 
 /*-----------------------------------------------------------*/
@@ -187,13 +200,15 @@ void vApplicationDaemonTaskStartupHook( void )
          * here for debugging purposes. */
         prvShowTiCc3220SecurityAlertCounts();
 
+        //WIRE CODE
+        setup();
+        loop();
         // One-time init of I2C driver
         I2C_init();
 
         //LO
         uint8_t rawDataIn[2] = 0x00 ;
         uint8_t rawDataOut[1] = 0x00 ;
-
 
         // initialize optional I2C bus parameters
 //        I2C_Params params;
@@ -287,6 +302,7 @@ void vApplicationDaemonTaskStartupHook( void )
 
 
         DEMO_RUNNER_RunDemos();
+
     }
 }
 

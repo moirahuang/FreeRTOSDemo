@@ -16,33 +16,33 @@
 
 // This example code is in the public domain.
 
-#include <stdio.h>
-#include <Wire.h>
-void setup(void);
-void loop(void);
-int main()
-{
-    /* Call board init functions. */
-    setup();
-
-    /* Start logging task. */
-    loop();
-
-    return( 0 );
-}
-void setup() {
-  Wire_begin();        // join i2c bus (address optional for master)
-}
-
-void loop() {
-  Wire_requestFrom(8, 6);    // request 6 bytes from slave device #8
-
-  while (Wire_available()) { // slave may send less than requested
-    char c = Wire_read(); // receive a byte as character
-//    Serial.print(c);         // print the character
-  }
-
-//  delay(500);
-}
+//#include <stdio.h>
+//#include <Wire.h>
+//void setup(void);
+//void loop(void);
+//int main()
+//{
+//    /* Call board init functions. */
+//    setup();
+//
+//    /* Start logging task. */
+//    loop();
+//
+//    return( 0 );
+//}
+//void setup() {
+//  Wire_begin();        // join i2c bus (address optional for master)
+//}
+//
+//void loop() {
+//  Wire_requestFrom(8, 6);    // request 6 bytes from slave device #8
+//
+//  while (Wire_available()) { // slave may send less than requested
+//    char c = Wire_read(); // receive a byte as character
+////    Serial.print(c);         // print the character
+//  }
+//
+////  delay(500);
+//}
 
 

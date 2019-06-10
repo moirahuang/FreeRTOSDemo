@@ -5,9 +5,14 @@
  *      Author: huanmoir
  */
 /* Standard includes. */
+
+//MOIRA'S IMPLEMENTATION OF WIRE API, IN BETWEEN ARDUINO AND AFR I2C
 #include <stdint.h>
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+#include <inttypes.h>
 /* EDIT THIS FILE:
  * Wi-Fi SSID, password & security settings,
  * AWS endpoint, certificate, private key & thing name. */
@@ -53,8 +58,23 @@ void Wire_begin() {
     i2cHandle = I2C_open(0, NULL);
 }
 
-void Wire_requestFrom() {
-    
+uint8_t Wire_requestFrom(uint8_t opt, uint8_t num) {
+    I2C_Transaction i2cTransaction = {0};
+    uint8_t readBuffer[num];
+    i2cTransaction.slaveAddress = opt;
+    i2cTransaction.writeBuf = NULL;
+    i2cTransaction.writeCount = 0;
+    i2cTransaction.readBuf = readBuffer;
+    i2cTransaction.readCount = num;
+    bool status = I2C_transfer(i2cHandle, &i2cTransaction);
+    if (status == false) {
+        // Unsuccessful I2C transfer
+        configPRINTF(("unsuccessful I2C read"));
+    } else{
+       configPRINTF(("successful I2C read"));
+    }
+    //not sure how to get data that's read yet
+    return (int) i2cTransaction.readBuf;
 }
 
 uint8_t Wire_write(uint8_t val) {
@@ -99,5 +119,8 @@ int Wire_read() {
     }
     //not sure how to get data that's read yet
     return (int) i2cTransaction.readBuf;
+};
+int Wire_available(void) {
+    return 1;
 };
 
