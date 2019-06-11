@@ -97,6 +97,8 @@ void vApplicationDaemonTaskStartupHook( void );
 static void prvWifiConnect( void );
 static CK_RV prvProvisionRootCA( void );
 static void prvShowTiCc3220SecurityAlertCounts( void );
+void setup(void);
+void loop(void);
 
 /**
  * @brief Performs board and logging initializations, then starts the OS.
@@ -124,13 +126,14 @@ int main( void )
     return( 0 );
 }
 //WIRE CODE
-void setup() {
+void setup(void) {
+  configPRINTF(("IN SETUP"));
   Wire_begin();        // join i2c bus (address optional for master)
 }
 
-void loop() {
+void loop(void) {
   Wire_requestFrom(8, 6);    // request 6 bytes from slave device #8
-  configPRINTF(("IN LOOP%r\n"));
+  configPRINTF(("IN LOOP"));
   while (Wire_available()) { // slave may send less than requested
     char c = Wire_read(); // receive a byte as character
     configPRINTF(("Read Status %c\r\n", c));         // print the character
@@ -199,7 +202,7 @@ void vApplicationDaemonTaskStartupHook( void )
          * the device cannot be automatically flashed, but must be reprogrammed with uniflash. This routine is placed 
          * here for debugging purposes. */
         prvShowTiCc3220SecurityAlertCounts();
-
+        configPRINTF(("BEFORE SETUP"));
         //WIRE CODE
         setup();
         loop();

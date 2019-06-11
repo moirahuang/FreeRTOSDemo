@@ -49,13 +49,16 @@
 /* Application version info. */
 #include "aws_application_version.h"
 
-#include <ti/drivers/I2C.h>
+//LORENZO#include <ti/drivers/I2C.h>
+#include <iot_i2c.h>
 
 #define OPT_ADDR 0x18
 I2C_Handle i2cHandle = NULL;
 void Wire_begin() {
-    I2C_init();
-    i2cHandle = I2C_open(0, NULL);
+    //LORENZOI2C_init();
+    //LORENZOi2cHandle = I2C_open(0, NULL);
+
+    iot_i2c_open(0);
 }
 
 uint8_t Wire_requestFrom(uint8_t opt, uint8_t num) {
@@ -98,6 +101,15 @@ uint8_t Wire_write(uint8_t val) {
     } else{
        configPRINTF(("successful I2C write"));
     }
+
+
+    iot_i2c_ioctl( master config );
+    iot_i2c_ioctl( slave address);
+
+    iot_i2c_write_sync( .. );
+
+    //gp bacl to blocking
+    //wait for flag from callback, put somehwere so function can find the flag
     return valSize;
 };
 
