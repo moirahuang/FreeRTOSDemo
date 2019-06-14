@@ -31,8 +31,10 @@
  */
 #ifndef _IOT_I2C_H_
 #define _IOT_I2C_H_
-#include "FreeRTOS.h"
 
+#include "stdint.h"
+#include "stdlib.h"
+#include "FreeRTOS.h"
 /**
  * @defgroup iot_i2c I2C Abstraction APIs.
  * @{
@@ -62,35 +64,35 @@
 
 typedef struct
 {
-        uint32_t ulMasterTimeout;
-        uint32_t ulBusFreq;
+    uint32_t ulMasterTimeout;
+    uint32_t ulBusFreq;
 } IotI2CIoctlConfig_t;
 
 typedef enum
 {
-        eI2CSendStop,       /**< Send the stop condition on the bus. */
-        eI2CSetSlaveAddrWrite, /**< Master sends the stop condition followed by slave address to Write. */
-        eI2CSetSlaveAddrRead, /**< Master sends the stop condition followed by slave address to Read.  */
-        eI2CSetMasterConfig, /**< Sets the I2C bus frequency and timeout using the struct IotI2CIoctlConfig_t,
+    eI2CSendStop,           /**< Send the stop condition on the bus. */
+    eI2CSetSlaveAddrWrite,  /**< Master sends the stop condition followed by slave address to Write. */
+    eI2CSetSlaveAddrRead,   /**< Master sends the stop condition followed by slave address to Read.  */
+    eI2CSetMasterConfig,    /**< Sets the I2C bus frequency and timeout using the struct IotI2CIoctlConfig_t,
                               *   default speed is Standard, fast, fast-plus and High speed. */
-        eI2CGetMasterConfig, /**< Gets the I2C bus frequency and timeout set for the I2C master. */
-        eI2CGetBusState,    /**< Gets the mode from one of the error codes. */
-        eI2CClearBusReset,  /**< Master resets the bus by sending 9 clock signals. */
-        eI2CGetTxNoOfbytes, /** Get the number of bytes sent in write operation. */
-        eI2CGetRxNoOfbytes, /** Get the number of bytes received in read operation. */
+    eI2CGetMasterConfig,    /**< Gets the I2C bus frequency and timeout set for the I2C master. */
+    eI2CGetBusState,        /**< Gets the mode from one of the error codes. */
+    eI2CClearBusReset,      /**< Master resets the bus by sending 9 clock signals. */
+    eI2CGetTxNoOfbytes,     /** Get the number of bytes sent in write operation. */
+    eI2CGetRxNoOfbytes,     /** Get the number of bytes received in read operation. */
 } IotI2CIoctlRequest_t;
 
 /**
  * @brief The I2C descriptor type defined in the source file.
  */
-struct                    IotI2CDescriptor;
+struct IotI2CDescriptor;
 
 /**
  * @brief IotI2CHandle_t is the handle type returned by calling iot_i2c_open().
  *        This is initialized in open and returned to caller. The caller must pass
  *        this pointer to the rest of APIs.syst
  */
-typedef struct IotI2CDescriptor   * IotI2CHandle_t;
+typedef struct IotI2CDescriptor * IotI2CHandle_t;
 
 /**
  * @brief The callback function for completion of I2C operation.

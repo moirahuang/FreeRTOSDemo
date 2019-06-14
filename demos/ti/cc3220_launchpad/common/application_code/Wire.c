@@ -31,7 +31,7 @@ size_t Wire_write(uint8_t val) {
         iot_i2c_ioctl( I2CHandle, eI2CSetSlaveAddrWrite, (void *)&address );
         iot_i2c_ioctl( I2CHandle, eI2CSetMasterConfig, &config);
 
-        iot_i2c_write_sync(I2CHandle, writeBuffer, 1);
+        iot_i2c_write_async(I2CHandle, writeBuffer, 1);
         return val;
 };
 
@@ -44,7 +44,7 @@ int Wire_read() {
         iot_i2c_ioctl(I2CHandle, eI2CSetSlaveAddrWrite,(void *)&address);
         iot_i2c_ioctl(I2CHandle, eI2CSetMasterConfig, &config );
 
-        iot_i2c_read_sync(I2CHandle, readBuffer, 1 );
+        iot_i2c_read_async(I2CHandle, readBuffer, 1 );
 
         return (int) readBuffer[0];
 };

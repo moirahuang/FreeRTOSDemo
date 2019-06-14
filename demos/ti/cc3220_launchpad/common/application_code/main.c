@@ -132,6 +132,8 @@ void vApplicationDaemonTaskStartupHook( void )
         /* Hardware initialization required after the RTOS is running. */
         GPIO_init();
         SPI_init();
+        I2C_init();
+
 
         /* Configure the UART. */
         xtUartHndl = InitTerm();
