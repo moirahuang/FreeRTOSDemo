@@ -138,13 +138,6 @@ void vApplicationDaemonTaskStartupHook( void )
         UART_control( xtUartHndl, UART_CMD_RXDISABLE, NULL );
 
         configPRINTF( ( "Starting Wi-Fi Module ...\r\n" ) );
-//        Wire_begin();
-//        int val = Wire_read();
-//        configPRINTF(("Read1 Status %d\r\n", val));
-//        int val2 = Wire_write(1);
-//        configPRINTF(("Read1 Status %d\r\n", val2));
-//        int val3 = Wire_write(2);
-//        configPRINTF(("Read1 Status %d\r\n", val3));
 
         /* Initialize Wi-Fi module. This is called before key provisioning because
          * initializing the Wi-Fi module also initializes the CC3220SF's file system. */
