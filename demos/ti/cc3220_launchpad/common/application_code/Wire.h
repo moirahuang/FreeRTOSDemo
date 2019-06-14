@@ -7,16 +7,26 @@
 
 #ifndef APPLICATION_CODE_WIRE_H_
 #define APPLICATION_CODE_WIRE_H_
-#include <stdlib.h>
+#ifndef TwoWire_h
+#define TwoWire_h
+
+#include <inttypes.h>
+//#include "Stream.h"
+
+#define BUFFER_LENGTH 32
+
+// WIRE_HAS_END means Wire has end()
+#define WIRE_HAS_END 1
 #include <string.h>
 #include <stdint.h>
 #include <inttypes.h>
+#include "iot_i2c.h"
 void Wire_begin();
 //void begin(uint8_t);
 //void begin(int);
 void Wire_end();
 //void setClock(uint32_t);
-void beginTransmission(uint8_t);
+//void beginTransmission(uint8_t);
 //void beginTransmission(int);
 //uint8_t endTransmission(void);
 //uint8_t endTransmission(uint8_t);
@@ -40,3 +50,4 @@ int Wire_read(void);
 //inline size_t write(int n) { return write((uint8_t)n); }
 
 #endif /* APPLICATION_CODE_WIRE_H_ */
+#endif

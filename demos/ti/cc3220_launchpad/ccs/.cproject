@@ -41,7 +41,6 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.LITTLE_ENDIAN.2031715668" name="Little endian code [See 'General' page to edit] (--little_endian, -me)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.LITTLE_ENDIAN" value="true" valueType="boolean"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.INCLUDE_PATH.1680333660" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="${BASE_DIR_ROOT}/lib/include/FreeRTOS_POSIX"/>
-									<listOptionValue builtIn="false" value="/Users/huanmoir/Downloads/AmazonFreeRTOS 9/demos/ti/cc3220_launchpad/common/application_code"/>
 									<listOptionValue builtIn="false" value="${BASE_DIR_ROOT}/lib/FreeRTOS-Plus-POSIX/include"/>
 									<listOptionValue builtIn="false" value="${BASE_DIR_ROOT}/lib/FreeRTOS-Plus-POSIX/include/portable/ti/cc3220_launchpad"/>
 									<listOptionValue builtIn="false" value="${BASE_DIR_ROOT}/lib/third_party/mcu_vendor/ti/SimpleLink_CC32xx/v2_10_00_04/source"/>
@@ -51,9 +50,11 @@
 									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/lib/aws/include}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/lib/aws/include/private}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/application_code/ti_code}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/application_code}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/application_code/common_demos/include}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/lib/aws/FreeRTOS/portable/CCS/ARM_CM3}"/>
 									<listOptionValue builtIn="false" value="${BASE_DIR_ROOT}/lib/third_party/pkcs11"/>
+									<listOptionValue builtIn="false" value="${BASE_DIR_ROOT}/demos/ti/cc3220_launchpad/common/application_code"/>
 									<listOptionValue builtIn="false" value="${BASE_DIR_ROOT}/lib/third_party/mbedtls/include"/>
 									<listOptionValue builtIn="false" value="${BASE_DIR_ROOT}/lib/third_party/pkcs11"/>
 								</option>
@@ -116,6 +117,15 @@
 							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.8973357" name="Resource Custom Build Step Output Type"/>
 						</tool>
 					</fileInfo>
+					<fileInfo id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.362742304.204625099" name="Wire.c" rcbsApplicability="disable" resourcePath="application_code/Wire.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.compilerDebug.998481463.807374284">
+						<tool id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.compilerDebug.998481463.807374284" name="ARM Compiler" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.compilerDebug.998481463">
+							<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__C_SRCS.634563333" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__C_SRCS"/>
+							<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__CPP_SRCS.34799013" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__CPP_SRCS"/>
+							<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM_SRCS.686347386" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM_SRCS"/>
+							<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM2_SRCS.1263388700" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM2_SRCS"/>
+						</tool>
+					</fileInfo>
+					<fileInfo id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.362742304.526001293" name="Wire.h" rcbsApplicability="disable" resourcePath="application_code/Wire.h" toolsToInvoke=""/>
 					<fileInfo id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.362742304.Libraries/AWS/SecureSockets/source/aws_secure_sockets.c" name="aws_secure_sockets.c" rcbsApplicability="disable" resourcePath="Libraries/AWS/SecureSockets/source/aws_secure_sockets.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.compilerDebug.998481463.965051836">
 						<tool id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.compilerDebug.998481463.965051836" name="ARM Compiler" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.compilerDebug.998481463">
 							<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__C_SRCS.378660803" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__C_SRCS"/>
@@ -157,6 +167,6 @@
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
-	<storageModule moduleId="scannerConfiguration"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="scannerConfiguration"/>
 </cproject>
