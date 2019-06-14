@@ -49,9 +49,9 @@ typedef struct IotI2CDescriptor
 
 typedef struct IotI2CConfig
 {
-        uint32_t ulMasterTimeout; /**<! Master timeout value in msec, to relinquish the bus if slave
-                                      does not respond */
-        uint32_t ulBusFreq;     /**<! Bus frequency/baud rate */
+    uint32_t ulMasterTimeout; /**<! Master timeout value in msec, to relinquish the bus if slave
+                                  does not respond */
+    uint32_t ulBusFreq;     /**<! Bus frequency/baud rate */
 } IotI2CConfig_t;
 
 #define I2C_INSTANCES                 ( 2 )
@@ -114,7 +114,6 @@ IotI2CHandle_t iot_i2c_open( int32_t I2CInstance )
     pDescriptor->params.bitRate = I2C_100kHz;
     pDescriptor->params.transferMode = I2C_MODE_CALLBACK;
     pDescriptor->params.custom = NULL;
-
     pDescriptor->busy = true;
 
     return &i2cInstances[ I2CInstance ];
@@ -152,13 +151,15 @@ int32_t iot_i2c_read_sync( IotI2CHandle_t const pxI2CPeripheral,
                            uint8_t * const pvBuffer,
                            size_t xBytes )
 {
+    bool status = false;
     int32_t readStatus = IOT_I2C_READ_FAIL;
+
     pxI2CPeripheral->transaction.writeBuf = NULL;
     pxI2CPeripheral->transaction.writeCount = 0;
     pxI2CPeripheral->transaction.readBuf = pvBuffer;
     pxI2CPeripheral->transaction.readCount = xBytes;
 
-    bool status = I2C_transfer( pxI2CPeripheral->handle, &pxI2CPeripheral->transaction );
+    status = I2C_transfer( pxI2CPeripheral->handle, &pxI2CPeripheral->transaction );
 
     if (status == false)
     {
@@ -308,32 +309,32 @@ int32_t iot_i2c_ioctl( IotI2CHandle_t const pxI2CPeripheral,
     {
         case eI2CSetMasterConfig:
         {
-                IotI2CConfig_t * config = ( IotI2CConfig_t * )pvBuffer;
+            IotI2CConfig_t * config = ( IotI2CConfig_t * )pvBuffer;
 
-                pDescriptor->params.bitRate = FrequencyToBitRate( config->ulBusFreq );
+            pDescriptor->params.bitRate = FrequencyToBitRate( config->ulBusFreq );
 
-                I2C_Handle i2cHandle = I2C_open( pDescriptor->instance, &pDescriptor->params );
+            I2C_Handle i2cHandle = I2C_open( pDescriptor->instance, &pDescriptor->params );
 
-                if( i2cHandle != NULL )
-                {
-                        pDescriptor->handle = i2cHandle;
-                        ioctlStatus  = IOT_I2C_SUCCESS;
-                }
+            if( i2cHandle != NULL )
+            {
+                    pDescriptor->handle = i2cHandle;
+                    ioctlStatus  = IOT_I2C_SUCCESS;
+            }
         }
         break;
 
         case eI2CSetSlaveAddrWrite:
         case eI2CSetSlaveAddrRead:
         {
-                uint8_t * address = ( uint8_t * )pvBuffer;
+            uint8_t * address = ( uint8_t * )pvBuffer;
 
-                pDescriptor->transaction.slaveAddress = *address;
+            pDescriptor->transaction.slaveAddress = *address;
         }
         break;
 
         default:
         {
-               break;
+           break;
         }
     }
 
