@@ -16,38 +16,38 @@
 IotI2CHandle_t I2CHandle = NULL;
 
 void Wire_begin() {
-        I2CHandle = iot_i2c_open(0);
+    I2CHandle = iot_i2c_open(0);
 }
 
 uint8_t Wire_requestFrom(uint8_t opt, uint8_t num) {
-        return 0;
+    return 0;
 }
 
 size_t Wire_write(uint8_t val) {
-        IotI2CIoctlConfig_t config = {100000, 100000};
-        uint8_t writeBuffer[1]= { 0x00 };
+    IotI2CIoctlConfig_t config = {100000, 100000};
+    uint8_t writeBuffer[1]= { 0x00 };
 
-        const uint8_t address = OPT_ADDR;
-        iot_i2c_ioctl( I2CHandle, eI2CSetSlaveAddrWrite, (void *)&address );
-        iot_i2c_ioctl( I2CHandle, eI2CSetMasterConfig, &config);
+    const uint8_t address = OPT_ADDR;
+    iot_i2c_ioctl( I2CHandle, eI2CSetSlaveAddrWrite, (void *)&address );
+    iot_i2c_ioctl( I2CHandle, eI2CSetMasterConfig, &config);
 
-        iot_i2c_write_async(I2CHandle, writeBuffer, 1);
-        return val;
+    iot_i2c_write_async(I2CHandle, writeBuffer, 1);
+    return val;
 };
 
 //read a value to send as a single byte
 int Wire_read() {
-        IotI2CIoctlConfig_t config = {100000, 100000};
-        uint8_t readBuffer[1];
+    IotI2CIoctlConfig_t config = {100000, 100000};
+    uint8_t readBuffer[1];
 
-        const uint8_t address = OPT_ADDR;
-        iot_i2c_ioctl(I2CHandle, eI2CSetSlaveAddrWrite,(void *)&address);
-        iot_i2c_ioctl(I2CHandle, eI2CSetMasterConfig, &config );
+    const uint8_t address = OPT_ADDR;
+    iot_i2c_ioctl(I2CHandle, eI2CSetSlaveAddrWrite,(void *)&address);
+    iot_i2c_ioctl(I2CHandle, eI2CSetMasterConfig, &config );
 
-        iot_i2c_read_async(I2CHandle, readBuffer, 1 );
+    iot_i2c_read_async(I2CHandle, readBuffer, 1 );
 
-        return (int) readBuffer[0];
+    return (int) readBuffer[0];
 };
 int Wire_available(void) {
-        return 1;
+    return 1;
 };
