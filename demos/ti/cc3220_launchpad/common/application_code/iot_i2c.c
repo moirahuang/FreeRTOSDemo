@@ -33,7 +33,6 @@
 #include "iot_i2c.h"
 #include <stdio.h>
 
-#define MOIRA_ASSERT(condition) if(!condition) { printf( "ASSEERT!!!!!"); while(1) {} }
 /**
  * @brief I2C Bus status
  */
@@ -309,9 +308,8 @@ int32_t iot_i2c_ioctl( IotI2CHandle_t const pxI2CPeripheral,
 
         default:
         {
-                MOIRA_ASSERT( 0 );
+               break;
         }
-        break;
         }
 
         return ioctlStatus;
