@@ -43,7 +43,6 @@ typedef struct IotI2CDescriptor
     I2C_Params params;
     I2C_Transaction transaction;
     IotI2CCallback_t userCallback;
-    void * userContext;
     bool busy;
 } IotI2CDescriptor_t;
 
@@ -71,13 +70,13 @@ static void I2C_CallbackInternal(I2C_Handle handle, I2C_Transaction *transaction
     {
         if( i2cInstances[ i ].handle == handle )
         {
-                pDescriptor = &i2cInstances[ i ];
+            pDescriptor = &i2cInstances[ i ];
         }
     }
 
-    if( pDescriptor != NULL )
+    if( pDescriptor != NULL && pDescriptor->userCallback )
     {
-        pDescriptor->userCallback( pDescriptor->userContext );
+        pDescriptor->userCallback( pDescriptor );
     }
 }
 
@@ -99,22 +98,20 @@ IotI2CHandle_t iot_i2c_open( int32_t I2CInstance )
 
     if( I2CInstance > I2C_INSTANCES )
     {
-            pDescriptor = NULL;
+        pDescriptor = NULL;
     }
 
     pDescriptor = &i2cInstances[ I2CInstance ];
 
-    if( pDescriptor->busy == true )
-    {
-            return NULL;
-    }
+//    if( pDescri
+
 
     pDescriptor->instance = I2CInstance;
     pDescriptor->params.transferCallbackFxn = I2C_CallbackInternal;
     pDescriptor->params.bitRate = I2C_100kHz;
     pDescriptor->params.transferMode = I2C_MODE_CALLBACK;
     pDescriptor->params.custom = NULL;
-    pDescriptor->busy = true;
+    pDescriptor->busy = false;
 
     return &i2cInstances[ I2CInstance ];
 }
@@ -124,16 +121,13 @@ IotI2CHandle_t iot_i2c_open( int32_t I2CInstance )
  *
  * @param[in] pxI2CPeripheral The I2C peripheral handle returned in the open() call.
  * @param[in] xCallback The callback function to be called on completion of transaction.
- * @param[in] pvUserContext The user context to be passed back when callback is called.
  */
-void iot_i2c_set_callback( IotI2CHandle_t const pxI2CPeripheral,
-                           IotI2CCallback_t xCallback,
-                           void * pvUserContext )
+void iot_i2c_set_completion_callback( IotI2CHandle_t const pxI2CPeripheral,
+                                      IotI2CCallback_t xCallback )
 {
     IotI2CHandle_t pDescriptor = pxI2CPeripheral;
 
     pDescriptor->userCallback = xCallback;
-    pDescriptor->userContext = pvUserContext;
 }
 
 /**
@@ -191,7 +185,6 @@ int32_t iot_i2c_write_sync( IotI2CHandle_t const pxI2CPeripheral,
 {
     bool status = false;
     uint8_t * writeBuffer = pvBuffer;
-
     int32_t writeStatus = IOT_I2C_WRITE_FAIL;
 
     pxI2CPeripheral->transaction.writeBuf = writeBuffer;
@@ -313,8 +306,16 @@ int32_t iot_i2c_ioctl( IotI2CHandle_t const pxI2CPeripheral,
 
             pDescriptor->params.bitRate = FrequencyToBitRate( config->ulBusFreq );
 
-            I2C_Handle i2cHandle = I2C_open( pDescriptor->instance, &pDescriptor->params );
+            I2C_Handle i2cHandle = NULL;
 
+            if (pDescriptor->busy == false)
+            {
+                i2cHandle = I2C_open( pDescriptor->instance, &pDescriptor->params );
+            }
+            else
+            {
+                I2C_CallbackInternal((I2C_Config *) &pDescriptor->handle, &pDescriptor->transaction, true);
+            }
             if( i2cHandle != NULL )
             {
                     pDescriptor->handle = i2cHandle;
