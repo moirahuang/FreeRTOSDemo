@@ -45,26 +45,9 @@ void Wire_begin()
     iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
 }
 
-void Wire_begin(uint8_t addr)
+void Wire_end()
 {
-    IotI2CHandle_t handle = iot_i2c_open(0);
-
-    transactionContext.handle = handle;
-
-    uint32_t error = iot_i2c_ioctl( transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr );
-
-    iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
-}
-
-void Wire_begin(int addr)
-{
-    IotI2CHandle_t handle = iot_i2c_open(0);
-
-    transactionContext.handle = handle;
-
-    uint32_t error = iot_i2c_ioctl( transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr );
-
-    iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
+    iot_i2c_close( transactionContext.handle );
 }
 
 void Wire_beginTransmission(uint8_t addr)
@@ -111,7 +94,7 @@ void Wire_beginTransmission(int addr)
             return;
         }
 
-        error = iot_i2c_ioctl( transactionContext.handle, eI2CSetMasterConfig, &config);
+        error = iot_i2c_ioctl( transactionContext.handle, eI2CSetMasterConfig, &config );
 
         if(error != IOT_I2C_SUCCESS)
         {
@@ -143,7 +126,7 @@ size_t Wire_write(uint8_t val)
     {
         uint8_t writeBuffer[1]= { val };
 
-        iot_i2c_write_async(transactionContext.handle, writeBuffer, 1);
+        iot_i2c_write_async( transactionContext.handle, writeBuffer, 1 );
     }
 
     return val;
@@ -155,7 +138,7 @@ int Wire_read()
 
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {
-            iot_i2c_read_async(transactionContext.handle, readBuffer, 1 );
+            iot_i2c_read_async( transactionContext.handle, readBuffer, 1 );
     }
 
     return (int) readBuffer[0];
@@ -175,14 +158,6 @@ uint8_t Wire_requestFrom(uint8_t opt, uint8_t num)
     }
 
     return num;
-}
-
-void onRequest()
-{
-    if(transactionContext.error == IOT_I2C_SUCCESS)
-    {
-        iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
-    }
 }
 
 int Wire_available(void)

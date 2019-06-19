@@ -196,7 +196,7 @@ int32_t iot_i2c_write_sync( IotI2CHandle_t const pxI2CPeripheral,
     pxI2CPeripheral->transaction.readBuf = NULL;
     pxI2CPeripheral->transaction.readCount = 0;
 
-    status = I2C_transfer(pxI2CPeripheral->handle, &pxI2CPeripheral->transaction);
+    status = I2C_transfer( pxI2CPeripheral->handle, &pxI2CPeripheral->transaction );
 
     if (status == false)
     {
@@ -232,7 +232,7 @@ int32_t iot_i2c_read_async( IotI2CHandle_t const pxI2CPeripheral,
     pxI2CPeripheral->transaction.readBuf = pvBuffer;
     pxI2CPeripheral->transaction.readCount = xBytes;
 
-    status = I2C_transfer(pxI2CPeripheral->handle, &pxI2CPeripheral->transaction);
+    status = I2C_transfer( pxI2CPeripheral->handle, &pxI2CPeripheral->transaction );
 
     if (status == false)
     {
@@ -269,7 +269,7 @@ int32_t iot_i2c_write_async( IotI2CHandle_t const pxI2CPeripheral,
     pxI2CPeripheral->transaction.readBuf = NULL;
     pxI2CPeripheral->transaction.readCount = 0;
 
-    status = I2C_transfer(pxI2CPeripheral->handle, &pxI2CPeripheral->transaction);
+    status = I2C_transfer( pxI2CPeripheral->handle, &pxI2CPeripheral->transaction );
 
     if (status == false)
     {
@@ -298,7 +298,7 @@ int32_t iot_i2c_ioctl( IotI2CHandle_t const pxI2CPeripheral,
                        IotI2CIoctlRequest_t xI2CRequest,
                        void * const pvBuffer )
 {
-    IotI2CDescriptor_t * pDescriptor = (IotI2CDescriptor_t *) pxI2CPeripheral;
+    IotI2CDescriptor_t * pDescriptor = ( IotI2CDescriptor_t * ) pxI2CPeripheral;
 
     int32_t ioctlStatus = IOT_I2C_FUNCTION_NOT_SUPPORTED;
 
@@ -315,19 +315,19 @@ int32_t iot_i2c_ioctl( IotI2CHandle_t const pxI2CPeripheral,
             if (pDescriptor->busy == false)
             {
                 i2cHandle = I2C_open( pDescriptor->instance, &pDescriptor->params );
-                pDescriptor->handle = i2cHandle;
+                if( i2cHandle != NULL )
+                {
+                    pDescriptor->handle = i2cHandle;
+                }
+
                 pDescriptor->busy = true;
+
                 ioctlStatus  = IOT_I2C_SUCCESS;
             }
             else if ( pxI2CPeripheral != NULL )
             {
                 pDescriptor->handle = pxI2CPeripheral->handle;
 
-                ioctlStatus  = IOT_I2C_SUCCESS;
-            }
-            else if( i2cHandle != NULL )
-            {
-                pDescriptor->handle = i2cHandle;
                 ioctlStatus  = IOT_I2C_SUCCESS;
             }
         }
@@ -338,7 +338,7 @@ int32_t iot_i2c_ioctl( IotI2CHandle_t const pxI2CPeripheral,
         {
             uint8_t * address = ( uint8_t * ) pvBuffer;
 
-            pDescriptor->transaction.slaveAddress = (uint_least8_t) *address;
+            pDescriptor->transaction.slaveAddress = ( uint_least8_t ) *address;
 
             ioctlStatus  = IOT_I2C_SUCCESS;
         }
@@ -348,6 +348,7 @@ int32_t iot_i2c_ioctl( IotI2CHandle_t const pxI2CPeripheral,
         {
             ioctlStatus  = IOT_I2C_SUCCESS;
         }
+        break;
         default:
         {
             break;
