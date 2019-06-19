@@ -46,14 +46,27 @@ void SensorsLoop( void * context )
     Wire_begin();
     for( ; ; )
     {
-        int val = Wire_read();
-        configPRINTF(("Read1 Status %d\r\n", val));
-        int val2 = Wire_write(1);
-        configPRINTF(("Write Status %d\r\n", val2));
-        int val3 = Wire_write(2);
-        configPRINTF(("Write2 Status %d\r\n", val3));
-
-    }
+        Wire_beginTransmission(0x18);
+        int write = Wire_write(8);
+       configPRINTF(("Write Status %d\r\n", write));
+       Wire_endTransmission();
+       Wire_requestFrom(0x18, 1);
+       int val = Wire_read();
+       configPRINTF(("Read1 Status %d\r\n", val));
+//    }
+//        for( ; ; )
+//        {
+//            Wire_beginTransmission(0x18);
+//            int val = Wire_read();
+//            Wire_endTransmission();
+//            configPRINTF(("Read1 Status %d\r\n", val));
+//            int val2 = Wire_write(1);
+//            configPRINTF(("Write Status %d\r\n", val2));
+//            int val3 = Wire_write(2);
+//            configPRINTF(("Write2 Status %d\r\n", val3));
+//
+            vTaskDelay(pdMS_TO_TICKS(1000));
+        }
 }
 
 /**

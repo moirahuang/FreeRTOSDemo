@@ -13,78 +13,125 @@
 #include "FreeRTOS.h"
 #include "semphr.h"
 #include "LinkedList.c"
-#define OPT_ADDR 0x18
 
-Node tasks = NULL;
-IotI2CHandle_t I2CHandle = NULL;
-bool blocking = false;
+typedef struct I2CTrasanctionContext
+{
+        IotI2CHandle_t handle;
+        uint8_t OPT_ADDR;
+        uint8_t error; // no error is zero (0)
+
+} I2CTransactionContext_t;
+
+I2CTransactionContext_t transactionContext = { 0 };
+
+#define WIRE_OK         ((uint8_t)0)
+#define WIRE_TOO_LONG   ((uint8_t)1)
+#define WIRE_ADDR_NACK  ((uint8_t)2)
+#define WIRE_DATA_NACK  ((uint8_t)3)
+#define WIRE_FAIL       ((uint8_t)4)
+
 void Wire_CallbackInternal( void * context )
 {
 
 }
-
 /* ------------------------------------------------------------------------ */
 
-void Wire_begin() {
+void Wire_begin()
+{
+        IotI2CHandle_t handle = iot_i2c_open(0);
 
-    I2CHandle = iot_i2c_open(0);
+        transactionContext.handle = handle;
+
+        iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
 }
 
-void beginTransmission(uint8_t) {
-    blocking = true;
+void Wire_beginTransmission(uint8_t addr)
+{
+        iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
 
-    I2CHandle = iot_i2c_open(0);
+        if(transactionContext.error == IOT_I2C_SUCCESS)
+        {
+                IotI2CIoctlConfig_t config = {100000, 100000};
 
-    iot_i2c_set_completion_callback( I2CHandle, Wire_CallbackInternal );
+                uint32_t error = iot_i2c_ioctl( transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr );
+
+                if(error != IOT_I2C_SUCCESS)
+                {
+                        transactionContext.error = error;
+
+                        configPRINTF(("ERROR %d\r\n", error));
+                        return;
+                }
+
+                error = iot_i2c_ioctl( transactionContext.handle, eI2CSetMasterConfig, &config);
+
+                if(error != IOT_I2C_SUCCESS)
+                {
+                        transactionContext.error = error;
+
+                        configPRINTF(("ERROR %d\r\n", error));
+
+                        return;
+                }
+        }
 }
 
-uint8_t endTransmission(void) {
+uint8_t Wire_endTransmission(void)
+{
+        if(transactionContext.error == IOT_I2C_SUCCESS)
+        {
+                iot_i2c_ioctl( transactionContext.handle, eI2CSendStop, NULL);
+        }
 
+        transactionContext.error = IOT_I2C_SUCCESS;
+
+        configPRINTF(("ERROR %d\r\n", transactionContext.error));
+
+        return 0;
 }
+
+
+size_t Wire_write(uint8_t val)
+{
+        if(transactionContext.error == IOT_I2C_SUCCESS)
+        {
+                uint8_t writeBuffer[1]= { val };
+
+                iot_i2c_write_async(transactionContext.handle, writeBuffer, 1);
+        }
+        return val;
+};
+
+int Wire_read() {
+        uint8_t readBuffer[4] = {0};
+        if(transactionContext.error == IOT_I2C_SUCCESS)
+        {
+                iot_i2c_read_async(transactionContext.handle, readBuffer, 1 );
+        }
+        return (int) readBuffer[0];
+};
 
 uint8_t Wire_requestFrom(uint8_t opt, uint8_t num) {
-    return 0;
+
+        iot_i2c_ioctl( transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&opt );
+        if(transactionContext.error == IOT_I2C_SUCCESS)
+        {
+                int i = 0;
+                for (i = 0; i < num; i++)
+                {
+                        Wire_read();
+                }
+        }
+        return num;
 }
 
-size_t Wire_write(uint8_t val) {
-    IotI2CIoctlConfig_t config = {100000, 100000};
-    uint8_t writeBuffer[1]= { 0x00 };
-
-    const uint8_t address = OPT_ADDR;
-    iot_i2c_ioctl( I2CHandle, eI2CSetSlaveAddrWrite, (void *)&address );
-    iot_i2c_ioctl( I2CHandle, eI2CSetMasterConfig, &config);
-
-    if (blocking)
-    {
-        iot_i2c_write_async(I2CHandle, writeBuffer, 1);
-    }
-    else
-    {
-        iot_i2c_write_sync(I2CHandle, writeBuffer, 1);
-    }
-
-    return val;
-};
-
-//read a value to send as a single byte
-int Wire_read() {
-    IotI2CIoctlConfig_t config = {100000, 100000};
-    uint8_t readBuffer[1];
-
-    const uint8_t address = OPT_ADDR;
-    iot_i2c_ioctl(I2CHandle, eI2CSetSlaveAddrWrite,(void *)&address);
-    iot_i2c_ioctl(I2CHandle, eI2CSetMasterConfig, &config );
-
-    if (blocking)
-    {
-        iot_i2c_read_async(I2CHandle, readBuffer, 1 );
-    }
-    else
-    {
-        iot_i2c_read_sync(I2CHandle, readBuffer, 1 );
-    }
-    return (int) readBuffer[0];
+void onRequest()
+{
+        if(transactionContext.error == IOT_I2C_SUCCESS)
+        {
+                iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
+        }
 };
 int Wire_available(void) {
-    return 1;
+        return 1;
 };

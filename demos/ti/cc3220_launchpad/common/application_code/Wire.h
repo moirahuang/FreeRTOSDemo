@@ -26,9 +26,9 @@ void Wire_begin();
 //void begin(int);
 void Wire_end();
 //void setClock(uint32_t);
-void beginTransmission(uint8_t);
+void Wire_beginTransmission(uint8_t);
 //void beginTransmission(int);
-uint8_t endTransmission(void);
+uint8_t Wire_endTransmission(void);
 //uint8_t endTransmission(uint8_t);
 uint8_t Wire_requestFrom(uint8_t, uint8_t);
 //uint8_t requestFrom(uint8_t, uint8_t, uint8_t);
@@ -42,7 +42,7 @@ int Wire_read(void);
 //virtual int peek(void);
 //virtual void flush(void);
 //void onReceive( void (*)(int) );
-//void onRequest( void (*)(void) );
+void onRequest( void (*)(void) );
 //
 //inline size_t write(unsigned long n) { return write((uint8_t)n); }
 //inline size_t write(long n) { return write((uint8_t)n); }

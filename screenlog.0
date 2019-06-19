@@ -1,0 +1,1662 @@
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] START OF PROGRAM2 7 [Arduino Wir] Read1 Status 0
+3 7 [Arduino Wir] Write Status 1
+4 10 [Arduino Wir] Write2 Status 2
+5 14 [Arduino Wir] Wire Loop6 17 [Arduino Wir] Write Status 1
+7 20 [Arduino Wir] Write2 Status 2
+8 23 [Arduino Wir] Wire Loop9 27 [Arduino Wir] Write Status 1
+10 29 [Arduino Wir] Write2 Status 2
+11 33 [Arduino Wir] Wire Loop12 36 [Arduino Wir] Write Status 1
+13 39 [Arduino Wir] Write2 Status 2
+14 42 [Arduino Wir] Wire Loop15 46 [Arduino Wir] Write Status 1
+16 49 [Arduino Wir] Write2 Status 2
+17 52 [Arduino Wir] Wire Loop18 56 [Arduino Wir] Write Status 1
+19 59 [Arduino Wir] Write2 Status 2
+20 62 [Arduino Wir] Wire Loop21 65 [Arduino Wir] Write Status 1
+22 68 [Arduino Wir] Write2 Status 2
+23 72 [Arduino Wir] Wire Loop24 75 [Arduino Wir] Write Status 1
+25 78 [Arduino Wir] Write2 Status 2
+26 81 [Arduino Wir] Wire Loop27 85 [Arduino Wir] Write Status 1
+28 88 [Arduino Wir] Write2 Status 2
+29 91 [Arduino Wir] Wire Loop30 95 [Arduino Wir] Write Status 1
+31 98 [Arduino Wir] Write2 Status 2
+32 101 [Arduino Wir] Wire Loop33 104 [Arduino Wir] Write Status 1
+34 107 [Arduino Wir] Write2 Status 2
+35 111 [Arduino Wir] Wire Loop36 115 [Arduino Wir] Write Status 1
+37 117 [Arduino Wir] Write2 Status 2
+38 121 [Arduino Wir] Wire Loop39 125 [Arduino Wir] Write Status 1
+40 127 [Arduino Wir] Write2 Status 2
+41 131 [Arduino Wir] Wire Loop42 135 [Arduino Wir] Write Status 1
+43 138 [Arduino Wir] Write2 Status 2
+44 141 [Arduino Wir] Wire Loop45 145 [Arduino Wir] Write Status 1
+46 148 [Arduino Wir] Write2 Status 2
+47 151 [Arduino Wir] Wire Loop48 155 [Arduino Wir] Write Status 1
+49 158 [Arduino Wir] Write2 Status 2
+50 161 [Arduino Wir] Wire Loop51 165 [Arduino Wir] Write Status 1
+52 168 [Arduino Wir] Write2 Status 2
+53 171 [Arduino Wir] Wire Loop54 175 [Arduino Wir] Write Status 1
+55 178 [Arduino Wir] Write2 Status 2
+56 181 [Arduino Wir] Wire Loop57 185 [Arduino Wir] Write Status 1
+58 188 [Arduino Wir] Write2 Status 2
+59 191 [Arduino Wir] Wire Loop60 195 [Arduino Wir] Write Status 1
+61 198 [Arduino Wir] Write2 Status 2
+62 201 [Arduino Wir] Wire Loop63 205 [Arduino Wir] Write Status 1
+64 208 [Arduino Wir] Write2 Status 2
+65 211 [Arduino Wir] Wire Loop66 215 [Arduino Wir] Write Status 1
+67 218 [Arduino Wir] Write2 Status 2
+68 221 [Arduino Wir] Wire Loop69 225 [Arduino Wir] Write Status 1
+70 228 [Arduino Wir] Write2 Status 2
+71 231 [Arduino Wir] Wire Loop72 235 [Arduino Wir] Write Status 1
+73 238 [Arduino Wir] Write2 Status 2
+74 241 [Arduino Wir] Wire Loop75 245 [Arduino Wir] Write Status 1
+76 248 [Arduino Wir] Write2 Status 2
+77 251 [Arduino Wir] Wire Loop78 255 [Arduino Wir] Write Status 1
+79 258 [Arduino Wir] Write2 Status 2
+80 261 [Arduino Wir] Wire Loop81 265 [Arduino Wir] Write Status 1
+82 268 [Arduino Wir] Write2 Status 2
+83 271 [Arduino Wir] Wire Loop84 275 [Arduino Wir] Write Status 1
+85 278 [Arduino Wir] Write2 Status 2
+86 281 [Arduino Wir] Wire Loop87 285 [Arduino Wir] Write Status 1
+88 288 [Arduino Wir] Write2 Status 2
+89 291 [Arduino Wir] Wire Loop90 295 [Arduino Wir] Write Status 1
+91 298 [Arduino Wir] Write2 Status 2
+92 302 [Arduino Wir] Wire Loop93 305 [Arduino Wir] Write Status 1
+94 308 [Arduino Wir] Write2 Status 2
+95 312 [Arduino Wir] Wire Loop96 315 [Arduino Wir] Write Status 1
+97 318 [Arduino Wir] Write2 Status 2
+98 322 [Arduino Wir] Wire Loop99 325 [Arduino Wir] Write Status 1
+100 328 [Arduino Wir] Write2 Status 2
+101 332 [Arduino Wir] Wire Loop102 335 [Arduino Wir] Write Status 1
+103 338 [Arduino Wir] Write2 Status 2
+104 342 [Arduino Wir] Wire Loop105 346 [Arduino Wir] Write Status 1
+106 349 [Arduino Wir] Write2 Status 2
+107 352 [Arduino Wir] Wire Loop108 356 [Arduino Wir] Write Status 1
+109 359 [Arduino Wir] Write2 Status 2
+110 363 [Arduino Wir] Wire Loop111 366 [Arduino Wir] Write Status 1
+112 369 [Arduino Wir] Write2 Status 2
+113 373 [Arduino Wir] Wire Loop114 376 [Arduino Wir] Write Status 1
+115 379 [Arduino Wir] Write2 Status 2
+116 383 [Arduino Wir] Wire Loop117 387 [Arduino Wir] Write Status 1
+118 390 [Arduino Wir] Write2 Status 2
+119 393 [Arduino Wir] Wire Loop120 397 [Arduino Wir] Write Status 1
+121 400 [Arduino Wir] Write2 Status 2
+122 404 [Arduino Wir] Wire Loop123 407 [Arduino Wir] Write Status 1
+124 410 [Arduino Wir] Write2 Status 2
+125 414 [Arduino Wir] Wire Loop126 418 [Arduino Wir] Write Status 1
+127 421 [Arduino Wir] Write2 Status 2
+128 424 [Arduino Wir] Wire Loop129 428 [Arduino Wir] Write Status 1
+130 431 [Arduino Wir] Write2 Status 2
+131 435 [Arduino Wir] Wire Loop132 438 [Arduino Wir] Write Status 1
+133 441 [Arduino Wir] Write2 Status 2
+134 445 [Arduino Wir] Wire Loop135 449 [Arduino Wir] Write Status 1
+136 452 [Arduino Wir] Write2 Status 2
+137 455 [Arduino Wir] Wire Loop138 459 [Arduino Wir] Write Status 1
+139 462 [Arduino Wir] Write2 Status 2
+140 465 [Arduino Wir] Wire Loop141 469 [Arduino Wir] Write Status 1
+142 472 [Arduino Wir] Write2 Status 2
+143 476 [Arduino Wir] Wire Loop144 479 [Arduino Wir] Write Status 1
+145 482 [Arduino Wir] Write2 Status 2
+146 486 [Arduino Wir] Wire Loop147 490 [Arduino Wir] Write Status 1
+148 493 [Arduino Wir] Write2 Status 2
+149 496 [Arduino Wir] Wire Loop150 500 [Arduino Wir] Write Status 1
+151 503 [Arduino Wir] Write2 Status 2
+152 507 [Arduino Wir] Wire Loop153 510 [Arduino Wir] Write Status 1
+154 513 [Arduino Wir] Write2 Status 2
+155 517 [Arduino Wir] Wire Loop156 521 [Arduino Wir] Write Status 1
+157 524 [Arduino Wir] Write2 Status 2
+158 527 [Arduino Wir] Wire Loop159 531 [Arduino Wir] Write Status 1
+160 534 [Arduino Wir] Write2 Status 2
+161 538 [Arduino Wir] Wire Loop162 541 [Arduino Wir] Write Status 1
+163 544 [Arduino Wir] Write2 Status 2
+164 548 [Arduino Wir] Wire Loop165 552 [Arduino Wir] Write Status 1
+166 555 [Arduino Wir] Write2 Status 2
+167 558 [Arduino Wir] Wire Loop168 562 [Arduino Wir] Write Status 1
+169 565 [Arduino Wir] Write2 Status 2
+170 568 [Arduino Wir] Wire Loop171 572 [Arduino Wir] Write Status 1
+172 575 [Arduino Wir] Write2 Status 2
+173 579 [Arduino Wir] Wire Loop174 582 [Arduino Wir] Write Status 1
+175 585 [Arduino Wir] Write2 Status 2
+176 589 [Arduino Wir] Wire Loop177 593 [Arduino Wir] Write Status 1
+178 596 [Arduino Wir] Write2 Status 2
+179 599 [Arduino Wir] Wire Loop180 603 [Arduino Wir] Write Status 1
+181 606 [Arduino Wir] Write2 Status 2
+182 610 [Arduino Wir] Wire Loop183 613 [Arduino Wir] Write Status 1
+184 616 [Arduino Wir] Write2 Status 2
+185 620 [Arduino Wir] Wire Loop186 624 [Arduino Wir] Write Status 1
+187 627 [Arduino Wir] Write2 Status 2
+188 630 [Arduino Wir] Wire Loop189 634 [Arduino Wir] Write Status 1
+190 637 [Arduino Wir] Write2 Status 2
+191 641 [Arduino Wir] Wire Loop192 644 [Arduino Wir] Write Status 1
+193 647 [Arduino Wir] Write2 Status 2
+194 651 [Arduino Wir] Wire Loop195 655 [Arduino Wir] Write Status 1
+196 658 [Arduino Wir] Write2 Status 2
+197 661 [Arduino Wir] Wire Loop198 665 [Arduino Wir] Write Status 1
+199 668 [Arduino Wir] Write2 Status 2
+200 671 [Arduino Wir] Wire Loop201 675 [Arduino Wir] Write Status 1
+202 678 [Arduino Wir] Write2 Status 2
+203 682 [Arduino Wir] Wire Loop204 685 [Arduino Wir] Write Status 1
+205 688 [Arduino Wir] Write2 Status 2
+206 692 [Arduino Wir] Wire Loop207 696 [Arduino Wir] Write Status 1
+208 699 [Arduino Wir] Write2 Status 2
+209 702 [Arduino Wir] Wire Loop210 706 [Arduino Wir] Write Status 1
+211 709 [Arduino Wir] Write2 Status 2
+212 713 [Arduino Wir] Wire Loop213 716 [Arduino Wir] Write Status 1
+214 719 [Arduino Wir] Write2 Status 2
+215 723 [Arduino Wir] Wire Loop216 727 [Arduino Wir] Write Status 1
+217 730 [Arduino Wir] Write2 Status 2
+218 733 [Arduino Wir] Wire Loop219 737 [Arduino Wir] Write Status 1
+220 740 [Arduino Wir] Write2 Status 2
+221 744 [Arduino Wir] Wire Loop222 747 [Arduino Wir] Write Status 1
+223 750 [Arduino Wir] Write2 Status 2
+224 754 [Arduino Wir] Wire Loop225 758 [Arduino Wir] Write Status 1
+226 761 [Arduino Wir] Write2 Status 2
+227 764 [Arduino Wir] Wire Loop228 768 [Arduino Wir] Write Status 1
+229 771 [Arduino Wir] Write2 Status 2
+230 774 [Arduino Wir] Wire Loop231 778 [Arduino Wir] Write Status 1
+232 781 [Arduino Wir] Write2 Status 2
+233 785 [Arduino Wir] Wire Loop234 788 [Arduino Wir] Write Status 1
+235 791 [Arduino Wir] Write2 Status 2
+236 795 [Arduino Wir] Wire Loop237 799 [Arduino Wir] Write Status 1
+238 802 [Arduino Wir] Write2 Status 2
+239 805 [Arduino Wir] Wire Loop240 809 [Arduino Wir] Write Status 1
+241 812 [Arduino Wir] Write2 Status 2
+242 816 [Arduino Wir] Wire Loop243 819 [Arduino Wir] Write Status 1
+244 822 [Arduino Wir] Write2 Status 2
+245 826 [Arduino Wir] Wire Loop246 830 [Arduino Wir] Write Status 1
+247 833 [Arduino Wir] Write2 Status 2
+248 836 [Arduino Wir] Wire Loop249 840 [Arduino Wir] Write Status 1
+250 843 [Arduino Wir] Write2 Status 2
+251 847 [Arduino Wir] Wire Loop252 850 [Arduino Wir] Write Status 1
+253 853 [Arduino Wir] Write2 Status 2
+254 857 [Arduino Wir] Wire Loop255 861 [Arduino Wir] Write Status 1
+256 864 [Arduino Wir] Write2 Status 2
+257 867 [Arduino Wir] Wire Loop258 871 [Arduino Wir] Write Status 1
+259 874 [Arduino Wir] Write2 Status 2
+260 877 [Arduino Wir] Wire Loop261 881 [Arduino Wir] Write Status 1
+262 884 [Arduino Wir] Write2 Status 2
+263 888 [Arduino Wir] Wire Loop264 891 [Arduino Wir] Write Status 1
+265 894 [Arduino Wir] Write2 Status 2
+266 898 [Arduino Wir] Wire Loop267 902 [Arduino Wir] Write Status 1
+268 905 [Arduino Wir] Write2 Status 2
+269 908 [Arduino Wir] Wire Loop270 912 [Arduino Wir] Write Status 1
+271 915 [Arduino Wir] Write2 Status 2
+272 919 [Arduino Wir] Wire Loop273 922 [Arduino Wir] Write Status 1
+274 925 [Arduino Wir] Write2 Status 2
+275 929 [Arduino Wir] Wire Loop276 933 [Arduino Wir] Write Status 1
+277 936 [Arduino Wir] Write2 Status 2
+278 939 [Arduino Wir] Wire Loop279 943 [Arduino Wir] Write Status 1
+280 946 [Arduino Wir] Write2 Status 2
+281 950 [Arduino Wir] Wire Loop282 953 [Arduino Wir] Write Status 1
+283 956 [Arduino Wir] Write2 Status 2
+284 960 [Arduino Wir] Wire Loop285 964 [Arduino Wir] Write Status 1
+286 967 [Arduino Wir] Write2 Status 2
+287 970 [Arduino Wir] Wire Loop288 974 [Arduino Wir] Write Status 1
+289 977 [Arduino Wir] Write2 Status 2
+290 980 [Arduino Wir] Wire Loop291 984 [Arduino Wir] Write Status 1
+292 987 [Arduino Wir] Write2 Status 2
+293 991 [Arduino Wir] Wire Loop294 994 [Arduino Wir] Write Status 1
+295 997 [Arduino Wir] Write2 Status 2
+296 1001 [Arduino Wir] Wire Loop297 1005 [Arduino Wir] Write Status 1
+298 1008 [Arduino Wir] Write2 Status 2
+299 1012 [Arduino Wir] Wire Loop300 1015 [Arduino Wir] Write Status 1
+301 1018 [Arduino Wir] Write2 Status 2
+302 1022 [Arduino Wir] Wire Loop303 1026 [Arduino Wir] Write Status 1
+304 1029 [Arduino Wir] Write2 Status 2
+305 1033 [Arduino Wir] Wire Loop306 1036 [Arduino Wir] Write Status 1
+307 1040 [Arduino Wir] Write2 Status 2
+308 1043 [Arduino Wir] Wire Loop309 1047 [Arduino Wir] Write Status 1
+310 1050 [Arduino Wir] Write2 Status 2
+311 1054 [Arduino Wir] Wire Loop312 1058 [Arduino Wir] Write Status 1
+313 1061 [Arduino Wir] Write2 Status 2
+314 1064 [Arduino Wir] Wire Loop315 1068 [Arduino Wir] Write Status 1
+316 1071 [Arduino Wir] Write2 Status 2
+317 1075 [Arduino Wir] Wire Loop318 1079 [Arduino Wir] Write Status 1
+319 1082 [Arduino Wir] Write2 Status 2
+320 1086 [Arduino Wir] Wire Loop321 1089 [Arduino Wir] Write Status 1
+322 1092 [Arduino Wir] Write2 Status 2
+323 1096 [Arduino Wir] Wire Loop324 1100 [Arduino Wir] Write Status 1
+325 1103 [Arduino Wir] Write2 Status 2
+326 1107 [Arduino Wir] Wire Loop327 1110 [Arduino Wir] Write Status 1
+328 1114 [Arduino Wir] Write2 Status 2
+329 1117 [Arduino Wir] Wire Loop330 1121 [Arduino Wir] Write Status 1
+331 1124 [Arduino Wir] Write2 Status 2
+332 1128 [Arduino Wir] Wire Loop333 1132 [Arduino Wir] Write Status 1
+334 1135 [Arduino Wir] Write2 Status 2
+335 1138 [Arduino Wir] Wire Loop336 1142 [Arduino Wir] Write Status 1
+337 1145 [Arduino Wir] Write2 Status 2
+338 1149 [Arduino Wir] Wire Loop339 1153 [Arduino Wir] Write Status 1
+340 1156 [Arduino Wir] Write2 Status 2
+341 1160 [Arduino Wir] Wire Loop342 1163 [Arduino Wir] Write Status 1
+343 1166 [Arduino Wir] Write2 Status 2
+344 1170 [Arduino Wir] Wire Loop345 1174 [Arduino Wir] Write Status 1
+346 1177 [Arduino Wir] Write2 Status 2
+347 1181 [Arduino Wir] Wire Loop348 1184 [Arduino Wir] Write Status 1
+349 1188 [Arduino Wir] Write2 Status 2
+350 1191 [Arduino Wir] Wire Loop351 1195 [Arduino Wir] Write Status 1
+352 1198 [Arduino Wir] Write2 Status 2
+353 1202 [Arduino Wir] Wire Loop354 1206 [Arduino Wir] Write Status 1
+355 1209 [Arduino Wir] Write2 Status 2
+356 1212 [Arduino Wir] Wire Loop357 1216 [Arduino Wir] Write Status 1
+358 1219 [Arduino Wir] Write2 Status 2
+359 1223 [Arduino Wir] Wire Loop360 1227 [Arduino Wir] Write Status 1
+361 1230 [Arduino Wir] Write2 Status 2
+362 1233 [Arduino Wir] Wire Loop363 1237 [Arduino Wir] Write Status 1
+364 1240 [Arduino Wir] Write2 Status 2
+365 1244 [Arduino Wir] Wire Loop366 1248 [Arduino Wir] Write Status 1
+367 1251 [Arduino Wir] Write2 Status 2
+368 1255 [Arduino Wir] Wire Loop369 1258 [Arduino Wir] Write Status 1
+370 1261 [Arduino Wir] Write2 Status 2
+371 1265 [Arduino Wir] Wire Loop372 1269 [Arduino Wir] Write Status 1
+373 1272 [Arduino Wir] Write2 Status 2
+374 1276 [Arduino Wir] Wire Loop375 1280 [Arduino Wir] Write Status 1
+376 1283 [Arduino Wir] Write2 Status 2
+377 1286 [Arduino Wir] Wire Loop378 1290 [Arduino Wir] Write Status 1
+379 1293 [Arduino Wir] Write2 Status 2
+380 1297 [Arduino Wir] Wire Loop381 1301 [Arduino Wir] Write Status 1
+382 1304 [Arduino Wir] Write2 Status 2
+383 1307 [Arduino Wir] Wire Loop384 1311 [Arduino Wir] Write Status 1
+385 1314 [Arduino Wir] Write2 Status 2
+386 1318 [Arduino Wir] Wire Loop387 1322 [Arduino Wir] Write Status 1
+388 1325 [Arduino Wir] Write2 Status 2
+389 1329 [Arduino Wir] Wire Loop390 1332 [Arduino Wir] Write Status 1
+391 1335 [Arduino Wir] Write2 Status 2
+392 1339 [Arduino Wir] Wire Loop393 1343 [Arduino Wir] Write Status 1
+394 1346 [Arduino Wir] Write2 Status 2
+395 1350 [Arduino Wir] Wire Loop396 1353 [Arduino Wir] Write Status 1
+397 1357 [Arduino Wir] Write2 Status 2
+398 1360 [Arduino Wir] Wire Loop399 1364 [Arduino Wir] Write Status 1
+400 1367 [Arduino Wir] Write2 Status 2
+401 1371 [Arduino Wir] Wire Loop402 1375 [Arduino Wir] Write Status 1
+403 1378 [Arduino Wir] Write2 Status 2
+404 1381 [Arduino Wir] Wire Loop405 1385 [Arduino Wir] Write Status 1
+406 1388 [Arduino Wir] Write2 Status 2
+407 1392 [Arduino Wir] Wire Loop408 1396 [Arduino Wir] Write Status 1
+409 1399 [Arduino Wir] Write2 Status 2
+410 1403 [Arduino Wir] Wire Loop411 1406 [Arduino Wir] Write Status 1
+412 1409 [Arduino Wir] Write2 Status 2
+413 1413 [Arduino Wir] Wire Loop414 1417 [Arduino Wir] Write Status 1
+415 1420 [Arduino Wir] Write2 Status 2
+416 1424 [Arduino Wir] Wire Loop417 1427 [Arduino Wir] Write Status 1
+418 1431 [Arduino Wir] Write2 Status 2
+419 1434 [Arduino Wir] Wire Loop420 1438 [Arduino Wir] Write Status 1
+421 1441 [Arduino Wir] Write2 Status 2
+422 1445 [Arduino Wir] Wire Loop423 1449 [Arduino Wir] Write Status 1
+424 1452 [Arduino Wir] Write2 Status 2
+425 1455 [Arduino Wir] Wire Loop426 1459 [Arduino Wir] Write Status 1
+427 1462 [Arduino Wir] Write2 Status 2
+428 1466 [Arduino Wir] Wire Loop429 1470 [Arduino Wir] Write Status 1
+430 1473 [Arduino Wir] Write2 Status 2
+431 1477 [Arduino Wir] Wire Loop432 1480 [Arduino Wir] Write Status 1
+433 1483 [Arduino Wir] Write2 Status 2
+434 1487 [Arduino Wir] Wire Loop435 1491 [Arduino Wir] Write Status 1
+436 1494 [Arduino Wir] Write2 Status 2
+437 1498 [Arduino Wir] Wire Loop438 1501 [Arduino Wir] Write Status 1
+439 1505 [Arduino Wir] Write2 Status 2
+440 1508 [Arduino Wir] Wire Loop441 1512 [Arduino Wir] Write Status 1
+442 1515 [Arduino Wir] Write2 Status 2
+443 1519 [Arduino Wir] Wire Loop444 1523 [Arduino Wir] Write Status 1
+445 1526 [Arduino Wir] Write2 Status 2
+446 1529 [Arduino Wir] Wire Loop447 1533 [Arduino Wir] Write Status 1
+448 1536 [Arduino Wir] Write2 Status 2
+449 1540 [Arduino Wir] Wire Loop450 1544 [Arduino Wir] Write Status 1
+451 1547 [Arduino Wir] Write2 Status 2
+452 1550 [Arduino Wir] Wire Loop453 1554 [Arduino Wir] Write Status 1
+454 1557 [Arduino Wir] Write2 Status 2
+455 1561 [Arduino Wir] Wire Loop456 1565 [Arduino Wir] Write Status 1
+457 1568 [Arduino Wir] Write2 Status 2
+458 1572 [Arduino Wir] Wire Loop459 1575 [Arduino Wir] Write Status 1
+460 1578 [Arduino Wir] Write2 Status 2
+461 1582 [Arduino Wir] Wire Loop462 1586 [Arduino Wir] Write Status 1
+463 1589 [Arduino Wir] Write2 Status 2
+464 1593 [Arduino Wir] Wire Loop465 1597 [Arduino Wir] Write Status 1
+466 1600 [Arduino Wir] Write2 Status 2
+467 1603 [Arduino Wir] Wire Loop468 1607 [Arduino Wir] Write Status 1
+469 1610 [Arduino Wir] Write2 Status 2
+470 1614 [Arduino Wir] Wire Loop471 1618 [Arduino Wir] Write Status 1
+472 1621 [Arduino Wir] Write2 Status 2
+473 1624 [Arduino Wir] Wire Loop474 1628 [Arduino Wir] Write Status 1
+475 1631 [Arduino Wir] Write2 Status 2
+476 1635 [Arduino Wir] Wire Loop477 1639 [Arduino Wir] Write Status 1
+478 1642 [Arduino Wir] Write2 Status 2
+479 1646 [Arduino Wir] Wire Loop480 1649 [Arduino Wir] Write Status 1
+481 1652 [Arduino Wir] Write2 Status 2
+482 1656 [Arduino Wir] Wire Loop483 1660 [Arduino Wir] Write Status 1
+484 1663 [Arduino Wir] Write2 Status 2
+485 1667 [Arduino Wir] Wire Loop486 1670 [Arduino Wir] Write Status 1
+487 1674 [Arduino Wir] Write2 Status 2
+488 1677 [Arduino Wir] Wire Loop489 1681 [Arduino Wir] Write Status 1
+490 1684 [Arduino Wir] Write2 Status 2
+491 1688 [Arduino Wir] Wire Loop492 1692 [Arduino Wir] Write Status 1
+493 1695 [Arduino Wir] Write2 Status 2
+494 1698 [Arduino Wir] Wire Loop495 1702 [Arduino Wir] Write Status 1
+496 1705 [Arduino Wir] Write2 Status 2
+497 1709 [Arduino Wir] Wire Loop498 1713 [Arduino Wir] Write Status 1
+499 1716 [Arduino Wir] Write2 Status 2
+500 1720 [Arduino Wir] Wire Loop501 1723 [Arduino Wir] Write Status 1
+502 1726 [Arduino Wir] Write2 Status 2
+503 1730 [Arduino Wir] Wire Loop504 1734 [Arduino Wir] Write Status 1
+505 1737 [Arduino Wir] Write2 Status 2
+506 1741 [Arduino Wir] Wire Loop507 1744 [Arduino Wir] Write Status 1
+508 1748 [Arduino Wir] Write2 Status 2
+509 1751 [Arduino Wir] Wire Loop510 1755 [Arduino Wir] Write Status 1
+511 1758 [Arduino Wir] Write2 Status 2
+512 1762 [Arduino Wir] Wire Loop513 1766 [Arduino Wir] Write Status 1
+514 1769 [Arduino Wir] Write2 Status 2
+515 1772 [Arduino Wir] Wire Loop516 1776 [Arduino Wir] Write Status 1
+517 1779 [Arduino Wir] Write2 Status 2
+518 1783 [Arduino Wir] Wire Loop519 1787 [Arduino Wir] Write Status 1
+520 1790 [Arduino Wir] Write2 Status 2
+521 1794 [Arduino Wir] Wire Loop522 1797 [Arduino Wir] Write Status 1
+523 1800 [Arduino Wir] Write2 Status 2
+524 1804 [Arduino Wir] Wire Loop525 1808 [Arduino Wir] Write Status 1
+526 1811 [Arduino Wir] Write2 Status 2
+527 1815 [Arduino Wir] Wire Loop528 1818 [Arduino Wir] Write Status 1
+529 1822 [Arduino Wir] Write2 Status 2
+530 1825 [Arduino Wir] Wire Loop531 1829 [Arduino Wir] Write Status 1
+532 1832 [Arduino Wir] Write2 Status 2
+533 1836 [Arduino Wir] Wire Loop534 1840 [Arduino Wir] Write Status 1
+535 1843 [Arduino Wir] Write2 Status 2
+536 1846 [Arduino Wir] Wire Loop537 1850 [Arduino Wir] Write Status 1
+538 1853 [Arduino Wir] Write2 Status 2
+539 1857 [Arduino Wir] Wire Loop540 1861 [Arduino Wir] Write Status 1
+541 1864 [Arduino Wir] Write2 Status 2
+542 1868 [Arduino Wir] Wire Loop543 1871 [Arduino Wir] Write Status 1
+544 1874 [Arduino Wir] Write2 Status 2
+545 1878 [Arduino Wir] Wire Loop546 1882 [Arduino Wir] Write Status 1
+547 1885 [Arduino Wir] Write2 Status 2
+548 1889 [Arduino Wir] Wire Loop549 1892 [Arduino Wir] Write Status 1
+550 1896 [Arduino Wir] Write2 Status 2
+551 1899 [Arduino Wir] Wire Loop552 1903 [Arduino Wir] Write Status 1
+553 1906 [Arduino Wir] Write2 Status 2
+554 1910 [Arduino Wir] Wire Loop555 1914 [Arduino Wir] Write Status 1
+556 1917 [Arduino Wir] Write2 Status 2
+557 1920 [Arduino Wir] Wire Loop558 1924 [Arduino Wir] Write Status 1
+559 1927 [Arduino Wir] Write2 Status 2
+560 1931 [Arduino Wir] Wire Loop561 1935 [Arduino Wir] Write Status 1
+562 1938 [Arduino Wir] Write2 Status 2
+563 1941 [Arduino Wir] Wire Loop564 1945 [Arduino Wir] Write Status 1
+565 1948 [Arduino Wir] Write2 Status 2
+566 1952 [Arduino Wir] Wire Loop567 1956 [Arduino Wir] Write Status 1
+568 1959 [Arduino Wir] Write2 Status 2
+569 1963 [Arduino Wir] Wire Loop570 1966 [Arduino Wir] Write Status 1
+571 1969 [Arduino Wir] Write2 Status 2
+572 1973 [Arduino Wir] Wire Loop573 1977 [Arduino Wir] Write Status 1
+574 1980 [Arduino Wir] Write2 Status 2
+575 1984 [Arduino Wir] Wire Loop576 1988 [Arduino Wir] Write Status 1
+577 1991 [Arduino Wir] Write2 Status 2
+578 1994 [Arduino Wir] Wire Loop579 1998 [Arduino Wir] Write Status 1
+580 2001 [Arduino Wir] Write2 Status 2
+581 2005 [Arduino Wir] Wire Loop582 2009 [Arduino Wir] Write Status 1
+583 2012 [Arduino Wir] Write2 Status 2
+584 2015 [Arduino Wir] Wire Loop585 2019 [Arduino Wir] Write Status 1
+586 2022 [Arduino Wir] Write2 Status 2
+587 2026 [Arduino Wir] Wire Loop588 2030 [Arduino Wir] Write Status 1
+589 2033 [Arduino Wir] Write2 Status 2
+590 2037 [Arduino Wir] Wire Loop591 2040 [Arduino Wir] Write Status 1
+592 2043 [Arduino Wir] Write2 Status 2
+593 2047 [Arduino Wir] Wire Loop594 2051 [Arduino Wir] Write Status 1
+595 2054 [Arduino Wir] Write2 Status 2
+596 2058 [Arduino Wir] Wire Loop597 2061 [Arduino Wir] Write Status 1
+598 2065 [Arduino Wir] Write2 Status 2
+599 2068 [Arduino Wir] Wire Loop600 2072 [Arduino Wir] Write Status 1
+601 2075 [Arduino Wir] Write2 Status 2
+602 2079 [Arduino Wir] Wire Loop603 2083 [Arduino Wir] Write Status 1
+604 2086 [Arduino Wir] Write2 Status 2
+605 2089 [Arduino Wir] Wire Loop606 2093 [Arduino Wir] Write Status 1
+607 2096 [Arduino Wir] Write2 Status 2
+608 2100 [Arduino Wir] Wire Loop609 2104 [Arduino Wir] Write Status 1
+610 2107 [Arduino Wir] Write2 Status 2
+611 2111 [Arduino Wir] Wire Loop612 2114 [Arduino Wir] Write Status 1
+613 2117 [Arduino Wir] Write2 Status 2
+614 2121 [Arduino Wir] Wire Loop615 2125 [Arduino Wir] Write Status 1
+616 2128 [Arduino Wir] Write2 Status 2
+617 2132 [Arduino Wir] Wire Loop618 2135 [Arduino Wir] Write Status 1
+619 2139 [Arduino Wir] Write2 Status 2
+620 2142 [Arduino Wir] Wire Loop621 2146 [Arduino Wir] Write Status 1
+622 2149 [Arduino Wir] Write2 Status 2
+623 2153 [Arduino Wir] Wire Loop624 2157 [Arduino Wir] Write Status 1
+625 2160 [Arduino Wir] Write2 Status 2
+626 2163 [Arduino Wir] Wire Loop627 2167 [Arduino Wir] Write Status 1
+628 2170 [Arduino Wir] Write2 Status 2
+629 2174 [Arduino Wir] Wire Loop630 2178 [Arduino Wir] Write Status 1
+631 2181 [Arduino Wir] Write2 Status 2
+632 2185 [Arduino Wir] Wire Loop633 2188 [Arduino Wir] Write Status 1
+634 2191 [Arduino Wir] Write2 Status 2
+635 2195 [Arduino Wir] Wire Loop636 2199 [Arduino Wir] Write Status 1
+637 2202 [Arduino Wir] Write2 Status 2
+638 2206 [Arduino Wir] Wire Loop639 2209 [Arduino Wir] Write Status 1
+640 2213 [Arduino Wir] Write2 Status 2
+641 2216 [Arduino Wir] Wire Loop642 2220 [Arduino Wir] Write Status 1
+643 2223 [Arduino Wir] Write2 Status 2
+644 2227 [Arduino Wir] Wire Loop645 2231 [Arduino Wir] Write Status 1
+646 2234 [Arduino Wir] Write2 Status 2
+647 2237 [Arduino Wir] Wire Loop648 2241 [Arduino Wir] Write Status 1
+649 2244 [Arduino Wir] Write2 Status 2
+650 2248 [Arduino Wir] Wire Loop651 2252 [Arduino Wir] Write Status 1
+652 2255 [Arduino Wir] Write2 Status 2
+653 2259 [Arduino Wir] Wire Loop654 2262 [Arduino Wir] Write Status 1
+655 2265 [Arduino Wir] Write2 Status 2
+656 2269 [Arduino Wir] Wire Loop657 2273 [Arduino Wir] Write Status 1
+658 2276 [Arduino Wir] Write2 Status 2
+659 2280 [Arduino Wir] Wire Loop660 2283 [Arduino Wir] Write Status 1
+661 2286 [Arduino Wir] Write2 Status 2
+662 2290 [Arduino Wir] Wire Loop663 2294 [Arduino Wir] Write Status 1
+664 2297 [Arduino Wir] Write2 Status 2
+665 2301 [Arduino Wir] Wire Loop666 2305 [Arduino Wir] Write Status 1
+667 2308 [Arduino Wir] Write2 Status 2
+668 2311 [Arduino Wir] Wire Loop669 2315 [Arduino Wir] Write Status 1
+670 2318 [Arduino Wir] Write2 Status 2
+671 2322 [Arduino Wir] Wire Loop672 2326 [Arduino Wir] Write Status 1
+673 2329 [Arduino Wir] Write2 Status 2
+674 2332 [Arduino Wir] Wire Loop675 2336 [Arduino Wir] Write Status 1
+676 2339 [Arduino Wir] Write2 Status 2
+677 2343 [Arduino Wir] Wire Loop678 2347 [Arduino Wir] Write Status 1
+679 2350 [Arduino Wir] Write2 Status 2
+680 2354 [Arduino Wir] Wire Loop681 2357 [Arduino Wir] Write Status 1
+682 2360 [Arduino Wir] Write2 Status 2
+683 2364 [Arduino Wir] Wire Loop684 2368 [Arduino Wir] Write Status 1
+685 2371 [Arduino Wir] Write2 Status 2
+686 2375 [Arduino Wir] Wire Loop687 2379 [Arduino Wir] Write Status 1
+688 2382 [Arduino Wir] Write2 Status 2
+689 2385 [Arduino Wir] Wire Loop690 2389 [Arduino Wir] Write Status 1
+691 2392 [Arduino Wir] Write2 Status 2
+692 2396 [Arduino Wir] Wire Loop693 2400 [Arduino Wir] Write Status 1
+694 2403 [Arduino Wir] Write2 Status 2
+695 2406 [Arduino Wir] Wire Loop696 2410 [Arduino Wir] Write Status 1
+697 2413 [Arduino Wir] Write2 Status 2
+698 2417 [Arduino Wir] Wire Loop699 2421 [Arduino Wir] Write Status 1
+700 2424 [Arduino Wir] Write2 Status 2
+701 2428 [Arduino Wir] Wire Loop702 2431 [Arduino Wir] Write Status 1
+703 2434 [Arduino Wir] Write2 Status 2
+704 2438 [Arduino Wir] Wire Loop705 2442 [Arduino Wir] Write Status 1
+706 2445 [Arduino Wir] Write2 Status 2
+707 2449 [Arduino Wir] Wire Loop708 2452 [Arduino Wir] Write Status 1
+709 2456 [Arduino Wir] Write2 Status 2
+710 2459 [Arduino Wir] Wire Loop711 2463 [Arduino Wir] Write Status 1
+712 2466 [Arduino Wir] Write2 Status 2
+713 2470 [Arduino Wir] Wire Loop714 2474 [Arduino Wir] Write Status 1
+715 2477 [Arduino Wir] Write2 Status 2
+716 2480 [Arduino Wir] Wire Loop717 2484 [Arduino Wir] Write Status 1
+718 2487 [Arduino Wir] Write2 Status 2
+719 2491 [Arduino Wir] Wire Loop720 2495 [Arduino Wir] Write Status 1
+721 2498 [Arduino Wir] Write2 Status 2
+722 2502 [Arduino Wir] Wire Loop723 2505 [Arduino Wir] Write Status 1
+724 2508 [Arduino Wir] Write2 Status 2
+725 2512 [Arduino Wir] Wire Loop726 2516 [Arduino Wir] Write Status 1
+727 2519 [Arduino Wir] Write2 Status 2
+728 2523 [Arduino Wir] Wire Loop729 2526 [Arduino Wir] Write Status 1
+730 2530 [Arduino Wir] Write2 Status 2
+731 2533 [Arduino Wir] Wire Loop732 2537 [Arduino Wir] Write Status 1
+733 2540 [Arduino Wir] Write2 Status 2
+734 2544 [Arduino Wir] Wire Loop735 2548 [Arduino Wir] Write Status 1
+736 2551 [Arduino Wir] Write2 Status 2
+737 2554 [Arduino Wir] Wire Loop738 2558 [Arduino Wir] Write Status 1
+739 2561 [Arduino Wir] Write2 Status 2
+740 2565 [Arduino Wir] Wire Loop741 2569 [Arduino Wir] Write Status 1
+742 2572 [Arduino Wir] Write2 Status 2
+743 2576 [Arduino Wir] Wire Loop744 2579 [Arduino Wir] Write Status 1
+745 2582 [Arduino Wir] Write2 Status 2
+746 2586 [Arduino Wir] Wire Loop747 2590 [Arduino Wir] Write Status 1
+748 2593 [Arduino Wir] Write2 Status 2
+749 2597 [Arduino Wir] Wire Loop750 2600 [Arduino Wir] Write Status 1
+751 2604 [Arduino Wir] Write2 Status 2
+752 2607 [Arduino Wir] Wire Loop753 2611 [Arduino Wir] Write Status 1
+754 2614 [Arduino Wir] Write2 Status 2
+755 2618 [Arduino Wir] Wire Loop756 2622 [Arduino Wir] Write Status 1
+757 2625 [Arduino Wir] Write2 Status 2
+758 2628 [Arduino Wir] Wire Loop759 2632 [Arduino Wir] Write Status 1
+760 2635 [Arduino Wir] Write2 Status 2
+761 2639 [Arduino Wir] Wire Loop762 2643 [Arduino Wir] Write Status 1
+763 2646 [Arduino Wir] Write2 Status 2
+764 2649 [Arduino Wir] Wire Loop765 2653 [Arduino Wir] Write Status 1
+766 2656 [Arduino Wir] Write2 Status 2
+767 2660 [Arduino Wir] Wire Loop768 2664 [Arduino Wir] Write Status 1
+769 2667 [Arduino Wir] Write2 Status 2
+770 2671 [Arduino Wir] Wire Loop771 2674 [Arduino Wir] Write Status 1
+772 2677 [Arduino Wir] Write2 Status 2
+773 2681 [Arduino Wir] Wire Loop774 2685 [Arduino Wir] Write Status 1
+775 2688 [Arduino Wir] Write2 Status 2
+776 2692 [Arduino Wir] Wire Loop777 2696 [Arduino Wir] Write Status 1
+778 2699 [Arduino Wir] Write2 Status 2
+779 2702 [Arduino Wir] Wire Loop780 2706 [Arduino Wir] Write Status 1
+781 2709 [Arduino Wir] Write2 Status 2
+782 2713 [Arduino Wir] Wire Loop783 2717 [Arduino Wir] Write Status 1
+784 2720 [Arduino Wir] Write2 Status 2
+785 2723 [Arduino Wir] Wire Loop786 2727 [Arduino Wir] Write Status 1
+787 2730 [Arduino Wir] Write2 Status 2
+788 2734 [Arduino Wir] Wire Loop789 2738 [Arduino Wir] Write Status 1
+790 2741 [Arduino Wir] Write2 Status 2
+791 2745 [Arduino Wir] Wire Loop792 2748 [Arduino Wir] Write Status 1
+793 2751 [Arduino Wir] Write2 Status 2
+794 2755 [Arduino Wir] Wire Loop795 2759 [Arduino Wir] Write Status 1
+796 2762 [Arduino Wir] Write2 Status 2
+797 2766 [Arduino Wir] Wire Loop798 2769 [Arduino Wir] Write Status 1
+799 2773 [Arduino Wir] Write2 Status 2
+800 2776 [Arduino Wir] Wire Loop801 2780 [Arduino Wir] Write Status 1
+802 2783 [Arduino Wir] Write2 Status 2
+803 2787 [Arduino Wir] Wire Loop804 2791 [Arduino Wir] Write Status 1
+805 2794 [Arduino Wir] Write2 Status 2
+806 2797 [Arduino Wir] Wire Loop807 2801 [Arduino Wir] Write Status 1
+808 2804 [Arduino Wir] Write2 Status 2
+809 2808 [Arduino Wir] Wire Loop810 2812 [Arduino Wir] Write Status 1
+811 2815 [Arduino Wir] Write2 Status 2
+812 2819 [Arduino Wir] Wire Loop813 2822 [Arduino Wir] Write Status 1
+814 2825 [Arduino Wir] Write2 Status 2
+815 2829 [Arduino Wir] Wire Loop816 2833 [Arduino Wir] Write Status 1
+817 2836 [Arduino Wir] Write2 Status 2
+818 2840 [Arduino Wir] Wire Loop819 2843 [Arduino Wir] Write Status 1
+820 2847 [Arduino Wir] Write2 Status 2
+821 2850 [Arduino Wir] Wire Loop822 2854 [Arduino Wir] Write Status 1
+823 2857 [Arduino Wir] Write2 Status 2
+824 2861 [Arduino Wir] Wire Loop825 2865 [Arduino Wir] Write Status 1
+826 2868 [Arduino Wir] Write2 Status 2
+827 2871 [Arduino Wir] Wire Loop828 2875 [Arduino Wir] Write Status 1
+829 2878 [Arduino Wir] Write2 Status 2
+830 2882 [Arduino Wir] Wire Loop831 2886 [Arduino Wir] Write Status 1
+832 2889 [Arduino Wir] Write2 Status 2
+833 2893 [Arduino Wir] Wire Loop834 2896 [Arduino Wir] Write Status 1
+835 2899 [Arduino Wir] Write2 Status 2
+836 2903 [Arduino Wir] Wire Loop837 2907 [Arduino Wir] Write Status 1
+838 2910 [Arduino Wir] Write2 Status 2
+839 2914 [Arduino Wir] Wire Loop840 2917 [Arduino Wir] Write Status 1
+841 2921 [Arduino Wir] Write2 Status 2
+842 2924 [Arduino Wir] Wire Loop843 2928 [Arduino Wir] Write Status 1
+844 2931 [Arduino Wir] Write2 Status 2
+845 2935 [Arduino Wir] Wire Loop846 2939 [Arduino Wir] Write Status 1
+847 2942 [Arduino Wir] Write2 Status 2
+848 2945 [Arduino Wir] Wire Loop849 2949 [Arduino Wir] Write Status 1
+850 2952 [Arduino Wir] Write2 Status 2
+851 2956 [Arduino Wir] Wire Loop852 2960 [Arduino Wir] Write Status 1
+853 2963 [Arduino Wir] Write2 Status 2
+854 2967 [Arduino Wir] Wire Loop855 2970 [Arduino Wir] Write Status 1
+856 2973 [Arduino Wir] Write2 Status 2
+857 2977 [Arduino Wir] Wire Loop858 2981 [Arduino Wir] Write Status 1
+859 2984 [Arduino Wir] Write2 Status 2
+860 2988 [Arduino Wir] Wire Loop861 2991 [Arduino Wir] Write Status 1
+862 2995 [Arduino Wir] Write2 Status 2
+863 2998 [Arduino Wir] Wire Loop864 3002 [Arduino Wir] Write Status 1
+865 3005 [Arduino Wir] Write2 Status 2
+866 3009 [Arduino Wir] Wire Loop867 3013 [Arduino Wir] Write Status 1
+868 3016 [Arduino Wir] Write2 Status 2
+869 3019 [Arduino Wir] Wire Loop870 3023 [Arduino Wir] Write Status 1
+871 3026 [Arduino Wir] Write2 Status 2
+872 3030 [Arduino Wir] Wire Loop873 3034 [Arduino Wir] Write Status 1
+874 3037 [Arduino Wir] Write2 Status 2
+875 3040 [Arduino Wir] Wire Loop876 3044 [Arduino Wir] Write Status 1
+877 3047 [Arduino Wir] Write2 Status 2
+878 3051 [Arduino Wir] Wire Loop879 3055 [Arduino Wir] Write Status 1
+880 3058 [Arduino Wir] Write2 Status 2
+881 3062 [Arduino Wir] Wire Loop882 3065 [Arduino Wir] Write Status 1
+883 3068 [Arduino Wir] Write2 Status 2
+884 3072 [Arduino Wir] Wire Loop885 3076 [Arduino Wir] Write Status 1
+886 3079 [Arduino Wir] Write2 Status 2
+887 3083 [Arduino Wir] Wire Loop888 3087 [Arduino Wir] Write Status 1
+889 3090 [Arduino Wir] Write2 Status 2
+890 3093 [Arduino Wir] Wire Loop891 3097 [Arduino Wir] Write Status 1
+892 3100 [Arduino Wir] Write2 Status 2
+893 3104 [Arduino Wir] Wire Loop894 3108 [Arduino Wir] Write Status 1
+895 3111 [Arduino Wir] Write2 Status 2
+896 3114 [Arduino Wir] Wire Loop897 3118 [Arduino Wir] Write Status 1
+898 3121 [Arduino Wir] Write2 Status 2
+899 3125 [Arduino Wir] Wire Loop900 3129 [Arduino Wir] Write Status 1
+901 3132 [Arduino Wir] Write2 Status 2
+902 3136 [Arduino Wir] Wire Loop903 3139 [Arduino Wir] Write Status 1
+904 3142 [Arduino Wir] Write2 Status 2
+905 3146 [Arduino Wir] Wire Loop906 3150 [Arduino Wir] Write Status 1
+907 3153 [Arduino Wir] Write2 Status 2
+908 3157 [Arduino Wir] Wire Loop909 3160 [Arduino Wir] Write Status 1
+910 3164 [Arduino Wir] Write2 Status 2
+911 3167 [Arduino Wir] Wire Loop912 3171 [Arduino Wir] Write Status 1
+913 3174 [Arduino Wir] Write2 Status 2
+914 3178 [Arduino Wir] Wire Loop915 3182 [Arduino Wir] Write Status 1
+916 3185 [Arduino Wir] Write2 Status 2
+917 3188 [Arduino Wir] Wire Loop918 3192 [Arduino Wir] Write Status 1
+919 3195 [Arduino Wir] Write2 Status 2
+920 3199 [Arduino Wir] Wire Loop921 3203 [Arduino Wir] Write Status 1
+922 3206 [Arduino Wir] Write2 Status 2
+923 3210 [Arduino Wir] Wire Loop924 3213 [Arduino Wir] Write Status 1
+925 3216 [Arduino Wir] Write2 Status 2
+926 3220 [Arduino Wir] Wire Loop927 3224 [Arduino Wir] Write Status 1
+928 3227 [Arduino Wir] Write2 Status 2
+929 3231 [Arduino Wir] Wire Loop930 3234 [Arduino Wir] Write Status 1
+931 3238 [Arduino Wir] Write2 Status 2
+932 3241 [Arduino Wir] Wire Loop933 3245 [Arduino Wir] Write Status 1
+934 3248 [Arduino Wir] Write2 Status 2
+935 3252 [Arduino Wir] Wire Loop936 3256 [Arduino Wir] Write Status 1
+937 3259 [Arduino Wir] Write2 Status 2
+938 3262 [Arduino Wir] Wire Loop939 3266 [Arduino Wir] Write Status 1
+940 3269 [Arduino Wir] Write2 Status 2
+941 3273 [Arduino Wir] Wire Loop942 3277 [Arduino Wir] Write Status 1
+943 3280 [Arduino Wir] Write2 Status 2
+944 3284 [Arduino Wir] Wire Loop945 3287 [Arduino Wir] Write Status 1
+946 3290 [Arduino Wir] Write2 Status 2
+947 3294 [Arduino Wir] Wire Loop948 3298 [Arduino Wir] Write Status 1
+949 3301 [Arduino Wir] Write2 Status 2
+950 3305 [Arduino Wir] Wire Loop951 3308 [Arduino Wir] Write Status 1
+952 3312 [Arduino Wir] Write2 Status 2
+953 3315 [Arduino Wir] Wire Loop954 3319 [Arduino Wir] Write Status 1
+955 3322 [Arduino Wir] Write2 Status 2
+956 3326 [Arduino Wir] Wire Loop957 3330 [Arduino Wir] Write Status 1
+958 3333 [Arduino Wir] Write2 Status 2
+959 3336 [Arduino Wir] Wire Loop960 3340 [Arduino Wir] Write Status 1
+961 3343 [Arduino Wir] Write2 Status 2
+962 3347 [Arduino Wir] Wire Loop963 3351 [Arduino Wir] Write Status 1
+964 3354 [Arduino Wir] Write2 Status 2
+965 3358 [Arduino Wir] Wire Loop966 3361 [Arduino Wir] Write Status 1
+967 3364 [Arduino Wir] Write2 Status 2
+968 3368 [Arduino Wir] Wire Loop969 3372 [Arduino Wir] Write Status 1
+970 3375 [Arduino Wir] Write2 Status 2
+971 3379 [Arduino Wir] Wire Loop972 3382 [Arduino Wir] Write Status 1
+973 3385 [Arduino Wir] Write2 Status 2
+974 3389 [Arduino Wir] Wire Loop975 3393 [Arduino Wir] Write Status 1
+976 3396 [Arduino Wir] Write2 Status 2
+977 3400 [Arduino Wir] Wire Loop978 3404 [Arduino Wir] Write Status 1
+979 3407 [Arduino Wir] Write2 Status 2
+980 3410 [Arduino Wir] Wire Loop981 3414 [Arduino Wir] Write Status 1
+982 3417 [Arduino Wir] Write2 Status 2
+983 3421 [Arduino Wir] Wire Loop984 3425 [Arduino Wir] Write Status 1
+985 3428 [Arduino Wir] Write2 Status 2
+986 3431 [Arduino Wir] Wire Loop987 3435 [Arduino Wir] Write Status 1
+988 3438 [Arduino Wir] Write2 Status 2
+989 3442 [Arduino Wir] Wire Loop990 3446 [Arduino Wir] Write Status 1
+991 3449 [Arduino Wir] Write2 Status 2
+992 3453 [Arduino Wir] Wire Loop993 3456 [Arduino Wir] Write Status 1
+994 3459 [Arduino Wir] Write2 Status 2
+995 3463 [Arduino Wir] Wire Loop996 3467 [Arduino Wir] Write Status 1
+997 3470 [Arduino Wir] Write2 Status 2
+998 3474 [Arduino Wir] Wire Loop999 3478 [Arduino Wir] Write Status 1
+1000 3481 [Arduino Wir] Write2 Status 2
+1001 3484 [Arduino Wir] Wire Loop1002 3488 [Arduino Wir] Write Status 1
+1003 3491 [Arduino Wir] Write2 Status 2
+1004 3495 [Arduino Wir] Wire Loop1005 3499 [Arduino Wir] Write Status 1
+1006 3502 [Arduino Wir] Write2 Status 2
+1007 3506 [Arduino Wir] Wire Loop1008 3510 [Arduino Wir] Write Status 1
+1009 3513 [Arduino Wir] Write2 Status 2
+1010 3517 [Arduino Wir] Wire Loop1011 3521 [Arduino Wir] Write Status 1
+1012 3524 [Arduino Wir] Write2 Status 2
+1013 3528 [Arduino Wir] Wire Loop1014 3532 [Arduino Wir] Write Status 1
+1015 3535 [Arduino Wir] Write2 Status 2
+1016 3538 [Arduino Wir] Wire Loop1017 3542 [Arduino Wir] Write Status 1
+1018 3546 [Arduino Wir] Write2 Status 2
+1019 3549 [Arduino Wir] Wire Loop1020 3553 [Arduino Wir] Write Status 1
+1021 3556 [Arduino Wir] Write2 Status 2
+1022 3560 [Arduino Wir] Wire Loop1023 3564 [Arduino Wir] Write Status 1
+1024 3567 [Arduino Wir] Write2 Status 2
+1025 3571 [Arduino Wir] Wire Loop1026 3575 [Arduino Wir] Write Status 1
+1027 3578 [Arduino Wir] Write2 Status 2
+1028 3582 [Arduino Wir] Wire Loop1029 3586 [Arduino Wir] Write Status 1
+1030 3589 [Arduino Wir] Write2 Status 2
+1031 3593 [Arduino Wir] Wire Loop1032 3597 [Arduino Wir] Write Status 1
+1033 3600 [Arduino Wir] Write2 Status 2
+1034 3603 [Arduino Wir] Wire Loop1035 3607 [Arduino Wir] Write Status 1
+1036 3611 [Arduino Wir] Write2 Status 2
+1037 3614 [Arduino Wir] Wire Loop1038 3618 [Arduino Wir] Write Status 1
+1039 3621 [Arduino Wir] Write2 Status 2
+1040 3625 [Arduino Wir] Wire Loop1041 3629 [Arduino Wir] Write Status 1
+1042 3632 [Arduino Wir] Write2 Status 2
+1043 3636 [Arduino Wir] Wire Loop1044 3640 [Arduino Wir] Write Status 1
+1045 3643 [Arduino Wir] Write2 Status 2
+1046 3647 [Arduino Wir] Wire Loop1047 3651 [Arduino Wir] Write Status 1
+1048 3654 [Arduino Wir] Write2 Status 2
+1049 3658 [Arduino Wir] Wire Loop1050 3662 [Arduino Wir] Write Status 1
+1051 3665 [Arduino Wir] Write2 Status 2
+1052 3669 [Arduino Wir] Wire Loop1053 3672 [Arduino Wir] Write Status 1
+1054 3676 [Arduino Wir] Write2 Status 2
+1055 3679 [Arduino Wir] Wire Loop1056 3683 [Arduino Wir] Write Status 1
+1057 3686 [Arduino Wir] Write2 Status 2
+1058 3690 [Arduino Wir] Wire Loop1059 3694 [Arduino Wir] Write Status 1
+1060 3697 [Arduino Wir] Write2 Status 2
+1061 3701 [Arduino Wir] Wire Loop1062 3705 [Arduino Wir] Write Status 1
+1063 3708 [Arduino Wir] Write2 Status 2
+1064 3712 [Arduino Wir] Wire Loop1065 3716 [Arduino Wir] Write Status 1
+1066 3719 [Arduino Wir] Write2 Status 2
+1067 3723 [Arduino Wir] Wire Loop1068 3727 [Arduino Wir] Write Status 1
+1069 3730 [Arduino Wir] Write2 Status 2
+1070 3734 [Arduino Wir] Wire Loop1071 3737 [Arduino Wir] Write Status 1
+1072 3741 [Arduino Wir] Write2 Status 2
+1073 3744 [Arduino Wir] Wire Loop1074 3748 [Arduino Wir] Write Status 1
+1075 3751 [Arduino Wir] Write2 Status 2
+1076 3755 [Arduino Wir] Wire Loop1077 3759 [Arduino Wir] Write Status 1
+1078 3762 [Arduino Wir] Write2 Status 2
+1079 3766 [Arduino Wir] Wire Loop1080 3770 [Arduino Wir] Write Status 1
+1081 3773 [Arduino Wir] Write2 Status 2
+1082 3777 [Arduino Wir] Wire Loop1083 3781 [Arduino Wir] Write Status 1
+1084 3784 [Arduino Wir] Write2 Status 2
+1085 3788 [Arduino Wir] Wire Loop1086 3792 [Arduino Wir] Write Status 1
+1087 3795 [Arduino Wir] Write2 Status 2
+1088 3799 [Arduino Wir] Wire Loop1089 3802 [Arduino Wir] Write Status 1
+1090 3806 [Arduino Wir] Write2 Status 2
+1091 3809 [Arduino Wir] Wire Loop1092 3813 [Arduino Wir] Write Status 1
+1093 3816 [Arduino Wir] Write2 Status 2
+1094 3820 [Arduino Wir] Wire Loop1095 3824 [Arduino Wir] Write Status 1
+1096 3827 [Arduino Wir] Write2 Status 2
+1097 3831 [Arduino Wir] Wire Loop1098 3835 [Arduino Wir] Write Status 1
+1099 3838 [Arduino Wir] Write2 Status 2
+1100 3842 [Arduino Wir] Wire Loop1101 3846 [Arduino Wir] Write Status 1
+1102 3849 [Arduino Wir] Write2 Status 2
+1103 3853 [Arduino Wir] Wire Loop1104 3857 [Arduino Wir] Write Status 1
+1105 3860 [Arduino Wir] Write2 Status 2
+1106 3864 [Arduino Wir] Wire Loop1107 3867 [Arduino Wir] Write Status 1
+1108 3871 [Arduino Wir] Write2 Status 2
+1109 3874 [Arduino Wir] Wire Loop1110 3878 [Arduino Wir] Write Status 1
+1111 3881 [Arduino Wir] Write2 Status 2
+1112 3885 [Arduino Wir] Wire Loop1113 3889 [Arduino Wir] Write Status 1
+1114 3892 [Arduino Wir] Write2 Status 2
+1115 3896 [Arduino Wir] Wire Loop1116 3900 [Arduino Wir] Write Status 1
+1117 3903 [Arduino Wir] Write2 Status 2
+1118 3907 [Arduino Wir] Wire Loop1119 3911 [Arduino Wir] Write Status 1
+1120 3914 [Arduino Wir] Write2 Status 2
+1121 3918 [Arduino Wir] Wire Loop1122 3922 [Arduino Wir] Write Status 1
+1123 3925 [Arduino Wir] Write2 Status 2
+1124 3929 [Arduino Wir] Wire Loop1125 3932 [Arduino Wir] Write Status 1
+1126 3936 [Arduino Wir] Write2 Status 2
+1127 3939 [Arduino Wir] Wire Loop1128 3943 [Arduino Wir] Write Status 1
+1129 3946 [Arduino Wir] Write2 Status 2
+1130 3950 [Arduino Wir] Wire Loop1131 3954 [Arduino Wir] Write Status 1
+1132 3957 [Arduino Wir] Write2 Status 2
+1133 3961 [Arduino Wir] Wire Loop1134 3965 [Arduino Wir] Write Status 1
+1135 3968 [Arduino Wir] Write2 Status 2
+1136 3972 [Arduino Wir] Wire Loop1137 3976 [Arduino Wir] Write Status 1
+1138 3979 [Arduino Wir] Write2 Status 2
+1139 3983 [Arduino Wir] Wire Loop1140 3987 [Arduino Wir] Write Status 1
+1141 3990 [Arduino Wir] Write2 Status 2
+1142 3994 [Arduino Wir] Wire Loop1143 3997 [Arduino Wir] Write Status 1
+1144 4001 [Arduino Wir] Write2 Status 2
+1145 4004 [Arduino Wir] Wire Loop1146 4008 [Arduino Wir] Write Status 1
+1147 4011 [Arduino Wir] Write2 Status 2
+1148 4015 [Arduino Wir] Wire Loop1149 4019 [Arduino Wir] Write Status 1
+1150 4022 [Arduino Wir] Write2 Status 2
+1151 4026 [Arduino Wir] Wire Loop1152 4030 [Arduino Wir] Write Status 1
+1153 4033 [Arduino Wir] Write2 Status 2
+1154 4037 [Arduino Wir] Wire Loop1155 4041 [Arduino Wir] Write Status 1
+1156 4044 [Arduino Wir] Write2 Status 2
+1157 4048 [Arduino Wir] Wire Loop1158 4052 [Arduino Wir] Write Status 1
+1159 4055 [Arduino Wir] Write2 Status 2
+1160 4059 [Arduino Wir] Wire Loop1161 4062 [Arduino Wir] Write Status 1
+1162 4066 [Arduino Wir] Write2 Status 2
+1163 4069 [Arduino Wir] Wire Loop1164 4073 [Arduino Wir] Write Status 1
+1165 4076 [Arduino Wir] Write2 Status 2
+1166 4080 [Arduino Wir] Wire Loop1167 4084 [Arduino Wir] Write Status 1
+1168 4087 [Arduino Wir] Write2 Status 2
+1169 4091 [Arduino Wir] Wire Loop1170 4095 [Arduino Wir] Write Status 1
+1171 4098 [Arduino Wir] Write2 Status 2
+1172 4102 [Arduino Wir] Wire Loop1173 4106 [Arduino Wir] Write Status 1
+1174 4109 [Arduino Wir] Write2 Status 2
+1175 4113 [Arduino Wir] Wire Loop1176 4117 [Arduino Wir] Write Status 1
+1177 4120 [Arduino Wir] Write2 Status 2
+1178 4124 [Arduino Wir] Wire Loop1179 4127 [Arduino Wir] Write Status 1
+1180 4131 [Arduino Wir] Write2 Status 2
+1181 4134 [Arduino Wir] Wire Loop1182 4138 [Arduino Wir] Write Status 1
+1183 4141 [Arduino Wir] Write2 Status 2
+1184 4145 [Arduino Wir] Wire Loop1185 4149 [Arduino Wir] Write Status 1
+1186 4152 [Arduino Wir] Write2 Status 2
+1187 4156 [Arduino Wir] Wire Loop1188 4160 [Arduino Wir] Write Status 1
+1189 4163 [Arduino Wir] Write2 Status 2
+1190 4167 [Arduino Wir] Wire Loop1191 4171 [Arduino Wir] Write Status 1
+1192 4174 [Arduino Wir] Write2 Status 2
+1193 4178 [Arduino Wir] Wire Loop1194 4182 [Arduino Wir] Write Status 1
+1195 4185 [Arduino Wir] Write2 Status 2
+1196 4189 [Arduino Wir] Wire Loop1197 4192 [Arduino Wir] Write Status 1
+1198 4196 [Arduino Wir] Write2 Status 2
+1199 4199 [Arduino Wir] Wire Loop1200 4203 [Arduino Wir] Write Status 1
+1201 4206 [Arduino Wir] Write2 Status 2
+1202 4210 [Arduino Wir] Wire Loop1203 4214 [Arduino Wir] Write Status 1
+1204 4217 [Arduino Wir] Write2 Status 2
+1205 4221 [Arduino Wir] Wire Loop1206 4225 [Arduino Wir] Write Status 1
+1207 4228 [Arduino Wir] Write2 Status 2
+1208 4232 [Arduino Wir] Wire Loop1209 4236 [Arduino Wir] Write Status 1
+1210 4239 [Arduino Wir] Write2 Status 2
+1211 4243 [Arduino Wir] Wire Loop1212 4247 [Arduino Wir] Write Status 1
+1213 4250 [Arduino Wir] Write2 Status 2
+1214 4254 [Arduino Wir] Wire Loop1215 4257 [Arduino Wir] Write Status 1
+1216 4261 [Arduino Wir] Write2 Status 2
+1217 4264 [Arduino Wir] Wire Loop1218 4268 [Arduino Wir] Write Status 1
+1219 4271 [Arduino Wir] Write2 Status 2
+1220 4275 [Arduino Wir] Wire Loop1221 4279 [Arduino Wir] Write Status 1
+1222 4282 [Arduino Wir] Write2 Status 2
+1223 4286 [Arduino Wir] Wire Loop1224 4290 [Arduino Wir] Write Status 1
+1225 4293 [Arduino Wir] Write2 Status 2
+1226 4297 [Arduino Wir] Wire Loop1227 4301 [Arduino Wir] Write Status 1
+1228 4304 [Arduino Wir] Write2 Status 2
+1229 4308 [Arduino Wir] Wire Loop1230 4312 [Arduino Wir] Write Status 1
+1231 4315 [Arduino Wir] Write2 Status 2
+1232 4319 [Arduino Wir] Wire Loop1233 4322 [Arduino Wir] Write Status 1
+1234 4326 [Arduino Wir] Write2 Status 2
+1235 4329 [Arduino Wir] Wire Loop1236 4333 [Arduino Wir] Write Status 1
+1237 4337 [Arduino Wir] Write2 Status 2
+1238 4340 [Arduino Wir] Wire Loop1239 4344 [Arduino Wir] Write Status 1
+1240 4347 [Arduino Wir] Write2 Status 2
+1241 4351 [Arduino Wir] Wire Loop1242 4355 [Arduino Wir] Write Status 1
+1243 4358 [Arduino Wir] Write2 Status 2
+1244 4362 [Arduino Wir] Wire Loop1245 4366 [Arduino Wir] Write Status 1
+1246 4369 [Arduino Wir] Write2 Status 2
+1247 4373 [Arduino Wir] Wire Loop1248 4377 [Arduino Wir] Write Status 1
+1249 4380 [Arduino Wir] Write2 Status 2
+1250 4384 [Arduino Wir] Wire Loop1251 4388 [Arduino Wir] Write Status 1
+1252 4391 [Arduino Wir] Write2 Status 2
+1253 4394 [Arduino Wir] Wire Loop1254 4398 [Arduino Wir] Write Status 1
+1255 4402 [Arduino Wir] Write2 Status 2
+1256 4405 [Arduino Wir] Wire Loop1257 4409 [Arduino Wir] Write Status 1
+1258 4412 [Arduino Wir] Write2 Status 2
+1259 4416 [Arduino Wir] Wire Loop1260 4420 [Arduino Wir] Write Status 1
+1261 4423 [Arduino Wir] Write2 Status 2
+1262 4427 [Arduino Wir] Wire Loop1263 4431 [Arduino Wir] Write Status 1
+1264 4434 [Arduino Wir] Write2 Status 2
+1265 4438 [Arduino Wir] Wire Loop1266 4442 [Arduino Wir] Write Status 1
+1267 4445 [Arduino Wir] Write2 Status 2
+1268 4449 [Arduino Wir] Wire Loop1269 4453 [Arduino Wir] Write Status 1
+1270 4456 [Arduino Wir] Write2 Status 2
+1271 4459 [Arduino Wir] Wire Loop1272 4463 [Arduino Wir] Write Status 1
+1273 4467 [Arduino Wir] Write2 Status 2
+1274 4470 [Arduino Wir] Wire Loop1275 4474 [Arduino Wir] Write Status 1
+1276 4477 [Arduino Wir] Write2 Status 2
+1277 4481 [Arduino Wir] Wire Loop1278 4485 [Arduino Wir] Write Status 1
+1279 4488 [Arduino Wir] Write2 Status 2
+1280 4492 [Arduino Wir] Wire Loop1281 4496 [Arduino Wir] Write Status 1
+1282 4499 [Arduino Wir] Write2 Status 2
+1283 4503 [Arduino Wir] Wire Loop1284 4507 [Arduino Wir] Write Status 1
+1285 4510 [Arduino Wir] Write2 Status 2
+1286 4514 [Arduino Wir] Wire Loop1287 4518 [Arduino Wir] Write Status 1
+1288 4521 [Arduino Wir] Write2 Status 2
+1289 4525 [Arduino Wir] Wire Loop1290 4528 [Arduino Wir] Write Status 1
+1291 4532 [Arduino Wir] Write2 Status 2
+1292 4535 [Arduino Wir] Wire Loop1293 4539 [Arduino Wir] Write Status 1
+1294 4542 [Arduino Wir] Write2 Status 2
+1295 4546 [Arduino Wir] Wire Loop1296 4550 [Arduino Wir] Write Status 1
+1297 4553 [Arduino Wir] Write2 Status 2
+1298 4557 [Arduino Wir] Wire Loop1299 4561 [Arduino Wir] Write Status 1
+1300 4564 [Arduino Wir] Write2 Status 2
+1301 4568 [Arduino Wir] Wire Loop1302 4572 [Arduino Wir] Write Status 1
+1303 4575 [Arduino Wir] Write2 Status 2
+1304 4579 [Arduino Wir] Wire Loop1305 4583 [Arduino Wir] Write Status 1
+1306 4586 [Arduino Wir] Write2 Status 2
+1307 4590 [Arduino Wir] Wire Loop1308 4593 [Arduino Wir] Write Status 1
+1309 4597 [Arduino Wir] Write2 Status 2
+1310 4600 [Arduino Wir] Wire Loop1311 4604 [Arduino Wir] Write Status 1
+1312 4607 [Arduino Wir] Write2 Status 2
+1313 4611 [Arduino Wir] Wire Loop1314 4615 [Arduino Wir] Write Status 1
+1315 4618 [Arduino Wir] Write2 Status 2
+1316 4622 [Arduino Wir] Wire Loop1317 4626 [Arduino Wir] Write Status 1
+1318 4629 [Arduino Wir] Write2 Status 2
+1319 4633 [Arduino Wir] Wire Loop1320 4637 [Arduino Wir] Write Status 1
+1321 4640 [Arduino Wir] Write2 Status 2
+1322 4644 [Arduino Wir] Wire Loop1323 4648 [Arduino Wir] Write Status 1
+1324 4651 [Arduino Wir] Write2 Status 2
+1325 4655 [Arduino Wir] Wire Loop1326 4658 [Arduino Wir] Write Status 1
+1327 4662 [Arduino Wir] Write2 Status 2
+1328 4665 [Arduino Wir] Wire Loop1329 4669 [Arduino Wir] Write Status 1
+1330 4672 [Arduino Wir] Write2 Status 2
+1331 4676 [Arduino Wir] Wire Loop1332 4680 [Arduino Wir] Write Status 1
+1333 4683 [Arduino Wir] Write2 Status 2
+1334 4687 [Arduino Wir] Wire Loop1335 4691 [Arduino Wir] Write Status 1
+1336 4694 [Arduino Wir] Write2 Status 2
+1337 4698 [Arduino Wir] Wire Loop1338 4702 [Arduino Wir] Write Status 1
+1339 4705 [Arduino Wir] Write2 Status 2
+1340 4709 [Arduino Wir] Wire Loop1341 4713 [Arduino Wir] Write Status 1
+1342 4716 [Arduino Wir] Write2 Status 2
+1343 4720 [Arduino Wir] Wire Loop1344 4723 [Arduino Wir] Write Status 1
+1345 4727 [Arduino Wir] Write2 Status 2
+1346 4730 [Arduino Wir] Wire Loop1347 4734 [Arduino Wir] Write Status 1
+1348 4737 [Arduino Wir] Write2 Status 2
+1349 4741 [Arduino Wir] Wire Loop1350 4745 [Arduino Wir] Write Status 1
+1351 4748 [Arduino Wir] Write2 Status 2
+1352 4752 [Arduino Wir] Wire Loop1353 4756 [Arduino Wir] Write Status 1
+1354 4759 [Arduino Wir] Write2 Status 2
+1355 4763 [Arduino Wir] Wire Loop1356 4767 [Arduino Wir] Write Status 1
+1357 4770 [Arduino Wir] Write2 Status 2
+1358 4774 [Arduino Wir] Wire Loop1359 4778 [Arduino Wir] Write Status 1
+1360 4781 [Arduino Wir] Write2 Status 2
+1361 4785 [Arduino Wir] Wire Loop1362 4788 [Arduino Wir] Write Status 1
+1363 4792 [Arduino Wir] Write2 Status 2
+1364 4795 [Arduino Wir] Wire Loop1365 4799 [Arduino Wir] Write Status 1
+1366 4802 [Arduino Wir] Write2 Status 2
+1367 4806 [Arduino Wir] Wire Loop1368 4810 [Arduino Wir] Write Status 1
+1369 4813 [Arduino Wir] Write2 Status 2
+1370 4817 [Arduino Wir] Wire Loop1371 4821 [Arduino Wir] Write Status 1
+1372 4824 [Arduino Wir] Write2 Status 2
+1373 4828 [Arduino Wir] Wire Loop1374 4832 [Arduino Wir] Write Status 1
+1375 4835 [Arduino Wir] Write2 Status 2
+1376 4839 [Arduino Wir] Wire Loop1377 4843 [Arduino Wir] Write Status 1
+1378 4846 [Arduino Wir] Write2 Status 2
+1379 4850 [Arduino Wir] Wire Loop1380 4853 [Arduino Wir] Write Status 1
+1381 4857 [Arduino Wir] Write2 Status 2
+1382 4860 [Arduino Wir] Wire Loop1383 4864 [Arduino Wir] Write Status 1
+1384 4867 [Arduino Wir] Write2 Status 2
+1385 4871 [Arduino Wir] Wire Loop1386 4875 [Arduino Wir] Write Status 1
+1387 4878 [Arduino Wir] Write2 Status 2
+1388 4882 [Arduino Wir] Wire Loop1389 4886 [Arduino Wir] Write Status 1
+1390 4889 [Arduino Wir] Write2 Status 2
+1391 4893 [Arduino Wir] Wire Loop1392 4897 [Arduino Wir] Write Status 1
+1393 4900 [Arduino Wir] Write2 Status 2
+1394 4904 [Arduino Wir] Wire Loop1395 4908 [Arduino Wir] Write Status 1
+1396 4911 [Arduino Wir] Write2 Status 2
+1397 4915 [Arduino Wir] Wire Loop1398 4918 [Arduino Wir] Write Status 1
+1399 4922 [Arduino Wir] Write2 Status 2
+1400 4925 [Arduino Wir] Wire Loop1401 4929 [Arduino Wir] Write Status 1
+1402 4932 [Arduino Wir] Write2 Status 2
+1403 4936 [Arduino Wir] Wire Loop1404 4940 [Arduino Wir] Write Status 1
+1405 4943 [Arduino Wir] Write2 Status 2
+1406 4947 [Arduino Wir] Wire Loop1407 4951 [Arduino Wir] Write Status 1
+1408 4954 [Arduino Wir] Write2 Status 2
+1409 4958 [Arduino Wir] Wire Loop1410 4962 [Arduino Wir] Write Status 1
+1411 4965 [Arduino Wir] Write2 Status 2
+1412 4969 [Arduino Wir] Wire Loop1413 4973 [Arduino Wir] Write Status 1
+1414 4976 [Arduino Wir] Write2 Status 2
+1415 4980 [Arduino Wir] Wire Loop1416 4983 [Arduino Wir] Write Status 1
+1417 4987 [Arduino Wir] Write2 Status 2
+1418 4990 [Arduino Wir] Wire Loop1419 4994 [Arduino Wir] Write Status 1
+1420 4997 [Arduino Wir] Write2 Status 2
+1421 5001 [Arduino Wir] Wire Loop1422 5005 [Arduino Wir] Write Status 1
+1423 5008 [Arduino Wir] Write2 Status 2
+1424 5012 [Arduino Wir] Wire Loop1425 5016 [Arduino Wir] Write Status 1
+1426 5019 [Arduino Wir] Write2 Status 2
+1427 5023 [Arduino Wir] Wire Loop1428 5027 [Arduino Wir] Write Status 1
+1429 5030 [Arduino Wir] Write2 Status 2
+1430 5034 [Arduino Wir] Wire Loop1431 5038 [Arduino Wir] Write Status 1
+1432 5041 [Arduino Wir] Write2 Status 2
+1433 5045 [Arduino Wir] Wire Loop1434 5048 [Arduino Wir] Write Status 1
+1435 5052 [Arduino Wir] Write2 Status 2
+1436 5055 [Arduino Wir] Wire Loop1437 5059 [Arduino Wir] Write Status 1
+1438 5062 [Arduino Wir] Write2 Status 2
+1439 5066 [Arduino Wir] Wire Loop1440 5070 [Arduino Wir] Write Status 1
+1441 5073 [Arduino Wir] Write2 Status 2
+1442 5077 [Arduino Wir] Wire Loop1443 5081 [Arduino Wir] Write Status 1
+1444 5084 [Arduino Wir] Write2 Status 2
+1445 5088 [Arduino Wir] Wire Loop1446 5092 [Arduino Wir] Write Status 1
+1447 5095 [Arduino Wir] Write2 Status 2
+1448 5099 [Arduino Wir] Wire Loop1449 5103 [Arduino Wir] Write Status 1
+1450 5106 [Arduino Wir] Write2 Status 2
+1451 5110 [Arduino Wir] Wire Loop1452 5113 [Arduino Wir] Write Status 1
+1453 5117 [Arduino Wir] Write2 Status 2
+1454 5120 [Arduino Wir] Wire Loop1455 5124 [Arduino Wir] Write Status 1
+1456 5128 [Arduino Wir] Write2 Status 2
+1457 5131 [Arduino Wir] Wire Loop1458 5135 [Arduino Wir] Write Status 1
+1459 5138 [Arduino Wir] Write2 Status 2
+1460 5142 [Arduino Wir] Wire Loop1461 5146 [Arduino Wir] Write Status 1
+1462 5149 [Arduino Wir] Write2 Status 2
+1463 5153 [Arduino Wir] Wire Loop1464 5157 [Arduino Wir] Write Status 1
+1465 5160 [Arduino Wir] Write2 Status 2
+1466 5164 [Arduino Wir] Wire Loop1467 5168 [Arduino Wir] Write Status 1
+1468 5171 [Arduino Wir] Write2 Status 2
+1469 5175 [Arduino Wir] Wire Loop1470 5179 [Arduino Wir] Write Status 1
+1471 5182 [Arduino Wir] Write2 Status 2
+1472 5185 [Arduino Wir] Wire Loop1473 5189 [Arduino Wir] Write Status 1
+1474 5193 [Arduino Wir] Write2 Status 2
+1475 5196 [Arduino Wir] Wire Loop1476 5200 [Arduino Wir] Write Status 1
+1477 5203 [Arduino Wir] Write2 Status 2
+1478 5207 [Arduino Wir] Wire Loop1479 5211 [Arduino Wir] Write Status 1
+1480 5214 [Arduino Wir] Write2 Status 2
+1481 5218 [Arduino Wir] Wire Loop1482 5222 [Arduino Wir] Write Status 1
+1483 5225 [Arduino Wir] Write2 Status 2
+1484 5229 [Arduino Wir] Wire Loop1485 5233 [Arduino Wir] Write Status 1
+1486 5236 [Arduino Wir] Write2 Status 2
+1487 5240 [Arduino Wir] Wire Loop1488 5244 [Arduino Wir] Write Status 1
+1489 5247 [Arduino Wir] Write2 Status 2
+1490 5250 [Arduino Wir] Wire Loop1491 5254 [Arduino Wir] Write Status 1
+1492 5258 [Arduino Wir] Write2 Status 2
+1493 5261 [Arduino Wir] Wire Loop1494 5265 [Arduino Wir] Write Status 1
+1495 5268 [Arduino Wir] Write2 Status 2
+1496 5272 [Arduino Wir] Wire Loop1497 5276 [Arduino Wir] Write Status 1
+1498 5279 [Arduino Wir] Write2 Status 2
+1499 5283 [Arduino Wir] Wire Loop1500 5287 [Arduino Wir] Write Status 1
+1501 5290 [Arduino Wir] Write2 Status 2
+1502 5294 [Arduino Wir] Wire Loop1503 5298 [Arduino Wir] Write Status 1
+1504 5301 [Arduino Wir] Write2 Status 2
+1505 5305 [Arduino Wir] Wire Loop1506 5309 [Arduino Wir] Write Status 1
+1507 5312 [Arduino Wir] Write2 Status 2
+1508 5316 [Arduino Wir] Wire Loop1509 5319 [Arduino Wir] Write Status 1
+1510 5323 [Arduino Wir] Write2 Status 2
+1511 5326 [Arduino Wir] Wire Loop1512 5330 [Arduino Wir] Write Status 1
+1513 5333 [Arduino Wir] Write2 Status 2
+1514 5337 [Arduino Wir] Wire Loop1515 5341 [Arduino Wir] Write Status 1
+1516 5344 [Arduino Wir] Write2 Status 2
+1517 5348 [Arduino Wir] Wire Loop1518 5352 [Arduino Wir] Write Status 1
+1519 5355 [Arduino Wir] Write2 Status 2
+1520 5359 [Arduino Wir] Wire Loop1521 5363 [Arduino Wir] Write Status 1
+1522 5366 [Arduino Wir] Write2 Status 2
+1523 5370 [Arduino Wir] Wire Loop1524 5374 [Arduino Wir] Write Status 1
+1525 5377 [Arduino Wir] Write2 Status 2
+1526 5381 [Arduino Wir] Wire Loop1527 5384 [Arduino Wir] Write Status 1
+1528 5388 [Arduino Wir] Write2 Status 2
+1529 5391 [Arduino Wir] Wire Loop1530 5395 [Arduino Wir] Write Status 1
+1531 5398 [Arduino Wir] Write2 Status 2
+1532 5402 [Arduino Wir] Wire Loop1533 5406 [Arduino Wir] Write Status 1
+1534 5409 [Arduino Wir] Write2 Status 2
+1535 5413 [Arduino Wir] Wire Loop1536 5417 [Arduino Wir] Write Status 1
+1537 5420 [Arduino Wir] Write2 Status 2
+1538 5424 [Arduino Wir] Wire Loop1539 5428 [Arduino Wir] Write Status 1
+1540 5431 [Arduino Wir] Write2 Status 2
+1541 5435 [Arduino Wir] Wire Loop1542 5439 [Arduino Wir] Write Status 1
+1543 5442 [Arduino Wir] Write2 Status 2
+1544 5446 [Arduino Wir] Wire Loop1545 5449 [Arduino Wir] Write Status 1
+1546 5453 [Arduino Wir] Write2 Status 2
+1547 5456 [Arduino Wir] Wire Loop1548 5460 [Arduino Wir] Write Status 1
+1549 5463 [Arduino Wir] Write2 Status 2
+1550 5467 [Arduino Wir] Wire Loop1551 5471 [Arduino Wir] Write Status 1
+1552 5474 [Arduino Wir] Write2 Status 2
+1553 5478 [Arduino Wir] Wire Loop1554 5482 [Arduino Wir] Write Status 1
+1555 5485 [Arduino Wir] Write2 Status 2
+1556 5489 [Arduino Wir] Wire Loop1557 5493 [Arduino Wir] Write Status 1
+1558 5496 [Arduino Wir] Write2 Status 2
+1559 5500 [Arduino Wir] Wire Loop1560 5504 [Arduino Wir] Write Status 1
+1561 5507 [Arduino Wir] Write2 Status 2
+1562 5511 [Arduino Wir] Wire Loop1563 5514 [Arduino Wir] Write Status 1
+1564 5518 [Arduino Wir] Write2 Status 2
+1565 5521 [Arduino Wir] Wire Loop1566 5525 [Arduino Wir] Write Status 1
+1567 5528 [Arduino Wir] Write2 Status 2
+1568 5532 [Arduino Wir] Wire Loop1569 5536 [Arduino Wir] Write Status 1
+1570 5539 [Arduino Wir] Write2 Status 2
+1571 5543 [Arduino Wir] Wire Loop1572 5547 [Arduino Wir] Write Status 1
+1573 5550 [Arduino Wir] Write2 Status 2
+1574 5554 [Arduino Wir] Wire Loop1575 5558 [Arduino Wir] Write Status 1
+1576 5561 [Arduino Wir] Write2 Status 2
+1577 5565 [Arduino Wir] Wire Loop1578 5569 [Arduino Wir] Write Status 1
+1579 5572 [Arduino Wir] Write2 Status 2
+1580 5576 [Arduino Wir] Wire Loop1581 5579 [Arduino Wir] Write Status 1
+1582 5583 [Arduino Wir] Write2 Status 2
+1583 5586 [Arduino Wir] Wire Loop1584 5590 [Arduino Wir] Write Status 1
+1585 5593 [Arduino Wir] Write2 Status 2
+1586 5597 [Arduino Wir] Wire Loop1587 5601 [Arduino Wir] Write Status 1
+1588 5604 [Arduino Wir] Write2 Status 2
+1589 5608 [Arduino Wir] Wire Loop1590 5612 [Arduino Wir] Write Status 1
+1591 5615 [Arduino Wir] Write2 Status 2
+1592 5619 [Arduino Wir] Wire Loop1593 5623 [Arduino Wir] Write Status 1
+1594 5626 [Arduino Wir] Write2 Status 2
+1595 5630 [Arduino Wir] Wire Loop1596 5634 [Arduino Wir] Write Status 1
+1597 5637 [Arduino Wir] Write2 Status 2
+1598 5641 [Arduino Wir] Wire Loop1599 5644 [Arduino Wir] Write Status 1
+1600 5648 [Arduino Wir] Write2 Status 2
+1601 5651 [Arduino Wir] Wire Loop1602 5655 [Arduino Wir] Write Status 1
+1603 5658 [Arduino Wir] Write2 Status 2
+1604 5662 [Arduino Wir] Wire Loop1605 5666 [Arduino Wir] Write Status 1
+1606 5669 [Arduino Wir] Write2 Status 2
+1607 5673 [Arduino Wir] Wire Loop1608 5677 [Arduino Wir] Write Status 1
+1609 5680 [Arduino Wir] Write2 Status 2
+1610 5684 [Arduino Wir] Wire Loop1611 5688 [Arduino Wir] Write Status 1
+1612 5691 [Arduino Wir] Write2 Status 2
+1613 5695 [Arduino Wir] Wire Loop1614 5699 [Arduino Wir] Write Status 1
+1615 5702 [Arduino Wir] Write2 Status 2
+1616 5706 [Arduino Wir] Wire Loop1617 5709 [Arduino Wir] Write Status 1
+1618 5713 [Arduino Wir] Write2 Status 2
+1619 5716 [Arduino Wir] Wire Loop1620 5720 [Arduino Wir] Write Status 1
+1621 5723 [Arduino Wir] Write2 Status 2
+1622 5727 [Arduino Wir] Wire Loop1623 5731 [Arduino Wir] Write Status 1
+1624 5734 [Arduino Wir] Write2 Status 2
+1625 5738 [Arduino Wir] Wire Loop1626 5742 [Arduino Wir] Write Status 1
+1627 5745 [Arduino Wir] Write2 Status 2
+1628 5749 [Arduino Wir] Wire Loop1629 5753 [Arduino Wir] Write Status 1
+1630 5756 [Arduino Wir] Write2 Status 2
+1631 5760 [Arduino Wir] Wire Loop1632 5764 [Arduino Wir] Write Status 1
+1633 5767 [Arduino Wir] Write2 Status 2
+1634 5771 [Arduino Wir] Wire Loop1635 5774 [Arduino Wir] Write Status 1
+1636 5778 [Arduino Wir] Write2 Status 2
+1637 5781 [Arduino Wir] Wire Loop1638 5785 [Arduino Wir] Write Status 1
+1639 5788 [Arduino Wir] Write2 Status 2
+1640 5792 [Arduino Wir] Wire Loop1641 5796 [Arduino Wir] Write Status 1
+1642 5799 [Arduino Wir] Write2 Status 2
+1643 5803 [Arduino Wir] Wire Loop1644 5807 [Arduino Wir] Write Status 1
+1645 5810 [Arduino Wir] Write2 Status 2
+1646 5814 [Arduino Wir] Wire Loop1647 5818 [Arduino Wir] Write Status 1
+1648 5821 [Arduino Wir] Write2 Status 2
+1649 5825 [Arduino Wir] Wire Loop1650 5829 [Arduino Wir] Write Status 1
+1651 5832 [Arduino Wir] Write2 Status 2
+1652 5836 [Arduino Wir] Wire Loop1653 5839 [Arduino Wir] Write Status 1
+1654 5843 [Arduino Wir] Write2 Status 2
+1655 5846 [Arduino Wir] Wire Loop1656 5850 [Arduino Wir] Write Status 1
+1657 5853 [Arduino Wir] Write2 Status 2
+1658 5857 [Arduino Wir] Wire Loop1659 5861 [Arduino Wir] Write Status 1
+1660 5864 [Arduino Wir] Write2 Status 2
+1661 5868 [Arduino Wir] Wire Loop1662 5872 [Arduino Wir] Write Status 1
+1663 5875 [Arduino Wir] Write2 Status 2
+1664 5879 [Arduino Wir] Wire Loop1665 5883 [Arduino Wir] Write Status 1
+1666 5886 [Arduino Wir] Write2 Status 2
+1667 5890 [Arduino Wir] Wire Loop1668 5894 [Arduino Wir] Write Status 1
+1669 5897 [Arduino Wir] Write2 Status 2
+1670 5901 [Arduino Wir] Wire Loop1671 5904 [Arduino Wir] Write Status 1
+1672 5908 [Arduino Wir] Write2 Status 2
+1673 5911 [Arduino Wir] Wire Loop1674 5915 [Arduino Wir] Write Status 1
+1675 5919 [Arduino Wir] Write2 Status 2
+1676 5922 [Arduino Wir] Wire Loop1677 5926 [Arduino Wir] Write Status 1
+1678 5929 [Arduino Wir] Write2 Status 2
+1679 5933 [Arduino Wir] Wire Loop1680 5937 [Arduino Wir] Write Status 1
+1681 5940 [Arduino Wir] Write2 Status 2
+1682 5944 [Arduino Wir] Wire Loop1683 5948 [Arduino Wir] Write Status 1
+1684 5951 [Arduino Wir] Write2 Status 2
+1685 5955 [Arduino Wir] Wire Loop1686 5959 [Arduino Wir] Write Status 1
+1687 5962 [Arduino Wir] Write2 Status 2
+1688 5966 [Arduino Wir] Wire Loop1689 5970 [Arduino Wir] Write Status 1
+1690 5973 [Arduino Wir] Write2 Status 2
+1691 5976 [Arduino Wir] Wire Loop1692 5980 [Arduino Wir] Write Status 1
+1693 5984 [Arduino Wir] Write2 Status 2
+1694 5987 [Arduino Wir] Wire Loop1695 5991 [Arduino Wir] Write Status 1
+1696 5994 [Arduino Wir] Write2 Status 2
+1697 5998 [Arduino Wir] Wire Loop1698 6002 [Arduino Wir] Write Status 1
+1699 6005 [Arduino Wir] Write2 Status 2
+1700 6009 [Arduino Wir] Wire Loop1701 6013 [Arduino Wir] Write Status 1
+1702 6016 [Arduino Wir] Write2 Status 2
+1703 6020 [Arduino Wir] Wire Loop1704 6024 [Arduino Wir] Write Status 1
+1705 6027 [Arduino Wir] Write2 Status 2
+1706 6031 [Arduino Wir] Wire Loop1707 6035 [Arduino Wir] Write Status 1
+1708 6038 [Arduino Wir] Write2 Status 2
+1709 6041 [Arduino Wir] Wire Loop1710 6045 [Arduino Wir] Write Status 1
+1711 6049 [Arduino Wir] Write2 Status 2
+1712 6052 [Arduino Wir] Wire Loop1713 6056 [Arduino Wir] Write Status 1
+1714 6059 [Arduino Wir] Write2 Status 2
+1715 6063 [Arduino Wir] Wire Loop1716 6067 [Arduino Wir] Write Status 1
+1717 6070 [Arduino Wir] Write2 Status 2
+1718 6074 [Arduino Wir] Wire Loop1719 6078 [Arduino Wir] Write Status 1
+1720 6081 [Arduino Wir] Write2 Status 2
+1721 6085 [Arduino Wir] Wire Loop1722 6089 [Arduino Wir] Write Status 1
+1723 6092 [Arduino Wir] Write2 Status 2
+1724 6096 [Arduino Wir] Wire Loop1725 6100 [Arduino Wir] Write Status 1
+1726 6103 [Arduino Wir] Write2 Status 2
+1727 6107 [Arduino Wir] Wire Loop1728 6110 [Arduino Wir] Write Status 1
+1729 6114 [Arduino Wir] Write2 Status 2
+1730 6117 [Arduino Wir] Wire Loop1731 6121 [Arduino Wir] Write Status 1
+1732 6124 [Arduino Wir] Write2 Status 2
+1733 6128 [Arduino Wir] Wire Loop1734 6132 [Arduino Wir] Write Status 1
+1735 6135 [Arduino Wir] Write2 Status 2
+1736 6139 [Arduino Wir] Wire Loop1737 6143 [Arduino Wir] Write Status 1
+1738 6146 [Arduino Wir] Write2 Status 2
+1739 6150 [Arduino Wir] Wire Loop1740 6154 [Arduino Wir] Write Status 1
+1741 6157 [Arduino Wir] Write2 Status 2
+1742 6161 [Arduino Wir] Wire Loop1743 6165 [Arduino Wir] Write Status 1
+1744 6168 [Arduino Wir] Write2 Status 2
+1745 6172 [Arduino Wir] Wire Loop1746 6175 [Arduino Wir] Write Status 1
+1747 6179 [Arduino Wir] Write2 Status 2
+1748 6182 [Arduino Wir] Wire Loop1749 6186 [Arduino Wir] Write Status 1
+1750 6189 [Arduino Wir] Write2 Status 2
+1751 6193 [Arduino Wir] Wire Loop1752 6197 [Arduino Wir] Write Status 1
+1753 6200 [Arduino Wir] Write2 Status 2
+1754 6204 [Arduino Wir] Wire Loop1755 6208 [Arduino Wir] Write Status 1
+1756 6211 [Arduino Wir] Write2 Status 2
+1757 6215 [Arduino Wir] Wire Loop1758 6219 [Arduino Wir] Write Status 1
+1759 6222 [Arduino Wir] Write2 Status 2
+1760 6226 [Arduino Wir] Wire Loop1761 6230 [Arduino Wir] Write Status 1
+1762 6233 [Arduino Wir] Write2 Status 2
+1763 6237 [Arduino Wir] Wire Loop1764 6240 [Arduino Wir] Write Status 1
+1765 6244 [Arduino Wir] Write2 Status 2
+1766 6247 [Arduino Wir] Wire Loop1767 6251 [Arduino Wir] Write Status 1
+1768 6254 [Arduino Wir] Write2 Status 2
+1769 6258 [Arduino Wir] Wire Loop1770 6262 [Arduino Wir] Write Status 1
+1771 6265 [Arduino Wir] Write2 Status 2
+1772 6269 [Arduino Wir] Wire Loop1773 6273 [Arduino Wir] Write Status 1
+1774 6276 [Arduino Wir] Write2 Status 2
+1775 6280 [Arduino Wir] Wire Loop1776 6284 [Arduino Wir] Write Status 1
+1777 6287 [Arduino Wir] Write2 Status 2
+1778 6291 [Arduino Wir] Wire Loop1779 6295 [Arduino Wir] Write Status 1
+1780 6298 [Arduino Wir] Write2 Status 2
+1781 6302 [Arduino Wir] Wire Loop1782 6305 [Arduino Wir] Write Status 1
+1783 6309 [Arduino Wir] Write2 Status 2
+1784 6312 [Arduino Wir] Wire Loop1785 6316 [Arduino Wir] Write Status 1
+1786 6319 [Arduino Wir] Write2 Status 2
+1787 6323 [Arduino Wir] Wire Loop1788 6327 [Arduino Wir] Write Status 1
+1789 6330 [Arduino Wir] Write2 Status 2
+1790 6334 [Arduino Wir] Wire Loop1791 6338 [Arduino Wir] Write Status 1
+1792 6341 [Arduino Wir] Write2 Status 2
+1793 6345 [Arduino Wir] Wire Loop1794 6349 [Arduino Wir] Write Status 1
+1795 6352 [Arduino Wir] Write2 Status 2
+1796 6356 [Arduino Wir] Wire Loop1797 6360 [Arduino Wir] Write Status 1
+1798 6363 [Arduino Wir] Write2 Status 2
+1799 6367 [Arduino Wir] Wire Loop1800 6370 [Arduino Wir] Write Status 1
+1801 6374 [Arduino Wir] Write2 Status 2
+1802 6377 [Arduino Wir] Wire Loop1803 6381 [Arduino Wir] Write Status 1
+1804 6384 [Arduino Wir] Write2 Status 2
+1805 6388 [Arduino Wir] Wire Loop1806 6392 [Arduino Wir] Write Status 1
+1807 6395 [Arduino Wir] Write2 Status 2
+1808 6399 [Arduino Wir] Wire Loop1809 6403 [Arduino Wir] Write Status 1
+1810 6406 [Arduino Wir] Write2 Status 2
+1811 6410 [Arduino Wir] Wire Loop1812 6414 [Arduino Wir] Write Status 1
+1813 6417 [Arduino Wir] Write2 Status 2
+1814 6421 [Arduino Wir] Wire Loop1815 6425 [Arduino Wir] Write Status 1
+1816 6428 [Arduino Wir] Write2 Status 2
+1817 6432 [Arduino Wir] Wire Loop1818 6435 [Arduino Wir] Write Status 1
+1819 6439 [Arduino Wir] Write2 Status 2
+1820 6442 [Arduino Wir] Wire Loop1821 6446 [Arduino Wir] Write Status 1
+1822 6449 [Arduino Wir] Write2 Status 2
+1823 6453 [Arduino Wir] Wire Loop1824 6457 [Arduino Wir] Write Status 1
+1825 6460 [Arduino Wir] Write2 Status 2
+1826 6464 [Arduino Wir] Wire Loop1827 6468 [Arduino Wir] Write Status 1
+1828 6471 [Arduino Wir] Write2 Status 2
+1829 6475 [Arduino Wir] Wire Loop1830 6479 [Arduino Wir] Write Status 1
+1831 6482 [Arduino Wir] Write2 Status 2
+1832 6486 [Arduino Wir] Wire Loop1833 6490 [Arduino Wir] Write Status 1
+1834 6493 [Arduino Wir] Write2 Status 2
+1835 6497 [Arduino Wir] Wire Loop1836 6500 [Arduino Wir] Write Status 1
+1837 6504 [Arduino Wir] Write2 Status 2
+1838 6507 [Arduino Wir] Wire Loop1839 6511 [Arduino Wir] Write Status 1
+1840 6514 [Arduino Wir] Write2 Status 2
+1841 6518 [Arduino Wir] Wire Loop1842 6522 [Arduino Wir] Write Status 1
+1843 6525 [Arduino Wir] Write2 Status 2
+1844 6529 [Arduino Wir] Wire Loop1845 6533 [Arduino Wir] Write Status 1
+1846 6536 [Arduino Wir] Write2 Status 2
+1847 6540 [Arduino Wir] Wire Loop1848 6544 [Arduino Wir] Write Status 1
+1849 6547 [Arduino Wir] Write2 Status 2
+1850 6551 [Arduino Wir] Wire Loop1851 6555 [Arduino Wir] Write Status 1
+1852 6558 [Arduino Wir] Write2 Status 2
+1853 6562 [Arduino Wir] Wire Loop1854 6565 [Arduino Wir] Write Status 1
+1855 6569 [Arduino Wir] Write2 Status 2
+1856 6572 [Arduino Wir] Wire Loop1857 6576 [Arduino Wir] Write Status 1
+1858 6579 [Arduino Wir] Write2 Status 2
+1859 6583 [Arduino Wir] Wire Loop1860 6587 [Arduino Wir] Write Status 1
+1861 6590 [Arduino Wir] Write2 Status 2
+1862 6594 [Arduino Wir] Wire Loop1863 6598 [Arduino Wir] Write Status 1
+1864 6601 [Arduino Wir] Write2 Status 2
+1865 6605 [Arduino Wir] Wire Loop1866 6609 [Arduino Wir] Write Status 1
+1867 6612 [Arduino Wir] Write2 Status 2
+1868 6616 [Arduino Wir] Wire Loop1869 6620 [Arduino Wir] Write Status 1
+1870 6623 [Arduino Wir] Write2 Status 2
+1871 6627 [Arduino Wir] Wire Loop1872 6630 [Arduino Wir] Write Status 1
+1873 6634 [Arduino Wir] Write2 Status 2
+1874 6637 [Arduino Wir] Wire Loop1875 6641 [Arduino Wir] Write Status 1
+1876 6644 [Arduino Wir] Write2 Status 2
+1877 6648 [Arduino Wir] Wire Loop1878 6652 [Arduino Wir] Write Status 1
+1879 6655 [Arduino Wir] Write2 Status 2
+1880 6659 [Arduino Wir] Wire Loop1881 6663 [Arduino Wir] Write Status 1
+1882 6666 [Arduino Wir] Write2 Status 2
+1883 6670 [Arduino Wir] Wire Loop1884 6674 [Arduino Wir] Write Status 1
+1885 6677 [Arduino Wir] Write2 Status 2
+1886 6681 [Arduino Wir] Wire Loop1887 6685 [Arduino Wir] Write Status 1
+1888 6688 [Arduino Wir] Write2 Status 2
+1889 6692 [Arduino Wir] Wire Loop1890 6695 [Arduino Wir] Write Status 1
+1891 6699 [Arduino Wir] Write2 Status 2
+1892 6702 [Arduino Wir] Wire Loop1893 6706 [Arduino Wir] Write Status 1
+1894 6710 [Arduino Wir] Write2 Status 2
+1895 6713 [Arduino Wir] Wire Loop1896 6717 [Arduino Wir] Write Status 1
+1897 6720 [Arduino Wir] Write2 Status 2
+1898 6724 [Arduino Wir] Wire Loop1899 6728 [Arduino Wir] Write Status 1
+1900 6731 [Arduino Wir] Write2 Status 2
+1901 6735 [Arduino Wir] Wire Loop1902 6739 [Arduino Wir] Write Status 1
+1903 6742 [Arduino Wir] Write2 Status 2
+1904 6746 [Arduino Wir] Wire Loop1905 6750 [Arduino Wir] Write Status 1
+1906 6753 [Arduino Wir] Write2 Status 2
+1907 6757 [Arduino Wir] Wire Loop1908 6761 [Arduino Wir] Write Status 1
+1909 6764 [Arduino Wir] Write2 Status 2
+1910 6767 [Arduino Wir] Wire Loop1911 6771 [Arduino Wir] Write Status 1
+1912 6775 [Arduino Wir] Write2 Status 2
+1913 6778 [Arduino Wir] Wire Loop1914 6782 [Arduino Wir] Write Status 1
+1915 6785 [Arduino Wir] Write2 Status 2
+1916 6789 [Arduino Wir] Wire Loop1917 6793 [Arduino Wir] Write Status 1
+1918 6796 [Arduino Wir] Write2 Status 2
+1919 6800 [Arduino Wir] Wire Loop1920 6804 [Arduino Wir] Write Status 1
+1921 6807 [Arduino Wir] Write2 Status 2
+1922 6811 [Arduino Wir] Wire Loop1923 6815 [Arduino Wir] Write Status 1
+1924 6818 [Arduino Wir] Write2 Status 2
+1925 6822 [Arduino Wir] Wire Loop1926 6826 [Arduino Wir] Write Status 1
+1927 6829 [Arduino Wir] Write2 Status 2
+1928 6832 [Arduino Wir] Wire Loop1929 6836 [Arduino Wir] Write Status 1
+1930 6840 [Arduino Wir] Write2 Status 2
+1931 6843 [Arduino Wir] Wire Loop1932 6847 [Arduino Wir] Write Status 1
+1933 6850 [Arduino Wir] Write2 Status 2
+1934 6854 [Arduino Wir] Wire Loop1935 6858 [Arduino Wir] Write Status 1
+1936 6861 [Arduino Wir] Write2 Status 2
+1937 6865 [Arduino Wir] Wire Loop1938 6869 [Arduino Wir] Write Status 1
+1939 6872 [Arduino Wir] Write2 Status 2
+1940 6876 [Arduino Wir] Wire Loop1941 6880 [Arduino Wir] Write Status 1
+1942 6883 [Arduino Wir] Write2 Status 2
+1943 6887 [Arduino Wir] Wire Loop1944 6891 [Arduino Wir] Write Status 1
+1945 6894 [Arduino Wir] Write2 Status 2
+1946 6898 [Arduino Wir] Wire Loop1947 6901 [Arduino Wir] Write Status 1
+1948 6905 [Arduino Wir] Write2 Status 2
+1949 6908 [Arduino Wir] Wire Loop1950 6912 [Arduino Wir] Write Status 1
+1951 6915 [Arduino Wir] Write2 Status 2
+1952 6919 [Arduino Wir] Wire Loop1953 6923 [Arduino Wir] Write Status 1
+1954 6926 [Arduino Wir] Write2 Status 2
+1955 6930 [Arduino Wir] Wire Loop1956 6934 [Arduino Wir] Write Status 1
+1957 6937 [Arduino Wir] Write2 Status 2
+1958 6941 [Arduino Wir] Wire Loop1959 6945 [Arduino Wir] Write Status 1
+1960 6948 [Arduino Wir] Write2 Status 2
+1961 6952 [Arduino Wir] Wire Loop1962 6956 [Arduino Wir] Write Status 1
+1963 6959 [Arduino Wir] Write2 Status 2
+1964 6963 [Arduino Wir] Wire Loop1965 6966 [Arduino Wir] Write Status 1
+1966 6970 [Arduino Wir] Write2 Status 2
+1967 6973 [Arduino Wir] Wire Loop1968 6977 [Arduino Wir] Write Status 1
+1969 6980 [Arduino Wir] Write2 Status 2
+1970 6984 [Arduino Wir] Wire Loop1971 6988 [Arduino Wir] Write Status 1
+1972 6991 [Arduino Wir] Write2 Status 2
+1973 6995 [Arduino Wir] Wire Loop1974 6999 [Arduino Wir] Write Status 1
+1975 7002 [Arduino Wir] Write2 Status 2
+1976 7006 [Arduino Wir] Wire Loop1977 7010 [Arduino Wir] Write Status 1
+1978 7013 [Arduino Wir] Write2 Status 2
+1979 7017 [Arduino Wir] Wire Loop1980 7021 [Arduino Wir] Write Status 1
+1981 7024 [Arduino Wir] Write2 Status 2
+1982 7028 [Arduino Wir] Wire Loop1983 7031 [Arduino Wir] Write Status 1
+1984 7035 [Arduino Wir] Write2 Status 2
+1985 7038 [Arduino Wir] Wire Loop1986 7042 [Arduino Wir] Write Status 1
+1987 7045 [Arduino Wir] Write2 Status 2
+1988 7049 [Arduino Wir] Wire Loop1989 7053 [Arduino Wir] Write Status 1
+1990 7056 [Arduino Wir] Write2 Status 2
+1991 7060 [Arduino Wir] Wire Loop1992 7064 [Arduino Wir] Write Status 1
+1993 7067 [Arduino Wir] Write2 Status 2
+1994 7071 [Arduino Wir] Wire Loop1995 7075 [Arduino Wir] Write Status 1
+1996 7078 [Arduino Wir] Write2 Status 2
+1997 7082 [Arduino Wir] Wire Loop1998 7086 [Arduino Wir] Write Status 1
+1999 7089 [Arduino Wir] Write2 Status 2
+2000 7093 [Arduino Wir] Wire Loop2001 7096 [Arduino Wir] Write Status 1
+2002 7100 [Arduino Wir] Write2 Status 2
+2003 7103 [Arduino Wir] Wire Loop2004 7107 [Arduino Wir] Write Status 1
+2005 7110 [Arduino Wir] Write2 Status 2
+2006 7114 [Arduino Wir] Wire Loop2007 7118 [Arduino Wir] Write Status 1
+2008 7121 [Arduino Wir] Write2 Status 2
+2009 7125 [Arduino Wir] Wire Loop2010 7129 [Arduino Wir] Write Status 1
+2011 7132 [Arduino Wir] Write2 Status 2
+2012 7136 [Arduino Wir] Wire Loop2013 7140 [Arduino Wir] Write Status 1
+2014 7143 [Arduino Wir] Write2 Status 2
+2015 7147 [Arduino Wir] Wire Loop2016 7151 [Arduino Wir] Write Status 1
+2017 7154 [Arduino Wir] Write2 Status 2
+2018 7158 [Arduino Wir] Wire Loop2019 7161 [Arduino Wir] Write Status 1
+2020 7165 [Arduino Wir] Write2 Status 2
+2021 7168 [Arduino Wir] Wire Loop2022 7172 [Arduino Wir] Write Status 1
+2023 7175 [Arduino Wir] Write2 Status 2
+2024 7179 [Arduino Wir] Wire Loop2025 7183 [Arduino Wir] Write Status 1
+2026 7186 [Arduino Wir] Write2 Status 2
+2027 7190 [Arduino Wir] Wire Loop2028 7194 [Arduino Wir] Write Status 1
+2029 7197 [Arduino Wir] Write2 Status 2
+2030 7201 [Arduino Wir] Wire Loop2031 7205 [Arduino Wir] Write Status 1
+2032 7208 [Arduino Wir] Write2 Status 2
+2033 7212 [Arduino Wir] Wire Loop2034 7216 [Arduino Wir] Write Status 1
+2035 7219 [Arduino Wir] Write2 Status 2
+2036 7223 [Arduino Wir] Wire Loop2037 7226 [Arduino Wir] Write Status 1
+2038 7230 [Arduino Wir] Write2 Status 2
+2039 7233 [Arduino Wir] Wire Loop2040 7237 [Arduino Wir] Write Status 1
+2041 7240 [Arduino Wir] Write2 Status 2
+2042 7244 [Arduino Wir] Wire Loop2043 7248 [Arduino Wir] Write Status 1
+2044 7251 [Arduino Wir] Write2 Status 2
+2045 7255 [Arduino Wir] Wire Loop2046 7259 [Arduino Wir] Write Status 1
+2047 7262 [Arduino Wir] Write2 Status 2
+2048 7266 [Arduino Wir] Wire Loop2049 7270 [Arduino Wir] Write Status 1
+2050 7273 [Arduino Wir] Write2 Status 2
+2051 7277 [Arduino Wir] Wire Loop2052 7281 [Arduino Wir] Write Status 1
+2053 7284 [Arduino Wir] Write2 Status 2
+2054 7288 [Arduino Wir] Wire Loop2055 7291 [Arduino Wir] Write Status 1
+2056 7295 [Arduino Wir] Write2 Status 2
+2057 7298 [Arduino Wir] Wire Loop2058 7302 [Arduino Wir] Write Status 1
+2059 7305 [Arduino Wir] Write2 Status 2
+2060 7309 [Arduino Wir] Wire Loop2061 7313 [Arduino Wir] Write Status 1
+2062 7316 [Arduino Wir] Write2 Status 2
+2063 7320 [Arduino Wir] Wire Loop2064 7324 [Arduino Wir] Write Status 1
+2065 7327 [Arduino Wir] Write2 Status 2
+2066 7331 [Arduino Wir] Wire Loop2067 7335 [Arduino Wir] Write Status 1
+2068 7338 [Arduino Wir] Write2 Status 2
+2069 7342 [Arduino Wir] Wire Loop2070 7346 [Arduino Wir] Write Status 1
+2071 7349 [Arduino Wir] Write2 Status 2
+2072 7353 [Arduino Wir] Wire Loop2073 7356 [Arduino Wir] Write Status 1
+2074 7360 [Arduino Wir] Write2 Status 2
+2075 7363 [Arduino Wir] Wire Loop2076 7367 [Arduino Wir] Write Status 1
+2077 7370 [Arduino Wir] Write2 Status 2
+2078 7374 [Arduino Wir] Wire Loop2079 7378 [Arduino Wir] Write Status 1
+2080 7381 [Arduino Wir] Write2 Status 2
+2081 7385 [Arduino Wir] Wire Loop2082 7389 [Arduino Wir] Write Status 1
+2083 7392 [Arduino Wir] Write2 Status 2
+2084 7396 [Arduino Wir] Wire Loop2085 7400 [Arduino Wir] Write Status 1
+2086 7403 [Arduino Wir] Write2 Status 2
+2087 7407 [Arduino Wir] Wire Loop2088 7411 [Arduino Wir] Write Status 1
+2089 7414 [Arduino Wir] Write2 Status 2
+2090 7418 [Arduino Wir] Wire Loop2091 7421 [Arduino Wir] Write Status 1
+2092 7425 [Arduino Wir] Write2 Status 2
+2093 7428 [Arduino Wir] Wire Loop2094 7432 [Arduino Wir] Write Status 1
+2095 7435 [Arduino Wir] Write2 Status 2
+2096 7439 [Arduino Wir] Wire Loop2097 7443 [Arduino Wir] Write Status 1
+2098 7446 [Arduino Wir] Write2 Status 2
+2099 7450 [Arduino Wir] Wire Loop2100 7454 [Arduino Wir] Write Status 1
+2101 7457 [Arduino Wir] Write2 Status 2
+2102 7461 [Arduino Wir] Wire Loop2103 7465 [Arduino Wir] Write Status 1
+2104 7468 [Arduino Wir] Write2 Status 2
+2105 7472 [Arduino Wir] Wire Loop2106 7476 [Arduino Wir] Write Status 1
+2107 7479 [Arduino Wir] Write2 Status 2
+2108 7483 [Arduino Wir] Wire Loop2109 7486 [Arduino Wir] Write Status 1
+2110 7490 [Arduino Wir] Write2 Status 2
+2111 7493 [Arduino Wir] Wire Loop2112 7497 [Arduino Wir] Write Status 1
+2113 7501 [Arduino Wir] Write2 Status 2
+2114 7504 [Arduino Wir] Wire Loop2115 7508 [Arduino Wir] Write Status 1
+2116 7511 [Arduino Wir] Write2 Status 2
+2117 7515 [Arduino Wir] Wire Loop2118 7519 [Arduino Wir] Write Status 1
+2119 7522 [Arduino Wir] Write2 Status 2
+2120 7526 [Arduino Wir] Wire Loop2121 7530 [Arduino Wir] Write Status 1
+2122 7533 [Arduino Wir] Write2 Status 2
+2123 7537 [Arduino Wir] Wire Loop2124 7541 [Arduino Wir] Write Status 1
+2125 7544 [Arduino Wir] Write2 Status 2
+2126 7548 [Arduino Wir] Wire Loop2127 7552 [Arduino Wir] Write Status 1
+2128 7555 [Arduino Wir] Write2 Status 2
+2129 7558 [Arduino Wir] Wire Loop2130 7562 [Arduino Wir] Write Status 1
+2131 7566 [Arduino Wir] Write2 Status 2
+2132 7569 [Arduino Wir] Wire Loop2133 7573 [Arduino Wir] Write Status 1
+2134 7576 [Arduino Wir] Write2 Status 2
+2135 7580 [Arduino Wir] Wire Loop2136 7584 [Arduino Wir] Write Status 1
+2137 7587 [Arduino Wir] Write2 Status 2
+2138 7591 [Arduino Wir] Wire Loop2139 7595 [Arduino Wir] Write Status 1
+2140 7598 [Arduino Wir] Write2 Status 2
+2141 7602 [Arduino Wir] Wire Loop2142 7606 [Arduino Wir] Write Status 1
+2143 7609 [Arduino Wir] Write2 Status 2
+2144 7613 [Arduino Wir] Wire Loop2145 7617 [Arduino Wir] Write Status 1
+2146 7620 [Arduino Wir] Write2 Status 2
+2147 7623 [Arduino Wir] Wire Loop2148 7627 [Arduino Wir] Write Status 1
+2149 7631 [Arduino Wir] Write2 Status 2
+2150 7634 [Arduino Wir] Wire Loop2151 7638 [Arduino Wir] Write Status 1
+2152 7641 [Arduino Wir] Write2 Status 2
+2153 7645 [Arduino Wir] Wire Loop2154 7649 [Arduino Wir] Write Status 1
+2155 7652 [Arduino Wir] Write2 Status 2
+2156 7656 [Arduino Wir] Wire Loop2157 7660 [Arduino Wir] Write Status 1
+2158 7663 [Arduino Wir] Write2 Status 2
+2159 7667 [Arduino Wir] Wire Loop2160 7671 [Arduino Wir] Write Status 1
+2161 7674 [Arduino Wir] Write2 Status 2
+2162 7678 [Arduino Wir] Wire Loop2163 7682 [Arduino Wir] Write Status 1
+2164 7685 [Arduino Wir] Write2 Status 2
+2165 7689 [Arduino Wir] Wire Loop2166 7692 [Arduino Wir] Write Status 1
+2167 7696 [Arduino Wir] Write2 Status 2
+2168 7699 [Arduino Wir] Wire Loop2169 7703 [Arduino Wir] Write Status 1
+2170 7706 [Arduino Wir] Write2 Status 2
+2171 7710 [Arduino Wir] Wire Loop2172 7714 [Arduino Wir] Write Status 1
+2173 7717 [Arduino Wir] Write2 Status 2
+2174 7721 [Arduino Wir] Wire Loop2175 7725 [Arduino Wir] Write Status 1
+2176 7728 [Arduino Wir] Write2 Status 2
+2177 7732 [Arduino Wir] Wire Loop2178 7736 [Arduino Wir] Write Status 1
+2179 7739 [Arduino Wir] Write2 Status 2
+2180 7743 [Arduino Wir] Wire Loop2181 7747 [Arduino Wir] Write Status 1
+2182 7750 [Arduino Wir] Write2 Status 2
+2183 7754 [Arduino Wir] Wire Loop2184 7757 [Arduino Wir] Write Status 1
+2185 7761 [Arduino Wir] Write2 Status 2
+2186 7764 [Arduino Wir] Wire Loop2187 7768 [Arduino Wir] Write Status 1
+2188 7771 [Arduino Wir] Write2 Status 2
+2189 7775 [Arduino Wir] Wire Loop2190 7779 [Arduino Wir] Write Status 1
+2191 7782 [Arduino Wir] Write2 Status 2
+2192 7786 [Arduino Wir] Wire Loop2193 7790 [Arduino Wir] Write Status 1
+2194 7793 [Arduino Wir] Write2 Status 2
+2195 7797 [Arduino Wir] Wire Loop2196 7801 [Arduino Wir] Write Status 1
+2197 7804 [Arduino Wir] Write2 Status 2
+2198 7808 [Arduino Wir] Wire Loop2199 7812 [Arduino Wir] Write Status 1
+2200 7815 [Arduino Wir] Write2 Status 2
+2201 7819 [Arduino Wir] Wire Loop2202 7822 [Arduino Wir] Write Status 1
+2203 7826 [Arduino Wir] Write2 Status 2
+2204 7829 [Arduino Wir] Wire Loop2205 7833 [Arduino Wir] Write Status 1
+2206 7836 [Arduino Wir] Write2 Status 2
+2207 7840 [Arduino Wir] Wire Loop2208 7844 [Arduino Wir] Write Status 1
+2209 7847 [Arduino Wir] Write2 Status 2
+2210 7851 [Arduino Wir] Wire Loop2211 7855 [Arduino Wir] Write Status 1
+2212 7858 [Arduino Wir] Write2 Status 2
+2213 7862 [Arduino Wir] Wire Loop2214 7866 [Arduino Wir] Write Status 1
+2215 7869 [Arduino Wir] Write2 Status 2
+2216 7873 [Arduino Wir] Wire Loop2217 7877 [Arduino Wir] Write Status 1
+2218 7880 [Arduino Wir] Write2 Status 2
+2219 7884 [Arduino Wir] Wire Loop2220 7887 [Arduino Wir] Write Status 1
+2221 7891 [Arduino Wir] Write2 Status 2
+2222 7894 [Arduino Wir] Wire Loop2223 7898 [Arduino Wir] Write Status 1
+2224 7901 [Arduino Wir] Write2 Status 2
+2225 7905 [Arduino Wir] Wire Loop2226 7909 [Arduino Wir] Write Status 1
+2227 7912 [Arduino Wir] Write2 Status 2
+2228 7916 [Arduino Wir] Wire Loop2229 7920 [Arduino Wir] Write Status 1
+2230 7923 [Arduino Wir] Write2 Status 2
+2231 7927 [Arduino Wir] Wire Loop2232 7931 [Arduino Wir] Write Status 1
+2233 7934 [Arduino Wir] Write2 Status 2
+2234 7938 [Arduino Wir] Wire Loop2235 7942 [Arduino Wir] Write Status 1
+2236 7945 [Arduino Wir] Write2 Status 2
+2237 7949 [Arduino Wir] Wire Loop2238 7952 [Arduino Wir] Write Status 1
+2239 7956 [Arduino Wir] Write2 Status 2
+2240 7959 [Arduino Wir] Wire Loop2241 7963 [Arduino Wir] Write Status 1
+2242 7966 [Arduino Wir] Write2 Status 2
+2243 7970 [Arduino Wir] Wire Loop2244 7974 [Arduino Wir] Write Status 1
+2245 7977 [Arduino Wir] Write2 Status 2
+2246 7981 [Arduino Wir] Wire Loop2247 7985 [Arduino Wir] Write Status 1
+2248 7988 [Arduino Wir] Write2 Status 2
+2249 7992 [Arduino Wir] Wire Loop2250 7996 [Arduino Wir] Write Status 1
+2251 7999 [Arduino Wir] Write2 Status 2
+2252 8003 [Arduino Wir] Wire Loop2253 8007 [Arduino Wir] Write Status 1
+2254 8010 [Arduino Wir] Write2 Status 2
+2255 8014 [Arduino Wir] Wire Loop2256 8017 [Arduino Wir] Write Status 1
+2257 8021 [Arduino Wir] Write2 Status 2
+2258 8024 [Arduino Wir] Wire Loop2259 8028 [Arduino Wir] Write Status 1
+2260 8031 [Arduino Wir] Write2 Status 2
+2261 8035 [Arduino Wir] Wire Loop2262 8039 [Arduino Wir] Write Status 1
+2263 8042 [Arduino Wir] Write2 Status 2
+2264 8046 [Arduino Wir] Wire Loop2265 8050 [Arduino Wir] Write Status 1
+2266 8053 [Arduino Wir] Write2 Status 2
+2267 8057 [Arduino Wir] Wire Loop2268 8061 [Arduino Wir] Write Status 1
+2269 8064 [Arduino Wir] Write2 Status 2
+2270 8068 [Arduino Wir] Wire Loop2271 8072 [Arduino Wir] Write Status 1
+2272 8075 [Arduino Wir] Write2 Status 2
+2273 8079 [Arduino Wir] Wire Loop2274 8082 [Arduino Wir] Write Status 1
+2275 8086 [Arduino Wir] Write2 Status 2
+2276 8089 [Arduino Wir] Wire Loop2277 8093 [Arduino Wir] Write Status 1
+2278 8096 [Arduino Wir] Write2 Status 2
+2279 8100 [Arduino Wir] Wire Loop2280 8104 [Arduino Wir] Write Status 1
+2281 8107 [Arduino Wir] Write2 Status 2
+2282 8111 [Arduino Wir] Wire Loop2283 8115 [Arduino Wir] Write Status 1
+2284 8118 [Arduino Wir] Write2 Status 2
+2285 8122 [Arduino Wir] Wire Loop2286 8126 [Arduino Wir] Write Status 1
+2287 8129 [Arduino Wir] Write2 Status 2
+2288 8133 [Arduino Wir] Wire Loop2289 8137 [Arduino Wir] Write Status 1
+2290 8140 [Arduino Wir] Write2 Status 2
+2291 8144 [Arduino Wir] Wire Loop2292 8147 [Arduino Wir] Write Status 1
+2293 8151 [Arduino Wir] Write2 Status 2
+2294 8154 [Arduino Wir] Wire Loop2295 8158 [Arduino Wir] Write Status 1
+2296 8161 [Arduino Wir] Write2 Status 2
+2297 8165 [Arduino Wir] Wire Loop2298 8169 [Arduino Wir] Write Status 1
+2299 8172 [Arduino Wir] Write2 Status 2
+2300 8176 [Arduino Wir] Wire Loop2301 8180 [Arduino Wir] Write Status 1
+2302 8183 [Arduino Wir] Write2 Status 2
+2303 8187 [Arduino Wir] Wire Loop2304 8191 [Arduino Wir] Write Status 1
+2305 8194 [Arduino Wir] Write2 Status 2
+2306 8198 [Arduino Wir] Wire Loop2307 8202 [Arduino Wir] Write Status 1
+2308 8205 [Arduino Wir] Write2 Status 2
+2309 8209 [Arduino Wir] Wire Loop2310 8212 [Arduino Wir] Write Status 1
+2311 8216 [Arduino Wir] Write2 Status 2
+2312 8219 [Arduino Wir] Wire Loop2313 8223 [Arduino Wir] Write Status 1
+2314 8227 [Arduino Wir] Write2 Status 2
+2315 8230 [Arduino Wir] Wire Loop2316 8234 [Arduino Wir] Write Status 1
+2317 8237 [Arduino Wir] Write2 Status 2
+2318 8241 [Arduino Wir] Wire Loop2319 8245 [Arduino Wir] Write Status 1
+2320 8248 [Arduino Wir] Write2 Status 2
+2321 8252 [Arduino Wir] Wire Loop2322 8256 [Arduino Wir] Write Status 1
+2323 8259 [Arduino Wir] Write2 Status 2
+2324 8263 [Arduino Wir] Wire Loop2325 8267 [Arduino Wir] Write Status 1
+2326 8270 [Arduino Wir] Write2 Status 2
+2327 8274 [Arduino Wir] Wire Loop2328 8277 [Arduino Wir] Write Status 1
+2329 8281 [Arduino Wir] Write2 Status 2
+2330 8284 [Arduino Wir] Wire Loop2331 8288 [Arduino Wir] Write Status 1
+2332 8292 [Arduino Wir] Write2 Status 2
+2333 8295 [Arduino Wir] Wire Loop2334 8299 [Arduino Wir] Write Status 1
+2335 8302 [Arduino Wir] Write2 Status 2
+2336 8306 [Arduino Wir] Wire Loop2337 8310 [Arduino Wir] Write Status 1
+2338 8313 [Arduino Wir] Write2 Status 2
+2339 8317 [Arduino Wir] Wire Loop2340 8321 [Arduino Wir] Write Status 1
+2341 8324 [Arduino Wir] Write2 Status 2
+2342 8328 [Arduino Wir] Wire Loop2343 8332 [Arduino Wir] Write Status 1
+2344 8335 [Arduino Wir] Write2 Status 2
+2345 8339 [Arduino Wir] Wire Loop2346 8343 [Arduino Wir] Write Status 1
+2347 8346 [Arduino Wir] Write2 Status 2
+2348 8349 [Arduino Wir] Wire Loop2349 8353 [Arduino Wir] Write Status 1
+2350 8357 [Arduino Wir] Write2 Status 2
+2351 8360 [Arduino Wir] Wire Loop2352 8364 [Arduino Wir] Write Status 1
+2353 8367 [Arduino Wir] Write2 Status 2
+2354 8371 [Arduino Wir] Wire Loop2355 8375 [Arduino Wir] Write Status 1
+2356 8378 [Arduino Wir] Write2 Status 2
+2357 8382 [Arduino Wir] Wire Loop2358 8386 [Arduino Wir] Write Status 1
+2359 8389 [Arduino Wir] Write2 Status 2
+2360 8393 [Arduino Wir] Wire Loop2361 8397 [Arduino Wir] Write Status 1
+2362 8400 [Arduino Wir] Write2 Status 2
+2363 8404 [Arduino Wir] Wire Loop2364 8408 [Arduino Wir] Write Status 1
+2365 8411 [Arduino Wir] Write2 Status 2
+2366 8414 [Arduino Wir] Wire Loop2367 8418 [Arduino Wir] Write Status 1
+2368 8422 [Arduino Wir] Write2 Status 2
+2369 8425 [Arduino Wir] Wire Loop2370 8429 [Arduino Wir] Write Status 1
+2371 8432 [Arduino Wir] Write2 Status 2
+2372 8436 [Arduino Wir] Wire Loop2373 8440 [Arduino Wir] Write Status 1
+2374 8443 [Arduino Wir] Write2 Status 2
+2375 8447 [Arduino Wir] Wire Loop2376 8451 [Arduino Wir] Write Status 1
+2377 8454 [Arduino Wir] Write2 Status 2
+2378 8458 [Arduino Wir] Wire Loop2379 8462 [Arduino Wir] Write Status 1
+2380 8465 [Arduino Wir] Write2 Status 2
+2381 8469 [Arduino Wir] Wire Loop2382 8473 [Arduino Wir] Write Status 1
+2383 8476 [Arduino Wir] Write2 Status 2
+2384 8480 [Arduino Wir] Wire Loop2385 8483 [Arduino Wir] Write Status 1
+2386 8487 [Arduino Wir] Write2 Status 2
+2387 8490 [Arduino Wir] Wire Loop2388 8494 [Arduino Wir] Write Status 1
+2389 8497 [Arduino Wir] Write2 Status 2
+2390 8501 [Arduino Wir] Wire Loop2391 8505 [Arduino Wir] Write Status 1
+2392 8508 [Arduino Wir] Write2 Status 2
+2393 8512 [Arduino Wir] Wire Loop2394 8516 [Arduino Wir] Write Status 1
+2395 8519 [Arduino Wir] Write2 Status 2
+2396 8523 [Arduino Wir] Wire Loop2397 8527 [Arduino Wir] Write Status 1
+2398 8530 [Arduino Wir] Write2 Status 2
+2399 8534 [Arduino Wir] Wire Loop2400 8538 [Arduino Wir] Write Status 1
+2401 8541 [Arduino Wir] Write2 Status 2
+2402 8545 [Arduino Wir] Wire Loop2403 8548 [Arduino Wir] Write Status 1
+2404 8552 [Arduino Wir] Write2 Status 2
+2405 8555 [Arduino Wir] Wire Loop2406 8559 [Arduino Wir] Write Status 1
+2407 8562 [Arduino Wir] Write2 Status 2
+2408 8566 [Arduino Wir] Wire Loop2409 8570 [Arduino Wir] Write Status 1
+2410 8573 [Arduino Wir] Write2 Status 2
+2411 8577 [Arduino Wir] Wire Loop2412 8581 [Arduino Wir] Write Status 1
+2413 8584 [Arduino Wir] Write2 Status 2
+2414 8588 [Arduino Wir] Wire Loop2415 8592 [Arduino Wir] Write Status 1
+2416 8595 [Arduino Wir] Write2 Status 2
+2417 8599 [Arduino Wir] Wire Loop2418 8603 [Arduino Wir] Write Status 1
+2419 8606 [Arduino Wir] Write2 Status 2
+2420 8610 [Arduino Wir] Wire Loop2421 8613 [Arduino Wir] Write Status 1
+2422 8617 [Arduino Wir] Write2 Status 2
+2423 8620 [Arduino Wir] Wire Loop2424 8624 [Arduino Wir] Write Status 1
+2425 8627 [Arduino Wir] Write2 Status 2
+2426 8631 [Arduino Wir] Wire Loop2427 8635 [Arduino Wir] Write Status 1
+2428 8638 [Arduino Wir] Write2 Status 2
+2429 8642 [Arduino Wir] Wire Loop2430 8646 [Arduino Wir] Write Status 1
+2431 8649 [Arduino Wir] Write2 Status 2
+2432 8653 [Arduino Wir] Wire Loop2433 8657 [Arduino Wir] Write Status 1
+2434 8660 [Arduino Wir] Write2 Status 2
+2435 8664 [Arduino Wir] Wire Loop2436 8668 [Arduino Wir] Write Status 1
+2437 8671 [Arduino Wir] Write2 Status 2
+2438 8675 [Arduino Wir] Wire Loop2439 8678 [Arduino Wir] Write Status 1
+2440 8682 [Arduino Wir] Write2 Status 2
+2441 8685 [Arduino Wir] Wire Loop2442 8689 [Arduino Wir] Write Status 1
+2443 8692 [Arduino Wir] Write2 Status 2
+2444 8696 [Arduino Wir] Wire Loop2445 8700 [Arduino Wir] Write Status 1
+2446 8703 [Arduino Wir] Write2 Status 2
+2447 8707 [Arduino Wir] Wire Loop2448 8711 [Arduino Wir] Write Status 1
+2449 8714 [Arduino Wir] Write2 Status 2
+2450 8718 [Arduino Wir] Wire Loop2451 8722 [Arduino Wir] Write Status 1
+2452 8725 [Arduino Wir] Write2 Status 2
+2453 8729 [Arduino Wir] Wire Loop2454 8733 [Arduino Wir] Write Status 1
+2455 8736 [Arduino Wir] Write2 Status 2
+2456 8740 [Arduino Wir] Wire Loop2457 8743 [Arduino Wir] Write Status 1
+2458 8747 [Arduino Wir] Write2 Status 2
+2459 8750 [Arduino Wir] Wire Loop2460 8754 [Arduino Wir] Write Status 1
+2461 8757 [Arduino Wir] Write2 Status 2
+2462 8761 [Arduino Wir] Wire Loop2463 8765 [Arduino Wir] Write Status 1
+2464 8768 [Arduino Wir] Write2 Statu0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] START OF PROGRAM2 7 [Arduino Wir] Read1 Status 0
+3 7 [Arduino Wir] Read1 Status 0
+4 7 [Arduino Wir] Read1 Status 0
+5 7 [Arduino Wir] Read1 Status 0
+6 8 [Arduino Wir] Read1 Status 0
+7 8 [Arduino Wir] Read1 Status 0
+8 8 [Arduino Wir] Read1 Status 0
+9 8 [Arduino Wir] Read1 Status 0
+10 8 [Arduino Wir] Read1 Status 0
+11 8 [Arduino Wir] Read1 Status 0
+12 8 [Arduino Wir] Read1 Status 0
+13 9 [Arduino Wir] Read1 Status 0
+14 9 [Arduino Wir] Read1 Status 0
+15 9 [Arduino Wir] Read1 Status 0
+16 9 [Arduino Wir] Read1 Status 0
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] START OF PROGRAM0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] START OF PROGRAM
