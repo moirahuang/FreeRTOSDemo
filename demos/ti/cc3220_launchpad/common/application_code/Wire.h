@@ -11,7 +11,6 @@
 #define TwoWire_h
 
 #include <inttypes.h>
-//#include "Stream.h"
 
 #define BUFFER_LENGTH 32
 
@@ -22,8 +21,8 @@
 #include <inttypes.h>
 #include "iot_i2c.h"
 void Wire_begin();
-//void begin(uint8_t);
-//void begin(int);
+void begin(uint8_t);
+void begin(int);
 void Wire_end();
 //void setClock(uint32_t);
 void Wire_beginTransmission(uint8_t);
