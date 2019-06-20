@@ -12,7 +12,6 @@
 #include "iot_i2c.h"
 #include "FreeRTOS.h"
 #include "semphr.h"
-#include "LinkedList.c"
 
 typedef struct I2CTrasanctionContext
 {
@@ -50,33 +49,6 @@ void Wire_end()
     iot_i2c_close( transactionContext.handle );
 }
 
-void Wire_beginTransmission(uint8_t addr)
-{
-    iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
-
-    if(transactionContext.error == IOT_I2C_SUCCESS)
-    {
-        IotI2CIoctlConfig_t config = {100000, 100000};
-
-        uint32_t error = iot_i2c_ioctl( transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr );
-
-        if(error != IOT_I2C_SUCCESS)
-        {
-            transactionContext.error = error;
-
-            return;
-        }
-
-        error = iot_i2c_ioctl( transactionContext.handle, eI2CSetMasterConfig, &config);
-
-        if(error != IOT_I2C_SUCCESS)
-        {
-            transactionContext.error = error;
-
-            return;
-        }
-    }
-}
 void Wire_beginTransmission(int addr)
 {
     iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
@@ -104,6 +76,33 @@ void Wire_beginTransmission(int addr)
         }
     }
 }
+//void Wire_beginTransmission(uint8_t addr)
+//{
+//    iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
+//
+//    if(transactionContext.error == IOT_I2C_SUCCESS)
+//    {
+//        IotI2CIoctlConfig_t config = {100000, 100000};
+//
+//        uint32_t error = iot_i2c_ioctl( transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr );
+//
+//        if(error != IOT_I2C_SUCCESS)
+//        {
+//            transactionContext.error = error;
+//
+//            return;
+//        }
+//
+//        error = iot_i2c_ioctl( transactionContext.handle, eI2CSetMasterConfig, &config );
+//
+//        if(error != IOT_I2C_SUCCESS)
+//        {
+//            transactionContext.error = error;
+//
+//            return;
+//        }
+//    }
+//}
 
 uint8_t Wire_endTransmission(void)
 {
