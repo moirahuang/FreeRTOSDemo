@@ -226,3 +226,13 @@ int32_t iot_i2c_cancel( IotI2CHandle_t const pxI2CPeripheral );
 /* end of group iot_i2c */
 
 #endif /* ifndef _IOT_I2C_H_ */
+
+/**
+ * @brief This function is used to set the frequency before the handle is opened
+ *
+ * @param[in] pxI2CPeripheral The I2C handle returned in open() call.
+ *            pvBuffer The frequency value to be set
+ *
+ */
+void setFrequency( IotI2CHandle_t const pxI2CPeripheral,
+                   void * const pvBuffer );

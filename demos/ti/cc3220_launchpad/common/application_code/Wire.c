@@ -49,6 +49,11 @@ void Wire_end()
     iot_i2c_close( transactionContext.handle );
 }
 
+void Wire_setClock(uint32_t speed)
+{
+    setFrequency( transactionContext.handle, (void *)&speed );
+}
+
 void Wire_beginTransmission(int addr)
 {
     iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );

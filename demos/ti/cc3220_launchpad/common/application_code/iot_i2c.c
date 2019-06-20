@@ -412,3 +412,13 @@ static I2C_BitRate FrequencyToBitRate( uint32_t frequency )
 
     return ebitRate;
 }
+
+void setFrequency( IotI2CHandle_t const pxI2CPeripheral,
+                          void * const pvBuffer )
+{
+    IotI2CDescriptor_t * pDescriptor = ( IotI2CDescriptor_t * ) pxI2CPeripheral;
+
+    IotI2CConfig_t * config = ( IotI2CConfig_t * )pvBuffer;
+
+    pDescriptor->params.bitRate = FrequencyToBitRate( config->ulBusFreq );
+}
