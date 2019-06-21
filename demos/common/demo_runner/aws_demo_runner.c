@@ -44,13 +44,22 @@ extern void vStartMQTTEchoDemo( void );
 void SensorsLoop( void * context )
 {
     Wire_begin();
-    Wire_beginTransmission(0x18);
-    int write = Wire_write(8);
-    configPRINTF(("Write Status %d\r\n", write));
+    Wire_beginTransmission(0x41);
+
+    //int write = Wire_write(8);
+
+    for (; ; )
+    {
+        Wire_requestFrom( 0x41, 1 );
+
+        int val = Wire_read();
+
+        configPRINTF(("Read value '%d'\r\n", val));
+
+        vTaskDelay( 100 );
+    }
+
     Wire_endTransmission();
-    Wire_requestFrom(0x18, 1);
-    int val = Wire_read();
-    configPRINTF(("Read1 Status %d\r\n", val));
 }
 
 /**

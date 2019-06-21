@@ -67,7 +67,7 @@ IotI2CDescriptor_t i2cInstances[ I2C_INSTANCES ] = { { 0, NULL, { 0 }, { 0 }, NU
 /**
  * The internal callback from native driver implementation.
  */
-static void I2C_CallbackInternal(I2C_Handle handle, I2C_Transaction *transaction, bool transferStatus)
+static void I2C_CallbackInternal( I2C_Handle handle, I2C_Transaction * transaction, bool transferStatus )
 {
     IotI2CHandle_t pDescriptor = NULL;
 
@@ -83,7 +83,7 @@ static void I2C_CallbackInternal(I2C_Handle handle, I2C_Transaction *transaction
 
     if( pDescriptor != NULL && pDescriptor->userCallback )
     {
-        pDescriptor->userCallback( pDescriptor );
+        pDescriptor->userCallback( NULL );
     }
 }
 
