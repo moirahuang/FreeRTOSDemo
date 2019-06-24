@@ -46,7 +46,7 @@ void Wire_CallbackInternal( void * context )
 }
 /* ------------------------------------------------------------------------ */
 
-void Wire_begin()
+void begin()
 {
     IotI2CHandle_t handle = iot_i2c_open(0);
 
@@ -57,17 +57,17 @@ void Wire_begin()
     iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
 }
 
-void Wire_end()
+void end()
 {
     iot_i2c_close( transactionContext.handle );
 }
 
-void Wire_setClock(uint32_t speed)
+void setClock(uint32_t speed)
 {
     setFrequency( transactionContext.handle, (void *)&speed );
 }
 
-void Wire_beginTransmission(int addr)
+void beginTransmission(int addr)
 {
     iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
 
@@ -122,7 +122,7 @@ void Wire_beginTransmission(int addr)
 //    }
 //}
 
-uint8_t Wire_endTransmission(void)
+uint8_t endTransmission(void)
 {
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {
@@ -137,7 +137,7 @@ uint8_t Wire_endTransmission(void)
 }
 
 
-size_t Wire_write(uint8_t val)
+size_t write(uint8_t val)
 {
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {
@@ -153,7 +153,7 @@ size_t Wire_write(uint8_t val)
     return 0;
 }
 
-int Wire_read()
+int read()
 {
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {
@@ -178,7 +178,7 @@ int Wire_read()
     return -1;
 }
 
-uint8_t Wire_requestFrom( uint8_t opt, uint8_t num )
+uint8_t requestFrom( uint8_t opt, uint8_t num )
 {
     iot_i2c_ioctl( transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&opt );
 
@@ -216,7 +216,7 @@ uint8_t Wire_requestFrom( uint8_t opt, uint8_t num )
     return 0;
 }
 
-int Wire_available(void)
+int available(void)
 {
     return transactionContext.available;
 }

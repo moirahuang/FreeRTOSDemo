@@ -43,23 +43,23 @@ extern void vStartMQTTEchoDemo( void );
 
 void SensorsLoop( void * context )
 {
-    Wire_begin();
-    Wire_beginTransmission(0x41);
+    begin();
+    beginTransmission(0x41);
 
     //int write = Wire_write(8);
 
     for (; ; )
     {
-        Wire_requestFrom( 0x41, 1 );
+        requestFrom( 0x41, 4 );
 
-        int val = Wire_read();
+        int val = read();
 
         configPRINTF(("Read value '%d'\r\n", val));
 
         vTaskDelay( 100 );
     }
 
-    Wire_endTransmission();
+    endTransmission();
 }
 
 /**
@@ -67,7 +67,7 @@ void SensorsLoop( void * context )
  */
 void DEMO_RUNNER_RunDemos( void )
 {
-    //vStartMQTTEchoDemo();
+    vStartMQTTEchoDemo();
 
     ( void ) xTaskCreate( SensorsLoop,          /* The function that implements the demo task. */
                           "Arduino Wire Loop",  /* The name to assign to the task being created. */
