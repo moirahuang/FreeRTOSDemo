@@ -106,7 +106,7 @@
  * @brief Dimension of the character array buffers used to hold data (strings in
  * this case) that is published to and received from the MQTT broker (in the cloud).
  */
-#define echoMAX_DATA_LENGTH      20
+#define echoMAX_DATA_LENGTH      25
 
 /**
  * @brief A block time of 0 simply means "don't block".
@@ -142,7 +142,7 @@ static BaseType_t prvCreateClientAndConnectToBroker( void );
  *
  * @param[in] xMessageNumber Appended to the message to make it unique.
  */
-static void prvPublishNextMessage( BaseType_t xMessageNumber );
+void prvPublishNextMessage( char* message, double val );
 
 /**
  * @brief The callback registered with the MQTT client to get notified when
@@ -200,7 +200,7 @@ static BaseType_t prvCreateClientAndConnectToBroker( void )
     };
 
     /* Check this function has not already been executed. */
-    configASSERT( xMQTTHandle == NULL );
+//    configASSERT( xMQTTHandle == NULL );
 
     /* The MQTT client object must be created before it can be used.  The
      * maximum number of MQTT client objects that can exist simultaneously
@@ -237,7 +237,7 @@ static BaseType_t prvCreateClientAndConnectToBroker( void )
 }
 /*-----------------------------------------------------------*/
 
-static void prvPublishNextMessage( BaseType_t xMessageNumber )
+void prvPublishNextMessage( char* message, double val )
 {
     MQTTAgentPublishParams_t xPublishParameters;
     MQTTAgentReturnCode_t xReturned;
@@ -245,12 +245,12 @@ static void prvPublishNextMessage( BaseType_t xMessageNumber )
 
     /* Check this function is not being called before the MQTT client object has
      * been created. */
-    configASSERT( xMQTTHandle != NULL );
+//    configASSERT( xMQTTHandle != NULL );
 
     /* Create the message that will be published, which is of the form "Hello World n"
      * where n is a monotonically increasing number. Note that snprintf appends
      * terminating null character to the cDataBuffer. */
-    ( void ) snprintf( cDataBuffer, echoMAX_DATA_LENGTH, "Hello World %d", ( int ) xMessageNumber );
+    ( void ) snprintf( cDataBuffer, echoMAX_DATA_LENGTH, message, val );
 
     /* Setup the publish parameters. */
     memset( &( xPublishParameters ), 0x00, sizeof( xPublishParameters ) );
@@ -290,8 +290,8 @@ static void prvMessageEchoingTask( void * pvParameters )
     ( void ) pvParameters;
 
     /* Check this task has not already been created. */
-    configASSERT( xMQTTHandle != NULL );
-    configASSERT( xEchoMessageBuffer != NULL );
+//    configASSERT( xMQTTHandle != NULL );
+//    configASSERT( xEchoMessageBuffer != NULL );
 
     /* Setup the publish parameters. */
     xPublishParameters.pucTopic = echoTOPIC_NAME;
@@ -388,9 +388,9 @@ static MQTTBool_t prvMQTTCallback( void * pvUserData,
     /* Remove warnings about the unused parameters. */
     ( void ) pvUserData;
 
-    /* Don't expect the callback to be invoked for any other topics. */
-    configASSERT( ( size_t ) ( pxPublishParameters->usTopicLength ) == strlen( ( const char * ) echoTOPIC_NAME ) );
-    configASSERT( memcmp( pxPublishParameters->pucTopic, echoTOPIC_NAME, ( size_t ) ( pxPublishParameters->usTopicLength ) ) == 0 );
+//    /* Don't expect the callback to be invoked for any other topics. */
+//    configASSERT( ( size_t ) ( pxPublishParameters->usTopicLength ) == strlen( ( const char * ) echoTOPIC_NAME ) );
+//    configASSERT( memcmp( pxPublishParameters->pucTopic, echoTOPIC_NAME, ( size_t ) ( pxPublishParameters->usTopicLength ) ) == 0 );
 
     /* THe ulBytesToCopy has already been initialized to ensure it does not copy
      * more bytes than will fit in the buffer.  Now check it does not copy more
@@ -478,18 +478,18 @@ static void prvMQTTConnectAndPublishTask( void * pvParameters )
         xReturned = prvSubscribe();
     }
 
-    if( xReturned == pdPASS )
-    {
-        /* MQTT client is now connected to a broker.  Publish a message
-         * every five seconds until a minute has elapsed. */
-        for( xX = 0; xX < xIterationsInAMinute; xX++ )
-        {
-            prvPublishNextMessage( xX );
-
-            /* Five seconds delay between publishes. */
-            vTaskDelay( xFiveSeconds );
-        }
-    }
+//    if( xReturned == pdPASS )
+//    {
+//        /* MQTT client is now connected to a broker.  Publish a message
+//         * every five seconds until a minute has elapsed. */
+//        for( xX = 0; xX < xIterationsInAMinute; xX++ )
+//        {
+//            prvPublishNextMessage( xX );
+//
+//            /* Five seconds delay between publishes. */
+//            vTaskDelay( xFiveSeconds );
+//        }
+//    }
 
     /* Disconnect the client. */
     ( void ) MQTT_AGENT_Disconnect( xMQTTHandle, democonfigMQTT_TIMEOUT );
@@ -513,7 +513,7 @@ void vStartMQTTEchoDemo( void )
      * published every 5 seconds.  The message buffer requires that there is space
      * for the message length, which is held in a size_t variable. */
     xEchoMessageBuffer = xMessageBufferCreate( ( size_t ) echoMAX_DATA_LENGTH + sizeof( size_t ) );
-    configASSERT( xEchoMessageBuffer );
+//    configASSERT( xEchoMessageBuffer );
 
     /* Create the task that publishes messages to the MQTT broker every five
      * seconds.  This task, in turn, creates the task that echoes data received

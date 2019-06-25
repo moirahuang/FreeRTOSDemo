@@ -178,9 +178,9 @@ int read()
     return -1;
 }
 
-uint8_t requestFrom( uint8_t opt, uint8_t num )
+uint8_t requestFrom( uint8_t addr, uint8_t num )
 {
-    iot_i2c_ioctl( transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&opt );
+    iot_i2c_ioctl( transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr );
 
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {

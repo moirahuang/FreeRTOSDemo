@@ -28,6 +28,8 @@
 
 #include "aws_demo.h"
 
+void prvPublishNextMessage(char*, double);
+
 demoDECLARE_DEMO( vStartMQTTEchoDemo );
 
 #endif

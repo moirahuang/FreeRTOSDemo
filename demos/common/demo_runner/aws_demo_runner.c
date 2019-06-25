@@ -35,6 +35,7 @@
 #define OPT_ADDR 0x18
 
 #include "Wire.h"
+#include "aws_hello_world.h"
 
 /* Demo declarations. */
 extern void vStartMQTTEchoDemo( void );
@@ -44,19 +45,26 @@ extern void vStartMQTTEchoDemo( void );
 void SensorsLoop( void * context )
 {
     begin();
+
     beginTransmission(0x41);
 
-    //int write = Wire_write(8);
+    write(2);
+    requestFrom( 0x41, 2 );
+    endTransmission();
+
+    beginTransmission(0x41);
+
+    write(1);
 
     for (; ; )
     {
-        requestFrom( 0x41, 4 );
+        requestFrom( 0x41, 2 );
 
-        int val = read();
+        int val = ((read() << 8) + read()) >> 2;
+        prvPublishNextMessage("Read value '%lf'\r\n", val/32.0);
+        configPRINTF(("Read value '%lf'\r\n", val/32.0));
 
-        configPRINTF(("Read value '%d'\r\n", val));
-
-        vTaskDelay( 100 );
+        vTaskDelay( 1000 );
     }
 
     endTransmission();
