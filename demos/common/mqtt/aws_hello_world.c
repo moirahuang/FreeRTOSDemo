@@ -113,6 +113,7 @@
  */
 #define echoDONT_BLOCK           ( ( TickType_t ) 0 )
 
+#define newMessage   false
 /*-----------------------------------------------------------*/
 
 /**
@@ -124,7 +125,7 @@
  * @param[in] pvParameters Parameters passed while creating the task. Unused in our
  * case.
  */
-static void prvMQTTConnectAndPublishTask( void * pvParameters );
+static void prvMQTTConnectAndPublishTask( void * pvParameters, char* message, double val );
 
 /**
  * @brief Creates an MQTT client and then connects to the MQTT broker.
@@ -245,7 +246,7 @@ void prvPublishNextMessage( char* message, double val )
 
     /* Check this function is not being called before the MQTT client object has
      * been created. */
-//    configASSERT( xMQTTHandle != NULL );
+    configASSERT( xMQTTHandle != NULL );
 
     /* Create the message that will be published, which is of the form "Hello World n"
      * where n is a monotonically increasing number. Note that snprintf appends
@@ -389,8 +390,8 @@ static MQTTBool_t prvMQTTCallback( void * pvUserData,
     ( void ) pvUserData;
 
 //    /* Don't expect the callback to be invoked for any other topics. */
-//    configASSERT( ( size_t ) ( pxPublishParameters->usTopicLength ) == strlen( ( const char * ) echoTOPIC_NAME ) );
-//    configASSERT( memcmp( pxPublishParameters->pucTopic, echoTOPIC_NAME, ( size_t ) ( pxPublishParameters->usTopicLength ) ) == 0 );
+    configASSERT( ( size_t ) ( pxPublishParameters->usTopicLength ) == strlen( ( const char * ) echoTOPIC_NAME ) );
+    configASSERT( memcmp( pxPublishParameters->pucTopic, echoTOPIC_NAME, ( size_t ) ( pxPublishParameters->usTopicLength ) ) == 0 );
 
     /* THe ulBytesToCopy has already been initialized to ensure it does not copy
      * more bytes than will fit in the buffer.  Now check it does not copy more
@@ -433,7 +434,7 @@ static MQTTBool_t prvMQTTCallback( void * pvUserData,
 }
 /*-----------------------------------------------------------*/
 
-static void prvMQTTConnectAndPublishTask( void * pvParameters )
+static void prvMQTTConnectAndPublishTask( void * pvParameters, char* message, double val )
 {
     BaseType_t xX;
     BaseType_t xReturned;
@@ -447,28 +448,28 @@ static void prvMQTTConnectAndPublishTask( void * pvParameters )
     /* Create the MQTT client object and connect it to the MQTT broker. */
     xReturned = prvCreateClientAndConnectToBroker();
 
-    if( xReturned == pdPASS )
-    {
-        /* Create the task that echoes data received in the callback back to the
-         * MQTT broker. */
-        xReturned = xTaskCreate( prvMessageEchoingTask,               /* The function that implements the task. */
-                                 "Echoing",                           /* Human readable name for the task. */
-                                 democonfigMQTT_ECHO_TASK_STACK_SIZE, /* Size of the stack to allocate for the task, in words not bytes! */
-                                 NULL,                                /* The task parameter is not used. */
-                                 tskIDLE_PRIORITY,                    /* Runs at the lowest priority. */
-                                 &( xEchoingTask ) );                 /* The handle is stored so the created task can be deleted again at the end of the demo. */
-
-        if( xReturned != pdPASS )
-        {
-            /* The task could not be created because there was insufficient FreeRTOS
-             * heap available to create the task's data structures and/or stack. */
-            configPRINTF( ( "MQTT echoing task could not be created - out of heap space?\r\n" ) );
-        }
-    }
-    else
-    {
-        configPRINTF( ( "MQTT echo test could not connect to broker.\r\n" ) );
-    }
+//    if( xReturned == pdPASS )
+//    {
+//        /* Create the task that echoes data received in the callback back to the
+//         * MQTT broker. */
+//        xReturned = xTaskCreate( prvMessageEchoingTask,               /* The function that implements the task. */
+//                                 "Echoing",                           /* Human readable name for the task. */
+//                                 democonfigMQTT_ECHO_TASK_STACK_SIZE, /* Size of the stack to allocate for the task, in words not bytes! */
+//                                 NULL,                                /* The task parameter is not used. */
+//                                 tskIDLE_PRIORITY,                    /* Runs at the lowest priority. */
+//                                 &( xEchoingTask ) );                 /* The handle is stored so the created task can be deleted again at the end of the demo. */
+//
+//        if( xReturned != pdPASS )
+//        {
+//            /* The task could not be created because there was insufficient FreeRTOS
+//             * heap available to create the task's data structures and/or stack. */
+//            configPRINTF( ( "MQTT echoing task could not be created - out of heap space?\r\n" ) );
+//        }
+//    }
+//    else
+//    {
+//        configPRINTF( ( "MQTT echo test could not connect to broker.\r\n" ) );
+//    }
 
     if( xReturned == pdPASS )
     {
@@ -478,18 +479,10 @@ static void prvMQTTConnectAndPublishTask( void * pvParameters )
         xReturned = prvSubscribe();
     }
 
-//    if( xReturned == pdPASS )
-//    {
-//        /* MQTT client is now connected to a broker.  Publish a message
-//         * every five seconds until a minute has elapsed. */
-//        for( xX = 0; xX < xIterationsInAMinute; xX++ )
-//        {
-//            prvPublishNextMessage( xX );
-//
-//            /* Five seconds delay between publishes. */
-//            vTaskDelay( xFiveSeconds );
-//        }
-//    }
+   while(true)
+    {
+
+    }
 
     /* Disconnect the client. */
     ( void ) MQTT_AGENT_Disconnect( xMQTTHandle, democonfigMQTT_TIMEOUT );
@@ -526,3 +519,4 @@ void vStartMQTTEchoDemo( void )
                           NULL );                              /* Not storing the task's handle. */
 }
 /*-----------------------------------------------------------*/
+
