@@ -45,24 +45,78 @@ extern void vStartMQTTEchoDemo( void );
 void SensorsLoop( void * context )
 {
     begin();
-
     beginTransmission(0x41);
 
-    write(2);
-    requestFrom( 0x41, 2 );
-    endTransmission();
+    //check if available to read yet
+    int dataReady = 0;
+    while (dataReady == 0)
+    {
+        //need to check which address???
+        write(2);
+        requestFrom(0x41, 2);
+        read();
+        int dataReady = ((read() >> 7)) & 1;
+        configPRINTF(("Read 2 value '%d'\r\n", dataReady));
+        if (dataReady == 1)
+        {
+            break;
+        }
+    }
 
+    //@cobus written, but don't i need to get the 7th bit?
+//    write(2);
+//    requestFrom( 0x41, 2 );
+//    endTransmission();
+
+    //start reading from register 1
     beginTransmission(0x41);
-
     write(1);
 
-    for (; ; )
+    int i = 0;
+    for ( i = 0; i < 2 ; i++ )
     {
-        requestFrom( 0x41, 2 );
+        int requestResult = requestFrom( 0x41, 2 );
 
-        int val = ((read() << 8) + read()) >> 2;
+        int high = read();
+        int low = read();
+        int val = ((high << 8) + low) >> 2;
         prvPublishNextMessage("Read value '%lf'\r\n", val/32.0);
         configPRINTF(("Read value '%lf'\r\n", val/32.0));
+
+        vTaskDelay( 1000 );
+    }
+
+    endTransmission();
+
+    //try doing the same for accelerometer
+    beginTransmission(0x18);
+
+    //seems to be register for x? read LSB register to unlock MSB
+    write(2);
+    requestFrom( 0x18, 6 );
+    i = 0;
+    for ( i = 0; i < 3 ; i++ )
+    {
+        int check = read();
+        if (check)
+        {
+            int val = read();
+            if (i == 0)
+            {
+                prvPublishNextMessage("Read x value '%lf'\r\n", val);
+                configPRINTF(("Read x value '%lf'\r\n", val));
+            }
+            if (i == 1)
+            {
+                prvPublishNextMessage("Read Y value '%lf'\r\n", val);
+                configPRINTF(("Read Y value '%lf'\r\n", val));
+            }
+            if (i == 2)
+            {
+                prvPublishNextMessage("Read z value '%lf'\r\n", val);
+                configPRINTF(("Read z value '%lf'\r\n", val));
+            }
+        }
 
         vTaskDelay( 1000 );
     }

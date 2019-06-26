@@ -153,7 +153,7 @@ size_t write(uint8_t val)
     return 0;
 }
 
-int read()
+uint8_t read()
 {
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {
@@ -161,7 +161,7 @@ int read()
         {
             configASSERT( transactionContext.bufferSize >= transactionContext.available );
 
-            int val = transactionContext.buffer[ transactionContext.bufferSize - transactionContext.available ];
+            uint8_t val = transactionContext.buffer[ transactionContext.bufferSize - transactionContext.available ];
 
             if( --transactionContext.available == 0)
             {
