@@ -233,7 +233,7 @@ int32_t iot_i2c_read_async( IotI2CHandle_t const pxI2CPeripheral,
     pxI2CPeripheral->transaction.readCount = xBytes;
 
     status = I2C_transfer( pxI2CPeripheral->handle, &pxI2CPeripheral->transaction );
-
+//    configPRINTF(("asyn %d\r\n", status));
     if (status == false)
     {
         readStatus = IOT_I2C_NACK;

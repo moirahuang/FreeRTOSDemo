@@ -45,9 +45,9 @@ extern void vStartMQTTEchoDemo( void );
 void SensorsLoop( void * context )
 {
     begin();
+
     beginTransmission(0x41);
 
-    //check if available to read yet
     int dataReady = 0;
     while (dataReady == 0)
     {
@@ -63,23 +63,19 @@ void SensorsLoop( void * context )
         }
     }
 
-    //@cobus written, but don't i need to get the 7th bit?
-//    write(2);
-//    requestFrom( 0x41, 2 );
-//    endTransmission();
+    endTransmission();
 
-    //start reading from register 1
     beginTransmission(0x41);
+
     write(1);
 
     int i = 0;
     for ( i = 0; i < 2 ; i++ )
     {
-        int requestResult = requestFrom( 0x41, 2 );
-
-        int high = read();
-        int low = read();
-        int val = ((high << 8) + low) >> 2;
+        int reqFrmVal = requestFrom( 0x41, 2 );
+        int upper = read();
+        int lower = read();
+        int val = ((upper << 8) + lower) >> 2;
         prvPublishNextMessage("Read value '%lf'\r\n", val/32.0);
         configPRINTF(("Read value '%lf'\r\n", val/32.0));
 
@@ -93,6 +89,8 @@ void SensorsLoop( void * context )
 
     //seems to be register for x? read LSB register to unlock MSB
     write(2);
+    for ( ; ; )
+    {
     requestFrom( 0x18, 6 );
     i = 0;
     for ( i = 0; i < 3 ; i++ )
@@ -117,11 +115,12 @@ void SensorsLoop( void * context )
                 configPRINTF(("Read z value '%lf'\r\n", val));
             }
         }
-
+    }
         vTaskDelay( 1000 );
     }
 
     endTransmission();
+
 }
 
 /**

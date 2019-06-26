@@ -28,7 +28,7 @@ typedef struct I2CTrasanctionContext
 
 I2CTransactionContext_t transactionContext = { 0 };
 
-#define WIRE_TRANSACTION_TIMEOUT 1000
+#define WIRE_TRANSACTION_TIMEOUT 10000
 
 #define WIRE_OK         ((uint8_t)0)
 #define WIRE_TOO_LONG   ((uint8_t)1)
@@ -159,6 +159,7 @@ uint8_t read()
     {
         if( transactionContext.available > 0 )
         {
+//            configPRINTF(("r %d\r\n", transactionContext.available));
             configASSERT( transactionContext.bufferSize >= transactionContext.available );
 
             uint8_t val = transactionContext.buffer[ transactionContext.bufferSize - transactionContext.available ];
@@ -174,6 +175,7 @@ uint8_t read()
             return val;
         }
     }
+    configPRINTF(("er \n\r"));
 
     return -1;
 }
@@ -191,6 +193,7 @@ uint8_t requestFrom( uint8_t addr, uint8_t num )
             transactionContext.buffer = NULL;
             transactionContext.bufferSize = 0;
             transactionContext.available = 0;
+
         }
 
         transactionContext.buffer = pvPortMalloc( num * sizeof( uint8_t) );
@@ -203,11 +206,15 @@ uint8_t requestFrom( uint8_t addr, uint8_t num )
 
             if( status == IOT_I2C_SUCCESS )
             {
-                if( xSemaphoreTake( transactionContext.semaphore, pdMS_TO_TICKS( WIRE_TRANSACTION_TIMEOUT ) == pdTRUE ))
+                if( xSemaphoreTake( transactionContext.semaphore, pdMS_TO_TICKS( WIRE_TRANSACTION_TIMEOUT)) == pdTRUE )
                 {
                     transactionContext.available = num;
-
+                    configPRINTF(("a \r\n"));
                     return num;
+                }
+                else
+                {
+                    configPRINTF(("timeout \r\n"));
                 }
             }
         }
