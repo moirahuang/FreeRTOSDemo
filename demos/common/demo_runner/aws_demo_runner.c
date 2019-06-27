@@ -51,7 +51,6 @@ void SensorsLoop( void * context )
     int dataReady = 0;
     while (dataReady == 0)
     {
-        //need to check which address???
         write(2);
         requestFrom(0x41, 2);
         read();
@@ -86,39 +85,41 @@ void SensorsLoop( void * context )
 
     //try doing the same for accelerometer
     beginTransmission(0x18);
-
+    write(15);
+    requestFrom( 0x18, 1 );
+    int range = read();
     //seems to be register for x? read LSB register to unlock MSB
     write(2);
     for ( ; ; )
     {
-    requestFrom( 0x18, 6 );
-    i = 0;
-    for ( i = 0; i < 3 ; i++ )
-    {
-        int check = read();
-        if (check)
+        requestFrom( 0x18, 6 );
+        i = 0;
+        for ( i = 0; i < 3 ; i++ )
         {
-            int val = read();
-            if (i == 0)
+            int check = read() & 1;
+            if (check)
             {
-                prvPublishNextMessage("Read x value '%lf'\r\n", val);
-                configPRINTF(("Read x value '%lf'\r\n", val));
+                double val = range * ((int8_t)read())/127.0;
+                if (i == 0)
+                {
+                    prvPublishNextMessage("Read x value %lf\r\n",  val);
+                    configPRINTF(("Read x value %lf\r\n", val));
+                }
+                if (i == 1)
+                {
+                    prvPublishNextMessage("Read Y value %lf\r\n", val);
+                    configPRINTF(("Read Y value %lf\r\n", val));
+                }
+                if (i == 2)
+                {
+                    prvPublishNextMessage("Read z value %lf\r\n", val);
+                    configPRINTF(("Read z value %lf\r\n", val));
+                }
             }
-            if (i == 1)
-            {
-                prvPublishNextMessage("Read Y value '%lf'\r\n", val);
-                configPRINTF(("Read Y value '%lf'\r\n", val));
-            }
-            if (i == 2)
-            {
-                prvPublishNextMessage("Read z value '%lf'\r\n", val);
-                configPRINTF(("Read z value '%lf'\r\n", val));
-            }
+
+            vTaskDelay( 1000 );
         }
     }
-        vTaskDelay( 1000 );
-    }
-
     endTransmission();
 
 }
@@ -137,7 +138,5 @@ void DEMO_RUNNER_RunDemos( void )
                           0,                    /* The priority at which the task being created will run. */
                           NULL                  /* Not storing the task handle. */
                           );
-
-
 
 }
