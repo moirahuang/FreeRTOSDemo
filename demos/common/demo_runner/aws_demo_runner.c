@@ -83,13 +83,16 @@ void SensorsLoop( void * context )
 
     endTransmission();
 
-    //try doing the same for accelerometer
     beginTransmission(0x18);
+
     write(15);
+
     requestFrom( 0x18, 1 );
+
     int range = read();
-    //seems to be register for x? read LSB register to unlock MSB
+
     write(2);
+
     for ( ; ; )
     {
         requestFrom( 0x18, 6 );
