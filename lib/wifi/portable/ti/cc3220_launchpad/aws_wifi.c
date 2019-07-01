@@ -980,7 +980,7 @@ WIFIReturnCode_t WIFI_Scan( WIFIScanResult_t * pxBuffer,
         if( xRetVal == eWiFiSuccess )
         {
             /* TI's compiler has a bug if you use array with variable length on stack, it will malloc without freeing it */
-            pxNetEntries = pvPortMalloc( sizeof( SlWlanNetworkEntry_t ) * ucNumNetworks );
+            pxNetEntries = (SlWlanNetworkEntry_t *) pvPortMalloc( sizeof( SlWlanNetworkEntry_t ) * ucNumNetworks );
 
             if( pxNetEntries != NULL )
             {

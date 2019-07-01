@@ -62,8 +62,7 @@ typedef struct IotI2CConfig
 
 #define I2C_INSTANCES                 ( 2 )
 
-IotI2CDescriptor_t i2cInstances[ I2C_INSTANCES ] = { { 0, NULL, { 0 }, { 0 }, NULL, NULL, false }, { 1, NULL, { 0 }, { 0 }, NULL, NULL, false } };
-
+IotI2CDescriptor_t i2cInstances[ I2C_INSTANCES ] =  { 0, NULL, { I2C_MODE_BLOCKING }, { 0 }, NULL, NULL, false };
 /**
  * The internal callback from native driver implementation.
  */

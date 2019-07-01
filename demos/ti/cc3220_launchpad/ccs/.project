@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><projectDescription>
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
 	<name>aws_demos</name>
-	<comment/>
+	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -79,7 +80,6 @@
 			<type>2</type>
 			<locationURI>BASE_DIR_ROOT/lib/bufferpool</locationURI>
 		</link>
-		
 		<link>
 			<name>lib/aws/include</name>
 			<type>2</type>
@@ -90,7 +90,6 @@
 			<type>2</type>
 			<locationURI>BASE_DIR_ROOT/lib/mqtt</locationURI>
 		</link>
-		
 		<link>
 			<name>lib/aws/pkcs11</name>
 			<type>2</type>
@@ -101,7 +100,6 @@
 			<type>2</type>
 			<locationURI>BASE_DIR_ROOT/lib/secure_sockets/portable/ti/cc3220_launchpad</locationURI>
 		</link>
-		
 		<link>
 			<name>lib/aws/utils</name>
 			<type>2</type>
@@ -112,7 +110,6 @@
 			<type>2</type>
 			<locationURI>BASE_DIR_ROOT/lib/wifi/portable/ti/cc3220_launchpad</locationURI>
 		</link>
-		
 		<link>
 			<name>lib/third_party/mbedtls</name>
 			<type>2</type>
@@ -128,7 +125,6 @@
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
-		
 		<link>
 			<name>application_code/common_demos/source/aws_demo_runner.c</name>
 			<type>1</type>
@@ -139,7 +135,6 @@
 			<type>1</type>
 			<locationURI>BASE_DIR_ROOT/demos/common/devmode_key_provisioning/aws_dev_mode_key_provisioning.c</locationURI>
 		</link>
-		
 		<link>
 			<name>application_code/common_demos/source/aws_hello_world.c</name>
 			<type>1</type>
@@ -150,11 +145,6 @@
 			<type>1</type>
 			<locationURI>BASE_DIR_ROOT/demos/common/logging/aws_logging_task_dynamic_buffers.c</locationURI>
 		</link>
-		
-		
-		
-		
-		
 		<link>
 			<name>lib/aws/FreeRTOS-Plus-POSIX/include</name>
 			<type>2</type>
@@ -165,8 +155,6 @@
 			<type>2</type>
 			<locationURI>BASE_DIR_ROOT/lib/FreeRTOS-Plus-POSIX/source</locationURI>
 		</link>
-		
-		
 		<link>
 			<name>lib/aws/pkcs11/aws_pkcs11_pal.c</name>
 			<type>1</type>

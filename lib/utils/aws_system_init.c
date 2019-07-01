@@ -22,10 +22,8 @@
  * http://aws.amazon.com/freertos
  * http://www.FreeRTOS.org
  */
-
 #include "FreeRTOS.h"
 #include "aws_system_init.h"
-
 /* Library code. */
 extern BaseType_t MQTT_AGENT_Init( void );
 extern BaseType_t BUFFERPOOL_Init( void );

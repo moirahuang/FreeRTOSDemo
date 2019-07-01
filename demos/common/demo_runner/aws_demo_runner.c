@@ -26,6 +26,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "aws_demo_runner.h"
+
 #include <stddef.h>
 // Import I2C Driver definitions
 #include <ti/drivers/I2C.h>
@@ -34,7 +35,7 @@
 // Define the slave address of device on the SENSORS bus
 #define OPT_ADDR 0x18
 
-#include "Wire.h"
+#include "WireAdaptor.h"
 #include "aws_hello_world.h"
 
 /* Demo declarations. */
@@ -44,17 +45,17 @@ extern void vStartMQTTEchoDemo( void );
 
 void SensorsLoop( void * context )
 {
-    begin();
+    Wire_begin();
 
-    beginTransmission(0x41);
+    Wire_beginTransmission(0x41);
 
     int dataReady = 0;
     while (dataReady == 0)
     {
-        write(2);
-        requestFrom(0x41, 2);
-        read();
-        int dataReady = ((read() >> 7)) & 1;
+        Wire_write(2);
+        Wire_requestFrom(0x41, 2);
+        Wire_read();
+        int dataReady = ((Wire_read() >> 7)) & 1;
         configPRINTF(("Read 2 value '%d'\r\n", dataReady));
         if (dataReady == 1)
         {
@@ -62,18 +63,18 @@ void SensorsLoop( void * context )
         }
     }
 
-    endTransmission();
+    Wire_endTransmission();
 
-    beginTransmission(0x41);
+    Wire_beginTransmission(0x41);
 
-    write(1);
+    Wire_write(1);
 
     int i = 0;
     for ( i = 0; i < 2 ; i++ )
     {
-        int reqFrmVal = requestFrom( 0x41, 2 );
-        int upper = read();
-        int lower = read();
+        int reqFrmVal = Wire_requestFrom( 0x41, 2 );
+        int upper = Wire_read();
+        int lower = Wire_read();
         int val = ((upper << 8) + lower) >> 2;
         prvPublishNextMessage("Read value '%lf'\r\n", val/32.0);
         configPRINTF(("Read value '%lf'\r\n", val/32.0));
@@ -81,28 +82,28 @@ void SensorsLoop( void * context )
         vTaskDelay( 1000 );
     }
 
-    endTransmission();
+    Wire_endTransmission();
 
-    beginTransmission(0x18);
+    Wire_beginTransmission(0x18);
 
-    write(15);
+    Wire_write(15);
 
-    requestFrom( 0x18, 1 );
+    Wire_requestFrom( 0x18, 1 );
 
-    int range = read();
+    int range = Wire_read();
 
-    write(2);
+    Wire_write(2);
 
     for ( ; ; )
     {
-        requestFrom( 0x18, 6 );
+        Wire_requestFrom( 0x18, 6 );
         i = 0;
         for ( i = 0; i < 3 ; i++ )
         {
-            int check = read() & 1;
+            int check = Wire_read() & 1;
             if (check)
             {
-                double val = range * ((int8_t)read())/127.0;
+                double val = range * ((int8_t)Wire_read())/127.0;
                 if (i == 0)
                 {
                     prvPublishNextMessage("Read x value %lf\r\n",  val);
@@ -123,7 +124,7 @@ void SensorsLoop( void * context )
             vTaskDelay( 1000 );
         }
     }
-    endTransmission();
+endTransmission();
 
 }
 

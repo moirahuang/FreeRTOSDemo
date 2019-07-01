@@ -29,7 +29,7 @@
  * 2) Go to the target tab.
  * 3) Ensure that check box 'Reset target on a connect' is selected.
  */
-
+extern "C" {
 /* Standard includes. */
 #include <stdint.h>
 #include <stdio.h>
@@ -69,7 +69,7 @@
 
 /* Application version info. */
 #include "aws_application_version.h"
-
+}
 /* Declare the firmware version structure for all to see. */
 const AppVersion32_t xAppFirmwareVersion =
 {
@@ -84,11 +84,25 @@ const AppVersion32_t xAppFirmwareVersion =
 /* The task delay for allowing the lower priority logging task to print out Wi-Fi
  * failure status before blocking indefinitely. */
 #define mainLOGGING_WIFI_STATUS_DELAY       pdMS_TO_TICKS( 1000 )
-
+extern "C"{
 void vApplicationDaemonTaskStartupHook( void );
 static void prvWifiConnect( void );
 static CK_RV prvProvisionRootCA( void );
 static void prvShowTiCc3220SecurityAlertCounts( void );
+void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer,
+                                    StackType_t ** ppxIdleTaskStackBuffer,
+                                    uint32_t * pulIdleTaskStackSize );
+void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer,
+                                    StackType_t ** ppxIdleTaskStackBuffer,
+                                    uint32_t * pulIdleTaskStackSize );
+void vApplicationGetTimerTaskMemory( StaticTask_t ** ppxTimerTaskTCBBuffer,
+                                     StackType_t ** ppxTimerTaskStackBuffer,
+                                     uint32_t * pulTimerTaskStackSize );
+void vApplicationStackOverflowHook( TaskHandle_t xTask,
+                                    char * pcTaskName );
+void vApplicationMallocFailedHook();
+
+}
 
 /**
  * @brief Performs board and logging initializations, then starts the OS.
@@ -223,7 +237,7 @@ CK_RV prvProvisionRootCA( void )
                 xResult = xProvisionCertificate( xSessionHandle,
                                                  pucRootCA,
                                                  ulRootCALength,
-                                                 pkcs11configLABEL_ROOT_CERTIFICATE,
+                                                 (uint8_t*) pkcs11configLABEL_ROOT_CERTIFICATE,
                                                  &xCertificateHandle );
         }
 
@@ -370,6 +384,7 @@ void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer,
 /* configUSE_STATIC_ALLOCATION and configUSE_TIMERS are both set to 1, so the
  * application must provide an implementation of vApplicationGetTimerTaskMemory()
  * to provide the memory that is used by the Timer service task. */
+
 void vApplicationGetTimerTaskMemory( StaticTask_t ** ppxTimerTaskTCBBuffer,
                                      StackType_t ** ppxTimerTaskStackBuffer,
                                      uint32_t * pulTimerTaskStackSize )

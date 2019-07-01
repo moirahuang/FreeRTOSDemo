@@ -34,7 +34,6 @@
 
 /* Logging includes. */
 #include "aws_logging_task.h"
-
 /* Standard includes. */
 #include <stdio.h>
 #include <stdarg.h>
