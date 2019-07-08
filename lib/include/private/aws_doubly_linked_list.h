@@ -23,7 +23,6 @@
  * http://www.FreeRTOS.org
  */
 
-
 /**
  * @file aws_doubly_linked_list.h
  * @brief Doubly Linked List implementation.

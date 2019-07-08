@@ -23,7 +23,6 @@
  * http://www.FreeRTOS.org
  */
 
-
 /**
  * @file aws_bufferpool_config.h
  * @brief Buffer Pool config options.

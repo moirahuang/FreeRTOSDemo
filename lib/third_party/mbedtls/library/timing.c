@@ -81,8 +81,8 @@ struct _hr_time
 unsigned long mbedtls_timing_hardclock( void )
 {
     unsigned long tsc;
-    __asm   rdtsc
-    __asm   mov  [tsc], eax
+    __asm rdtsc
+    __asm mov [tsc], eax
     return( tsc );
 }
 #endif /* !HAVE_HARDCLOCK && MBEDTLS_HAVE_ASM &&
@@ -234,8 +234,8 @@ unsigned long mbedtls_timing_hardclock( void )
     }
 
     gettimeofday( &tv_cur, NULL );
-    return( ( tv_cur.tv_sec  - tv_init.tv_sec  ) * 1000000
-          + ( tv_cur.tv_usec - tv_init.tv_usec ) );
+    return( ( tv_cur.tv_sec - tv_init.tv_sec ) * 1000000
+            + ( tv_cur.tv_usec - tv_init.tv_usec ) );
 }
 #endif /* !HAVE_HARDCLOCK */
 
@@ -256,10 +256,10 @@ unsigned long mbedtls_timing_get_timer( struct mbedtls_timing_hr_time *val, int 
     {
         unsigned long delta;
         LARGE_INTEGER now, hfreq;
-        QueryPerformanceCounter(  &now );
+        QueryPerformanceCounter( &now );
         QueryPerformanceFrequency( &hfreq );
         delta = (unsigned long)( ( now.QuadPart - t->start.QuadPart ) * 1000ul
-                                 / hfreq.QuadPart );
+                / hfreq.QuadPart );
         return( delta );
     }
 }
@@ -308,8 +308,8 @@ unsigned long mbedtls_timing_get_timer( struct mbedtls_timing_hr_time *val, int 
         unsigned long delta;
         struct timeval now;
         gettimeofday( &now, NULL );
-        delta = ( now.tv_sec  - t->start.tv_sec  ) * 1000ul
-              + ( now.tv_usec - t->start.tv_usec ) / 1000;
+        delta = ( now.tv_sec - t->start.tv_sec ) * 1000ul
+        + ( now.tv_usec - t->start.tv_usec ) / 1000;
         return( delta );
     }
 }
@@ -328,7 +328,7 @@ void mbedtls_set_alarm( int seconds )
     if( seconds == 0 )
     {
         /* alarm(0) cancelled any previous pending alarm, but the
-           handler won't fire, so raise the flag straight away. */
+         handler won't fire, so raise the flag straight away. */
         mbedtls_timing_alarmed = 1;
     }
 }
@@ -346,7 +346,7 @@ void mbedtls_timing_set_delay( void *data, uint32_t int_ms, uint32_t fin_ms )
     ctx->fin_ms = fin_ms;
 
     if( fin_ms != 0 )
-        (void) mbedtls_timing_get_timer( &ctx->timer, 1 );
+    (void) mbedtls_timing_get_timer( &ctx->timer, 1 );
 }
 
 /*
@@ -358,15 +358,15 @@ int mbedtls_timing_get_delay( void *data )
     unsigned long elapsed_ms;
 
     if( ctx->fin_ms == 0 )
-        return( -1 );
+    return( -1 );
 
     elapsed_ms = mbedtls_timing_get_timer( &ctx->timer, 0 );
 
     if( elapsed_ms >= ctx->fin_ms )
-        return( 2 );
+    return( 2 );
 
     if( elapsed_ms >= ctx->int_ms )
-        return( 1 );
+    return( 1 );
 
     return( 0 );
 }
@@ -388,7 +388,7 @@ static void busy_msleep( unsigned long msec )
     (void) mbedtls_timing_get_timer( &hires, 1 );
 
     while( mbedtls_timing_get_timer( &hires, 0 ) < msec )
-        i++;
+    i++;
 
     j = i;
     (void) j;
@@ -426,10 +426,10 @@ int mbedtls_timing_self_test( int verbose )
     mbedtls_timing_delay_context ctx;
 
     if( verbose != 0 )
-        mbedtls_printf( "  TIMING tests note: will take some time!\n" );
+    mbedtls_printf( "  TIMING tests note: will take some time!\n" );
 
     if( verbose != 0 )
-        mbedtls_printf( "  TIMING test #1 (set_alarm / get_timer): " );
+    mbedtls_printf( "  TIMING test #1 (set_alarm / get_timer): " );
 
     {
         secs = 1;
@@ -438,50 +438,50 @@ int mbedtls_timing_self_test( int verbose )
 
         mbedtls_set_alarm( (int) secs );
         while( !mbedtls_timing_alarmed )
-            ;
+        ;
 
         millisecs = mbedtls_timing_get_timer( &hires, 0 );
 
         /* For some reason on Windows it looks like alarm has an extra delay
          * (maybe related to creating a new thread). Allow some room here. */
         if( millisecs < 800 * secs || millisecs > 1200 * secs + 300 )
-            FAIL;
+        FAIL;
     }
 
     if( verbose != 0 )
-        mbedtls_printf( "passed\n" );
+    mbedtls_printf( "passed\n" );
 
     if( verbose != 0 )
-        mbedtls_printf( "  TIMING test #2 (set/get_delay        ): " );
+    mbedtls_printf( "  TIMING test #2 (set/get_delay        ): " );
 
     {
         a = 800;
         b = 400;
-        mbedtls_timing_set_delay( &ctx, a, a + b );          /* T = 0 */
+        mbedtls_timing_set_delay( &ctx, a, a + b ); /* T = 0 */
 
-        busy_msleep( a - a / 4 );                      /* T = a - a/4 */
+        busy_msleep( a - a / 4 ); /* T = a - a/4 */
         if( mbedtls_timing_get_delay( &ctx ) != 0 )
-            FAIL;
+        FAIL;
 
-        busy_msleep( a / 4 + b / 4 );                  /* T = a + b/4 */
+        busy_msleep( a / 4 + b / 4 ); /* T = a + b/4 */
         if( mbedtls_timing_get_delay( &ctx ) != 1 )
-            FAIL;
+        FAIL;
 
-        busy_msleep( b );                          /* T = a + b + b/4 */
+        busy_msleep( b ); /* T = a + b + b/4 */
         if( mbedtls_timing_get_delay( &ctx ) != 2 )
-            FAIL;
+        FAIL;
     }
 
     mbedtls_timing_set_delay( &ctx, 0, 0 );
     busy_msleep( 200 );
     if( mbedtls_timing_get_delay( &ctx ) != -1 )
-        FAIL;
+    FAIL;
 
     if( verbose != 0 )
-        mbedtls_printf( "passed\n" );
+    mbedtls_printf( "passed\n" );
 
     if( verbose != 0 )
-        mbedtls_printf( "  TIMING test #3 (hardclock / get_timer): " );
+    mbedtls_printf( "  TIMING test #3 (hardclock / get_timer): " );
 
     /*
      * Allow one failure for possible counter wrapping.
@@ -489,11 +489,11 @@ int mbedtls_timing_self_test( int verbose )
      * since the whole test is about 10ms, it shouldn't happen twice in a row.
      */
 
-hard_test:
+    hard_test:
     if( hardfail > 1 )
     {
         if( verbose != 0 )
-            mbedtls_printf( "failed (ignored)\n" );
+        mbedtls_printf( "failed (ignored)\n" );
 
         goto hard_test_done;
     }
@@ -514,7 +514,7 @@ hard_test:
 
         /* Allow variation up to 20% */
         if( cycles / millisecs < ratio - ratio / 5 ||
-            cycles / millisecs > ratio + ratio / 5 )
+                cycles / millisecs > ratio + ratio / 5 )
         {
             hardfail++;
             goto hard_test;
@@ -522,12 +522,12 @@ hard_test:
     }
 
     if( verbose != 0 )
-        mbedtls_printf( "passed\n" );
+    mbedtls_printf( "passed\n" );
 
-hard_test_done:
+    hard_test_done:
 
     if( verbose != 0 )
-        mbedtls_printf( "\n" );
+    mbedtls_printf( "\n" );
 
     return( 0 );
 }

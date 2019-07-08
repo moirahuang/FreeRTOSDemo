@@ -26,6 +26,6 @@
 #ifndef _AWS_DEMO_RUNNER_H_
 #define _AWS_DEMO_RUNNER_H_
 
-void DEMO_RUNNER_RunDemos( void );
+void DEMO_RUNNER_RunDemos(void);
 
 #endif

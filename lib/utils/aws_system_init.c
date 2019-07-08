@@ -25,39 +25,39 @@
 #include "FreeRTOS.h"
 #include "aws_system_init.h"
 /* Library code. */
-extern BaseType_t MQTT_AGENT_Init( void );
-extern BaseType_t BUFFERPOOL_Init( void );
-extern BaseType_t SOCKETS_Init( void );
-extern BaseType_t SOCKETS_Init( void );
-extern BaseType_t SOCKETS_Init( void );
+extern BaseType_t MQTT_AGENT_Init(void);
+extern BaseType_t BUFFERPOOL_Init(void);
+extern BaseType_t SOCKETS_Init(void);
+extern BaseType_t SOCKETS_Init(void);
+extern BaseType_t SOCKETS_Init(void);
 
 /*-----------------------------------------------------------*/
 
 /**
  * @brief Initializes Amazon FreeRTOS libraries.
  */
-BaseType_t SYSTEM_Init( void )
+BaseType_t SYSTEM_Init(void)
 {
     BaseType_t xResult = pdPASS;
 
     xResult = MQTT_AGENT_Init();
 
-    if( xResult == pdPASS )
+    if (xResult == pdPASS)
     {
         xResult = BUFFERPOOL_Init();
     }
 
-    if( xResult == pdPASS )
+    if (xResult == pdPASS)
     {
         xResult = SOCKETS_Init();
     }
 
-    if( xResult == pdPASS )
+    if (xResult == pdPASS)
     {
         xResult = SOCKETS_Init();
     }
 
-    if( xResult == pdPASS )
+    if (xResult == pdPASS)
     {
         xResult = SOCKETS_Init();
     }

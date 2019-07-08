@@ -56,6 +56,8 @@ int Wire_read(void);
 
 //if written in c++ need to use externc for include files other issues etc
 //
+void setup();
+void loop();
 #ifdef __cplusplus
 }
 #endif

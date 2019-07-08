@@ -67,35 +67,35 @@
 #define TIMER_ABSTIME     0x01
 
 #if !defined( posixconfigENABLE_TIMESPEC ) || ( posixconfigENABLE_TIMESPEC == 1 )
-    struct timespec
-    {
-        time_t tv_sec; /* Seconds. */
-        long tv_nsec;  /* Nanoseconds. */
-    };
+struct timespec
+{
+    time_t tv_sec; /* Seconds. */
+    long tv_nsec; /* Nanoseconds. */
+};
 #endif
 
 #if !defined( posixconfigENABLE_ITIMERSPEC ) || ( posixconfigENABLE_ITIMERSPEC == 1 )
-    struct itimerspec
-    {
-        struct timespec it_interval; /* Timer period. */
-        struct timespec it_value;    /* Timer expiration. */
-    };
+struct itimerspec
+{
+    struct timespec it_interval; /* Timer period. */
+    struct timespec it_value; /* Timer expiration. */
+};
 #endif
 
 #if !defined( posixconfigENABLE_TM ) || ( posixconfigENABLE_TM == 1 )
-    struct tm
-    {
-        time_t tm_tick; /* FreeRTOS tick count. */
-        int tm_sec;     /* Seconds [0,60]. Not used. */
-        int tm_min;     /* Minutes [0,59]. Not used. */
-        int tm_hour;    /* Hour [0,23]. Not used. */
-        int tm_mday;    /* Day of month [1,31]. Not used. */
-        int tm_mon;     /* Month of year [0,11]. Not used. */
-        int tm_year;    /* Years since 1900. Not used. */
-        int tm_wday;    /* Day of week [0,6] (Sunday=0). Not used. */
-        int tm_yday;    /* Day of year [0,365]. Not used. */
-        int tm_isdst;   /* Daylight Savings flag. Not used. */
-    };
+struct tm
+{
+    time_t tm_tick; /* FreeRTOS tick count. */
+    int tm_sec; /* Seconds [0,60]. Not used. */
+    int tm_min; /* Minutes [0,59]. Not used. */
+    int tm_hour; /* Hour [0,23]. Not used. */
+    int tm_mday; /* Day of month [1,31]. Not used. */
+    int tm_mon; /* Month of year [0,11]. Not used. */
+    int tm_year; /* Years since 1900. Not used. */
+    int tm_wday; /* Day of week [0,6] (Sunday=0). Not used. */
+    int tm_yday; /* Day of year [0,365]. Not used. */
+    int tm_isdst; /* Daylight Savings flag. Not used. */
+};
 #endif
 
 /**
@@ -107,7 +107,7 @@
  * was started minus the ticks spent in the idle task. It does NOT report the
  * number of ticks spent by the calling thread.
  */
-clock_t clock( void );
+clock_t clock(void);
 
 /**
  * @brief Access a process CPU-time clock.
@@ -117,8 +117,7 @@ clock_t clock( void );
  * @note This function is currently unsupported. It will always return -1 and
  * set errno to EPERM.
  */
-int clock_getcpuclockid( pid_t pid,
-                         clockid_t * clock_id );
+int clock_getcpuclockid(pid_t pid, clockid_t * clock_id);
 
 /**
  * @brief Returns the resolution of a clock.
@@ -128,8 +127,7 @@ int clock_getcpuclockid( pid_t pid,
  * @note clock_id is ignored; this function returns the resolution of the FreeRTOS
  * tick count.
  */
-int clock_getres( clockid_t clock_id,
-                  struct timespec * res );
+int clock_getres(clockid_t clock_id, struct timespec * res);
 
 /**
  * @brief Returns the current value for the specified clock, clock_id.
@@ -139,8 +137,7 @@ int clock_getres( clockid_t clock_id,
  * @note clock_id is ignored; this function returns the FreeRTOS tick count.
  * Also, this function does not check for overflows of time_t.
  */
-int clock_gettime( clockid_t clock_id,
-                   struct timespec * tp );
+int clock_gettime(clockid_t clock_id, struct timespec * tp);
 
 /**
  * @brief High resolution sleep with specifiable clock.
@@ -152,10 +149,8 @@ int clock_gettime( clockid_t clock_id,
  * if INCLUDE_vTaskDelayUntil is 0, i.e. the FreeRTOS function vTaskDelayUntil
  * isn't available.
  */
-int clock_nanosleep( clockid_t clock_id,
-                     int flags,
-                     const struct timespec * rqtp,
-                     struct timespec * rmtp );
+int clock_nanosleep(clockid_t clock_id, int flags, const struct timespec * rqtp,
+                    struct timespec * rmtp);
 
 /**
  * @brief Sets the time for the specified clock.
@@ -166,8 +161,7 @@ int clock_nanosleep( clockid_t clock_id,
  * a function to modify the tick count. It will always return -1 and set errno
  * to EPERM.
  */
-int clock_settime( clockid_t clock_id,
-                   const struct timespec * tp );
+int clock_settime(clockid_t clock_id, const struct timespec * tp);
 
 /**
  * @brief Convert a time value to a broken-down local time.
@@ -177,8 +171,7 @@ int clock_settime( clockid_t clock_id,
  * @note This function only stores the time as tm.tm_tick. All other members of
  * the struct will be set to 0.
  */
-struct tm * localtime_r( const time_t * timer,
-                         struct tm * result );
+struct tm * localtime_r(const time_t * timer, struct tm * result);
 
 /**
  * @brief High resolution sleep.
@@ -187,8 +180,7 @@ struct tm * localtime_r( const time_t * timer,
  *
  * @note rmtp is ignored, as signals are not implemented.
  */
-int nanosleep( const struct timespec * rqtp,
-               struct timespec * rmtp );
+int nanosleep(const struct timespec * rqtp, struct timespec * rmtp);
 
 /**
  * @brief Convert date and time to a string.
@@ -197,10 +189,8 @@ int nanosleep( const struct timespec * rqtp,
  *
  * @note format is ignored.
  */
-size_t strftime( char * s,
-                 size_t maxsize,
-                 const char * format,
-                 const struct tm * timeptr );
+size_t strftime(char * s, size_t maxsize, const char * format,
+                const struct tm * timeptr);
 
 /**
  * @brief Get time.
@@ -210,7 +200,7 @@ size_t strftime( char * s,
  * @note This function returns the FreeRTOS tick count, not the seconds since
  * UNIX epoch.
  */
-time_t time( time_t * tloc );
+time_t time(time_t * tloc);
 
 /**
  * @brief Create a per-process timer.
@@ -221,16 +211,14 @@ time_t time( time_t * tloc );
  * clock. Because signals are currently unimplemented, evp.sigev_notify must be
  * set to SIGEV_THREAD.
  */
-int timer_create( clockid_t clockid,
-                  struct sigevent * evp,
-                  timer_t * timerid );
+int timer_create(clockid_t clockid, struct sigevent * evp, timer_t * timerid);
 
 /**
  * @brief Delete a per-process timer.
  *
  * http://pubs.opengroup.org/onlinepubs/9699919799/functions/timer_delete.html
  */
-int timer_delete( timer_t timerid );
+int timer_delete(timer_t timerid);
 
 /**
  * @brief Get the timer overrun count.
@@ -239,24 +227,21 @@ int timer_delete( timer_t timerid );
  *
  * Signals are not implemented, so this function will always return 0.
  */
-int timer_getoverrun( timer_t timerid );
+int timer_getoverrun(timer_t timerid);
 
 /**
  * @brief Get the amount of time until the timer expires.
  *
  * http://pubs.opengroup.org/onlinepubs/9699919799/functions/timer_gettime.html
  */
-int timer_gettime( timer_t timerid,
-                   struct itimerspec * value );
+int timer_gettime(timer_t timerid, struct itimerspec * value);
 
 /**
  * @brief Set the time until the next expiration of the timer.
  *
  * http://pubs.opengroup.org/onlinepubs/9699919799/functions/timer_settime.html
  */
-int timer_settime( timer_t timerid,
-                   int flags,
-                   const struct itimerspec * value,
-                   struct itimerspec * ovalue );
+int timer_settime(timer_t timerid, int flags, const struct itimerspec * value,
+                  struct itimerspec * ovalue);
 
 #endif /* ifndef _FREERTOS_POSIX_TIME_H_ */

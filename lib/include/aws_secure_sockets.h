@@ -183,10 +183,10 @@ typedef void * Socket_t;
  */
 typedef struct SocketsSockaddr
 {
-    uint8_t ucLength;       /**< Length of SocketsSockaddr structure. */
+    uint8_t ucLength; /**< Length of SocketsSockaddr structure. */
     uint8_t ucSocketDomain; /**< Only SOCKETS_AF_INET is supported. */
-    uint16_t usPort;        /**< Port number. Convention is to call this sin_port. */
-    uint32_t ulAddress;     /**< IP Address. Convention is to call this sin_addr. */
+    uint16_t usPort; /**< Port number. Convention is to call this sin_port. */
+    uint32_t ulAddress; /**< IP Address. Convention is to call this sin_addr. */
 } SocketsSockaddr_t;
 
 /**
@@ -204,7 +204,7 @@ typedef struct SocketsSockaddr
  * * @ref pdPASS if everything succeeds
  * * @ref pdFAIL otherwise.
  */
-lib_initDECLARE_LIB_INIT( SOCKETS_Init );
+lib_initDECLARE_LIB_INIT(SOCKETS_Init);
 
 /**
  * @brief Creates a TCP socket.
@@ -224,10 +224,7 @@ lib_initDECLARE_LIB_INIT( SOCKETS_Init );
  * returned
  * * @ref SOCKETS_INVALID_SOCKET is returned if an error occurred.
  */
-Socket_t SOCKETS_Socket( int32_t lDomain,
-                         int32_t lType,
-                         int32_t lProtocol );
-
+Socket_t SOCKETS_Socket(int32_t lDomain, int32_t lType, int32_t lProtocol);
 
 /**
  * @brief Connects the socket to the specified IP address and port.
@@ -252,9 +249,8 @@ Socket_t SOCKETS_Socket( int32_t lDomain,
  * * @ref SOCKETS_ERROR_NONE if a connection is established.
  * * If an error occurred, a negative value is returned. @ref SocketsErrors
  */
-int32_t SOCKETS_Connect( Socket_t xSocket,
-                         SocketsSockaddr_t * pxAddress,
-                         Socklen_t xAddressLength );
+int32_t SOCKETS_Connect(Socket_t xSocket, SocketsSockaddr_t * pxAddress,
+Socklen_t xAddressLength);
 
 /**
  * @brief Receive data from a TCP socket.
@@ -275,10 +271,8 @@ int32_t SOCKETS_Connect( Socket_t xSocket,
  *   is set using @ref SOCKETS_SO_RCVTIMEO).
  * * If an error occurred, a negative value is returned. @ref SocketsErrors
  */
-int32_t SOCKETS_Recv( Socket_t xSocket,
-                      void * pvBuffer,
-                      size_t xBufferLength,
-                      uint32_t ulFlags );
+int32_t SOCKETS_Recv(Socket_t xSocket, void * pvBuffer, size_t xBufferLength,
+                     uint32_t ulFlags);
 
 /**
  * @brief Transmit data to the remote socket.
@@ -295,10 +289,8 @@ int32_t SOCKETS_Recv( Socket_t xSocket,
  * * On success, the number of bytes actually sent is returned.
  * * If an error occurred, a negative value is returned. @ref SocketsErrors
  */
-int32_t SOCKETS_Send( Socket_t xSocket,
-                      const void * pvBuffer,
-                      size_t xDataLength,
-                      uint32_t ulFlags );
+int32_t SOCKETS_Send(Socket_t xSocket, const void * pvBuffer,
+                     size_t xDataLength, uint32_t ulFlags);
 
 /**
  * @brief Closes all or part of a full-duplex connection on the socket.
@@ -315,8 +307,7 @@ int32_t SOCKETS_Send( Socket_t xSocket,
  * * If the operation was successful, 0 is returned.
  * * If an error occurred, a negative value is returned. @ref SocketsErrors
  */
-int32_t SOCKETS_Shutdown( Socket_t xSocket,
-                          uint32_t ulHow );
+int32_t SOCKETS_Shutdown(Socket_t xSocket, uint32_t ulHow);
 
 /**
  * @brief Closes the socket and frees the related resources.
@@ -331,7 +322,7 @@ int32_t SOCKETS_Shutdown( Socket_t xSocket,
  * * On success, 0 is returned.
  * * If an error occurred, a negative value is returned. @ref SocketsErrors
  */
-int32_t SOCKETS_Close( Socket_t xSocket );
+int32_t SOCKETS_Close(Socket_t xSocket);
 
 /**
  * @brief AWS IoT ALPN protocol name for MQTT over TLS on server port 443.
@@ -407,11 +398,9 @@ int32_t SOCKETS_Close( Socket_t xSocket );
  * * On success, 0 is returned.
  * * If an error occured, a negative value is returned. @ref SocketsErrors
  */
-int32_t SOCKETS_SetSockOpt( Socket_t xSocket,
-                            int32_t lLevel,
-                            int32_t lOptionName,
-                            const void * pvOptionValue,
-                            size_t xOptionLength );
+int32_t SOCKETS_SetSockOpt(Socket_t xSocket, int32_t lLevel,
+                           int32_t lOptionName, const void * pvOptionValue,
+                           size_t xOptionLength);
 
 /**
  * @brief Resolve a host name using Domain Name Service.
@@ -421,9 +410,7 @@ int32_t SOCKETS_SetSockOpt( Socket_t xSocket,
  * * The IPv4 address of the specified host.
  * * If an error has occured, 0 is returned.
  */
-uint32_t SOCKETS_GetHostByName( const char * pcHostName );
-
-
+uint32_t SOCKETS_GetHostByName(const char * pcHostName);
 
 /**
  * @brief Convert an unsigned thirty-two-bit value from host endianness to network
@@ -432,9 +419,9 @@ uint32_t SOCKETS_GetHostByName( const char * pcHostName );
  * @param[in] usIn The unsigned thirty-two-bit value to convert.
  */
 #if defined( socketsconfigBYTE_ORDER ) && ( socketsconfigBYTE_ORDER == pdLITTLE_ENDIAN )
-    #define SOCKETS_htonl( ulIn )    ( ( uint32_t ) ( ( ( ulIn & 0xFF ) << 24 ) | ( ( ulIn & 0xFF00 ) << 8 ) | ( ( ulIn & 0xFF0000 ) >> 8 ) | ( ( ulIn & 0xFF000000 ) >> 24 ) ) )
+#define SOCKETS_htonl( ulIn )    ( ( uint32_t ) ( ( ( ulIn & 0xFF ) << 24 ) | ( ( ulIn & 0xFF00 ) << 8 ) | ( ( ulIn & 0xFF0000 ) >> 8 ) | ( ( ulIn & 0xFF000000 ) >> 24 ) ) )
 #else
-    #define SOCKETS_htonl( usIn )    ( ( uint32_t ) ( usIn ) )
+#define SOCKETS_htonl( usIn )    ( ( uint32_t ) ( usIn ) )
 #endif
 
 /**
@@ -445,7 +432,6 @@ uint32_t SOCKETS_GetHostByName( const char * pcHostName );
  */
 #define SOCKETS_ntohl( usIn )    SOCKETS_htonl( usIn )
 
-
 /**
  * @brief Convert an unsigned sixteen-bit value from host endianness to network
  * endianness.
@@ -454,11 +440,10 @@ uint32_t SOCKETS_GetHostByName( const char * pcHostName );
  */
 
 #if defined( socketsconfigBYTE_ORDER ) && ( socketsconfigBYTE_ORDER == pdLITTLE_ENDIAN )
-    #define SOCKETS_htons( usIn )    ( ( uint16_t ) ( ( ( usIn ) << 8U ) | ( ( usIn ) >> 8U ) ) )
+#define SOCKETS_htons( usIn )    ( ( uint16_t ) ( ( ( usIn ) << 8U ) | ( ( usIn ) >> 8U ) ) )
 #else
-    #define SOCKETS_htons( usIn )    ( ( uint16_t ) ( usIn ) )
+#define SOCKETS_htons( usIn )    ( ( uint16_t ) ( usIn ) )
 #endif
-
 
 /**
  * @brief Convert an unsigned sixteen-bit value from network endianness to host
@@ -470,13 +455,13 @@ uint32_t SOCKETS_GetHostByName( const char * pcHostName );
 
 #if defined( socketsconfigBYTE_ORDER ) && ( socketsconfigBYTE_ORDER == pdLITTLE_ENDIAN )
 
-    #define SOCKETS_inet_addr_quick( ucOctet0, ucOctet1, ucOctet2, ucOctet3 ) \
+#define SOCKETS_inet_addr_quick( ucOctet0, ucOctet1, ucOctet2, ucOctet3 ) \
     ( ( ( ( uint32_t ) ( ucOctet3 ) ) << 24UL ) |                             \
       ( ( ( uint32_t ) ( ucOctet2 ) ) << 16UL ) |                             \
       ( ( ( uint32_t ) ( ucOctet1 ) ) << 8UL ) |                              \
       ( ( uint32_t ) ( ucOctet0 ) ) )
 
-    #define SOCKETS_inet_ntoa( ulIPAddress, pucBuffer )               \
+#define SOCKETS_inet_ntoa( ulIPAddress, pucBuffer )               \
     sprintf( ( char * ) ( pucBuffer ), "%u.%u.%u.%u",                 \
              ( ( unsigned ) ( ( ulIPAddress ) & 0xffUL ) ),           \
              ( ( unsigned ) ( ( ( ulIPAddress ) >> 8 ) & 0xffUL ) ),  \
@@ -485,13 +470,13 @@ uint32_t SOCKETS_GetHostByName( const char * pcHostName );
 
 #else /* socketsconfigBYTE_ORDER. */
 
-    #define SOCKETS_inet_addr_quick( ucOctet0, ucOctet1, ucOctet2, ucOctet3 ) \
+#define SOCKETS_inet_addr_quick( ucOctet0, ucOctet1, ucOctet2, ucOctet3 ) \
     ( ( ( ( uint32_t ) ( ucOctet0 ) ) << 24UL ) |                             \
       ( ( ( uint32_t ) ( ucOctet1 ) ) << 16UL ) |                             \
       ( ( ( uint32_t ) ( ucOctet2 ) ) << 8UL ) |                              \
       ( ( uint32_t ) ( ucOctet3 ) ) )
 
-    #define SOCKETS_inet_ntoa( ulIPAddress, pucBuffer )               \
+#define SOCKETS_inet_ntoa( ulIPAddress, pucBuffer )               \
     sprintf( ( char * ) ( pucBuffer ), "%u.%u.%u.%u",                 \
              ( ( unsigned ) ( ( ulIPAddress ) >> 24 ) ),              \
              ( ( unsigned ) ( ( ( ulIPAddress ) >> 16 ) & 0xffUL ) ), \

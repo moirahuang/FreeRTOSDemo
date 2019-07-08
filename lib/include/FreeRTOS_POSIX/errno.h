@@ -86,8 +86,8 @@
 /**
  * @brief System error variable, errno.
  */
-    extern int FreeRTOS_errno;
-    #define errno FreeRTOS_errno
+extern int FreeRTOS_errno;
+#define errno FreeRTOS_errno
 #endif
 
 #endif /* ifndef _FREERTOS_POSIX_ERRNO_H_ */

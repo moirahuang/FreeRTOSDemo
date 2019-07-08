@@ -56,7 +56,7 @@ void mbedtls_arc4_init( mbedtls_arc4_context *ctx )
 void mbedtls_arc4_free( mbedtls_arc4_context *ctx )
 {
     if( ctx == NULL )
-        return;
+    return;
 
     mbedtls_platform_zeroize( ctx, sizeof( mbedtls_arc4_context ) );
 }
@@ -65,7 +65,7 @@ void mbedtls_arc4_free( mbedtls_arc4_context *ctx )
  * ARC4 key schedule
  */
 void mbedtls_arc4_setup( mbedtls_arc4_context *ctx, const unsigned char *key,
-                 unsigned int keylen )
+        unsigned int keylen )
 {
     int i, j, a;
     unsigned int k;
@@ -76,7 +76,7 @@ void mbedtls_arc4_setup( mbedtls_arc4_context *ctx, const unsigned char *key,
     m = ctx->m;
 
     for( i = 0; i < 256; i++ )
-        m[i] = (unsigned char) i;
+    m[i] = (unsigned char) i;
 
     j = k = 0;
 
@@ -95,7 +95,7 @@ void mbedtls_arc4_setup( mbedtls_arc4_context *ctx, const unsigned char *key,
  * ARC4 cipher function
  */
 int mbedtls_arc4_crypt( mbedtls_arc4_context *ctx, size_t length, const unsigned char *input,
-                unsigned char *output )
+        unsigned char *output )
 {
     int x, y, a, b;
     size_t i;
@@ -114,7 +114,7 @@ int mbedtls_arc4_crypt( mbedtls_arc4_context *ctx, size_t length, const unsigned
         m[y] = (unsigned char) a;
 
         output[i] = (unsigned char)
-            ( input[i] ^ m[(unsigned char)( a + b )] );
+        ( input[i] ^ m[(unsigned char)( a + b )] );
     }
 
     ctx->x = x;
@@ -133,23 +133,23 @@ int mbedtls_arc4_crypt( mbedtls_arc4_context *ctx, size_t length, const unsigned
  */
 static const unsigned char arc4_test_key[3][8] =
 {
-    { 0x01, 0x23, 0x45, 0x67, 0x89, 0xAB, 0xCD, 0xEF },
-    { 0x01, 0x23, 0x45, 0x67, 0x89, 0xAB, 0xCD, 0xEF },
-    { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }
+    {   0x01, 0x23, 0x45, 0x67, 0x89, 0xAB, 0xCD, 0xEF},
+    {   0x01, 0x23, 0x45, 0x67, 0x89, 0xAB, 0xCD, 0xEF},
+    {   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
 };
 
 static const unsigned char arc4_test_pt[3][8] =
 {
-    { 0x01, 0x23, 0x45, 0x67, 0x89, 0xAB, 0xCD, 0xEF },
-    { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 },
-    { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }
+    {   0x01, 0x23, 0x45, 0x67, 0x89, 0xAB, 0xCD, 0xEF},
+    {   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00},
+    {   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
 };
 
 static const unsigned char arc4_test_ct[3][8] =
 {
-    { 0x75, 0xB7, 0x87, 0x80, 0x99, 0xE0, 0xC5, 0x96 },
-    { 0x74, 0x94, 0xC2, 0xE7, 0x10, 0x4B, 0x08, 0x79 },
-    { 0xDE, 0x18, 0x89, 0x41, 0xA3, 0x37, 0x5D, 0x3A }
+    {   0x75, 0xB7, 0x87, 0x80, 0x99, 0xE0, 0xC5, 0x96},
+    {   0x74, 0x94, 0xC2, 0xE7, 0x10, 0x4B, 0x08, 0x79},
+    {   0xDE, 0x18, 0x89, 0x41, 0xA3, 0x37, 0x5D, 0x3A}
 };
 
 /*
@@ -167,7 +167,7 @@ int mbedtls_arc4_self_test( int verbose )
     for( i = 0; i < 3; i++ )
     {
         if( verbose != 0 )
-            mbedtls_printf( "  ARC4 test #%d: ", i + 1 );
+        mbedtls_printf( "  ARC4 test #%d: ", i + 1 );
 
         memcpy( ibuf, arc4_test_pt[i], 8 );
 
@@ -177,20 +177,20 @@ int mbedtls_arc4_self_test( int verbose )
         if( memcmp( obuf, arc4_test_ct[i], 8 ) != 0 )
         {
             if( verbose != 0 )
-                mbedtls_printf( "failed\n" );
+            mbedtls_printf( "failed\n" );
 
             ret = 1;
             goto exit;
         }
 
         if( verbose != 0 )
-            mbedtls_printf( "passed\n" );
+        mbedtls_printf( "passed\n" );
     }
 
     if( verbose != 0 )
-        mbedtls_printf( "\n" );
+    mbedtls_printf( "\n" );
 
-exit:
+    exit:
     mbedtls_arc4_free( &ctx );
 
     return( ret );

@@ -46,14 +46,14 @@
  *
  * @return nothing
  */
-static void prvInitializeStaticCond( pthread_cond_internal_t * pxCond );
+static void prvInitializeStaticCond(pthread_cond_internal_t * pxCond);
 
 /*-----------------------------------------------------------*/
 
-static void prvInitializeStaticCond( pthread_cond_internal_t * pxCond )
+static void prvInitializeStaticCond(pthread_cond_internal_t * pxCond)
 {
     /* Check if the condition variable needs to be initialized. */
-    if( pxCond->xIsInitialized == pdFALSE )
+    if (pxCond->xIsInitialized == pdFALSE)
     {
         /* Cond initialization must be in a critical section to prevent two threads
          * from initializing it at the same time. */
@@ -62,13 +62,14 @@ static void prvInitializeStaticCond( pthread_cond_internal_t * pxCond )
         /* Check again that the cond is still uninitialized, i.e. it wasn't
          * initialized while this function was waiting to enter the critical
          * section. */
-        if( pxCond->xIsInitialized == pdFALSE )
+        if (pxCond->xIsInitialized == pdFALSE)
         {
             /* Set the members of the cond. The semaphore create calls will never fail
              * when their arguments aren't NULL. */
             pxCond->xIsInitialized = pdTRUE;
-            ( void ) xSemaphoreCreateMutexStatic( &pxCond->xCondMutex );
-            ( void ) xSemaphoreCreateCountingStatic( INT_MAX, 0U, &pxCond->xCondWaitSemaphore );
+            (void) xSemaphoreCreateMutexStatic(&pxCond->xCondMutex);
+            (void) xSemaphoreCreateCountingStatic(INT_MAX, 0U,
+                                                  &pxCond->xCondWaitSemaphore);
             pxCond->iWaitingThreads = 0;
         }
 
@@ -79,69 +80,70 @@ static void prvInitializeStaticCond( pthread_cond_internal_t * pxCond )
 
 /*-----------------------------------------------------------*/
 
-int pthread_cond_broadcast( pthread_cond_t * cond )
+int pthread_cond_broadcast(pthread_cond_t * cond)
 {
     int i = 0;
-    pthread_cond_internal_t * pxCond = ( pthread_cond_internal_t * ) ( cond );
+    pthread_cond_internal_t * pxCond = (pthread_cond_internal_t *) (cond);
 
     /* If the cond is uninitialized, perform initialization. */
-    prvInitializeStaticCond( pxCond );
+    prvInitializeStaticCond(pxCond);
 
     /* Lock xCondMutex to protect access to iWaitingThreads.
      * This call will never fail because it blocks forever. */
-    ( void ) xSemaphoreTake( ( SemaphoreHandle_t ) &pxCond->xCondMutex, portMAX_DELAY );
+    (void) xSemaphoreTake((SemaphoreHandle_t ) &pxCond->xCondMutex,
+                          portMAX_DELAY);
 
     /* Unblock all threads waiting on this condition variable. */
-    for( i = 0; i < pxCond->iWaitingThreads; i++ )
+    for (i = 0; i < pxCond->iWaitingThreads; i++)
     {
-        ( void ) xSemaphoreGive( ( SemaphoreHandle_t ) &pxCond->xCondWaitSemaphore );
+        (void) xSemaphoreGive((SemaphoreHandle_t ) &pxCond->xCondWaitSemaphore);
     }
 
     /* All threads were unblocked, set waiting threads to 0. */
     pxCond->iWaitingThreads = 0;
 
     /* Release xCondMutex. */
-    ( void ) xSemaphoreGive( ( SemaphoreHandle_t ) &pxCond->xCondMutex );
+    (void) xSemaphoreGive((SemaphoreHandle_t ) &pxCond->xCondMutex);
 
     return 0;
 }
 
 /*-----------------------------------------------------------*/
 
-int pthread_cond_destroy( pthread_cond_t * cond )
+int pthread_cond_destroy(pthread_cond_t * cond)
 {
-    pthread_cond_internal_t * pxCond = ( pthread_cond_internal_t * ) ( cond );
+    pthread_cond_internal_t * pxCond = (pthread_cond_internal_t *) (cond);
 
     /* Free all resources in use by the cond. */
-    vSemaphoreDelete( ( SemaphoreHandle_t ) &pxCond->xCondMutex );
-    vSemaphoreDelete( ( SemaphoreHandle_t ) &pxCond->xCondWaitSemaphore );
+    vSemaphoreDelete((SemaphoreHandle_t ) &pxCond->xCondMutex);
+    vSemaphoreDelete((SemaphoreHandle_t ) &pxCond->xCondWaitSemaphore);
 
     return 0;
 }
 
 /*-----------------------------------------------------------*/
 
-int pthread_cond_init( pthread_cond_t * cond,
-                       const pthread_condattr_t * attr )
+int pthread_cond_init(pthread_cond_t * cond, const pthread_condattr_t * attr)
 {
     int iStatus = 0;
-    pthread_cond_internal_t * pxCond = ( pthread_cond_internal_t * ) cond;
+    pthread_cond_internal_t * pxCond = (pthread_cond_internal_t *) cond;
 
     /* Silence warnings about unused parameters. */
-    ( void ) attr;
+    (void) attr;
 
-    if( pxCond == NULL )
+    if (pxCond == NULL)
     {
         iStatus = ENOMEM;
     }
 
-    if( iStatus == 0 )
+    if (iStatus == 0)
     {
         /* Set the members of the cond. The semaphore create calls will never fail
          * when their arguments aren't NULL. */
         pxCond->xIsInitialized = pdTRUE;
-        ( void ) xSemaphoreCreateMutexStatic( &pxCond->xCondMutex );
-        ( void ) xSemaphoreCreateCountingStatic( INT_MAX, 0U, &pxCond->xCondWaitSemaphore );
+        (void) xSemaphoreCreateMutexStatic(&pxCond->xCondMutex);
+        (void) xSemaphoreCreateCountingStatic(INT_MAX, 0U,
+                                              &pxCond->xCondWaitSemaphore);
         pxCond->iWaitingThreads = 0;
     }
 
@@ -150,32 +152,34 @@ int pthread_cond_init( pthread_cond_t * cond,
 
 /*-----------------------------------------------------------*/
 
-int pthread_cond_signal( pthread_cond_t * cond )
+int pthread_cond_signal(pthread_cond_t * cond)
 {
-    pthread_cond_internal_t * pxCond = ( pthread_cond_internal_t * ) ( cond );
+    pthread_cond_internal_t * pxCond = (pthread_cond_internal_t *) (cond);
 
     /* If the cond is uninitialized, perform initialization. */
-    prvInitializeStaticCond( pxCond );
+    prvInitializeStaticCond(pxCond);
 
     /* Check that at least one thread is waiting for a signal. */
-    if( pxCond->iWaitingThreads > 0 )
+    if (pxCond->iWaitingThreads > 0)
     {
         /* Lock xCondMutex to protect access to iWaitingThreads.
          * This call will never fail because it blocks forever. */
-        ( void ) xSemaphoreTake( ( SemaphoreHandle_t ) &pxCond->xCondMutex, portMAX_DELAY );
+        (void) xSemaphoreTake((SemaphoreHandle_t ) &pxCond->xCondMutex,
+                              portMAX_DELAY);
 
         /* Check again that at least one thread is waiting for a signal after
          * taking xCondMutex. If so, unblock it. */
-        if( pxCond->iWaitingThreads > 0 )
+        if (pxCond->iWaitingThreads > 0)
         {
-            ( void ) xSemaphoreGive( ( SemaphoreHandle_t ) &pxCond->xCondWaitSemaphore );
+            (void) xSemaphoreGive(
+                    (SemaphoreHandle_t ) &pxCond->xCondWaitSemaphore);
 
             /* Decrease the number of waiting threads. */
             pxCond->iWaitingThreads--;
         }
 
         /* Release xCondMutex. */
-        ( void ) xSemaphoreGive( ( SemaphoreHandle_t ) &pxCond->xCondMutex );
+        (void) xSemaphoreGive((SemaphoreHandle_t ) &pxCond->xCondMutex);
     }
 
     return 0;
@@ -183,62 +187,64 @@ int pthread_cond_signal( pthread_cond_t * cond )
 
 /*-----------------------------------------------------------*/
 
-int pthread_cond_timedwait( pthread_cond_t * cond,
-                            pthread_mutex_t * mutex,
-                            const struct timespec * abstime )
+int pthread_cond_timedwait(pthread_cond_t * cond, pthread_mutex_t * mutex,
+                           const struct timespec * abstime)
 {
     int iStatus = 0;
-    pthread_cond_internal_t * pxCond = ( pthread_cond_internal_t * ) ( cond );
+    pthread_cond_internal_t * pxCond = (pthread_cond_internal_t *) (cond);
     TickType_t xDelay = portMAX_DELAY;
 
     /* If the cond is uninitialized, perform initialization. */
-    prvInitializeStaticCond( pxCond );
+    prvInitializeStaticCond(pxCond);
 
     /* Convert abstime to a delay in TickType_t if provided. */
-    if( abstime != NULL )
+    if (abstime != NULL)
     {
         struct timespec xCurrentTime = { 0 };
 
         /* Get current time */
-        if( clock_gettime( CLOCK_REALTIME, &xCurrentTime ) != 0 )
+        if (clock_gettime( CLOCK_REALTIME, &xCurrentTime) != 0)
         {
             iStatus = EINVAL;
         }
         else
         {
-            iStatus = UTILS_AbsoluteTimespecToDeltaTicks( abstime, &xCurrentTime, &xDelay );
+            iStatus = UTILS_AbsoluteTimespecToDeltaTicks(abstime, &xCurrentTime,
+                                                         &xDelay);
         }
     }
 
     /* Increase the counter of threads blocking on condition variable, then
      * unlock mutex. */
-    if( iStatus == 0 )
+    if (iStatus == 0)
     {
-        ( void ) xSemaphoreTake( ( SemaphoreHandle_t ) &pxCond->xCondMutex, portMAX_DELAY );
+        (void) xSemaphoreTake((SemaphoreHandle_t ) &pxCond->xCondMutex,
+                              portMAX_DELAY);
         pxCond->iWaitingThreads++;
-        ( void ) xSemaphoreGive( ( SemaphoreHandle_t ) &pxCond->xCondMutex );
+        (void) xSemaphoreGive((SemaphoreHandle_t ) &pxCond->xCondMutex);
 
-        iStatus = pthread_mutex_unlock( mutex );
+        iStatus = pthread_mutex_unlock(mutex);
     }
 
     /* Wait on the condition variable. */
-    if( iStatus == 0 )
+    if (iStatus == 0)
     {
-        if( xSemaphoreTake( ( SemaphoreHandle_t ) &pxCond->xCondWaitSemaphore,
-                            xDelay ) == pdPASS )
+        if ( xSemaphoreTake( ( SemaphoreHandle_t ) &pxCond->xCondWaitSemaphore,
+                xDelay ) == pdPASS)
         {
             /* When successful, relock mutex. */
-            iStatus = pthread_mutex_lock( mutex );
+            iStatus = pthread_mutex_lock(mutex);
         }
         else
         {
             /* Timeout. Relock mutex and decrement number of waiting threads. */
             iStatus = ETIMEDOUT;
-            ( void ) pthread_mutex_lock( mutex );
+            (void) pthread_mutex_lock(mutex);
 
-            ( void ) xSemaphoreTake( ( SemaphoreHandle_t ) &pxCond->xCondMutex, portMAX_DELAY );
+            (void) xSemaphoreTake((SemaphoreHandle_t ) &pxCond->xCondMutex,
+                                  portMAX_DELAY);
             pxCond->iWaitingThreads--;
-            ( void ) xSemaphoreGive( ( SemaphoreHandle_t ) &pxCond->xCondMutex );
+            (void) xSemaphoreGive((SemaphoreHandle_t ) &pxCond->xCondMutex);
         }
     }
 
@@ -247,8 +253,7 @@ int pthread_cond_timedwait( pthread_cond_t * cond,
 
 /*-----------------------------------------------------------*/
 
-int pthread_cond_wait( pthread_cond_t * cond,
-                       pthread_mutex_t * mutex )
+int pthread_cond_wait(pthread_cond_t * cond, pthread_mutex_t * mutex)
 {
-    return pthread_cond_timedwait( cond, mutex, NULL );
+    return pthread_cond_timedwait(cond, mutex, NULL);
 }

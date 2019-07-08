@@ -23,7 +23,6 @@
  * http://www.FreeRTOS.org
  */
 
-
 /**
  * @file aws_wifi_config.h
  * @brief WiFi configuration options.

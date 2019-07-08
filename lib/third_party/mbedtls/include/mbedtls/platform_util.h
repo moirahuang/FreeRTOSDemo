@@ -38,7 +38,8 @@
 #endif /* MBEDTLS_HAVE_TIME_DATE */
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
 /**
@@ -63,7 +64,7 @@ extern "C" {
  * \param len   Length of the buffer in bytes
  *
  */
-void mbedtls_platform_zeroize( void *buf, size_t len );
+void mbedtls_platform_zeroize(void *buf, size_t len);
 
 #if defined(MBEDTLS_HAVE_TIME_DATE)
 /**
@@ -93,7 +94,7 @@ void mbedtls_platform_zeroize( void *buf, size_t len );
  *              NULL
  */
 struct tm *mbedtls_platform_gmtime_r( const mbedtls_time_t *tt,
-                                      struct tm *tm_buf );
+        struct tm *tm_buf );
 #endif /* MBEDTLS_HAVE_TIME_DATE */
 
 #ifdef __cplusplus

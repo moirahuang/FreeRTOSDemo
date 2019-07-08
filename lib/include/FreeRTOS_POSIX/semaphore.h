@@ -47,15 +47,14 @@ typedef PosixSemType_t sem_t;
  *
  * http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_destroy.html
  */
-int sem_destroy( sem_t * sem );
+int sem_destroy(sem_t * sem);
 
 /**
  * @brief Get the value of a semaphore.
  *
  * http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_getvalue.html
  */
-int sem_getvalue( sem_t * sem,
-                  int * sval );
+int sem_getvalue(sem_t * sem, int * sval);
 
 /**
  * @brief Initialize an unnamed semaphore.
@@ -64,31 +63,28 @@ int sem_getvalue( sem_t * sem,
  *
  * @note pshared is ignored. Semaphores will always be considered "shared".
  */
-int sem_init( sem_t * sem,
-              int pshared,
-              unsigned value );
+int sem_init(sem_t * sem, int pshared, unsigned value);
 
 /**
  * @brief Unlock a semaphore.
  *
  * http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_post.html
  */
-int sem_post( sem_t * sem );
+int sem_post(sem_t * sem);
 
 /**
  * @brief Lock a semaphore with timeout.
  *
  * http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_timedwait.html
  */
-int sem_timedwait( sem_t * sem,
-                   const struct timespec * abstime );
+int sem_timedwait(sem_t * sem, const struct timespec * abstime);
 
 /**
  * @brief Lock a semaphore if available.
  *
  * http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_trywait.html
  */
-int sem_trywait( sem_t * sem );
+int sem_trywait(sem_t * sem);
 
 /**
  * @brief Lock a semaphore.
@@ -97,6 +93,6 @@ int sem_trywait( sem_t * sem );
  *
  * @note Deadlock detection is not implemented.
  */
-int sem_wait( sem_t * sem );
+int sem_wait(sem_t * sem);
 
 #endif /* ifndef _FREERTOS_POSIX_SEMAPHORE_H_ */

@@ -23,7 +23,6 @@
  * http://www.FreeRTOS.org
  */
 
-
 /**
  * @file aws_mqtt_lib.c
  * @brief MQTT Core Library implementation.
@@ -342,8 +341,8 @@
  *
  * @return Handle to a free buffer if one is available, NULL otherwise.
  */
-static MQTTBufferHandle_t prvGetFreeBuffer( MQTTContext_t * pxMQTTContext,
-                                            uint32_t ulBufferLength );
+static MQTTBufferHandle_t prvGetFreeBuffer(MQTTContext_t * pxMQTTContext,
+                                           uint32_t ulBufferLength);
 
 /**
  * @brief Returns the given buffer back to the free buffer pool.
@@ -354,8 +353,8 @@ static MQTTBufferHandle_t prvGetFreeBuffer( MQTTContext_t * pxMQTTContext,
  * @param[in] pxMQTTContext The MQTT context to which to return the buffer.
  * @param[in] xBuffer The buffer to return.
  */
-static void prvReturnBuffer( MQTTContext_t * pxMQTTContext,
-                             MQTTBufferHandle_t xBuffer );
+static void prvReturnBuffer(MQTTContext_t * pxMQTTContext,
+                            MQTTBufferHandle_t xBuffer);
 
 /**
  * @brief Finds a Tx buffer containing the MQTT message matching the given packet
@@ -372,9 +371,8 @@ static void prvReturnBuffer( MQTTContext_t * pxMQTTContext,
  *
  * @return The handle to the buffer if it finds one, NULL otherwise.
  */
-static MQTTBufferHandle_t prvPacketTypeFlagsGetTxBuffer( MQTTContext_t * pxMQTTContext,
-                                                         uint8_t ucPacketType,
-                                                         uint8_t ucFlags );
+static MQTTBufferHandle_t prvPacketTypeFlagsGetTxBuffer(
+        MQTTContext_t * pxMQTTContext, uint8_t ucPacketType, uint8_t ucFlags);
 
 /**
  * @brief Finds a Tx buffer containing the MQTT message matching the given packet
@@ -393,10 +391,9 @@ static MQTTBufferHandle_t prvPacketTypeFlagsGetTxBuffer( MQTTContext_t * pxMQTTC
  *
  * @return The handle to the buffer if it finds one, NULL otherwise.
  */
-static MQTTBufferHandle_t prvPacketTypeFlagsIdentifierGetTxBuffer( MQTTContext_t * pxMQTTContext,
-                                                                   uint8_t ucPacketType,
-                                                                   uint8_t ucFlags,
-                                                                   uint16_t usPacketIdentifier );
+static MQTTBufferHandle_t prvPacketTypeFlagsIdentifierGetTxBuffer(
+        MQTTContext_t * pxMQTTContext, uint8_t ucPacketType, uint8_t ucFlags,
+        uint16_t usPacketIdentifier);
 
 /**
  * @brief Finds a Tx buffer containing the MQTT message matching the given packet
@@ -413,9 +410,9 @@ static MQTTBufferHandle_t prvPacketTypeFlagsIdentifierGetTxBuffer( MQTTContext_t
  *
  * @return The handle to the buffer if it finds one, NULL otherwise.
  */
-static MQTTBufferHandle_t prvPacketTypeIdentifierGetTxBuffer( MQTTContext_t * pxMQTTContext,
-                                                              uint8_t ucPacketType,
-                                                              uint16_t usPacketIdentifier );
+static MQTTBufferHandle_t prvPacketTypeIdentifierGetTxBuffer(
+        MQTTContext_t * pxMQTTContext, uint8_t ucPacketType,
+        uint16_t usPacketIdentifier);
 
 /**
  * @brief Resets the Rx message state of the context to prepare it for
@@ -423,7 +420,7 @@ static MQTTBufferHandle_t prvPacketTypeIdentifierGetTxBuffer( MQTTContext_t * px
  *
  * @param[in] pxMQTTContext The MQTT context to reset the Rx message state.
  */
-static void prvResetRxMessageState( MQTTContext_t * pxMQTTContext );
+static void prvResetRxMessageState(MQTTContext_t * pxMQTTContext);
 
 /**
  * @brief Resets the MQTT contexts and puts in "not connected" state.
@@ -435,7 +432,7 @@ static void prvResetRxMessageState( MQTTContext_t * pxMQTTContext );
  *
  * @param[in] pxMQTTContext The MQTT context to reset.
  */
-static void prvResetMQTTContext( MQTTContext_t * pxMQTTContext );
+static void prvResetMQTTContext(MQTTContext_t * pxMQTTContext);
 
 /**
  * @brief Gets the current tick count.
@@ -449,7 +446,7 @@ static void prvResetMQTTContext( MQTTContext_t * pxMQTTContext );
  * @return The current tick count if the user has supplied GetTicks function,
  * zero otherwise.
  */
-static uint64_t prvGetCurrentTickCount( MQTTContext_t * pxMQTTContext );
+static uint64_t prvGetCurrentTickCount(MQTTContext_t * pxMQTTContext);
 
 /**
  * @brief Compares the recorded tick count with the current tick count to see
@@ -469,9 +466,9 @@ static uint64_t prvGetCurrentTickCount( MQTTContext_t * pxMQTTContext );
  *
  * @return eMQTTTrue if the time has elapsed, eMQTTFalse otherwise.
  */
-static MQTTBool_t prvIsTimeElapsed( uint64_t * pxRecordedTickCount,
-                                    uint64_t xCurrentTickCount,
-                                    uint32_t * pulRemainingTicks );
+static MQTTBool_t prvIsTimeElapsed(uint64_t * pxRecordedTickCount,
+                                   uint64_t xCurrentTickCount,
+                                   uint32_t * pulRemainingTicks);
 
 /**
  * @brief Transmits the data using the user supplied callback.
@@ -486,9 +483,9 @@ static MQTTBool_t prvIsTimeElapsed( uint64_t * pxRecordedTickCount,
  *
  * @return eMQTTSuccess if send is successful, eMQTTSendFailed otherwise.
  */
-static MQTTReturnCode_t prvSendData( MQTTContext_t * pxMQTTContext,
-                                     const uint8_t * const pucData,
-                                     uint32_t ulDataLength );
+static MQTTReturnCode_t prvSendData(MQTTContext_t * pxMQTTContext,
+                                    const uint8_t * const pucData,
+                                    uint32_t ulDataLength);
 
 /**
  * @brief Decodes and processes the received MQTT message containing only fixed header.
@@ -508,7 +505,8 @@ static MQTTReturnCode_t prvSendData( MQTTContext_t * pxMQTTContext,
  *
  * @param[in] pxMQTTContext The MQTT context for which the message was received.
  */
-static void prvProcessReceivedFixedHeaderOnlyMQTTPacket( MQTTContext_t * pxMQTTContext );
+static void prvProcessReceivedFixedHeaderOnlyMQTTPacket(
+        MQTTContext_t * pxMQTTContext);
 
 /**
  * @brief Decodes and processes the received MQTT message.
@@ -519,7 +517,7 @@ static void prvProcessReceivedFixedHeaderOnlyMQTTPacket( MQTTContext_t * pxMQTTC
  *
  * @param[in] pxMQTTContext The MQTT context for which the message was received.
  */
-static void prvProcessReceivedMQTTPacket( MQTTContext_t * pxMQTTContext );
+static void prvProcessReceivedMQTTPacket(MQTTContext_t * pxMQTTContext);
 
 /**
  * @brief Decodes and processes the received CONNACK message.
@@ -530,7 +528,7 @@ static void prvProcessReceivedMQTTPacket( MQTTContext_t * pxMQTTContext );
  *
  * @param[in] pxMQTTContext The MQTT context for which the message was received.
  */
-static void prvProcessReceivedCONNACK( MQTTContext_t * pxMQTTContext );
+static void prvProcessReceivedCONNACK(MQTTContext_t * pxMQTTContext);
 
 /**
  * @brief Decodes and processes the received SUBACK message.
@@ -541,7 +539,7 @@ static void prvProcessReceivedCONNACK( MQTTContext_t * pxMQTTContext );
  *
  * @param[in] pxMQTTContext The MQTT context for which the message was received.
  */
-static void prvProcessReceivedSUBACK( MQTTContext_t * pxMQTTContext );
+static void prvProcessReceivedSUBACK(MQTTContext_t * pxMQTTContext);
 
 /**
  * @brief Decodes and processes the received UNSUBACK message.
@@ -552,7 +550,7 @@ static void prvProcessReceivedSUBACK( MQTTContext_t * pxMQTTContext );
  *
  * @param[in] pxMQTTContext The MQTT context for which the message was received.
  */
-static void prvProcessReceivedUNSUBACK( MQTTContext_t * pxMQTTContext );
+static void prvProcessReceivedUNSUBACK(MQTTContext_t * pxMQTTContext);
 
 /**
  * @brief Decodes and processes the received PUBACK message.
@@ -563,7 +561,7 @@ static void prvProcessReceivedUNSUBACK( MQTTContext_t * pxMQTTContext );
  *
  * @param[in] pxMQTTContext The MQTT context for which the message was received.
  */
-static void prvProcessReceivedPUBACK( MQTTContext_t * pxMQTTContext );
+static void prvProcessReceivedPUBACK(MQTTContext_t * pxMQTTContext);
 
 /**
  * @brief Decodes and processes the received PINGRESP message.
@@ -572,7 +570,7 @@ static void prvProcessReceivedPUBACK( MQTTContext_t * pxMQTTContext );
  *
  * @param[in] pxMQTTContext The MQTT context for which the message was received.
  */
-static void prvProcessReceivedPINGRESP( MQTTContext_t * pxMQTTContext );
+static void prvProcessReceivedPINGRESP(MQTTContext_t * pxMQTTContext);
 
 /**
  * @brief Decodes and processes the received Publish message.
@@ -587,7 +585,7 @@ static void prvProcessReceivedPINGRESP( MQTTContext_t * pxMQTTContext );
  *
  * @param[in] pxMQTTContext The MQTT context for which the message was received.
  */
-static void prvProcessReceivedPublish( MQTTContext_t * pxMQTTContext );
+static void prvProcessReceivedPublish(MQTTContext_t * pxMQTTContext);
 
 /**
  * @brief Invokes the user supplied callback.
@@ -605,8 +603,9 @@ static void prvProcessReceivedPublish( MQTTContext_t * pxMQTTContext );
  * @return returned value from the callback, if one was invoked, eMQTTFalse
  * otherwise.
  */
-static MQTTBool_t prvInvokeCallback( MQTTContext_t * pxMQTTContext,
-                                     MQTTEventCallbackParams_t * pxEventCallbackParams );
+static MQTTBool_t prvInvokeCallback(
+        MQTTContext_t * pxMQTTContext,
+        MQTTEventCallbackParams_t * pxEventCallbackParams);
 
 /**
  * @brief Writes a string in the expected MQTT format which means prefixed with
@@ -628,10 +627,10 @@ static MQTTBool_t prvInvokeCallback( MQTTContext_t * pxMQTTContext,
  * @return The address of the byte following the string just copied to the buffer
  * if write is successful, pucDestination otherwise.
  */
-static uint8_t * prvWriteString( uint8_t * pucDestination,
-                                 const uint8_t * const pucLastByteInBuffer,
-                                 const uint8_t * const pucString,
-                                 uint16_t usStringLength );
+static uint8_t * prvWriteString(uint8_t * pucDestination,
+                                const uint8_t * const pucLastByteInBuffer,
+                                const uint8_t * const pucString,
+                                uint16_t usStringLength);
 
 /**
  * @brief Returns the number of bytes required to encode the given "Remaining Length"
@@ -643,7 +642,7 @@ static uint8_t * prvWriteString( uint8_t * pucDestination,
  * given remaining length is not within the permissible limits as documented by the
  * MQTT protocol spec, it returns 0 to indicate failure.
  */
-static uint8_t prvSizeOfRemainingLength( uint32_t ulRemainingLength );
+static uint8_t prvSizeOfRemainingLength(uint32_t ulRemainingLength);
 
 /**
  * @brief Encodes the given remaining length using the variable length encoding
@@ -663,9 +662,9 @@ static uint8_t prvSizeOfRemainingLength( uint32_t ulRemainingLength );
  *
  * @return The number of bytes written to the buffer.
  */
-static uint8_t prvEncodeRemainingLength( uint32_t ulRemainingLength,
-                                         uint8_t * const pucEncodedRemainingLength,
-                                         const uint8_t * const pucLastByteInBuffer );
+static uint8_t prvEncodeRemainingLength(
+        uint32_t ulRemainingLength, uint8_t * const pucEncodedRemainingLength,
+        const uint8_t * const pucLastByteInBuffer);
 
 /**
  * @brief Decodes the given remaining length using the variable length encoding
@@ -682,8 +681,9 @@ static uint8_t prvEncodeRemainingLength( uint32_t ulRemainingLength,
  *
  * @return Number of bytes read from the buffer.
  */
-static uint8_t prvDecodeRemainingLength( const uint8_t * const pucEncodedRemainingLength,
-                                         uint32_t * const pulRemainingLength );
+static uint8_t prvDecodeRemainingLength(
+        const uint8_t * const pucEncodedRemainingLength,
+        uint32_t * const pulRemainingLength);
 
 /**
  * @brief Store the subscription in the subscription manager.
@@ -705,11 +705,11 @@ static uint8_t prvDecodeRemainingLength( const uint8_t * const pucEncodedRemaini
  */
 #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-    static MQTTBool_t prvStoreSubscription( MQTTContext_t * pxMQTTContext,
-                                            const uint8_t * const pucTopic,
-                                            uint16_t usTopicLength,
-                                            void * pvPublishCallbackContext,
-                                            MQTTPublishCallback_t pxPublishCallback );
+static MQTTBool_t prvStoreSubscription(MQTTContext_t * pxMQTTContext,
+                                       const uint8_t * const pucTopic,
+                                       uint16_t usTopicLength,
+                                       void * pvPublishCallbackContext,
+                                       MQTTPublishCallback_t pxPublishCallback);
 
 #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
@@ -727,9 +727,9 @@ static uint8_t prvDecodeRemainingLength( const uint8_t * const pucEncodedRemaini
  */
 #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-    static void prvRemoveSubscription( MQTTContext_t * pxMQTTContext,
-                                       const uint8_t * const pucTopic,
-                                       uint16_t usTopicLength );
+static void prvRemoveSubscription(MQTTContext_t * pxMQTTContext,
+                                  const uint8_t * const pucTopic,
+                                  uint16_t usTopicLength);
 
 #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
@@ -747,8 +747,8 @@ static uint8_t prvDecodeRemainingLength( const uint8_t * const pucEncodedRemaini
  */
 #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-    static void prvRemoveSubscriptionForSubscribeOrUnsubscribeBuffer( MQTTContext_t * pxMQTTContext,
-                                                                      MQTTBufferHandle_t xBuffer );
+static void prvRemoveSubscriptionForSubscribeOrUnsubscribeBuffer(
+        MQTTContext_t * pxMQTTContext, MQTTBufferHandle_t xBuffer);
 
 #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
@@ -773,9 +773,9 @@ static uint8_t prvDecodeRemainingLength( const uint8_t * const pucEncodedRemaini
  */
 #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-    static MQTTBool_t prvInvokeSubscriptionCallbacks( MQTTContext_t * pxMQTTContext,
-                                                      const MQTTPublishData_t * pxPublishData,
-                                                      MQTTBool_t * pxSubscriptionCallbackInvoked );
+static MQTTBool_t prvInvokeSubscriptionCallbacks(
+        MQTTContext_t * pxMQTTContext, const MQTTPublishData_t * pxPublishData,
+        MQTTBool_t * pxSubscriptionCallbackInvoked);
 
 #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
@@ -803,8 +803,8 @@ static uint8_t prvDecodeRemainingLength( const uint8_t * const pucEncodedRemaini
  */
 #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-    static MQTTTopicFilterType_t prvGetTopicFilterType( const uint8_t * const pucTopicFilter,
-                                                        uint16_t usTopicFilterLength );
+static MQTTTopicFilterType_t prvGetTopicFilterType(
+        const uint8_t * const pucTopicFilter, uint16_t usTopicFilterLength);
 
 #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
@@ -832,16 +832,15 @@ static uint8_t prvDecodeRemainingLength( const uint8_t * const pucEncodedRemaini
  */
 #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-    static MQTTBool_t prvDoesTopicMatchTopicFilter( const uint8_t * const pucTopic,
-                                                    uint16_t usTopicLength,
-                                                    const uint8_t * const pucTopicFilter,
-                                                    uint16_t usTopicFilterLength );
+static MQTTBool_t prvDoesTopicMatchTopicFilter(
+        const uint8_t * const pucTopic, uint16_t usTopicLength,
+        const uint8_t * const pucTopicFilter, uint16_t usTopicFilterLength);
 
 #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 /*-----------------------------------------------------------*/
 
-static MQTTBufferHandle_t prvGetFreeBuffer( MQTTContext_t * pxMQTTContext,
-                                            uint32_t ulBufferLength )
+static MQTTBufferHandle_t prvGetFreeBuffer(MQTTContext_t * pxMQTTContext,
+                                           uint32_t ulBufferLength)
 {
     MQTTBufferHandle_t xFreeBufferHandle = NULL;
     uint32_t ulRequestedBufferLength = 0;
@@ -849,18 +848,20 @@ static MQTTBufferHandle_t prvGetFreeBuffer( MQTTContext_t * pxMQTTContext,
 
     /* Request a buffer enough to hold the metadata along
      * with the MQTT message. */
-    ulRequestedBufferLength = ulBufferLength + ( uint32_t ) sizeof( MQTTBufferMetadata_t );
+    ulRequestedBufferLength = ulBufferLength
+            + (uint32_t) sizeof(MQTTBufferMetadata_t);
 
     /* Try to get a buffer from the free buffer pool. */
-    pucFreeBuffer = pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn( &ulRequestedBufferLength );
+    pucFreeBuffer = pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn(
+            &ulRequestedBufferLength);
 
     /* Initialize the metadata, if we got a buffer. */
-    if( pucFreeBuffer != NULL )
+    if (pucFreeBuffer != NULL)
     {
-        mqttbufferINIT_BUFFER( pucFreeBuffer, ulRequestedBufferLength );
+        mqttbufferINIT_BUFFER(pucFreeBuffer, ulRequestedBufferLength);
 
         /* Get the handle to return. */
-        xFreeBufferHandle = mqttbufferGET_HANDLE_FROM_RAW_BUFFER( pucFreeBuffer ); /*lint !e9087 Opaque pointer. */
+        xFreeBufferHandle = mqttbufferGET_HANDLE_FROM_RAW_BUFFER(pucFreeBuffer); /*lint !e9087 Opaque pointer. */
 
         /* Ensure that the actual space in the buffer to store
          * data is at least what the user requested. */
@@ -871,26 +872,27 @@ static MQTTBufferHandle_t prvGetFreeBuffer( MQTTContext_t * pxMQTTContext,
 }
 /*-----------------------------------------------------------*/
 
-static void prvReturnBuffer( MQTTContext_t * pxMQTTContext,
-                             MQTTBufferHandle_t xBuffer )
+static void prvReturnBuffer(MQTTContext_t * pxMQTTContext,
+                            MQTTBufferHandle_t xBuffer)
 {
-    if( xBuffer != NULL )
+    if (xBuffer != NULL)
     {
         /* Clear the payload memory. */
-        memset( mqttbufferGET_DATA( xBuffer ), 0x00, mqttbufferGET_EFFECTIVE_BUFFER_LENGTH( xBuffer ) );
+        memset(mqttbufferGET_DATA(xBuffer), 0x00,
+               mqttbufferGET_EFFECTIVE_BUFFER_LENGTH(xBuffer));
 
         /* If the buffer is part of Tx list, remove it. */
-        mqttbufferLIST_REMOVE( xBuffer );
+        mqttbufferLIST_REMOVE(xBuffer);
 
         /* Return the buffer to the free buffer pool. */
-        pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn( mqttbufferGET_RAW_BUFFER_FROM_HANDLE( xBuffer ) );
+        pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn(
+                mqttbufferGET_RAW_BUFFER_FROM_HANDLE(xBuffer));
     }
 }
 /*-----------------------------------------------------------*/
 
-static MQTTBufferHandle_t prvPacketTypeFlagsGetTxBuffer( MQTTContext_t * pxMQTTContext,
-                                                         uint8_t ucPacketType,
-                                                         uint8_t ucFlags )
+static MQTTBufferHandle_t prvPacketTypeFlagsGetTxBuffer(
+        MQTTContext_t * pxMQTTContext, uint8_t ucPacketType, uint8_t ucFlags)
 {
     Link_t * pxLink;
     MQTTBufferHandle_t xBuffer = NULL;
@@ -899,12 +901,14 @@ static MQTTBufferHandle_t prvPacketTypeFlagsGetTxBuffer( MQTTContext_t * pxMQTTC
     /* Iterate over all buffers in the Tx buffer list. */
     listFOR_EACH( pxLink, &( pxMQTTContext->xTxBufferListHead ) )
     {
-        xBuffer = mqttbufferGET_BUFFER_HANDLE_FROM_LINK( pxLink );
+        xBuffer = mqttbufferGET_BUFFER_HANDLE_FROM_LINK(pxLink);
 
         /* Check if the first byte contains the given packet type
          * and flags. */
-        if( ( ( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] & mqttTOP_NIBBLE_MASK ) == ucPacketType ) &&
-            ( ( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] & mqttLOWER_NIBBLE_MASK ) == ucFlags ) )
+        if ((( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+                & mqttTOP_NIBBLE_MASK) == ucPacketType)
+                && (( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+                        & mqttLOWER_NIBBLE_MASK) == ucFlags))
         {
             xFound = eMQTTTrue;
             break;
@@ -912,7 +916,7 @@ static MQTTBufferHandle_t prvPacketTypeFlagsGetTxBuffer( MQTTContext_t * pxMQTTC
     }
 
     /* Did we find a buffer? */
-    if( xFound == eMQTTFalse )
+    if (xFound == eMQTTFalse)
     {
         xBuffer = NULL;
     }
@@ -921,10 +925,9 @@ static MQTTBufferHandle_t prvPacketTypeFlagsGetTxBuffer( MQTTContext_t * pxMQTTC
 }
 /*-----------------------------------------------------------*/
 
-static MQTTBufferHandle_t prvPacketTypeFlagsIdentifierGetTxBuffer( MQTTContext_t * pxMQTTContext,
-                                                                   uint8_t ucPacketType,
-                                                                   uint8_t ucFlags,
-                                                                   uint16_t usPacketIdentifier )
+static MQTTBufferHandle_t prvPacketTypeFlagsIdentifierGetTxBuffer(
+        MQTTContext_t * pxMQTTContext, uint8_t ucPacketType, uint8_t ucFlags,
+        uint16_t usPacketIdentifier)
 {
     Link_t * pxLink;
     MQTTBufferHandle_t xBuffer = NULL;
@@ -933,13 +936,16 @@ static MQTTBufferHandle_t prvPacketTypeFlagsIdentifierGetTxBuffer( MQTTContext_t
     /* Iterate over all buffers in the Tx buffer list. */
     listFOR_EACH( pxLink, &( pxMQTTContext->xTxBufferListHead ) )
     {
-        xBuffer = mqttbufferGET_BUFFER_HANDLE_FROM_LINK( pxLink );
+        xBuffer = mqttbufferGET_BUFFER_HANDLE_FROM_LINK(pxLink);
 
         /* Check that the first byte contains the given packet type
          * and flags and the packet identifier matches the given one. */
-        if( ( ( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] & mqttTOP_NIBBLE_MASK ) == ucPacketType ) &&
-            ( ( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] & mqttLOWER_NIBBLE_MASK ) == ucFlags ) &&
-            ( mqttbufferGET_PACKET_IDENTIFIER( xBuffer ) == usPacketIdentifier ) )
+        if ((( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+                & mqttTOP_NIBBLE_MASK) == ucPacketType)
+                && (( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+                        & mqttLOWER_NIBBLE_MASK) == ucFlags)
+                && ( mqttbufferGET_PACKET_IDENTIFIER(xBuffer)
+                        == usPacketIdentifier))
         {
             xFound = eMQTTTrue;
             break;
@@ -947,7 +953,7 @@ static MQTTBufferHandle_t prvPacketTypeFlagsIdentifierGetTxBuffer( MQTTContext_t
     }
 
     /* Did we find a buffer? */
-    if( xFound == eMQTTFalse )
+    if (xFound == eMQTTFalse)
     {
         xBuffer = NULL;
     }
@@ -956,9 +962,9 @@ static MQTTBufferHandle_t prvPacketTypeFlagsIdentifierGetTxBuffer( MQTTContext_t
 }
 /*-----------------------------------------------------------*/
 
-static MQTTBufferHandle_t prvPacketTypeIdentifierGetTxBuffer( MQTTContext_t * pxMQTTContext,
-                                                              uint8_t ucPacketType,
-                                                              uint16_t usPacketIdentifier )
+static MQTTBufferHandle_t prvPacketTypeIdentifierGetTxBuffer(
+        MQTTContext_t * pxMQTTContext, uint8_t ucPacketType,
+        uint16_t usPacketIdentifier)
 {
     Link_t * pxLink;
     MQTTBufferHandle_t xBuffer = NULL;
@@ -967,12 +973,14 @@ static MQTTBufferHandle_t prvPacketTypeIdentifierGetTxBuffer( MQTTContext_t * px
     /* Iterate over all buffers in the Tx buffer list. */
     listFOR_EACH( pxLink, &( pxMQTTContext->xTxBufferListHead ) )
     {
-        xBuffer = mqttbufferGET_BUFFER_HANDLE_FROM_LINK( pxLink );
+        xBuffer = mqttbufferGET_BUFFER_HANDLE_FROM_LINK(pxLink);
 
         /* Check that the first byte contains the given packet type
          * and flags and the packet identifier matches the given one. */
-        if( ( ( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] & mqttTOP_NIBBLE_MASK ) == ucPacketType ) &&
-            ( mqttbufferGET_PACKET_IDENTIFIER( xBuffer ) == usPacketIdentifier ) )
+        if ((( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+                & mqttTOP_NIBBLE_MASK) == ucPacketType)
+                && ( mqttbufferGET_PACKET_IDENTIFIER(xBuffer)
+                        == usPacketIdentifier))
         {
             xFound = eMQTTTrue;
             break;
@@ -980,7 +988,7 @@ static MQTTBufferHandle_t prvPacketTypeIdentifierGetTxBuffer( MQTTContext_t * px
     }
 
     /* Did we find a buffer? */
-    if( xFound == eMQTTFalse )
+    if (xFound == eMQTTFalse)
     {
         xBuffer = NULL;
     }
@@ -989,7 +997,7 @@ static MQTTBufferHandle_t prvPacketTypeIdentifierGetTxBuffer( MQTTContext_t * px
 }
 /*-----------------------------------------------------------*/
 
-static void prvResetRxMessageState( MQTTContext_t * pxMQTTContext )
+static void prvResetRxMessageState(MQTTContext_t * pxMQTTContext)
 {
     /* Prepares the context to receive the next message. */
     pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes = 0;
@@ -1001,14 +1009,14 @@ static void prvResetRxMessageState( MQTTContext_t * pxMQTTContext )
 }
 /*-----------------------------------------------------------*/
 
-static void prvResetMQTTContext( MQTTContext_t * pxMQTTContext )
+static void prvResetMQTTContext(MQTTContext_t * pxMQTTContext)
 {
-    Link_t * pxLink, * pxTempLink;
+    Link_t * pxLink, *pxTempLink;
     MQTTBufferHandle_t xBufferHandle;
 
-    #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
-        uint32_t x;
-    #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+    uint32_t x;
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
     /* Set connection state to not connected. */
     pxMQTTContext->xConnectionState = eMQTTNotConnected;
@@ -1016,40 +1024,42 @@ static void prvResetMQTTContext( MQTTContext_t * pxMQTTContext )
     /* Return all Tx buffers to the free buffer pool. */
     listFOR_EACH_SAFE( pxLink, pxTempLink, &( pxMQTTContext->xTxBufferListHead ) )
     {
-        xBufferHandle = mqttbufferGET_BUFFER_HANDLE_FROM_LINK( pxLink );
-        prvReturnBuffer( pxMQTTContext, xBufferHandle );
+        xBufferHandle = mqttbufferGET_BUFFER_HANDLE_FROM_LINK(pxLink);
+        prvReturnBuffer(pxMQTTContext, xBufferHandle);
     }
 
     /* Return Rx buffer to the free buffer pool. */
-    prvReturnBuffer( pxMQTTContext, pxMQTTContext->xRxBuffer );
+    prvReturnBuffer(pxMQTTContext, pxMQTTContext->xRxBuffer);
 
     /* Reset Rx message state. */
-    prvResetRxMessageState( pxMQTTContext );
+    prvResetRxMessageState(pxMQTTContext);
 
-    #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-        /* Mark all the subscription entires in the subscription
-         * manager as free. */
-        for( x = 0; x < ( uint32_t ) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS; x++ )
-        {
-            pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].xInUse = eMQTTFalse;
-        }
+    /* Mark all the subscription entires in the subscription
+     * manager as free. */
+    for (x = 0; x < (uint32_t) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS;
+            x++)
+    {
+        pxMQTTContext->xSubscriptionManager.xSubscriptions[x].xInUse =
+                eMQTTFalse;
+    }
 
-        /* Set the number of in-use subscription entries to zero. */
-        pxMQTTContext->xSubscriptionManager.ulInUseSubscriptions = 0;
-    #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+    /* Set the number of in-use subscription entries to zero. */
+    pxMQTTContext->xSubscriptionManager.ulInUseSubscriptions = 0;
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 }
 /*-----------------------------------------------------------*/
 
-static uint64_t prvGetCurrentTickCount( MQTTContext_t * pxMQTTContext )
+static uint64_t prvGetCurrentTickCount(MQTTContext_t * pxMQTTContext)
 {
     uint64_t uxCurrentTickCount = 0;
 
     /* If user has supplied get ticks function, use it to get the
      * current tick count. */
-    if( pxMQTTContext->pxGetTicksFxn != NULL )
+    if (pxMQTTContext->pxGetTicksFxn != NULL)
     {
-        pxMQTTContext->pxGetTicksFxn( &( uxCurrentTickCount ) );
+        pxMQTTContext->pxGetTicksFxn(&(uxCurrentTickCount));
     }
 
     /* If user has not supplied get ticks function, we return zero
@@ -1060,14 +1070,14 @@ static uint64_t prvGetCurrentTickCount( MQTTContext_t * pxMQTTContext )
 }
 /*-----------------------------------------------------------*/
 
-static MQTTBool_t prvIsTimeElapsed( uint64_t * pxRecordedTickCount,
-                                    uint64_t xCurrentTickCount,
-                                    uint32_t * pulRemainingTicks )
+static MQTTBool_t prvIsTimeElapsed(uint64_t * pxRecordedTickCount,
+                                   uint64_t xCurrentTickCount,
+                                   uint32_t * pulRemainingTicks)
 {
     uint32_t ulElapsedTicks;
     MQTTBool_t xTimeElasped = eMQTTFalse;
 
-    if( ( *pxRecordedTickCount ) == ( uint64_t ) 0 )
+    if ((*pxRecordedTickCount) == (uint64_t) 0)
     {
         /* If recorded tick count is zero, this means that user has not
          * supplied get ticks function and we should store tick count. The
@@ -1077,13 +1087,13 @@ static MQTTBool_t prvIsTimeElapsed( uint64_t * pxRecordedTickCount,
     else
     {
         /* Check how much time has elapsed. */
-        ulElapsedTicks = ( uint32_t ) ( xCurrentTickCount - *pxRecordedTickCount );
+        ulElapsedTicks = (uint32_t) (xCurrentTickCount - *pxRecordedTickCount);
 
         /* Update the recorded tick count to the current tick count. */
         *pxRecordedTickCount = xCurrentTickCount;
 
         /* If elapsed ticks are more than remaining, return eMQTTTrue. */
-        if( ulElapsedTicks >= *pulRemainingTicks )
+        if (ulElapsedTicks >= *pulRemainingTicks)
         {
             xTimeElasped = eMQTTTrue;
             *pulRemainingTicks = 0;
@@ -1099,13 +1109,14 @@ static MQTTBool_t prvIsTimeElapsed( uint64_t * pxRecordedTickCount,
 }
 /*-----------------------------------------------------------*/
 
-static MQTTReturnCode_t prvSendData( MQTTContext_t * pxMQTTContext,
-                                     const uint8_t * const pucData,
-                                     uint32_t ulDataLength )
+static MQTTReturnCode_t prvSendData(MQTTContext_t * pxMQTTContext,
+                                    const uint8_t * const pucData,
+                                    uint32_t ulDataLength)
 {
     MQTTReturnCode_t xReturnCode = eMQTTSendFailed;
 
-    if( pxMQTTContext->pxMQTTSendFxn( pxMQTTContext->pvSendContext, pucData, ulDataLength ) == ulDataLength )
+    if (pxMQTTContext->pxMQTTSendFxn(pxMQTTContext->pvSendContext, pucData,
+                                     ulDataLength) == ulDataLength)
     {
         xReturnCode = eMQTTSuccess;
 
@@ -1113,98 +1124,111 @@ static MQTTReturnCode_t prvSendData( MQTTContext_t * pxMQTTContext,
          * need to be sent only if we are not sending any message. So
          * sending any message essentially delays when the next keep
          * alive should be sent. */
-        pxMQTTContext->xLastSentMessageTimestamp = prvGetCurrentTickCount( pxMQTTContext );
-        pxMQTTContext->ulNextPeriodicInvokeTicks = pxMQTTContext->ulKeepAliveActualIntervalTicks;
+        pxMQTTContext->xLastSentMessageTimestamp = prvGetCurrentTickCount(
+                pxMQTTContext);
+        pxMQTTContext->ulNextPeriodicInvokeTicks =
+                pxMQTTContext->ulKeepAliveActualIntervalTicks;
     }
 
     return xReturnCode;
 }
 /*-----------------------------------------------------------*/
 
-static void prvProcessReceivedFixedHeaderOnlyMQTTPacket( MQTTContext_t * pxMQTTContext )
+static void prvProcessReceivedFixedHeaderOnlyMQTTPacket(
+        MQTTContext_t * pxMQTTContext)
 {
     MQTTEventCallbackParams_t xEventCallbackParams;
 
     /* Is this a PINGRESP? */
-    if( pxMQTTContext->ucRxFixedHeaderBuffer[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] == ( uint8_t ) ( mqttCONTROL_PINGRESP | mqttFLAGS_PINGRESP ) )
+    if (pxMQTTContext->ucRxFixedHeaderBuffer[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+            == (uint8_t) ( mqttCONTROL_PINGRESP | mqttFLAGS_PINGRESP))
     {
-        prvProcessReceivedPINGRESP( pxMQTTContext );
+        prvProcessReceivedPINGRESP(pxMQTTContext);
     }
     /* Any other fixed header only packet is considered a malformed packet. */
     else
     {
         /* A malformed packet has been received - disconnect. */
-        prvResetMQTTContext( pxMQTTContext );
+        prvResetMQTTContext(pxMQTTContext);
 
         /* Inform the user about the malformed packet. */
         xEventCallbackParams.xEventType = eMQTTClientDisconnected;
-        xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonMalformedPacket;
-        ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+        xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                eMQTTDisconnectReasonMalformedPacket;
+        (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
     }
 }
 /*-----------------------------------------------------------*/
 
-static void prvProcessReceivedMQTTPacket( MQTTContext_t * pxMQTTContext )
+static void prvProcessReceivedMQTTPacket(MQTTContext_t * pxMQTTContext)
 {
     MQTTEventCallbackParams_t xEventCallbackParams;
 
     /* Is this a publish message from broker? */
-    if( ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] & mqttTOP_NIBBLE_MASK ) == mqttCONTROL_PUBLISH )
+    if (( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+            & mqttTOP_NIBBLE_MASK) == mqttCONTROL_PUBLISH)
     {
-        prvProcessReceivedPublish( pxMQTTContext );
+        prvProcessReceivedPublish(pxMQTTContext);
     }
     /* Is this a CONNACK? */
-    else if( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] == ( uint8_t ) ( mqttCONTROL_CONNACK | mqttFLAGS_CONNACK ) )
+    else if ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+            == (uint8_t) ( mqttCONTROL_CONNACK | mqttFLAGS_CONNACK))
     {
-        prvProcessReceivedCONNACK( pxMQTTContext );
+        prvProcessReceivedCONNACK(pxMQTTContext);
     }
     /* Is this a PUBACK? */
-    else if( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] == ( uint8_t ) ( mqttCONTROL_PUBACK | mqttFLAGS_PUBACK ) )
+    else if ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+            == (uint8_t) ( mqttCONTROL_PUBACK | mqttFLAGS_PUBACK))
     {
-        prvProcessReceivedPUBACK( pxMQTTContext );
+        prvProcessReceivedPUBACK(pxMQTTContext);
     }
     /* Is this a SUBACK? */
-    else if( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] == ( uint8_t ) ( mqttCONTROL_SUBACK | mqttFLAGS_SUBACK ) )
+    else if ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+            == (uint8_t) ( mqttCONTROL_SUBACK | mqttFLAGS_SUBACK))
     {
-        prvProcessReceivedSUBACK( pxMQTTContext );
+        prvProcessReceivedSUBACK(pxMQTTContext);
     }
     /* Is this an UNSUBACK? */
-    else if( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] == ( uint8_t ) ( mqttCONTROL_UNSUBACK | mqttFLAGS_UNSUBACK ) )
+    else if ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+            == (uint8_t) ( mqttCONTROL_UNSUBACK | mqttFLAGS_UNSUBACK))
     {
-        prvProcessReceivedUNSUBACK( pxMQTTContext );
+        prvProcessReceivedUNSUBACK(pxMQTTContext);
     }
     /* Any other packet is considered malformed. */
     else
     {
         /* A malformed packet has been received - disconnect. */
-        prvResetMQTTContext( pxMQTTContext );
+        prvResetMQTTContext(pxMQTTContext);
 
         /* Inform the user about the malformed packet. */
         xEventCallbackParams.xEventType = eMQTTClientDisconnected;
-        xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonMalformedPacket;
-        ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+        xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                eMQTTDisconnectReasonMalformedPacket;
+        (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
     }
 }
 /*-----------------------------------------------------------*/
 
-static void prvProcessReceivedCONNACK( MQTTContext_t * pxMQTTContext )
+static void prvProcessReceivedCONNACK(MQTTContext_t * pxMQTTContext)
 {
     MQTTBufferHandle_t xConnectTxBuffer;
     MQTTEventCallbackParams_t xEventCallbackParams;
-    MQTTBool_t xConnectionEstablished = eMQTTFalse, xConnectionRefused = eMQTTFalse, xMalformedPacket = eMQTTFalse;
+    MQTTBool_t xConnectionEstablished = eMQTTFalse, xConnectionRefused =
+            eMQTTFalse, xMalformedPacket = eMQTTFalse;
     uint8_t ucReturnCode;
-    static const uint8_t ucDefaultCONNACKParameters[] =
-    {
-        mqttCONTROL_CONNACK | mqttFLAGS_CONNACK, /* Fixed header control packet type. */
-        2,                                       /* Fixed header remaining length - always 2 for CONNACK. */
-        0,                                       /* Bit 0 is SP - Session Present. */
-        0,                                       /* Return code. */
+    static const uint8_t ucDefaultCONNACKParameters[] = {
+    mqttCONTROL_CONNACK | mqttFLAGS_CONNACK, /* Fixed header control packet type. */
+                                                          2, /* Fixed header remaining length - always 2 for CONNACK. */
+                                                          0, /* Bit 0 is SP - Session Present. */
+                                                          0, /* Return code. */
     };
 
     /* Is there a connect message waiting for CONNACK? */
-    xConnectTxBuffer = prvPacketTypeFlagsGetTxBuffer( pxMQTTContext, mqttCONTROL_CONNECT, mqttFLAGS_CONNECT );
+    xConnectTxBuffer = prvPacketTypeFlagsGetTxBuffer(pxMQTTContext,
+                                                     mqttCONTROL_CONNECT,
+                                                     mqttFLAGS_CONNECT);
 
-    if( xConnectTxBuffer == NULL )
+    if (xConnectTxBuffer == NULL)
     {
         /* Either the connect was never sent or the sender has
          * timed out i.e. not waiting for CONNACK. Either case,
@@ -1212,16 +1236,19 @@ static void prvProcessReceivedCONNACK( MQTTContext_t * pxMQTTContext )
          * an unexpected CONNACK (which might be a delayed one from
          * user's perspective) was received. */
         xEventCallbackParams.xEventType = eMQTTUnexpectedConnACK;
-        ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+        (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
     }
     else
     {
-        if( mqttbufferGET_DATA_LENGTH( pxMQTTContext->xRxBuffer ) >= sizeof( ucDefaultCONNACKParameters ) )
+        if ( mqttbufferGET_DATA_LENGTH(pxMQTTContext->xRxBuffer)
+                >= sizeof(ucDefaultCONNACKParameters))
         {
             /* Received enough data for a CONNACK - does the received fixed header match
              * the expected one for the CONNACK message (Fixed header is of 2 bytes for CONNACK
              * message because Remaining Length is 2 which takes only one byte)? */
-            if( memcmp( ucDefaultCONNACKParameters, mqttbufferGET_DATA( pxMQTTContext->xRxBuffer ), mqttFIXED_HEADER_MIN_SIZE ) == 0 )
+            if (memcmp(ucDefaultCONNACKParameters,
+                       mqttbufferGET_DATA(pxMQTTContext->xRxBuffer),
+                       mqttFIXED_HEADER_MIN_SIZE) == 0)
             {
                 mqttconfigDEBUG_LOG( ( "CONNACK received.\r\n" ) );
 
@@ -1229,49 +1256,61 @@ static void prvProcessReceivedCONNACK( MQTTContext_t * pxMQTTContext )
 
                 /* Since AWS IoT only supports CleanSession 1, SP bit will
                  * always be zero. */
-                ucReturnCode = mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttCONNACK_RETURN_CODE_OFFSET ];
+                ucReturnCode =
+                        mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttCONNACK_RETURN_CODE_OFFSET];
 
-                if( ucReturnCode == ( uint8_t ) 0 ) /* Connection Accepted. */
+                if (ucReturnCode == (uint8_t) 0) /* Connection Accepted. */
                 {
                     /* Server has accepted the connection and we are now in
                      * connected state. */
                     xEventCallbackParams.xEventType = eMQTTConnACK;
-                    xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode = eMQTTConnACKConnectionAccepted;
-                    xEventCallbackParams.u.xMQTTConnACKData.usPacketIdentifier = mqttbufferGET_PACKET_IDENTIFIER( xConnectTxBuffer );
-                    ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                    xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode =
+                            eMQTTConnACKConnectionAccepted;
+                    xEventCallbackParams.u.xMQTTConnACKData.usPacketIdentifier =
+                            mqttbufferGET_PACKET_IDENTIFIER(xConnectTxBuffer);
+                    (void) prvInvokeCallback(pxMQTTContext,
+                                             &xEventCallbackParams);
 
                     /* Connection is established. */
                     xConnectionEstablished = eMQTTTrue;
                 }
-                else if( ( ucReturnCode >= ( uint8_t ) 1 ) && ( ucReturnCode <= ( uint8_t ) 5 ) )
+                else if ((ucReturnCode >= (uint8_t) 1)
+                        && (ucReturnCode <= (uint8_t) 5))
                 {
                     /* Server refused to accept the connection. */
                     xEventCallbackParams.xEventType = eMQTTConnACK;
 
                     /* Convert the return code to a user friendly enum value. */
-                    if( ucReturnCode == ( uint8_t ) 1 )
+                    if (ucReturnCode == (uint8_t) 1)
                     {
-                        xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode = eMQTTConnACKUnacceptableProtocolVersion;
+                        xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode =
+                                eMQTTConnACKUnacceptableProtocolVersion;
                     }
-                    else if( ucReturnCode == ( uint8_t ) 2 )
+                    else if (ucReturnCode == (uint8_t) 2)
                     {
-                        xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode = eMQTTConnACKIdentifierRejected;
+                        xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode =
+                                eMQTTConnACKIdentifierRejected;
                     }
-                    else if( ucReturnCode == ( uint8_t ) 3 )
+                    else if (ucReturnCode == (uint8_t) 3)
                     {
-                        xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode = eMQTTConnACKServerUnavailable;
+                        xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode =
+                                eMQTTConnACKServerUnavailable;
                     }
-                    else if( ucReturnCode == ( uint8_t ) 4 )
+                    else if (ucReturnCode == (uint8_t) 4)
                     {
-                        xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode = eMQTTConnACKBadUsernameOrPassword;
+                        xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode =
+                                eMQTTConnACKBadUsernameOrPassword;
                     }
                     else
                     {
-                        xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode = eMQTTConnACKUnauthorized;
+                        xEventCallbackParams.u.xMQTTConnACKData.xConnACKReturnCode =
+                                eMQTTConnACKUnauthorized;
                     }
 
-                    xEventCallbackParams.u.xMQTTConnACKData.usPacketIdentifier = mqttbufferGET_PACKET_IDENTIFIER( xConnectTxBuffer );
-                    ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                    xEventCallbackParams.u.xMQTTConnACKData.usPacketIdentifier =
+                            mqttbufferGET_PACKET_IDENTIFIER(xConnectTxBuffer);
+                    (void) prvInvokeCallback(pxMQTTContext,
+                                             &xEventCallbackParams);
 
                     xConnectionRefused = eMQTTTrue;
                 }
@@ -1284,10 +1323,10 @@ static void prvProcessReceivedCONNACK( MQTTContext_t * pxMQTTContext )
             else
             {
                 mqttconfigDEBUG_LOG( ( "Unknown messages %x %x %x %x, expected CONNACK, disconnecting socket.\r\n",
-                                       mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ 0 ],
-                                       mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ 1 ],
-                                       mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ 2 ],
-                                       mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ 3 ] ) );
+                                mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ 0 ],
+                                mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ 1 ],
+                                mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ 2 ],
+                                mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ 3 ] ) );
 
                 /* Malformed packet - Fixed header does not match. */
                 xMalformedPacket = eMQTTTrue;
@@ -1300,50 +1339,54 @@ static void prvProcessReceivedCONNACK( MQTTContext_t * pxMQTTContext )
         }
 
         /* Return the Tx buffer to the free buffer pool. */
-        prvReturnBuffer( pxMQTTContext, xConnectTxBuffer );
+        prvReturnBuffer(pxMQTTContext, xConnectTxBuffer);
     }
 
     /* If connection was refused by the server or a malformed packet
      * was received, we need to disconnect and inform the user. */
-    if( ( xConnectionRefused == eMQTTTrue ) || ( xMalformedPacket == eMQTTTrue ) )
+    if ((xConnectionRefused == eMQTTTrue) || (xMalformedPacket == eMQTTTrue))
     {
-        prvResetMQTTContext( pxMQTTContext );
+        prvResetMQTTContext(pxMQTTContext);
         xEventCallbackParams.xEventType = eMQTTClientDisconnected;
 
         /* Set the appropriate disconnect reason. */
-        if( xMalformedPacket == eMQTTTrue )
+        if (xMalformedPacket == eMQTTTrue)
         {
-            xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonMalformedPacket;
+            xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                    eMQTTDisconnectReasonMalformedPacket;
         }
         else
         {
-            xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonBrokerRefusedConnection;
+            xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                    eMQTTDisconnectReasonBrokerRefusedConnection;
         }
 
-        ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+        (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
     }
 
     /* Did we get an expected CONNACK from the server. */
-    if( xConnectionEstablished == eMQTTTrue )
+    if (xConnectionEstablished == eMQTTTrue)
     {
         /* Set the connection state as connected. */
         pxMQTTContext->xConnectionState = eMQTTConnected;
 
         /* Now onwards, keep alive messages should be sent regularly in
          * order to ensure a long lived connection. */
-        pxMQTTContext->xLastSentMessageTimestamp = prvGetCurrentTickCount( pxMQTTContext );
-        pxMQTTContext->ulNextPeriodicInvokeTicks = pxMQTTContext->ulKeepAliveActualIntervalTicks;
+        pxMQTTContext->xLastSentMessageTimestamp = prvGetCurrentTickCount(
+                pxMQTTContext);
+        pxMQTTContext->ulNextPeriodicInvokeTicks =
+                pxMQTTContext->ulKeepAliveActualIntervalTicks;
 
         /* No ping has been sent yet. */
         pxMQTTContext->xWaitingForPingResp = eMQTTFalse;
     }
 
     /* Return the RxBuffer to the free buffer pool. */
-    prvReturnBuffer( pxMQTTContext, pxMQTTContext->xRxBuffer );
+    prvReturnBuffer(pxMQTTContext, pxMQTTContext->xRxBuffer);
 }
 /*-----------------------------------------------------------*/
 
-static void prvProcessReceivedSUBACK( MQTTContext_t * pxMQTTContext )
+static void prvProcessReceivedSUBACK(MQTTContext_t * pxMQTTContext)
 {
     MQTTBufferHandle_t xSubscribeTxBuffer;
     MQTTEventCallbackParams_t xEventCallbackParams;
@@ -1352,69 +1395,84 @@ static void prvProcessReceivedSUBACK( MQTTContext_t * pxMQTTContext )
     uint16_t usPacketIdentifier;
 
     /* Must have enough bytes to at least read out one return code. */
-    if( mqttbufferGET_DATA_LENGTH( pxMQTTContext->xRxBuffer ) > ( uint32_t ) mqttADJUST_OFFSET( mqttSUBACK_RETURN_CODE_OFFSET,
-                                                                                                pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) )
+    if ( mqttbufferGET_DATA_LENGTH(
+            pxMQTTContext->xRxBuffer) > ( uint32_t ) mqttADJUST_OFFSET( mqttSUBACK_RETURN_CODE_OFFSET,
+                    pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ))
     {
         /* Extract the packet identifier and see if there is a subscribe
          * packet waiting for ACK. */
-        usPacketIdentifier = ( uint16_t ) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttSUBACK_PACKET_ID_MSB_OFFSET,
-                                                                                                               pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) ] );
+        usPacketIdentifier =
+                (uint16_t) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[mqttADJUST_OFFSET(
+                        mqttSUBACK_PACKET_ID_MSB_OFFSET,
+                        pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)]);
         usPacketIdentifier <<= mqttBITS_PER_BYTE;
-        usPacketIdentifier |= ( uint8_t ) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttSUBACK_PACKET_ID_LSB_OFFSET,
-                                                                                                               pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) ] );
+        usPacketIdentifier |=
+                (uint8_t) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[mqttADJUST_OFFSET(
+                        mqttSUBACK_PACKET_ID_LSB_OFFSET,
+                        pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)]);
 
-        xSubscribeTxBuffer = prvPacketTypeFlagsIdentifierGetTxBuffer( pxMQTTContext, mqttCONTROL_SUBSCRIBE, mqttFLAGS_SUBSCRIBE, usPacketIdentifier );
+        xSubscribeTxBuffer = prvPacketTypeFlagsIdentifierGetTxBuffer(
+                pxMQTTContext, mqttCONTROL_SUBSCRIBE, mqttFLAGS_SUBSCRIBE,
+                usPacketIdentifier);
 
-        if( xSubscribeTxBuffer == NULL )
+        if (xSubscribeTxBuffer == NULL)
         {
             /* Either a subscribe was never sent or the sender
              * timed out. Either case, this is an unexpected
              * SUBACK. */
             xEventCallbackParams.xEventType = eMQTTUnexpectedSubACK;
-            ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+            (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
         }
         else
         {
             /* Extract the return code from the packet. */
-            ucReturnCode = mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttSUBACK_RETURN_CODE_OFFSET,
-                                                                                              pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) ];
+            ucReturnCode =
+                    mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[mqttADJUST_OFFSET(
+                            mqttSUBACK_RETURN_CODE_OFFSET,
+                            pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)];
 
             /* Return code must be valid. Note that QoS2 is not supported. */
-            if( ( ucReturnCode <= ( uint8_t ) 1 ) || ( ucReturnCode == ( uint8_t ) 128 ) )
+            if ((ucReturnCode <= (uint8_t) 1)
+                    || (ucReturnCode == (uint8_t) 128))
             {
                 /* Inform the user about the received SUBACK. */
                 xEventCallbackParams.xEventType = eMQTTSubACK;
 
                 /* Convert the return code to a user friendly enum value. */
-                if( ucReturnCode == ( uint8_t ) 0 )
+                if (ucReturnCode == (uint8_t) 0)
                 {
-                    xEventCallbackParams.u.xMQTTSubACKData.xSubACKReturnCode = eMQTTSubACKSuccessQos0;
+                    xEventCallbackParams.u.xMQTTSubACKData.xSubACKReturnCode =
+                            eMQTTSubACKSuccessQos0;
                 }
-                else if( ucReturnCode == ( uint8_t ) 1 )
+                else if (ucReturnCode == (uint8_t) 1)
                 {
-                    xEventCallbackParams.u.xMQTTSubACKData.xSubACKReturnCode = eMQTTSubACKSuccessQos1;
+                    xEventCallbackParams.u.xMQTTSubACKData.xSubACKReturnCode =
+                            eMQTTSubACKSuccessQos1;
                 }
                 else
                 {
-                    xEventCallbackParams.u.xMQTTSubACKData.xSubACKReturnCode = eMQTTSubACKFailure;
+                    xEventCallbackParams.u.xMQTTSubACKData.xSubACKReturnCode =
+                            eMQTTSubACKFailure;
                 }
 
-                xEventCallbackParams.u.xMQTTSubACKData.usPacketIdentifier = usPacketIdentifier;
-                ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                xEventCallbackParams.u.xMQTTSubACKData.usPacketIdentifier =
+                        usPacketIdentifier;
+                (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
 
-                #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-                    /* If the broker rejected the subscription request,
-                     * remove the subscription entry from the subscription
-                     * manager. */
-                    if( ucReturnCode == ( uint8_t ) 128 ) /* Subscription failure. */
-                    {
-                        prvRemoveSubscriptionForSubscribeOrUnsubscribeBuffer( pxMQTTContext, xSubscribeTxBuffer );
-                    }
-                #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+                /* If the broker rejected the subscription request,
+                 * remove the subscription entry from the subscription
+                 * manager. */
+                if (ucReturnCode == (uint8_t) 128) /* Subscription failure. */
+                {
+                    prvRemoveSubscriptionForSubscribeOrUnsubscribeBuffer(
+                            pxMQTTContext, xSubscribeTxBuffer);
+                }
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
                 /* Return the Tx Buffer to the pool. */
-                prvReturnBuffer( pxMQTTContext, xSubscribeTxBuffer );
+                prvReturnBuffer(pxMQTTContext, xSubscribeTxBuffer);
             }
             else
             {
@@ -1432,77 +1490,89 @@ static void prvProcessReceivedSUBACK( MQTTContext_t * pxMQTTContext )
     /* A malformed packet should result in disconnect. Note
      * that there is no need to disconnect in the case of
      * unexpected SUBACK. */
-    if( xMalformedPacket == eMQTTTrue )
+    if (xMalformedPacket == eMQTTTrue)
     {
-        prvResetMQTTContext( pxMQTTContext );
+        prvResetMQTTContext(pxMQTTContext);
 
         /* Inform user about the malformed packet received. */
         xEventCallbackParams.xEventType = eMQTTClientDisconnected;
-        xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonMalformedPacket;
-        ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+        xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                eMQTTDisconnectReasonMalformedPacket;
+        (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
     }
 
     /* Return the RxBuffer to the free buffer pool. */
-    prvReturnBuffer( pxMQTTContext, pxMQTTContext->xRxBuffer );
+    prvReturnBuffer(pxMQTTContext, pxMQTTContext->xRxBuffer);
 }
 /*-----------------------------------------------------------*/
 
-static void prvProcessReceivedUNSUBACK( MQTTContext_t * pxMQTTContext )
+static void prvProcessReceivedUNSUBACK(MQTTContext_t * pxMQTTContext)
 {
     MQTTBufferHandle_t xUnsubscribeTxBuffer;
     MQTTEventCallbackParams_t xEventCallbackParams;
     MQTTBool_t xMalformedPacket = eMQTTFalse;
     uint16_t usPacketIdentifier;
-    static const uint8_t ucUNSUBACKFixedHeader[] =
-    {
-        mqttCONTROL_UNSUBACK | mqttFLAGS_UNSUBACK, /* Fixed header control packet type. */
-        2,                                         /* Fixed header remaining length - always 2 for UNSUBACK. */
+    static const uint8_t ucUNSUBACKFixedHeader[] = {
+    mqttCONTROL_UNSUBACK | mqttFLAGS_UNSUBACK, /* Fixed header control packet type. */
+                                                     2, /* Fixed header remaining length - always 2 for UNSUBACK. */
     };
 
     /* Must have enough bytes to form a complete UNSUBACK packet
      * which contains 2 byte packet identifier other than the fixed
      * header. */
-    if( mqttbufferGET_DATA_LENGTH( pxMQTTContext->xRxBuffer ) >= ( sizeof( ucUNSUBACKFixedHeader ) + ( uint32_t ) mqttUNSUBACK_PACKET_IDENTIFER_LENGTH ) )
+    if ( mqttbufferGET_DATA_LENGTH(pxMQTTContext->xRxBuffer)
+            >= (sizeof(ucUNSUBACKFixedHeader)
+                    + (uint32_t) mqttUNSUBACK_PACKET_IDENTIFER_LENGTH))
     {
         /* Received enough data for an UNSUBACK - does the received fixed header match
          * the expected one for the UNSUBACK message (Fixed header is of 2 bytes for UNSUBACK
          * message because Remaining Length is 2 which takes only one byte)? */
-        if( memcmp( ucUNSUBACKFixedHeader, mqttbufferGET_DATA( pxMQTTContext->xRxBuffer ), sizeof( ucUNSUBACKFixedHeader ) ) == 0 )
+        if (memcmp(ucUNSUBACKFixedHeader,
+                   mqttbufferGET_DATA(pxMQTTContext->xRxBuffer),
+                   sizeof(ucUNSUBACKFixedHeader)) == 0)
         {
             /* Extract the packet identifier and see if there is an unsubscribe
              * packet waiting for ACK. */
-            usPacketIdentifier = ( uint8_t ) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttUNSUBACK_PACKET_ID_MSB_OFFSET,
-                                                                                                                  pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) ] );
+            usPacketIdentifier =
+                    (uint8_t) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[mqttADJUST_OFFSET(
+                            mqttUNSUBACK_PACKET_ID_MSB_OFFSET,
+                            pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)]);
             usPacketIdentifier <<= mqttBITS_PER_BYTE;
-            usPacketIdentifier |= ( uint8_t ) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttUNSUBACK_PACKET_ID_LSB_OFFSET,
-                                                                                                                   pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) ] );
+            usPacketIdentifier |=
+                    (uint8_t) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[mqttADJUST_OFFSET(
+                            mqttUNSUBACK_PACKET_ID_LSB_OFFSET,
+                            pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)]);
 
-            xUnsubscribeTxBuffer = prvPacketTypeFlagsIdentifierGetTxBuffer( pxMQTTContext, mqttCONTROL_UNSUBSCRIBE, mqttFLAGS_UNSUBSCRIBE, usPacketIdentifier );
+            xUnsubscribeTxBuffer = prvPacketTypeFlagsIdentifierGetTxBuffer(
+                    pxMQTTContext, mqttCONTROL_UNSUBSCRIBE,
+                    mqttFLAGS_UNSUBSCRIBE, usPacketIdentifier);
 
-            if( xUnsubscribeTxBuffer == NULL )
+            if (xUnsubscribeTxBuffer == NULL)
             {
                 /* Either an unsubscribe was never sent or the sender
                  * timed out. Either case, this is an unexpected UNSUBACK. */
                 xEventCallbackParams.xEventType = eMQTTUnexpectedUnSubACK;
-                ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
             }
             else
             {
                 /* Inform the user about the received UNSUBACK. */
                 xEventCallbackParams.xEventType = eMQTTUnSubACK;
-                xEventCallbackParams.u.xMQTTUnSubACKData.usPacketIdentifier = usPacketIdentifier;
-                ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                xEventCallbackParams.u.xMQTTUnSubACKData.usPacketIdentifier =
+                        usPacketIdentifier;
+                (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
 
-                #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-                    /* If we successfully unsubscribed, remove the
-                     * corresponding subscription entry from the subscription
-                     * manager. */
-                    prvRemoveSubscriptionForSubscribeOrUnsubscribeBuffer( pxMQTTContext, xUnsubscribeTxBuffer );
-                #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+                /* If we successfully unsubscribed, remove the
+                 * corresponding subscription entry from the subscription
+                 * manager. */
+                prvRemoveSubscriptionForSubscribeOrUnsubscribeBuffer(
+                        pxMQTTContext, xUnsubscribeTxBuffer);
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
                 /* Return the Tx Buffer to the pool. */
-                prvReturnBuffer( pxMQTTContext, xUnsubscribeTxBuffer );
+                prvReturnBuffer(pxMQTTContext, xUnsubscribeTxBuffer);
             }
         }
         else
@@ -1520,69 +1590,79 @@ static void prvProcessReceivedUNSUBACK( MQTTContext_t * pxMQTTContext )
     /* A malformed packet should result in disconnect. Note
      * that there is no need to disconnect in the case of
      * unexpected UNSUBACK. */
-    if( xMalformedPacket == eMQTTTrue )
+    if (xMalformedPacket == eMQTTTrue)
     {
-        prvResetMQTTContext( pxMQTTContext );
+        prvResetMQTTContext(pxMQTTContext);
 
         /* Inform user about the malformed packet received. */
         xEventCallbackParams.xEventType = eMQTTClientDisconnected;
-        xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonMalformedPacket;
-        ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+        xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                eMQTTDisconnectReasonMalformedPacket;
+        (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
     }
 
     /* Return the RxBuffer to the free buffer pool. */
-    prvReturnBuffer( pxMQTTContext, pxMQTTContext->xRxBuffer );
+    prvReturnBuffer(pxMQTTContext, pxMQTTContext->xRxBuffer);
 }
 /*-----------------------------------------------------------*/
 
-static void prvProcessReceivedPUBACK( MQTTContext_t * pxMQTTContext )
+static void prvProcessReceivedPUBACK(MQTTContext_t * pxMQTTContext)
 {
     MQTTBufferHandle_t xPublishTxBuffer;
     MQTTEventCallbackParams_t xEventCallbackParams;
     MQTTBool_t xMalformedPacket = eMQTTFalse;
     uint16_t usPacketIdentifier;
-    static const uint8_t ucPUBACKFixedHeader[] =
-    {
-        mqttCONTROL_PUBACK | mqttFLAGS_PUBACK, /* Fixed header control packet type. */
-        2,                                     /* Fixed header remaining length - always 2 for PUBACK. */
+    static const uint8_t ucPUBACKFixedHeader[] = {
+    mqttCONTROL_PUBACK | mqttFLAGS_PUBACK, /* Fixed header control packet type. */
+                                                   2, /* Fixed header remaining length - always 2 for PUBACK. */
     };
 
     /* Must have enough bytes to form a complete PUBACK packet
      * which contains 2 byte packet identifier other than the fixed
      * header. */
-    if( mqttbufferGET_DATA_LENGTH( pxMQTTContext->xRxBuffer ) >= ( sizeof( ucPUBACKFixedHeader ) + ( uint32_t ) mqttPUBACK_PACKET_IDENTIFER_LENGTH ) )
+    if ( mqttbufferGET_DATA_LENGTH(pxMQTTContext->xRxBuffer)
+            >= (sizeof(ucPUBACKFixedHeader)
+                    + (uint32_t) mqttPUBACK_PACKET_IDENTIFER_LENGTH))
     {
         /* Received enough data for a PUBACK - does the received fixed header match
          * the expected one for the PUBACK message (Fixed header is of 2 bytes for PUBACK
          * message because Remaining Length is 2 which takes only one byte)? */
-        if( memcmp( ucPUBACKFixedHeader, mqttbufferGET_DATA( pxMQTTContext->xRxBuffer ), sizeof( ucPUBACKFixedHeader ) ) == 0 )
+        if (memcmp(ucPUBACKFixedHeader,
+                   mqttbufferGET_DATA(pxMQTTContext->xRxBuffer),
+                   sizeof(ucPUBACKFixedHeader)) == 0)
         {
             /* Extract the packet identifier and see if there is a publish
              * packet waiting for ACK. */
-            usPacketIdentifier = ( uint8_t ) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttPUBACK_PACKET_ID_MSB_OFFSET,
-                                                                                                                  pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) ] );
+            usPacketIdentifier =
+                    (uint8_t) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[mqttADJUST_OFFSET(
+                            mqttPUBACK_PACKET_ID_MSB_OFFSET,
+                            pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)]);
             usPacketIdentifier <<= mqttBITS_PER_BYTE;
-            usPacketIdentifier |= ( uint8_t ) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttPUBACK_PACKET_ID_LSB_OFFSET,
-                                                                                                                   pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) ] );
+            usPacketIdentifier |=
+                    (uint8_t) ( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[mqttADJUST_OFFSET(
+                            mqttPUBACK_PACKET_ID_LSB_OFFSET,
+                            pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)]);
 
-            xPublishTxBuffer = prvPacketTypeIdentifierGetTxBuffer( pxMQTTContext, mqttCONTROL_PUBLISH, usPacketIdentifier );
+            xPublishTxBuffer = prvPacketTypeIdentifierGetTxBuffer(
+                    pxMQTTContext, mqttCONTROL_PUBLISH, usPacketIdentifier);
 
-            if( xPublishTxBuffer == NULL )
+            if (xPublishTxBuffer == NULL)
             {
                 /* Either a publish was never sent or the sender
                  * timed out. Either case, this is an unexpected PUBACK. */
                 xEventCallbackParams.xEventType = eMQTTUnexpectedPubACK;
-                ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
             }
             else
             {
                 /* Inform the user about the received UNSUBACK. */
                 xEventCallbackParams.xEventType = eMQTTPubACK;
-                xEventCallbackParams.u.xMQTTPubACKData.usPacketIdentifier = usPacketIdentifier;
-                ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                xEventCallbackParams.u.xMQTTPubACKData.usPacketIdentifier =
+                        usPacketIdentifier;
+                (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
 
                 /* Return the Tx Buffer to the pool. */
-                prvReturnBuffer( pxMQTTContext, xPublishTxBuffer );
+                prvReturnBuffer(pxMQTTContext, xPublishTxBuffer);
             }
         }
         else
@@ -1600,55 +1680,58 @@ static void prvProcessReceivedPUBACK( MQTTContext_t * pxMQTTContext )
     /* A malformed packet should result in disconnect. Note
      * that there is no need to disconnect in the case of
      * unexpected PUBACK. */
-    if( xMalformedPacket == eMQTTTrue )
+    if (xMalformedPacket == eMQTTTrue)
     {
-        prvResetMQTTContext( pxMQTTContext );
+        prvResetMQTTContext(pxMQTTContext);
 
         /* Inform user about the malformed packet received. */
         xEventCallbackParams.xEventType = eMQTTClientDisconnected;
-        xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonMalformedPacket;
-        ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+        xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                eMQTTDisconnectReasonMalformedPacket;
+        (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
     }
 
     /* Return the RxBuffer to the free buffer pool. */
-    prvReturnBuffer( pxMQTTContext, pxMQTTContext->xRxBuffer );
+    prvReturnBuffer(pxMQTTContext, pxMQTTContext->xRxBuffer);
 }
 /*-----------------------------------------------------------*/
 
-static void prvProcessReceivedPINGRESP( MQTTContext_t * pxMQTTContext )
+static void prvProcessReceivedPINGRESP(MQTTContext_t * pxMQTTContext)
 {
     MQTTEventCallbackParams_t xEventCallbackParams;
     MQTTBool_t xValidPingResponse = eMQTTFalse;
-    static const uint8_t ucPingRespPacket[] =
-    {
-        mqttCONTROL_PINGRESP | mqttFLAGS_PINGRESP,
-        0 /* PINGRESP packet does not have any variable header or payload. */
+    static const uint8_t ucPingRespPacket[] = {
+    mqttCONTROL_PINGRESP | mqttFLAGS_PINGRESP,
+                                                0 /* PINGRESP packet does not have any variable header or payload. */
     };
 
     /* Did we receive a valid PINGRESP? */
-    if( pxMQTTContext->ulRxMessageReceivedLength >= sizeof( ucPingRespPacket ) )
+    if (pxMQTTContext->ulRxMessageReceivedLength >= sizeof(ucPingRespPacket))
     {
-        if( memcmp( pxMQTTContext->ucRxFixedHeaderBuffer, ucPingRespPacket, sizeof( ucPingRespPacket ) ) == 0 )
+        if (memcmp(pxMQTTContext->ucRxFixedHeaderBuffer, ucPingRespPacket,
+                   sizeof(ucPingRespPacket)) == 0)
         {
             /* PINGRESP packet is valid. */
             xValidPingResponse = eMQTTTrue;
         }
     }
 
-    if( xValidPingResponse == eMQTTTrue )
+    if (xValidPingResponse == eMQTTTrue)
     {
         /* If we were expecting a PINGESP, update the time-stamp
          * when the next PINGREQ should be sent. Otherwise ignore
          * this unexpected PINRESP. */
-        if( pxMQTTContext->xWaitingForPingResp == eMQTTTrue )
+        if (pxMQTTContext->xWaitingForPingResp == eMQTTTrue)
         {
             /* Mark that we received the expected PINGRESP. */
             pxMQTTContext->xWaitingForPingResp = eMQTTFalse;
 
             /* Reset the last sent message timestamp so that the
              * next PINGREQ can be sent at appropriate time. */
-            pxMQTTContext->xLastSentMessageTimestamp = prvGetCurrentTickCount( pxMQTTContext );
-            pxMQTTContext->ulNextPeriodicInvokeTicks = pxMQTTContext->ulKeepAliveActualIntervalTicks;
+            pxMQTTContext->xLastSentMessageTimestamp = prvGetCurrentTickCount(
+                    pxMQTTContext);
+            pxMQTTContext->ulNextPeriodicInvokeTicks =
+                    pxMQTTContext->ulKeepAliveActualIntervalTicks;
         }
         else
         {
@@ -1659,27 +1742,27 @@ static void prvProcessReceivedPINGRESP( MQTTContext_t * pxMQTTContext )
     else
     {
         /* A malformed packet should result in disconnect. */
-        prvResetMQTTContext( pxMQTTContext );
+        prvResetMQTTContext(pxMQTTContext);
 
         /* Inform user about the malformed packet received. */
         xEventCallbackParams.xEventType = eMQTTClientDisconnected;
-        xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonMalformedPacket;
-        ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+        xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                eMQTTDisconnectReasonMalformedPacket;
+        (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
     }
 }
 /*-----------------------------------------------------------*/
 
-static void prvProcessReceivedPublish( MQTTContext_t * pxMQTTContext )
+static void prvProcessReceivedPublish(MQTTContext_t * pxMQTTContext)
 {
     MQTTEventCallbackParams_t xEventCallbackParams;
     uint8_t ucPacketIdentiferLength; /* Length in bytes taken by the packet identifier field in the received publish packet. */
     uint8_t ucQos;
-    static uint8_t ucPUBACKPacket[] =
-    {
-        mqttCONTROL_PUBACK | mqttFLAGS_PUBACK, /* Fixed header control packet type. */
-        2,                                     /* Fixed header remaining length - always 2 for PUBACK. */
-        0,                                     /* Packet identifier MSB. */
-        0                                      /* Packet identifier LSB. */
+    static uint8_t ucPUBACKPacket[] = {
+    mqttCONTROL_PUBACK | mqttFLAGS_PUBACK, /* Fixed header control packet type. */
+                                        2, /* Fixed header remaining length - always 2 for PUBACK. */
+                                        0, /* Packet identifier MSB. */
+                                        0 /* Packet identifier LSB. */
     };
 
     /* A broker has sent a message to this client.  Decode it, then pass the
@@ -1687,14 +1770,18 @@ static void prvProcessReceivedPublish( MQTTContext_t * pxMQTTContext )
     xEventCallbackParams.xEventType = eMQTTPublish;
 
     /*_TODO_ Do we want to expose DUP and RETAIN? */
-    ucQos = mqttPUBLISH_QoS_BITS( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] );
+    ucQos =
+            mqttPUBLISH_QoS_BITS(
+                    mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ]);
 
     /* QoS2 is not supported. */
-    if( ( ucQos == ( uint8_t ) 0 /* QoS0. */ ) || ( ucQos == ( uint8_t ) 1 /* QoS1. */ ) )
+    if ((ucQos == (uint8_t) 0 /* QoS0. */)
+            || (ucQos == (uint8_t) 1 /* QoS1. */))
     {
-        xEventCallbackParams.u.xPublishData.xQos = ( ucQos == ( uint8_t ) 0 ) ? eMQTTQoS0 : eMQTTQoS1;
+        xEventCallbackParams.u.xPublishData.xQos =
+                (ucQos == (uint8_t) 0) ? eMQTTQoS0 : eMQTTQoS1;
 
-        if( xEventCallbackParams.u.xPublishData.xQos == eMQTTQoS0 )
+        if (xEventCallbackParams.u.xPublishData.xQos == eMQTTQoS0)
         {
             ucPacketIdentiferLength = mqttPUBLISH_QOS0_PACKET_IDENTIFER_LENGTH;
         }
@@ -1704,148 +1791,170 @@ static void prvProcessReceivedPublish( MQTTContext_t * pxMQTTContext )
         }
 
         /* Extract Topic Length. */
-        xEventCallbackParams.u.xPublishData.usTopicLength = ( uint16_t ) mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttPUBLISH_TOPIC_LENGTH_MSB,
-                                                                                                                                            pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) ];
+        xEventCallbackParams.u.xPublishData.usTopicLength =
+                (uint16_t) mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[mqttADJUST_OFFSET(
+                        mqttPUBLISH_TOPIC_LENGTH_MSB,
+                        pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)];
         xEventCallbackParams.u.xPublishData.usTopicLength <<= mqttBITS_PER_BYTE;
-        xEventCallbackParams.u.xPublishData.usTopicLength |= ( uint16_t ) mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttPUBLISH_TOPIC_LENGTH_LSB,
-                                                                                                                                             pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) ];
+        xEventCallbackParams.u.xPublishData.usTopicLength |=
+                (uint16_t) mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[mqttADJUST_OFFSET(
+                        mqttPUBLISH_TOPIC_LENGTH_LSB,
+                        pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)];
 
         /* Extract Topic. */
-        xEventCallbackParams.u.xPublishData.pucTopic = &( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttPUBLISH_TOPIC_STRING_OFFSET,
-                                                                                                                             pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) ] );
+        xEventCallbackParams.u.xPublishData.pucTopic =
+                &( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[mqttADJUST_OFFSET(
+                        mqttPUBLISH_TOPIC_STRING_OFFSET,
+                        pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)]);
 
         /* Extract Published Data. */
-        xEventCallbackParams.u.xPublishData.pvData = ( void * ) &( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttPUBLISH_TOPIC_STRING_OFFSET,
-                                                                                                                                      pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) +
-                                                                                                                   xEventCallbackParams.u.xPublishData.usTopicLength +
-                                                                                                                   ucPacketIdentiferLength ] ); /*lint !e9087 Publish data is provided as void* to the user. */
+        xEventCallbackParams.u.xPublishData.pvData =
+                (void *) &( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET(
+                        mqttPUBLISH_TOPIC_STRING_OFFSET,
+                        pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)
+                        + xEventCallbackParams.u.xPublishData.usTopicLength
+                        + ucPacketIdentiferLength]); /*lint !e9087 Publish data is provided as void* to the user. */
 
         /* Topic string is followed by packet identifier which is
          * followed by actual data. NOte that QoS0 publishes do not
          * have packet identifier. */
-        xEventCallbackParams.u.xPublishData.ulDataLength = pxMQTTContext->xRxMessageState.ulTotalMessageLength - ( mqttADJUST_OFFSET( mqttPUBLISH_TOPIC_STRING_OFFSET,
-                                                                                                                                      pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) +
-                                                                                                                   xEventCallbackParams.u.xPublishData.usTopicLength +
-                                                                                                                   ucPacketIdentiferLength );
+        xEventCallbackParams.u.xPublishData.ulDataLength =
+                pxMQTTContext->xRxMessageState.ulTotalMessageLength
+                        - ( mqttADJUST_OFFSET(
+                                mqttPUBLISH_TOPIC_STRING_OFFSET,
+                                pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)
+                                + xEventCallbackParams.u.xPublishData.usTopicLength
+                                + ucPacketIdentiferLength);
 
         /* Pass the handle of the buffer containing the whole MQTT message. */
         xEventCallbackParams.u.xPublishData.xBuffer = pxMQTTContext->xRxBuffer;
 
         /* If this is a QoS1 publish, send the PUBACK before invoking the
          * callback. */
-        if( xEventCallbackParams.u.xPublishData.xQos == eMQTTQoS1 )
+        if (xEventCallbackParams.u.xPublishData.xQos == eMQTTQoS1)
         {
             /* Extract the packet identifier from the publish message
              * to set the same in PUBACK message. */
-            ucPUBACKPacket[ mqttPUBACK_PACKET_ID_MSB_OFFSET ] = mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttPUBLISH_TOPIC_STRING_OFFSET,
-                                                                                                                                   pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) +
-                                                                                                                xEventCallbackParams.u.xPublishData.usTopicLength ];
-            ucPUBACKPacket[ mqttPUBACK_PACKET_ID_LSB_OFFSET ] = mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET( mqttPUBLISH_TOPIC_STRING_OFFSET,
-                                                                                                                                   pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes ) +
-                                                                                                                xEventCallbackParams.u.xPublishData.usTopicLength +
-                                                                                                                ( uint16_t ) 1 /* Packet ID LSB follows MSB. */ ];
+            ucPUBACKPacket[ mqttPUBACK_PACKET_ID_MSB_OFFSET] =
+                    mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET(
+                            mqttPUBLISH_TOPIC_STRING_OFFSET,
+                            pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)
+                            + xEventCallbackParams.u.xPublishData.usTopicLength];
+            ucPUBACKPacket[ mqttPUBACK_PACKET_ID_LSB_OFFSET] =
+                    mqttbufferGET_DATA( pxMQTTContext->xRxBuffer )[ mqttADJUST_OFFSET(
+                            mqttPUBLISH_TOPIC_STRING_OFFSET,
+                            pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes)
+                            + xEventCallbackParams.u.xPublishData.usTopicLength
+                            + (uint16_t) 1 /* Packet ID LSB follows MSB. */];
 
             /* Send a PUBACK to the broker confirming the receipt
              * of the publish message. If we fail to send the PUBACK,
              * we will receive the same publish message again. */
-            ( void ) prvSendData( pxMQTTContext, ucPUBACKPacket, ( uint32_t ) sizeof( ucPUBACKPacket ) );
+            (void) prvSendData(pxMQTTContext, ucPUBACKPacket,
+                               (uint32_t) sizeof(ucPUBACKPacket));
         }
 
         /* If the user chooses not to take the ownership of the buffer,
          * return it back to the free buffer pool. */
-        if( prvInvokeCallback( pxMQTTContext, &xEventCallbackParams ) == eMQTTFalse )
+        if (prvInvokeCallback(pxMQTTContext, &xEventCallbackParams)
+                == eMQTTFalse)
         {
-            prvReturnBuffer( pxMQTTContext, pxMQTTContext->xRxBuffer );
+            prvReturnBuffer(pxMQTTContext, pxMQTTContext->xRxBuffer);
         }
     }
     else
     {
         /* A publish packet with QoS2 is considered malformed and
          * we disconnect. */
-        prvResetMQTTContext( pxMQTTContext );
+        prvResetMQTTContext(pxMQTTContext);
 
         /* Inform user about the malformed packet received. */
         xEventCallbackParams.xEventType = eMQTTClientDisconnected;
-        xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonMalformedPacket;
-        ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+        xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                eMQTTDisconnectReasonMalformedPacket;
+        (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
     }
 }
 /*-----------------------------------------------------------*/
 
-static MQTTBool_t prvInvokeCallback( MQTTContext_t * pxMQTTContext,
-                                     MQTTEventCallbackParams_t * pxEventCallbackParams )
+static MQTTBool_t prvInvokeCallback(
+        MQTTContext_t * pxMQTTContext,
+        MQTTEventCallbackParams_t * pxEventCallbackParams)
 {
     MQTTBool_t xBufferOwnershipTaken = eMQTTFalse;
 
-    #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
-        MQTTBool_t xSubscriptionCallbackInvoked = eMQTTFalse;
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+    MQTTBool_t xSubscriptionCallbackInvoked = eMQTTFalse;
 
-        /* In case of a publish message, try to invoke
-         * subscription specific callback first. If the
-         * user has not registered any specific callback
-         * for this topic, invoke the generic one. */
-        if( pxEventCallbackParams->xEventType == eMQTTPublish )
-        {
-            xBufferOwnershipTaken = prvInvokeSubscriptionCallbacks( pxMQTTContext,
-                                                                    &( pxEventCallbackParams->u.xPublishData ),
-                                                                    &( xSubscriptionCallbackInvoked ) );
-        }
+    /* In case of a publish message, try to invoke
+     * subscription specific callback first. If the
+     * user has not registered any specific callback
+     * for this topic, invoke the generic one. */
+    if (pxEventCallbackParams->xEventType == eMQTTPublish)
+    {
+        xBufferOwnershipTaken = prvInvokeSubscriptionCallbacks(
+                pxMQTTContext, &(pxEventCallbackParams->u.xPublishData),
+                &(xSubscriptionCallbackInvoked));
+    }
 
-        /* Invoke generic callback, if any subscription callback was
-         * not invoked and the user has registered a generic one. Note
-         * that since no callback was invoked, we are sure that the user
-         * has not got any chance to take the buffer ownership. That's
-         * why no check for xBufferOwnershipTaken. */
-        if( ( xSubscriptionCallbackInvoked == eMQTTFalse ) && ( pxMQTTContext->pxCallback != NULL ) )
-        {
-            xBufferOwnershipTaken = pxMQTTContext->pxCallback( pxMQTTContext->pvCallbackContext, pxEventCallbackParams );
-        }
-    #else /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
-        /* Invoke the generic callback, if the user has registered one. */
-        if( pxMQTTContext->pxCallback != NULL )
-        {
-            xBufferOwnershipTaken = pxMQTTContext->pxCallback( pxMQTTContext->pvCallbackContext, pxEventCallbackParams );
-        }
-    #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+    /* Invoke generic callback, if any subscription callback was
+     * not invoked and the user has registered a generic one. Note
+     * that since no callback was invoked, we are sure that the user
+     * has not got any chance to take the buffer ownership. That's
+     * why no check for xBufferOwnershipTaken. */
+    if ((xSubscriptionCallbackInvoked == eMQTTFalse)
+            && (pxMQTTContext->pxCallback != NULL))
+    {
+        xBufferOwnershipTaken = pxMQTTContext->pxCallback(
+                pxMQTTContext->pvCallbackContext, pxEventCallbackParams);
+    }
+#else /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+    /* Invoke the generic callback, if the user has registered one. */
+    if( pxMQTTContext->pxCallback != NULL )
+    {
+        xBufferOwnershipTaken = pxMQTTContext->pxCallback( pxMQTTContext->pvCallbackContext, pxEventCallbackParams );
+    }
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
     return xBufferOwnershipTaken;
 }
 /*-----------------------------------------------------------*/
 
-static uint8_t * prvWriteString( uint8_t * pucDestination,
-                                 const uint8_t * const pucLastByteInBuffer,
-                                 const uint8_t * const pucString,
-                                 uint16_t usStringLength )
+static uint8_t * prvWriteString(uint8_t * pucDestination,
+                                const uint8_t * const pucLastByteInBuffer,
+                                const uint8_t * const pucString,
+                                uint16_t usStringLength)
 {
     uint8_t * pucEndAddress;
 
     /* Check that writing the string and the two byte length into pucDestination
      * won't overflow the buffer. */
-    pucEndAddress = &( pucDestination[ mqttSTRLEN( usStringLength ) - ( uint16_t ) 1 ] );
+    pucEndAddress = &(pucDestination[ mqttSTRLEN(usStringLength)
+            - (uint16_t) 1]);
 
     /* Check the calculated end address against the last address of the Tx
      * buffer. */
-    if( pucEndAddress <= pucLastByteInBuffer ) /*lint !e946 Pointer comparison is ok as we are checking for memory overflow. */
+    if (pucEndAddress <= pucLastByteInBuffer) /*lint !e946 Pointer comparison is ok as we are checking for memory overflow. */
     {
-        *pucDestination = ( uint8_t ) ( usStringLength >> mqttBITS_PER_BYTE );
+        *pucDestination = (uint8_t) (usStringLength >> mqttBITS_PER_BYTE);
         pucDestination++;
-        *pucDestination = ( uint8_t ) usStringLength;
+        *pucDestination = (uint8_t) usStringLength;
         pucDestination++;
-        memcpy( pucDestination, pucString, usStringLength );
+        memcpy(pucDestination, pucString, usStringLength);
     }
     else
     {
         /* Writing the string would have overflowed the Tx buffer. */
-        usStringLength = ( uint16_t ) 0;
+        usStringLength = (uint16_t) 0;
     }
 
     /* Return the address of the byte following the string just copied to the
      * buffer. */
-    return &( pucDestination[ usStringLength ] );
+    return &(pucDestination[usStringLength]);
 }
 /*-----------------------------------------------------------*/
 
-static uint8_t prvSizeOfRemainingLength( uint32_t ulRemainingLength )
+static uint8_t prvSizeOfRemainingLength(uint32_t ulRemainingLength)
 {
     uint8_t ucRemainingLengthFieldBytes = 0;
 
@@ -1854,19 +1963,25 @@ static uint8_t prvSizeOfRemainingLength( uint32_t ulRemainingLength )
     mqttconfigASSERT( ulRemainingLength <= mqttMAX_REMAINING_LENGTH_LENGTH );
 
     /* The numbers below are taken from the MQTT protocol spec. */
-    if( ulRemainingLength <= ( uint32_t ) mqttONE_BYTE_MAX_REMAINING_LENGTH )
+    if (ulRemainingLength <= (uint32_t) mqttONE_BYTE_MAX_REMAINING_LENGTH)
     {
         ucRemainingLengthFieldBytes = 1;
     }
-    else if( ( ulRemainingLength > ( uint32_t ) mqttONE_BYTE_MAX_REMAINING_LENGTH ) && ( ulRemainingLength <= ( uint32_t ) mqttTWO_BYTES_MAX_REMAINING_LENGTH ) )
+    else if ((ulRemainingLength > (uint32_t) mqttONE_BYTE_MAX_REMAINING_LENGTH)
+            && (ulRemainingLength
+                    <= (uint32_t) mqttTWO_BYTES_MAX_REMAINING_LENGTH))
     {
         ucRemainingLengthFieldBytes = 2;
     }
-    else if( ( ulRemainingLength > ( uint32_t ) mqttTWO_BYTES_MAX_REMAINING_LENGTH ) && ( ulRemainingLength <= ( uint32_t ) mqttTHREE_BYTES_MAX_REMAINING_LENGTH ) )
+    else if ((ulRemainingLength > (uint32_t) mqttTWO_BYTES_MAX_REMAINING_LENGTH)
+            && (ulRemainingLength
+                    <= (uint32_t) mqttTHREE_BYTES_MAX_REMAINING_LENGTH))
     {
         ucRemainingLengthFieldBytes = 3;
     }
-    else if( ( ulRemainingLength > ( uint32_t ) mqttTHREE_BYTES_MAX_REMAINING_LENGTH ) && ( ulRemainingLength <= ( uint32_t ) mqttMAX_REMAINING_LENGTH_LENGTH ) )
+    else if ((ulRemainingLength
+            > (uint32_t) mqttTHREE_BYTES_MAX_REMAINING_LENGTH)
+            && (ulRemainingLength <= (uint32_t) mqttMAX_REMAINING_LENGTH_LENGTH))
     {
         ucRemainingLengthFieldBytes = 4;
     }
@@ -1879,9 +1994,9 @@ static uint8_t prvSizeOfRemainingLength( uint32_t ulRemainingLength )
 }
 /*-----------------------------------------------------------*/
 
-static uint8_t prvEncodeRemainingLength( uint32_t ulRemainingLength,
-                                         uint8_t * const pucEncodedRemainingLength,
-                                         const uint8_t * const pucLastByteInBuffer )
+static uint8_t prvEncodeRemainingLength(
+        uint32_t ulRemainingLength, uint8_t * const pucEncodedRemainingLength,
+        const uint8_t * const pucLastByteInBuffer)
 {
     uint8_t ucBytesWritten = 0, ucEncodedByte;
 
@@ -1892,12 +2007,13 @@ static uint8_t prvEncodeRemainingLength( uint32_t ulRemainingLength,
     do
     {
         /* Extract 7 bits from the length. */
-        ucEncodedByte = ( ( uint8_t ) ( ulRemainingLength ) & mqttLENGTH_BITMASK_REMAINING_LENGTH );
+        ucEncodedByte = ((uint8_t) (ulRemainingLength)
+                & mqttLENGTH_BITMASK_REMAINING_LENGTH);
         ulRemainingLength >>= mqttLENGTH_BITS_REMAINING_LENGTH;
 
         /* If there is more data to encode, set the continuation
          * bit of this byte. */
-        if( ulRemainingLength > ( uint32_t ) 0 )
+        if (ulRemainingLength > (uint32_t) 0)
         {
             ucEncodedByte |= mqttREMAINING_LENGTH_CONTINUATION_BITMASK;
         }
@@ -1905,10 +2021,10 @@ static uint8_t prvEncodeRemainingLength( uint32_t ulRemainingLength,
         /* Ensure that writing this byte will not result in buffer overflow. */
         mqttconfigASSERT( &( pucEncodedRemainingLength[ ucBytesWritten ] ) <= pucLastByteInBuffer );
 
-        if( &( pucEncodedRemainingLength[ ucBytesWritten ] ) <= pucLastByteInBuffer ) /*lint !e946 Pointer comparison is ok as we are checking for memory overflow. */
+        if (&(pucEncodedRemainingLength[ucBytesWritten]) <= pucLastByteInBuffer) /*lint !e946 Pointer comparison is ok as we are checking for memory overflow. */
         {
             /* Write the encoded byte to the provided buffer. */
-            pucEncodedRemainingLength[ ucBytesWritten ] = ucEncodedByte;
+            pucEncodedRemainingLength[ucBytesWritten] = ucEncodedByte;
             ucBytesWritten++;
         }
         else
@@ -1919,40 +2035,43 @@ static uint8_t prvEncodeRemainingLength( uint32_t ulRemainingLength,
             break;
         }
     }
-    while( ulRemainingLength > ( uint32_t ) 0 );
+    while (ulRemainingLength > (uint32_t) 0);
 
     return ucBytesWritten;
 }
 /*-----------------------------------------------------------*/
 
-static uint8_t prvDecodeRemainingLength( const uint8_t * const pucEncodedRemainingLength,
-                                         uint32_t * const pulRemainingLength )
+static uint8_t prvDecodeRemainingLength(
+        const uint8_t * const pucEncodedRemainingLength,
+        uint32_t * const pulRemainingLength)
 {
     uint8_t ucBytesRead, ucDecodedByte;
     uint32_t x, ulDecodedRemainingLength = 0, ulDecodedByte;
 
-    for( x = 0; x < ( uint32_t ) mqttREMAINING_LENGTH_MAX_BYTES; x++ )
+    for (x = 0; x < (uint32_t) mqttREMAINING_LENGTH_MAX_BYTES; x++)
     {
         /* Extract 7 lower bits from the current byte - These bits contain the
          * actual length information. */
-        ucDecodedByte = ( pucEncodedRemainingLength[ x ] & mqttLENGTH_BITMASK_REMAINING_LENGTH );
+        ucDecodedByte = (pucEncodedRemainingLength[x]
+                & mqttLENGTH_BITMASK_REMAINING_LENGTH);
 
         /* Move the extracted bits to their correct location. */
-        ulDecodedByte = ( uint32_t ) ucDecodedByte;
-        ulDecodedByte <<= ( x * ( uint32_t ) mqttLENGTH_BITS_REMAINING_LENGTH );
+        ulDecodedByte = (uint32_t) ucDecodedByte;
+        ulDecodedByte <<= (x * (uint32_t) mqttLENGTH_BITS_REMAINING_LENGTH);
 
         /* Place the extracted bits in the decoded length. */
         ulDecodedRemainingLength |= ulDecodedByte;
 
         /* If the continuation bit is not set in the current byte, decoding is
          * complete. */
-        if( ( pucEncodedRemainingLength[ x ] & mqttREMAINING_LENGTH_CONTINUATION_BITMASK ) == ( uint8_t ) 0 )
+        if ((pucEncodedRemainingLength[x]
+                & mqttREMAINING_LENGTH_CONTINUATION_BITMASK) == (uint8_t) 0)
         {
             break;
         }
     }
 
-    if( x >= ( uint32_t ) mqttREMAINING_LENGTH_MAX_BYTES )
+    if (x >= (uint32_t) mqttREMAINING_LENGTH_MAX_BYTES)
     {
         /* This would happen in case 4th byte also has continuation bit set.
          * This indicates a malformed encoded length and we inform the caller by
@@ -1964,11 +2083,11 @@ static uint8_t prvDecodeRemainingLength( const uint8_t * const pucEncodedRemaini
     {
         /* The decoding is successful. Inform the user by returning the number
          * of bytes used in decoding from given encoded length. */
-        ucBytesRead = ( uint8_t ) x + ( uint8_t ) 1;
+        ucBytesRead = (uint8_t) x + (uint8_t) 1;
 
         /* If the user has provided output buffer, return the decoded length
          * in it. */
-        if( pulRemainingLength != NULL )
+        if (pulRemainingLength != NULL)
         {
             *pulRemainingLength = ulDecodedRemainingLength;
         }
@@ -1980,195 +2099,282 @@ static uint8_t prvDecodeRemainingLength( const uint8_t * const pucEncodedRemaini
 
 #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-    static MQTTBool_t prvStoreSubscription( MQTTContext_t * pxMQTTContext,
-                                            const uint8_t * const pucTopic,
-                                            uint16_t usTopicLength,
-                                            void * pvPublishCallbackContext,
-                                            MQTTPublishCallback_t pxPublishCallback )
+static MQTTBool_t prvStoreSubscription(MQTTContext_t * pxMQTTContext,
+                                       const uint8_t * const pucTopic,
+                                       uint16_t usTopicLength,
+                                       void * pvPublishCallbackContext,
+                                       MQTTPublishCallback_t pxPublishCallback)
+{
+    uint32_t x;
+    MQTTBool_t xSubscriptionStored = eMQTTFalse;
+    MQTTTopicFilterType_t xTopicFilterType;
+
+    /* Is there a free entry in the subscription manager? */
+    if (pxMQTTContext->xSubscriptionManager.ulInUseSubscriptions
+            < (uint32_t) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS)
     {
-        uint32_t x;
-        MQTTBool_t xSubscriptionStored = eMQTTFalse;
-        MQTTTopicFilterType_t xTopicFilterType;
-
-        /* Is there a free entry in the subscription manager? */
-        if( pxMQTTContext->xSubscriptionManager.ulInUseSubscriptions < ( uint32_t ) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS )
+        /* Check that the topic name is not too long. */
+        if (usTopicLength
+                <= (uint16_t) mqttconfigSUBSCRIPTION_MANAGER_MAX_TOPIC_LENGTH)
         {
-            /* Check that the topic name is not too long. */
-            if( usTopicLength <= ( uint16_t ) mqttconfigSUBSCRIPTION_MANAGER_MAX_TOPIC_LENGTH )
+            /* Ensure that the topic is not invalid. */
+            xTopicFilterType = prvGetTopicFilterType(pucTopic, usTopicLength);
+
+            if (xTopicFilterType != eMQTTTopicFilterTypeInvalid)
             {
-                /* Ensure that the topic is not invalid. */
-                xTopicFilterType = prvGetTopicFilterType( pucTopic, usTopicLength );
+                /* Ensure that subscription manager does not contain
+                 * an entry for the topic filter already. */
+                prvRemoveSubscription(pxMQTTContext, pucTopic, usTopicLength);
 
-                if( xTopicFilterType != eMQTTTopicFilterTypeInvalid )
+                /* Find a free entry in the subscription manager. */
+                for (x = 0;
+                        x
+                                < (uint32_t) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS;
+                        x++)
                 {
-                    /* Ensure that subscription manager does not contain
-                     * an entry for the topic filter already. */
-                    prvRemoveSubscription( pxMQTTContext, pucTopic, usTopicLength );
-
-                    /* Find a free entry in the subscription manager. */
-                    for( x = 0; x < ( uint32_t ) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS; x++ )
+                    if (pxMQTTContext->xSubscriptionManager.xSubscriptions[x].xInUse
+                            == eMQTTFalse)
                     {
-                        if( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].xInUse == eMQTTFalse )
-                        {
-                            /* Found a free entry. Mark it as used and
-                             * store the subscription. */
-                            pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].xInUse = eMQTTTrue;
+                        /* Found a free entry. Mark it as used and
+                         * store the subscription. */
+                        pxMQTTContext->xSubscriptionManager.xSubscriptions[x].xInUse =
+                                eMQTTTrue;
 
-                            /* Store the subscription. */
-                            memcpy( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].ucTopicFilter,
-                                    pucTopic,
-                                    usTopicLength );
-                            pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].usTopicFilterLength = usTopicLength;
-                            pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].pvPublishCallbackContext = pvPublishCallbackContext;
-                            pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].pxPublishCallback = pxPublishCallback;
-                            pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].xTopicFilterType = xTopicFilterType;
+                        /* Store the subscription. */
+                        memcpy(pxMQTTContext->xSubscriptionManager.xSubscriptions[x].ucTopicFilter,
+                               pucTopic, usTopicLength);
+                        pxMQTTContext->xSubscriptionManager.xSubscriptions[x].usTopicFilterLength =
+                                usTopicLength;
+                        pxMQTTContext->xSubscriptionManager.xSubscriptions[x].pvPublishCallbackContext =
+                                pvPublishCallbackContext;
+                        pxMQTTContext->xSubscriptionManager.xSubscriptions[x].pxPublishCallback =
+                                pxPublishCallback;
+                        pxMQTTContext->xSubscriptionManager.xSubscriptions[x].xTopicFilterType =
+                                xTopicFilterType;
 
-                            /* Increase the in-use subscription entries count. */
-                            pxMQTTContext->xSubscriptionManager.ulInUseSubscriptions += ( uint32_t ) 1;
+                        /* Increase the in-use subscription entries count. */
+                        pxMQTTContext->xSubscriptionManager.ulInUseSubscriptions +=
+                                (uint32_t) 1;
 
-                            /* Inform the user that the subscription was stored
-                             * successfully. */
-                            xSubscriptionStored = eMQTTTrue;
+                        /* Inform the user that the subscription was stored
+                         * successfully. */
+                        xSubscriptionStored = eMQTTTrue;
 
-                            /* Done. */
-                            break;
-                        }
+                        /* Done. */
+                        break;
                     }
-                }
-                else
-                {
-                    /* The provided topic filter is invalid. */
-                    mqttconfigDEBUG_LOG( ( "WARN: The topic filter is invalid.\r\n" ) );
                 }
             }
             else
             {
-                /* Topic too long. */
-                mqttconfigDEBUG_LOG( ( "WARN: Topic is too long and cannot be stored in the subscription manager. Consider increasing mqttconfigSUBSCRIPTION_MANAGER_MAX_TOPIC_LENGTH.\r\n" ) );
+                /* The provided topic filter is invalid. */
+                mqttconfigDEBUG_LOG( ( "WARN: The topic filter is invalid.\r\n" ) );
             }
         }
         else
         {
-            /* Subscription Manager full. */
-            mqttconfigDEBUG_LOG( ( "WARN: Subscription Manager full! No space left to store new subscriptions.\r\n" ) );
+            /* Topic too long. */
+            mqttconfigDEBUG_LOG( ( "WARN: Topic is too long and cannot be stored in the subscription manager. Consider increasing mqttconfigSUBSCRIPTION_MANAGER_MAX_TOPIC_LENGTH.\r\n" ) );
         }
-
-        return xSubscriptionStored;
     }
+    else
+    {
+        /* Subscription Manager full. */
+        mqttconfigDEBUG_LOG( ( "WARN: Subscription Manager full! No space left to store new subscriptions.\r\n" ) );
+    }
+
+    return xSubscriptionStored;
+}
 
 #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 /*-----------------------------------------------------------*/
 
 #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-    static void prvRemoveSubscription( MQTTContext_t * pxMQTTContext,
-                                       const uint8_t * const pucTopic,
-                                       uint16_t usTopicLength )
+static void prvRemoveSubscription(MQTTContext_t * pxMQTTContext,
+                                  const uint8_t * const pucTopic,
+                                  uint16_t usTopicLength)
+{
+    uint32_t x;
+
+    /* Iterate over all the subscription entries in
+     * the subscription manager and try to find the
+     * matching one. */
+    for (x = 0; x < (uint32_t) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS;
+            x++)
     {
-        uint32_t x;
-
-        /* Iterate over all the subscription entries in
-         * the subscription manager and try to find the
-         * matching one. */
-        for( x = 0; x < ( uint32_t ) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS; x++ )
+        if ((pxMQTTContext->xSubscriptionManager.xSubscriptions[x].xInUse
+                == eMQTTTrue)
+                && (pxMQTTContext->xSubscriptionManager.xSubscriptions[x].usTopicFilterLength
+                        == usTopicLength))
         {
-            if( ( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].xInUse == eMQTTTrue ) &&
-                ( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].usTopicFilterLength == usTopicLength ) )
+            if (memcmp(
+                    pxMQTTContext->xSubscriptionManager.xSubscriptions[x].ucTopicFilter,
+                    pucTopic, usTopicLength) == 0)
             {
-                if( memcmp( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].ucTopicFilter, pucTopic, usTopicLength ) == 0 )
+                /* Found a matching subscription, mark it as free. */
+                pxMQTTContext->xSubscriptionManager.xSubscriptions[x].xInUse =
+                        eMQTTFalse;
+
+                /* Reduce the count of in-use subscription entries
+                 * in the subscription manager. */
+                pxMQTTContext->xSubscriptionManager.ulInUseSubscriptions -=
+                        (uint32_t) 1;
+
+                /* Done. */
+                break;
+            }
+        }
+    }
+}
+
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+/*-----------------------------------------------------------*/
+
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+
+static void prvRemoveSubscriptionForSubscribeOrUnsubscribeBuffer(
+        MQTTContext_t * pxMQTTContext, MQTTBufferHandle_t xBuffer)
+{
+    uint8_t ucRemaingingLengthFieldBytes;
+    uint16_t usTopicLength;
+
+    /* Get the number of bytes "Remaining Length" field spans
+     * from the subscribe or unsubscribe Tx buffer. */
+    ucRemaingingLengthFieldBytes =
+            prvDecodeRemainingLength(
+                    &( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET]),
+                    NULL);
+
+    /* We must be able to successfully decode the remaining length
+     * as this MQTT packet was constructed by us. */
+    mqttconfigASSERT( ucRemaingingLengthFieldBytes > 0 );
+
+    /* Read the topic length which precedes the topic name
+     * in the MQTT subscribe packet. Note that the topic
+     * happens to be at the same offset in both subscribe
+     * and unsubscribe message and therefore there is no need
+     * to repeat the same code with different #defines. */
+    usTopicLength = (uint8_t) ( mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+            mqttSUBSCRIBE_TOPIC_OFFSET, ucRemaingingLengthFieldBytes)]);
+    usTopicLength <<= mqttBITS_PER_BYTE;
+    usTopicLength |=
+            (uint8_t) ( mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                    ( mqttSUBSCRIBE_TOPIC_OFFSET + 1 ),
+                    ucRemaingingLengthFieldBytes)]);
+
+    /* Remove the subscription entry from the subscription manager. */
+    prvRemoveSubscription(
+            pxMQTTContext,
+            &( mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                    ( mqttSUBSCRIBE_TOPIC_OFFSET + 2 ),
+                    ucRemaingingLengthFieldBytes)]),
+            usTopicLength);
+}
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+/*-----------------------------------------------------------*/
+
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+
+static MQTTBool_t prvInvokeSubscriptionCallbacks(
+        MQTTContext_t * pxMQTTContext, const MQTTPublishData_t * pxPublishData,
+        MQTTBool_t * pxSubscriptionCallbackInvoked)
+{
+    MQTTBool_t xBufferOwnershipTaken = eMQTTFalse;
+    MQTTSubscription_t * pxSubscription;
+    uint32_t x;
+
+    /* Set the output parameter to eMQTTFalse. It will
+     * be set to eMQTTTrue if any callback is invoked. */
+    *pxSubscriptionCallbackInvoked = eMQTTFalse;
+
+    /* Iterate over the subscription entries containing topic filters
+     * without any wild-cards and invoke the registered callbacks. */
+    for (x = 0; x < (uint32_t) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS;
+            x++)
+    {
+        if ((pxMQTTContext->xSubscriptionManager.xSubscriptions[x].xInUse
+                == eMQTTTrue)
+                && (pxMQTTContext->xSubscriptionManager.xSubscriptions[x].xTopicFilterType
+                        == eMQTTTopicFilterTypeSimple)
+                && (pxMQTTContext->xSubscriptionManager.xSubscriptions[x].usTopicFilterLength
+                        == pxPublishData->usTopicLength))
+        {
+            if (memcmp(
+                    pxMQTTContext->xSubscriptionManager.xSubscriptions[x].ucTopicFilter,
+                    pxPublishData->pucTopic, pxPublishData->usTopicLength) == 0)
+            {
+                /* Found a matching subscription. */
+                pxSubscription =
+                        &(pxMQTTContext->xSubscriptionManager.xSubscriptions[x]);
+
+                /* If a callback is registered with the subscription,
+                 * invoke it. */
+                if (pxSubscription->pxPublishCallback != NULL)
                 {
-                    /* Found a matching subscription, mark it as free. */
-                    pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].xInUse = eMQTTFalse;
+                    /* Note that a callback was invoked. */
+                    *pxSubscriptionCallbackInvoked = eMQTTTrue;
 
-                    /* Reduce the count of in-use subscription entries
-                     * in the subscription manager. */
-                    pxMQTTContext->xSubscriptionManager.ulInUseSubscriptions -= ( uint32_t ) 1;
+                    /* Invoke callback. */
+                    xBufferOwnershipTaken = pxSubscription->pxPublishCallback(
+                            pxSubscription->pvPublishCallbackContext,
+                            pxPublishData);
 
-                    /* Done. */
-                    break;
+                    /* If the user takes the buffer ownership, do
+                     * not invoke any other callbacks. */
+                    if (xBufferOwnershipTaken == eMQTTTrue)
+                    {
+                        break;
+                    }
                 }
             }
         }
     }
 
-#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
-/*-----------------------------------------------------------*/
-
-#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
-
-    static void prvRemoveSubscriptionForSubscribeOrUnsubscribeBuffer( MQTTContext_t * pxMQTTContext,
-                                                                      MQTTBufferHandle_t xBuffer )
+    /* If the user has not taken the buffer ownership yet (which can
+     * happen if there is no exact matching entry in the subscription
+     * manager or the user does not take the ownership in the callback),
+     * iterate over the subscription entries containing topic filters
+     * with wild-cards and invoke the registered callbacks for the ones
+     * which match the topic. */
+    if (xBufferOwnershipTaken == eMQTTFalse)
     {
-        uint8_t ucRemaingingLengthFieldBytes;
-        uint16_t usTopicLength;
-
-        /* Get the number of bytes "Remaining Length" field spans
-         * from the subscribe or unsubscribe Tx buffer. */
-        ucRemaingingLengthFieldBytes = prvDecodeRemainingLength( &( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET ] ), NULL );
-
-        /* We must be able to successfully decode the remaining length
-         * as this MQTT packet was constructed by us. */
-        mqttconfigASSERT( ucRemaingingLengthFieldBytes > 0 );
-
-        /* Read the topic length which precedes the topic name
-         * in the MQTT subscribe packet. Note that the topic
-         * happens to be at the same offset in both subscribe
-         * and unsubscribe message and therefore there is no need
-         * to repeat the same code with different #defines. */
-        usTopicLength = ( uint8_t ) ( mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttSUBSCRIBE_TOPIC_OFFSET,
-                                                                                        ucRemaingingLengthFieldBytes ) ] );
-        usTopicLength <<= mqttBITS_PER_BYTE;
-        usTopicLength |= ( uint8_t ) ( mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( ( mqttSUBSCRIBE_TOPIC_OFFSET + 1 ),
-                                                                                         ucRemaingingLengthFieldBytes ) ] );
-
-        /* Remove the subscription entry from the subscription manager. */
-        prvRemoveSubscription( pxMQTTContext,
-                               &( mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( ( mqttSUBSCRIBE_TOPIC_OFFSET + 2 ), ucRemaingingLengthFieldBytes ) ] ),
-                               usTopicLength );
-    }
-#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
-/*-----------------------------------------------------------*/
-
-#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
-
-    static MQTTBool_t prvInvokeSubscriptionCallbacks( MQTTContext_t * pxMQTTContext,
-                                                      const MQTTPublishData_t * pxPublishData,
-                                                      MQTTBool_t * pxSubscriptionCallbackInvoked )
-    {
-        MQTTBool_t xBufferOwnershipTaken = eMQTTFalse;
-        MQTTSubscription_t * pxSubscription;
-        uint32_t x;
-
-        /* Set the output parameter to eMQTTFalse. It will
-         * be set to eMQTTTrue if any callback is invoked. */
-        *pxSubscriptionCallbackInvoked = eMQTTFalse;
-
-        /* Iterate over the subscription entries containing topic filters
-         * without any wild-cards and invoke the registered callbacks. */
-        for( x = 0; x < ( uint32_t ) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS; x++ )
+        for (x = 0;
+                x < (uint32_t) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS;
+                x++)
         {
-            if( ( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].xInUse == eMQTTTrue ) &&
-                ( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].xTopicFilterType == eMQTTTopicFilterTypeSimple ) &&
-                ( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].usTopicFilterLength == pxPublishData->usTopicLength ) )
+            if ((pxMQTTContext->xSubscriptionManager.xSubscriptions[x].xInUse
+                    == eMQTTTrue)
+                    && (pxMQTTContext->xSubscriptionManager.xSubscriptions[x].xTopicFilterType
+                            == eMQTTTopicFilterTypeWildCard))
             {
-                if( memcmp( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].ucTopicFilter, pxPublishData->pucTopic, pxPublishData->usTopicLength ) == 0 )
+                if (prvDoesTopicMatchTopicFilter(
+                        pxPublishData->pucTopic,
+                        pxPublishData->usTopicLength,
+                        pxMQTTContext->xSubscriptionManager.xSubscriptions[x].ucTopicFilter,
+                        pxMQTTContext->xSubscriptionManager.xSubscriptions[x].usTopicFilterLength)
+                        == eMQTTTrue)
                 {
                     /* Found a matching subscription. */
-                    pxSubscription = &( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ] );
+                    pxSubscription =
+                            &(pxMQTTContext->xSubscriptionManager.xSubscriptions[x]);
 
                     /* If a callback is registered with the subscription,
                      * invoke it. */
-                    if( pxSubscription->pxPublishCallback != NULL )
+                    if (pxSubscription->pxPublishCallback != NULL)
                     {
                         /* Note that a callback was invoked. */
                         *pxSubscriptionCallbackInvoked = eMQTTTrue;
 
                         /* Invoke callback. */
-                        xBufferOwnershipTaken = pxSubscription->pxPublishCallback( pxSubscription->pvPublishCallbackContext, pxPublishData );
+                        xBufferOwnershipTaken =
+                                pxSubscription->pxPublishCallback(
+                                        pxSubscription->pvPublishCallbackContext,
+                                        pxPublishData);
 
                         /* If the user takes the buffer ownership, do
                          * not invoke any other callbacks. */
-                        if( xBufferOwnershipTaken == eMQTTTrue )
+                        if (xBufferOwnershipTaken == eMQTTTrue)
                         {
                             break;
                         }
@@ -2176,270 +2382,232 @@ static uint8_t prvDecodeRemainingLength( const uint8_t * const pucEncodedRemaini
                 }
             }
         }
-
-        /* If the user has not taken the buffer ownership yet (which can
-         * happen if there is no exact matching entry in the subscription
-         * manager or the user does not take the ownership in the callback),
-         * iterate over the subscription entries containing topic filters
-         * with wild-cards and invoke the registered callbacks for the ones
-         * which match the topic. */
-        if( xBufferOwnershipTaken == eMQTTFalse )
-        {
-            for( x = 0; x < ( uint32_t ) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS; x++ )
-            {
-                if( ( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].xInUse == eMQTTTrue ) &&
-                    ( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].xTopicFilterType == eMQTTTopicFilterTypeWildCard ) )
-                {
-                    if( prvDoesTopicMatchTopicFilter( pxPublishData->pucTopic,
-                                                      pxPublishData->usTopicLength,
-                                                      pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].ucTopicFilter,
-                                                      pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].usTopicFilterLength ) == eMQTTTrue )
-                    {
-                        /* Found a matching subscription. */
-                        pxSubscription = &( pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ] );
-
-                        /* If a callback is registered with the subscription,
-                         * invoke it. */
-                        if( pxSubscription->pxPublishCallback != NULL )
-                        {
-                            /* Note that a callback was invoked. */
-                            *pxSubscriptionCallbackInvoked = eMQTTTrue;
-
-                            /* Invoke callback. */
-                            xBufferOwnershipTaken = pxSubscription->pxPublishCallback( pxSubscription->pvPublishCallbackContext, pxPublishData );
-
-                            /* If the user takes the buffer ownership, do
-                             * not invoke any other callbacks. */
-                            if( xBufferOwnershipTaken == eMQTTTrue )
-                            {
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        /* Return whether or not the user has taken the
-         * ownership of the MQTT buffer. */
-        return xBufferOwnershipTaken;
     }
+
+    /* Return whether or not the user has taken the
+     * ownership of the MQTT buffer. */
+    return xBufferOwnershipTaken;
+}
 
 #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 /*-----------------------------------------------------------*/
 
 #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-    static MQTTTopicFilterType_t prvGetTopicFilterType( const uint8_t * const pucTopicFilter,
-                                                        uint16_t usTopicFilterLength )
+static MQTTTopicFilterType_t prvGetTopicFilterType(
+        const uint8_t * const pucTopicFilter, uint16_t usTopicFilterLength)
+{
+    MQTTTopicFilterType_t xTopicFilterType = eMQTTTopicFilterTypeSimple;
+    uint16_t x;
+
+    /* Iterate over the topic filter. */
+    for (x = 0; x < usTopicFilterLength; x++)
     {
-        MQTTTopicFilterType_t xTopicFilterType = eMQTTTopicFilterTypeSimple;
-        uint16_t x;
-
-        /* Iterate over the topic filter. */
-        for( x = 0; x < usTopicFilterLength; x++ )
+        if (pucTopicFilter[x] == (uint8_t) '+')
         {
-            if( pucTopicFilter[ x ] == ( uint8_t ) '+' )
+            /* The topic filter contains wild-card. */
+            xTopicFilterType = eMQTTTopicFilterTypeWildCard;
+
+            /* Either '+' should be the first character or the
+             * preceding character should be '/'. */
+            if ((x == (uint16_t) 0)
+                    || (pucTopicFilter[x - (uint16_t) 1] == (uint8_t) '/'))
             {
-                /* The topic filter contains wild-card. */
-                xTopicFilterType = eMQTTTopicFilterTypeWildCard;
-
-                /* Either '+' should be the first character or the
-                 * preceding character should be '/'. */
-                if( ( x == ( uint16_t ) 0 ) || ( pucTopicFilter[ x - ( uint16_t ) 1 ] == ( uint8_t ) '/' ) )
+                /* Either '+' should be the last character or the
+                 * succeeding character should be '/'. */
+                if ((x == usTopicFilterLength - (uint16_t) 1)
+                        || (pucTopicFilter[x + (uint16_t) 1] == (uint8_t) '/'))
                 {
-                    /* Either '+' should be the last character or the
-                     * succeeding character should be '/'. */
-                    if( ( x == usTopicFilterLength - ( uint16_t ) 1 ) || ( pucTopicFilter[ x + ( uint16_t ) 1 ] == ( uint8_t ) '/' ) )
-                    {
-                        /* This '+' character in the given topic
-                         * filter is valid. */
-                        continue;
-                    }
-                    else
-                    {
-                        /* If '+' is not the last character and the succeeding
-                         * character is not '/', then it is not a valid topic
-                         * filter. */
-                        xTopicFilterType = eMQTTTopicFilterTypeInvalid;
-                        break;
-                    }
-                }
-                else
-                {
-                    /* If '+' is not the first character and the preceding
-                     * character is not '/', then it is not a valid topic
-                     * filter. */
-                    xTopicFilterType = eMQTTTopicFilterTypeInvalid;
-                    break;
-                }
-            }
-            else if( pucTopicFilter[ x ] == ( uint8_t ) '#' )
-            {
-                /* The topic filter contains wild-card. */
-                xTopicFilterType = eMQTTTopicFilterTypeWildCard;
-
-                /* Either '#' should be the first character or the
-                 * preceding character must be '/'. */
-                if( ( x == ( uint16_t ) 0 ) || ( pucTopicFilter[ x - ( uint16_t ) 1 ] == ( uint8_t ) '/' ) )
-                {
-                    /* '#' must be the last character in the topic
-                     * string. */
-                    if( x == usTopicFilterLength - ( uint16_t ) 1 )
-                    {
-                        /* This '#' character in the given topic filter
-                         * is valid. */
-                        break;
-                    }
-                    else
-                    {
-                        /* If '#' is not the last character, then it is
-                         * not a valid topic filter. */
-                        xTopicFilterType = eMQTTTopicFilterTypeInvalid;
-                        break;
-                    }
-                }
-                else
-                {
-                    /* If '#' is not the first character and the preceding
-                     * character is not '/', then it is not a valid topic
-                     * filter. */
-                    xTopicFilterType = eMQTTTopicFilterTypeInvalid;
-                    break;
-                }
-            }
-            else
-            {
-                /* Any character other than '+' and '#' is okay. */
-            }
-        }
-
-        return xTopicFilterType;
-    }
-
-#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
-/*-----------------------------------------------------------*/
-
-#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
-
-    static MQTTBool_t prvDoesTopicMatchTopicFilter( const uint8_t * const pucTopic,
-                                                    uint16_t usTopicLength,
-                                                    const uint8_t * const pucTopicFilter,
-                                                    uint16_t usTopicFilterLength )
-    {
-        MQTTBool_t xTopicMatchesTopicFilter = eMQTTFalse;
-        uint16_t usTopicIndex = 0, usTopicFilterIndex = 0;
-
-        while( ( usTopicIndex < usTopicLength ) && ( usTopicFilterIndex < usTopicFilterLength ) )
-        {
-            /* Does the character in the topic string matches the
-             * corresponding one in the topic filter string? */
-            if( pucTopic[ usTopicIndex ] == pucTopicFilter[ usTopicFilterIndex ] )
-            {
-                /* Handle special corner cases as documented by
-                 * the MQTT protocol spec. */
-
-                /* Filter of type "sport/#" also matches the singular
-                 * "sport" since # includes the parent level. */
-                if( ( usTopicIndex == usTopicLength - ( uint16_t ) 1 ) &&
-                    ( usTopicFilterIndex == usTopicFilterLength - ( uint16_t ) 3 ) &&
-                    ( pucTopicFilter[ usTopicFilterIndex + ( uint16_t ) 1 ] == ( uint8_t ) '/' ) &&
-                    ( pucTopicFilter[ usTopicFilterIndex + ( uint16_t ) 2 ] == ( uint8_t ) '#' ) )
-                {
-                    xTopicMatchesTopicFilter = eMQTTTrue;
-                    break;
-                }
-
-                /* Filter of type "sport/+" also matches the "sport/"
-                 * but not "sport". */
-                if( ( usTopicIndex == usTopicLength - ( uint16_t ) 1 ) &&
-                    ( usTopicFilterIndex == usTopicFilterLength - ( uint16_t ) 2 ) &&
-                    ( pucTopicFilter[ usTopicFilterIndex + ( uint16_t ) 1 ] == ( uint8_t ) '+' ) )
-                {
-                    xTopicMatchesTopicFilter = eMQTTTrue;
-                    break;
-                }
-            }
-            else
-            {
-                if( pucTopicFilter[ usTopicFilterIndex ] == ( uint8_t ) '+' )
-                {
-                    /* Consume the current topic level which is until
-                     * we encounter '/' in the topic string or the end
-                     * of the topic string. */
-                    while( usTopicIndex < usTopicLength && pucTopic[ usTopicIndex ] != ( uint8_t ) '/' )
-                    {
-                        usTopicIndex++;
-                    }
-
-                    /* Since we are already at the '/' character or at
-                     * the end in the topic string, increment the topic
-                     * filter index here and skip the index increments
-                     * at the end of the loop. */
-                    usTopicFilterIndex++;
+                    /* This '+' character in the given topic
+                     * filter is valid. */
                     continue;
                 }
-                else if( pucTopicFilter[ usTopicFilterIndex ] == ( uint8_t ) '#' )
+                else
                 {
-                    /* Since it is assumed that the given topic filter
-                     * is a valid topic filter, this must be the last
-                     * character in it. The rest of the topic string
-                     * matches this multi-level wild-card and hence this
-                     * is a match. */
-                    xTopicMatchesTopicFilter = eMQTTTrue;
+                    /* If '+' is not the last character and the succeeding
+                     * character is not '/', then it is not a valid topic
+                     * filter. */
+                    xTopicFilterType = eMQTTTopicFilterTypeInvalid;
+                    break;
+                }
+            }
+            else
+            {
+                /* If '+' is not the first character and the preceding
+                 * character is not '/', then it is not a valid topic
+                 * filter. */
+                xTopicFilterType = eMQTTTopicFilterTypeInvalid;
+                break;
+            }
+        }
+        else if (pucTopicFilter[x] == (uint8_t) '#')
+        {
+            /* The topic filter contains wild-card. */
+            xTopicFilterType = eMQTTTopicFilterTypeWildCard;
+
+            /* Either '#' should be the first character or the
+             * preceding character must be '/'. */
+            if ((x == (uint16_t) 0)
+                    || (pucTopicFilter[x - (uint16_t) 1] == (uint8_t) '/'))
+            {
+                /* '#' must be the last character in the topic
+                 * string. */
+                if (x == usTopicFilterLength - (uint16_t) 1)
+                {
+                    /* This '#' character in the given topic filter
+                     * is valid. */
                     break;
                 }
                 else
                 {
-                    /* Any character mismatch other than '+' or
-                     * '#' means the topic does not match the
-                     * given filter. */
+                    /* If '#' is not the last character, then it is
+                     * not a valid topic filter. */
+                    xTopicFilterType = eMQTTTopicFilterTypeInvalid;
                     break;
                 }
             }
-
-            /* Increment indexes. */
-            usTopicIndex++;
-            usTopicFilterIndex++;
+            else
+            {
+                /* If '#' is not the first character and the preceding
+                 * character is not '/', then it is not a valid topic
+                 * filter. */
+                xTopicFilterType = eMQTTTopicFilterTypeInvalid;
+                break;
+            }
         }
-
-        /* If the topic is not matched yet and both topic
-         * and topic filter strings are consumed, it's a match
-         * else we would have broken the loop in between.*/
-        if( ( xTopicMatchesTopicFilter == eMQTTFalse ) &&
-            ( ( usTopicIndex > ( uint16_t ) 0 ) && ( usTopicIndex >= usTopicLength ) ) &&
-            ( ( usTopicFilterIndex > ( uint16_t ) 0 ) && ( usTopicFilterIndex >= usTopicFilterLength ) ) )
+        else
         {
-            xTopicMatchesTopicFilter = eMQTTTrue;
+            /* Any character other than '+' and '#' is okay. */
         }
-
-        /* Return the result. */
-        return xTopicMatchesTopicFilter;
     }
+
+    return xTopicFilterType;
+}
 
 #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 /*-----------------------------------------------------------*/
 
-MQTTReturnCode_t MQTT_Init( MQTTContext_t * pxMQTTContext,
-                            const MQTTInitParams_t * const pxInitParams )
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+
+static MQTTBool_t prvDoesTopicMatchTopicFilter(
+        const uint8_t * const pucTopic, uint16_t usTopicLength,
+        const uint8_t * const pucTopicFilter, uint16_t usTopicFilterLength)
 {
-    #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
-        uint32_t x;
-    #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+    MQTTBool_t xTopicMatchesTopicFilter = eMQTTFalse;
+    uint16_t usTopicIndex = 0, usTopicFilterIndex = 0;
+
+    while ((usTopicIndex < usTopicLength)
+            && (usTopicFilterIndex < usTopicFilterLength))
+    {
+        /* Does the character in the topic string matches the
+         * corresponding one in the topic filter string? */
+        if (pucTopic[usTopicIndex] == pucTopicFilter[usTopicFilterIndex])
+        {
+            /* Handle special corner cases as documented by
+             * the MQTT protocol spec. */
+
+            /* Filter of type "sport/#" also matches the singular
+             * "sport" since # includes the parent level. */
+            if ((usTopicIndex == usTopicLength - (uint16_t) 1)
+                    && (usTopicFilterIndex == usTopicFilterLength - (uint16_t) 3)
+                    && (pucTopicFilter[usTopicFilterIndex + (uint16_t) 1]
+                            == (uint8_t) '/')
+                    && (pucTopicFilter[usTopicFilterIndex + (uint16_t) 2]
+                            == (uint8_t) '#'))
+            {
+                xTopicMatchesTopicFilter = eMQTTTrue;
+                break;
+            }
+
+            /* Filter of type "sport/+" also matches the "sport/"
+             * but not "sport". */
+            if ((usTopicIndex == usTopicLength - (uint16_t) 1)
+                    && (usTopicFilterIndex == usTopicFilterLength - (uint16_t) 2)
+                    && (pucTopicFilter[usTopicFilterIndex + (uint16_t) 1]
+                            == (uint8_t) '+'))
+            {
+                xTopicMatchesTopicFilter = eMQTTTrue;
+                break;
+            }
+        }
+        else
+        {
+            if (pucTopicFilter[usTopicFilterIndex] == (uint8_t) '+')
+            {
+                /* Consume the current topic level which is until
+                 * we encounter '/' in the topic string or the end
+                 * of the topic string. */
+                while (usTopicIndex < usTopicLength
+                        && pucTopic[usTopicIndex] != (uint8_t) '/')
+                {
+                    usTopicIndex++;
+                }
+
+                /* Since we are already at the '/' character or at
+                 * the end in the topic string, increment the topic
+                 * filter index here and skip the index increments
+                 * at the end of the loop. */
+                usTopicFilterIndex++;
+                continue;
+            }
+            else if (pucTopicFilter[usTopicFilterIndex] == (uint8_t) '#')
+            {
+                /* Since it is assumed that the given topic filter
+                 * is a valid topic filter, this must be the last
+                 * character in it. The rest of the topic string
+                 * matches this multi-level wild-card and hence this
+                 * is a match. */
+                xTopicMatchesTopicFilter = eMQTTTrue;
+                break;
+            }
+            else
+            {
+                /* Any character mismatch other than '+' or
+                 * '#' means the topic does not match the
+                 * given filter. */
+                break;
+            }
+        }
+
+        /* Increment indexes. */
+        usTopicIndex++;
+        usTopicFilterIndex++;
+    }
+
+    /* If the topic is not matched yet and both topic
+     * and topic filter strings are consumed, it's a match
+     * else we would have broken the loop in between.*/
+    if ((xTopicMatchesTopicFilter == eMQTTFalse)
+            && ((usTopicIndex > (uint16_t) 0) && (usTopicIndex >= usTopicLength))
+            && ((usTopicFilterIndex > (uint16_t) 0)
+                    && (usTopicFilterIndex >= usTopicFilterLength)))
+    {
+        xTopicMatchesTopicFilter = eMQTTTrue;
+    }
+
+    /* Return the result. */
+    return xTopicMatchesTopicFilter;
+}
+
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+/*-----------------------------------------------------------*/
+
+MQTTReturnCode_t MQTT_Init(MQTTContext_t * pxMQTTContext,
+                           const MQTTInitParams_t * const pxInitParams)
+{
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+    uint32_t x;
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
     /* These are checked here once and are later used without
      * NULL checks. */
-    mqttconfigASSERT( pxMQTTContext != NULL );
-    mqttconfigASSERT( pxInitParams->pxMQTTSendFxn != NULL );
-    mqttconfigASSERT( pxInitParams->xBufferPoolInterface.pxGetBufferFxn != NULL );
-    mqttconfigASSERT( pxInitParams->xBufferPoolInterface.pxReturnBufferFxn != NULL );
-    mqttconfigASSERT( pxInitParams != NULL );
+    mqttconfigASSERT( pxMQTTContext != NULL ); mqttconfigASSERT( pxInitParams->pxMQTTSendFxn != NULL ); mqttconfigASSERT( pxInitParams->xBufferPoolInterface.pxGetBufferFxn != NULL ); mqttconfigASSERT( pxInitParams->xBufferPoolInterface.pxReturnBufferFxn != NULL ); mqttconfigASSERT( pxInitParams != NULL );
 
     /* Initialize Tx Buffer List. */
-    listINIT_HEAD( &( pxMQTTContext->xTxBufferListHead ) );
+    listINIT_HEAD(&(pxMQTTContext->xTxBufferListHead));
 
     /* Initialize Rx State. */
-    prvResetRxMessageState( pxMQTTContext );
+    prvResetRxMessageState(pxMQTTContext);
 
     /* Set connection state to not connected. */
     pxMQTTContext->xConnectionState = eMQTTNotConnected;
@@ -2458,89 +2626,95 @@ MQTTReturnCode_t MQTT_Init( MQTTContext_t * pxMQTTContext,
     /* Store buffer pool interface. */
     pxMQTTContext->xBufferPoolInterface = pxInitParams->xBufferPoolInterface;
 
-    #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-        /* Mark all the subscription entires in the subscription
-         * manager as free. */
-        for( x = 0; x < ( uint32_t ) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS; x++ )
-        {
-            pxMQTTContext->xSubscriptionManager.xSubscriptions[ x ].xInUse = eMQTTFalse;
-        }
+    /* Mark all the subscription entires in the subscription
+     * manager as free. */
+    for (x = 0; x < (uint32_t) mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS;
+            x++)
+    {
+        pxMQTTContext->xSubscriptionManager.xSubscriptions[x].xInUse =
+                eMQTTFalse;
+    }
 
-        /* Set the number of in-use subscription entries to zero. */
-        pxMQTTContext->xSubscriptionManager.ulInUseSubscriptions = 0;
-    #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+    /* Set the number of in-use subscription entries to zero. */
+    pxMQTTContext->xSubscriptionManager.ulInUseSubscriptions = 0;
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
     return eMQTTSuccess;
 }
 /*-----------------------------------------------------------*/
 
-MQTTReturnCode_t MQTT_Connect( MQTTContext_t * pxMQTTContext,
-                               const MQTTConnectParams_t * const pxConnectParams )
+MQTTReturnCode_t MQTT_Connect(MQTTContext_t * pxMQTTContext,
+                              const MQTTConnectParams_t * const pxConnectParams)
 {
-    uint8_t * pucNextByte, * pucLastByteInBuffer, ucRemainingLengthFieldBytes;
+    uint8_t * pucNextByte, *pucLastByteInBuffer, ucRemainingLengthFieldBytes;
     uint32_t ulRemainingLength, ulTotalMessageLength = 0;
     uint16_t usClientIdLength, usUserNameLength;
     MQTTBufferHandle_t xBuffer = NULL;
     MQTTReturnCode_t xReturnCode = eMQTTFailure;
-    static const uint8_t ucDefaultConnectVariableHeader[] =
-    {
-        0,                              /* Protocol name length MSB. */
-        4,                              /* Protocol name length LSB. */
-        ( uint8_t ) 'M',                /* Protocol name byte 0. */
-        ( uint8_t ) 'Q',                /* Protocol name byte 1. */
-        ( uint8_t ) 'T',                /* Protocol name byte 2. */
-        ( uint8_t ) 'T',                /* Protocol name byte 3. */
-        mqttPROTOCOL_LEVEL,             /* Protocol level. */
-        mqttCONNECT_CLEAN_SESSION_FLAG, /* AWS IoT Broker does not support persistent sessions i.e. Clean Session flag must be set. */
-        ( uint8_t ) 0,                  /* Keep-alive time in seconds MSB. */
-        ( uint8_t ) 0,                  /* Keep-alive time in seconds LSB. */
+    static const uint8_t ucDefaultConnectVariableHeader[] = {
+            0, /* Protocol name length MSB. */
+            4, /* Protocol name length LSB. */
+            (uint8_t) 'M', /* Protocol name byte 0. */
+            (uint8_t) 'Q', /* Protocol name byte 1. */
+            (uint8_t) 'T', /* Protocol name byte 2. */
+            (uint8_t) 'T', /* Protocol name byte 3. */
+            mqttPROTOCOL_LEVEL, /* Protocol level. */
+            mqttCONNECT_CLEAN_SESSION_FLAG, /* AWS IoT Broker does not support persistent sessions i.e. Clean Session flag must be set. */
+            (uint8_t) 0, /* Keep-alive time in seconds MSB. */
+            (uint8_t) 0, /* Keep-alive time in seconds LSB. */
     };
 
     /* These are checked here once and are later used without
      * NULL checks. */
-    mqttconfigASSERT( pxMQTTContext != NULL );
-    mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL );
-    mqttconfigASSERT( pxConnectParams != NULL );
+    mqttconfigASSERT( pxMQTTContext != NULL ); mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL ); mqttconfigASSERT( pxConnectParams != NULL );
 
     /* Connect should only be sent in the "not connected" state. */
-    if( pxMQTTContext->xConnectionState != eMQTTNotConnected )
+    if (pxMQTTContext->xConnectionState != eMQTTNotConnected)
     {
         /* Fail the connect operation immediately, if the
          * MQTT client is already connected or connection is in
          * progress. */
-        xReturnCode = ( pxMQTTContext->xConnectionState == eMQTTConnected ) ? eMQTTClientAlreadyConnected : eMQTTClientConnectionInProgress;
+        xReturnCode =
+                (pxMQTTContext->xConnectionState == eMQTTConnected) ?
+                        eMQTTClientAlreadyConnected :
+                        eMQTTClientConnectionInProgress;
     }
     else
     {
         /* Store keep alive actual interval and timeout. */
-        pxMQTTContext->ulKeepAliveActualIntervalTicks = pxConnectParams->ulKeepAliveActualIntervalTicks;
-        pxMQTTContext->ulPingRequestTimeoutTicks = pxConnectParams->ulPingRequestTimeoutTicks;
+        pxMQTTContext->ulKeepAliveActualIntervalTicks =
+                pxConnectParams->ulKeepAliveActualIntervalTicks;
+        pxMQTTContext->ulPingRequestTimeoutTicks =
+                pxConnectParams->ulPingRequestTimeoutTicks;
 
         /* Client ID and username length. */
-        usClientIdLength = mqttSTRLEN( pxConnectParams->usClientIdLength );
-        usUserNameLength = pxConnectParams->usUserNameLength > ( uint16_t ) 0 ? mqttSTRLEN( pxConnectParams->usUserNameLength ) : ( uint16_t ) 0;
+        usClientIdLength = mqttSTRLEN(pxConnectParams->usClientIdLength);
+        usUserNameLength =
+                pxConnectParams->usUserNameLength > (uint16_t) 0 ?
+                        mqttSTRLEN(pxConnectParams->usUserNameLength) :
+                        (uint16_t) 0;
 
         /* Calculate "Remaining Length" i.e. length of the packet excluding Fixed Header. */
-        ulRemainingLength = ( uint32_t ) sizeof( ucDefaultConnectVariableHeader ) +
-                            ( uint32_t ) usClientIdLength +
-                            ( uint32_t ) usUserNameLength;
+        ulRemainingLength = (uint32_t) sizeof(ucDefaultConnectVariableHeader)
+                + (uint32_t) usClientIdLength + (uint32_t) usUserNameLength;
 
         /* Calculate the number of bytes occupied by the "Remaining Length" field. */
-        ucRemainingLengthFieldBytes = prvSizeOfRemainingLength( ulRemainingLength );
+        ucRemainingLengthFieldBytes = prvSizeOfRemainingLength(
+                ulRemainingLength);
 
         /* Make sure that "Remaining Length" is within the permissible limits. */
-        if( ucRemainingLengthFieldBytes > ( uint8_t ) 0 )
+        if (ucRemainingLengthFieldBytes > (uint8_t) 0)
         {
             /* Calculate total MQTT message length. */
-            ulTotalMessageLength = mqttTOTAL_MESSAGE_LENGTH( ucRemainingLengthFieldBytes, ulRemainingLength );
+            ulTotalMessageLength = mqttTOTAL_MESSAGE_LENGTH(
+                    ucRemainingLengthFieldBytes, ulRemainingLength);
 
             /* Try to get a buffer from the free buffer pool. */
-            xBuffer = prvGetFreeBuffer( pxMQTTContext, ulTotalMessageLength );
+            xBuffer = prvGetFreeBuffer(pxMQTTContext, ulTotalMessageLength);
 
-            if( xBuffer == NULL )
+            if (xBuffer == NULL)
             {
                 /* Fail the connect operation immediately, if no free
                  * buffer is available. */
@@ -2550,59 +2724,89 @@ MQTTReturnCode_t MQTT_Connect( MQTTContext_t * pxMQTTContext,
             else
             {
                 /* Add the buffer to the Tx buffer list. */
-                mqttbufferLIST_ADD( &( pxMQTTContext->xTxBufferListHead ), xBuffer );
+                mqttbufferLIST_ADD(&(pxMQTTContext->xTxBufferListHead), xBuffer);
 
                 /* To help debugging only. */
-                memset( mqttbufferGET_DATA( xBuffer ), 0x00, mqttbufferGET_EFFECTIVE_BUFFER_LENGTH( xBuffer ) );
+                memset(mqttbufferGET_DATA(xBuffer), 0x00,
+                       mqttbufferGET_EFFECTIVE_BUFFER_LENGTH(xBuffer));
 
                 /* Record time-stamp and store timeout. */
-                mqttbufferGET_PACKET_RECORDED_TICK_COUNT( xBuffer ) = prvGetCurrentTickCount( pxMQTTContext );
-                mqttbufferGET_PACKET_TIMEOUT_TICKS( xBuffer ) = pxConnectParams->ulTimeoutTicks;
+                mqttbufferGET_PACKET_RECORDED_TICK_COUNT( xBuffer ) =
+                        prvGetCurrentTickCount(pxMQTTContext);
+                mqttbufferGET_PACKET_TIMEOUT_TICKS( xBuffer ) =
+                        pxConnectParams->ulTimeoutTicks;
 
                 /* Write Fixed Header control packet type. */
-                mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] = mqttCONTROL_CONNECT | mqttFLAGS_CONNECT;
+                mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET] =
+                        mqttCONTROL_CONNECT | mqttFLAGS_CONNECT;
 
                 /* Write encoded "Remaining Length" in the fixed header. */
-                pucNextByte = &( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET ] );
-                pucLastByteInBuffer = &( mqttbufferGET_DATA( xBuffer )[ mqttbufferGET_EFFECTIVE_BUFFER_LENGTH( xBuffer ) - ( uint32_t ) 1 ] );
-                ucRemainingLengthFieldBytes = prvEncodeRemainingLength( ulRemainingLength, pucNextByte, pucLastByteInBuffer );
+                pucNextByte =
+                        &( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET]);
+                pucLastByteInBuffer =
+                        &( mqttbufferGET_DATA( xBuffer )[ mqttbufferGET_EFFECTIVE_BUFFER_LENGTH(
+                                xBuffer)
+                                - (uint32_t) 1]);
+                ucRemainingLengthFieldBytes = prvEncodeRemainingLength(
+                        ulRemainingLength, pucNextByte, pucLastByteInBuffer);
 
                 /* We should have successfully encoded the remaining length field
                  * as we already have a large enough buffer. */
                 mqttconfigASSERT( ucRemainingLengthFieldBytes == prvSizeOfRemainingLength( ulRemainingLength ) );
 
                 /* Write default variable header. */
-                pucNextByte = &( mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttVARIABLE_LENGTH_HEADER_START_OFFSET, ucRemainingLengthFieldBytes ) ] );
-                memcpy( pucNextByte, ucDefaultConnectVariableHeader, sizeof( ucDefaultConnectVariableHeader ) );
+                pucNextByte =
+                        &( mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                                mqttVARIABLE_LENGTH_HEADER_START_OFFSET,
+                                ucRemainingLengthFieldBytes)]);
+                memcpy(pucNextByte, ucDefaultConnectVariableHeader,
+                       sizeof(ucDefaultConnectVariableHeader));
 
                 /* Update the user name flag. */
-                if( pxConnectParams->usUserNameLength > ( uint16_t ) 0 )
+                if (pxConnectParams->usUserNameLength > (uint16_t) 0)
                 {
-                    mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttCONNECT_FLAGS_OFFSET, ucRemainingLengthFieldBytes ) ] |= mqttCONNECT_USER_NAME_FLAG;
+                    mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                            mqttCONNECT_FLAGS_OFFSET,
+                            ucRemainingLengthFieldBytes)] |=
+                            mqttCONNECT_USER_NAME_FLAG;
                 }
 
                 /* Update keep alive timeout. */
-                mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttCONNECT_KEEPALIVE_MSB_OFFSET,
-                                                                  ucRemainingLengthFieldBytes ) ] = ( uint8_t ) ( pxConnectParams->usKeepAliveIntervalSeconds >> mqttBITS_PER_BYTE );
-                mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttCONNECT_KEEPALIVE_LSB_OFFSET,
-                                                                  ucRemainingLengthFieldBytes ) ] = ( uint8_t ) ( pxConnectParams->usKeepAliveIntervalSeconds );
+                mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                        mqttCONNECT_KEEPALIVE_MSB_OFFSET,
+                        ucRemainingLengthFieldBytes)] =
+                        (uint8_t) (pxConnectParams->usKeepAliveIntervalSeconds
+                                >> mqttBITS_PER_BYTE);
+                mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                        mqttCONNECT_KEEPALIVE_LSB_OFFSET,
+                        ucRemainingLengthFieldBytes)] =
+                        (uint8_t) (pxConnectParams->usKeepAliveIntervalSeconds);
 
                 /* Write the client ID into the payload. */
-                pucNextByte = &( mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttCONNECT_CLIENT_ID_OFFSET, ucRemainingLengthFieldBytes ) ] );
-                pucNextByte = prvWriteString( pucNextByte, pucLastByteInBuffer, pxConnectParams->pucClientId, pxConnectParams->usClientIdLength );
+                pucNextByte =
+                        &( mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                                mqttCONNECT_CLIENT_ID_OFFSET,
+                                ucRemainingLengthFieldBytes)]);
+                pucNextByte = prvWriteString(pucNextByte, pucLastByteInBuffer,
+                                             pxConnectParams->pucClientId,
+                                             pxConnectParams->usClientIdLength);
 
                 /* Write the user name into the payload. */
-                if( pxConnectParams->usUserNameLength > ( uint16_t ) 0 )
+                if (pxConnectParams->usUserNameLength > (uint16_t) 0)
                 {
-                    pucNextByte = prvWriteString( pucNextByte, pucLastByteInBuffer, pxConnectParams->pucUserName, pxConnectParams->usUserNameLength );
+                    pucNextByte = prvWriteString(
+                            pucNextByte, pucLastByteInBuffer,
+                            pxConnectParams->pucUserName,
+                            pxConnectParams->usUserNameLength);
                 }
 
                 /* MISRA compliance. */
-                ( void ) pucNextByte;
+                (void) pucNextByte;
 
                 /* Store the packet identifier in TxBuffer also for matching
                  * ACK later. */
-                mqttbufferGET_PACKET_IDENTIFIER( xBuffer ) = pxConnectParams->usPacketIdentifier;
+                mqttbufferGET_PACKET_IDENTIFIER( xBuffer ) =
+                        pxConnectParams->usPacketIdentifier;
 
                 /* Update the number of bytes written to the buffer. */
                 mqttbufferGET_DATA_LENGTH( xBuffer ) = ulTotalMessageLength;
@@ -2614,17 +2818,18 @@ MQTTReturnCode_t MQTT_Connect( MQTTContext_t * pxMQTTContext,
     }
 
     /* If the packet was successfully constructed, transmit it. */
-    if( xReturnCode == eMQTTSuccess )
+    if (xReturnCode == eMQTTSuccess)
     {
-        xReturnCode = prvSendData( pxMQTTContext, mqttbufferGET_DATA( xBuffer ), mqttbufferGET_DATA_LENGTH( xBuffer ) );
+        xReturnCode = prvSendData(pxMQTTContext, mqttbufferGET_DATA(xBuffer),
+                                  mqttbufferGET_DATA_LENGTH(xBuffer));
     }
 
     /* If some error occurred, return the TxBuffer, otherwise it
      * will be returned upon receiving ACK or timeout. */
-    if( xReturnCode != eMQTTSuccess )
+    if (xReturnCode != eMQTTSuccess)
     {
         /* Return the buffer to the free buffer pool. */
-        prvReturnBuffer( pxMQTTContext, xBuffer );
+        prvReturnBuffer(pxMQTTContext, xBuffer);
     }
     else
     {
@@ -2636,53 +2841,53 @@ MQTTReturnCode_t MQTT_Connect( MQTTContext_t * pxMQTTContext,
 }
 /*-----------------------------------------------------------*/
 
-MQTTReturnCode_t MQTT_Disconnect( MQTTContext_t * pxMQTTContext )
+MQTTReturnCode_t MQTT_Disconnect(MQTTContext_t * pxMQTTContext)
 {
     MQTTReturnCode_t xReturnCode = eMQTTSuccess;
     MQTTEventCallbackParams_t xEventCallbackParams;
-    static const uint8_t ucDisconnectPacket[] =
-    {
-        mqttCONTROL_DISCONNECT | mqttFLAGS_DISCONNECT,
-        0 /* DISCONNECT packet does not have any variable header or payload. */
+    static const uint8_t ucDisconnectPacket[] = {
+    mqttCONTROL_DISCONNECT | mqttFLAGS_DISCONNECT,
+                                                  0 /* DISCONNECT packet does not have any variable header or payload. */
     };
 
     /* These are checked here once and are later used without
      * NULL checks. */
-    mqttconfigASSERT( pxMQTTContext != NULL );
-    mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL );
+    mqttconfigASSERT( pxMQTTContext != NULL ); mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL );
 
     /* Send the MQTT Disconnect message only if the MQTT client
      * is connected or a connection attempt is in progress (i.e.
      * we have sent connect message and are waiting for a CONNACK).
      * Do not send the disconnect message if someone is trying to
      * disconnect an already disconnected client. */
-    if( ( pxMQTTContext->xConnectionState == eMQTTConnected ) || ( pxMQTTContext->xConnectionState == eMQTTConnectionInProgress ) )
+    if ((pxMQTTContext->xConnectionState == eMQTTConnected)
+            || (pxMQTTContext->xConnectionState == eMQTTConnectionInProgress))
     {
-        if( prvSendData( pxMQTTContext, ucDisconnectPacket, sizeof( ucDisconnectPacket ) ) != eMQTTSuccess )
+        if (prvSendData(pxMQTTContext, ucDisconnectPacket,
+                        sizeof(ucDisconnectPacket)) != eMQTTSuccess)
         {
             xReturnCode = eMQTTSendFailed;
         }
 
         /* Inform the user about disconnect. */
         xEventCallbackParams.xEventType = eMQTTClientDisconnected;
-        xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonUserRequest;
-        ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+        xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                eMQTTDisconnectReasonUserRequest;
+        (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
     }
 
     /* Reset the internal state even if we fail to send the MQTT
      * message. */
-    prvResetMQTTContext( pxMQTTContext );
+    prvResetMQTTContext(pxMQTTContext);
 
     return xReturnCode;
 }
 /*-----------------------------------------------------------*/
 
-MQTTReturnCode_t MQTT_Subscribe( MQTTContext_t * pxMQTTContext,
-                                 const MQTTSubscribeParams_t * const pxSubscribeParams )
+MQTTReturnCode_t MQTT_Subscribe(
+        MQTTContext_t * pxMQTTContext,
+        const MQTTSubscribeParams_t * const pxSubscribeParams)
 {
-    uint8_t * pucNextByte, * pucLastByteInBuffer, ucRemainingLengthFieldBytes;
+    uint8_t * pucNextByte, *pucLastByteInBuffer, ucRemainingLengthFieldBytes;
     uint32_t ulRemainingLength, ulTotalMessageLength;
     uint16_t usTopicLength;
     MQTTBufferHandle_t xBuffer = NULL;
@@ -2690,17 +2895,11 @@ MQTTReturnCode_t MQTT_Subscribe( MQTTContext_t * pxMQTTContext,
 
     /* These are checked here once and are later used without
      * NULL checks. */
-    mqttconfigASSERT( pxMQTTContext != NULL );
-    mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL );
-    mqttconfigASSERT( pxSubscribeParams != NULL );
-    mqttconfigASSERT( pxSubscribeParams->pucTopic != NULL );
-    mqttconfigASSERT( pxSubscribeParams->xQos != eMQTTQoS2 ); /* QoS2 is not supported. */
+    mqttconfigASSERT( pxMQTTContext != NULL ); mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL ); mqttconfigASSERT( pxSubscribeParams != NULL ); mqttconfigASSERT( pxSubscribeParams->pucTopic != NULL ); mqttconfigASSERT( pxSubscribeParams->xQos != eMQTTQoS2 ); /* QoS2 is not supported. */
 
     mqttconfigDEBUG_LOG( ( "Initiating MQTT subscribe.\r\n" ) );
 
-    if( pxMQTTContext->xConnectionState != eMQTTConnected )
+    if (pxMQTTContext->xConnectionState != eMQTTConnected)
     {
         /* Fail the subscribe operation immediately, if
          * MQTT client is not connected. */
@@ -2708,46 +2907,48 @@ MQTTReturnCode_t MQTT_Subscribe( MQTTContext_t * pxMQTTContext,
     }
     else
     {
-        #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-            /* Try to store the subscription in the subscription
+        /* Try to store the subscription in the subscription
+         * manager. */
+        if (prvStoreSubscription(pxMQTTContext, pxSubscribeParams->pucTopic,
+                                 pxSubscribeParams->usTopicLength,
+                                 pxSubscribeParams->pvPublishCallbackContext,
+                                 pxSubscribeParams->pxPublishCallback)
+                == eMQTTFalse)
+        {
+            /* Fail the subscribe operation immediately, if we
+             * fail to store the subscription in the subscription
              * manager. */
-            if( prvStoreSubscription( pxMQTTContext,
-                                      pxSubscribeParams->pucTopic,
-                                      pxSubscribeParams->usTopicLength,
-                                      pxSubscribeParams->pvPublishCallbackContext,
-                                      pxSubscribeParams->pxPublishCallback ) == eMQTTFalse )
-            {
-                /* Fail the subscribe operation immediately, if we
-                 * fail to store the subscription in the subscription
-                 * manager. */
-                xReturnCode = eMQTTSubscriptionManagerFull;
-            }
-            else
-        #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+            xReturnCode = eMQTTSubscriptionManagerFull;
+        }
+        else
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
         {
             /* Length of the topic in the actual MQTT message. */
-            usTopicLength = mqttSTRLEN( pxSubscribeParams->usTopicLength );
+            usTopicLength = mqttSTRLEN(pxSubscribeParams->usTopicLength);
 
             /* Calculate the "Remaining Length" i.e. length of the packet
              * excluding fixed header. */
-            ulRemainingLength = ( uint32_t ) mqttSUBSCRIBE_PACKET_IDENTIFER_LENGTH +
-                                ( uint32_t ) usTopicLength +
-                                ( uint32_t ) mqttSUBSCRIBE_REQUESTED_QOS_LENGTH;
+            ulRemainingLength = (uint32_t) mqttSUBSCRIBE_PACKET_IDENTIFER_LENGTH
+                    + (uint32_t) usTopicLength
+                    + (uint32_t) mqttSUBSCRIBE_REQUESTED_QOS_LENGTH;
 
             /* Calculate the number of bytes occupied by the "Remaining Length" field. */
-            ucRemainingLengthFieldBytes = prvSizeOfRemainingLength( ulRemainingLength );
+            ucRemainingLengthFieldBytes = prvSizeOfRemainingLength(
+                    ulRemainingLength);
 
             /* Make sure that "Remaining Length" is within the permissible limits. */
-            if( ucRemainingLengthFieldBytes > ( uint8_t ) 0 )
+            if (ucRemainingLengthFieldBytes > (uint8_t) 0)
             {
                 /* Calculate total MQTT message length. */
-                ulTotalMessageLength = mqttTOTAL_MESSAGE_LENGTH( ucRemainingLengthFieldBytes, ulRemainingLength );
+                ulTotalMessageLength = mqttTOTAL_MESSAGE_LENGTH(
+                        ucRemainingLengthFieldBytes, ulRemainingLength);
 
                 /* Try to get a buffer from the free buffer pool. */
-                xBuffer = prvGetFreeBuffer( pxMQTTContext, ulTotalMessageLength );
+                xBuffer = prvGetFreeBuffer(pxMQTTContext, ulTotalMessageLength);
 
-                if( xBuffer == NULL )
+                if (xBuffer == NULL)
                 {
                     /* Fail the subscribe operation immediately, if
                      * no free buffer is available. */
@@ -2757,22 +2958,33 @@ MQTTReturnCode_t MQTT_Subscribe( MQTTContext_t * pxMQTTContext,
                 else
                 {
                     /* Add the buffer to the Tx buffer list. */
-                    mqttbufferLIST_ADD( &( pxMQTTContext->xTxBufferListHead ), xBuffer );
+                    mqttbufferLIST_ADD(&(pxMQTTContext->xTxBufferListHead),
+                                       xBuffer);
 
                     /* To help debugging only. */
-                    memset( mqttbufferGET_DATA( xBuffer ), 0x00, mqttbufferGET_EFFECTIVE_BUFFER_LENGTH( xBuffer ) );
+                    memset(mqttbufferGET_DATA(xBuffer), 0x00,
+                           mqttbufferGET_EFFECTIVE_BUFFER_LENGTH(xBuffer));
 
                     /* Record time-stamp and store timeout. */
-                    mqttbufferGET_PACKET_RECORDED_TICK_COUNT( xBuffer ) = prvGetCurrentTickCount( pxMQTTContext );
-                    mqttbufferGET_PACKET_TIMEOUT_TICKS( xBuffer ) = pxSubscribeParams->ulTimeoutTicks;
+                    mqttbufferGET_PACKET_RECORDED_TICK_COUNT( xBuffer ) =
+                            prvGetCurrentTickCount(pxMQTTContext);
+                    mqttbufferGET_PACKET_TIMEOUT_TICKS( xBuffer ) =
+                            pxSubscribeParams->ulTimeoutTicks;
 
                     /* Write the Fixed Header control packet type and flags. */
-                    mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] = mqttCONTROL_SUBSCRIBE | mqttFLAGS_SUBSCRIBE;
+                    mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET] =
+                            mqttCONTROL_SUBSCRIBE | mqttFLAGS_SUBSCRIBE;
 
                     /* Write the encoded remaining length in the fixed header. */
-                    pucNextByte = &( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET ] );
-                    pucLastByteInBuffer = &( mqttbufferGET_DATA( xBuffer )[ mqttbufferGET_EFFECTIVE_BUFFER_LENGTH( xBuffer ) - ( uint32_t ) 1 ] );
-                    ucRemainingLengthFieldBytes = prvEncodeRemainingLength( ulRemainingLength, pucNextByte, pucLastByteInBuffer );
+                    pucNextByte =
+                            &( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET]);
+                    pucLastByteInBuffer =
+                            &( mqttbufferGET_DATA( xBuffer )[ mqttbufferGET_EFFECTIVE_BUFFER_LENGTH(
+                                    xBuffer)
+                                    - (uint32_t) 1]);
+                    ucRemainingLengthFieldBytes = prvEncodeRemainingLength(
+                            ulRemainingLength, pucNextByte,
+                            pucLastByteInBuffer);
 
                     /* We should have successfully encoded the remaining length field
                      * as we already have a large enough buffer. */
@@ -2780,21 +2992,33 @@ MQTTReturnCode_t MQTT_Subscribe( MQTTContext_t * pxMQTTContext,
 
                     /* Write variable header which happens to contain only
                      * packet identifier in this case. */
-                    mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttSUBSCRIBE_PACKET_ID_MSB_OFFSET,
-                                                                      ucRemainingLengthFieldBytes ) ] = ( uint8_t ) ( pxSubscribeParams->usPacketIdentifier >> mqttBITS_PER_BYTE );
-                    mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttSUBSCRIBE_PACKET_ID_LSB_OFFSET,
-                                                                      ucRemainingLengthFieldBytes ) ] = ( uint8_t ) ( pxSubscribeParams->usPacketIdentifier );
+                    mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                            mqttSUBSCRIBE_PACKET_ID_MSB_OFFSET,
+                            ucRemainingLengthFieldBytes)] =
+                            (uint8_t) (pxSubscribeParams->usPacketIdentifier
+                                    >> mqttBITS_PER_BYTE);
+                    mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                            mqttSUBSCRIBE_PACKET_ID_LSB_OFFSET,
+                            ucRemainingLengthFieldBytes)] =
+                            (uint8_t) (pxSubscribeParams->usPacketIdentifier);
 
                     /* Write the topic into the message. */
-                    pucNextByte = &( mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttSUBSCRIBE_TOPIC_OFFSET, ucRemainingLengthFieldBytes ) ] );
-                    pucNextByte = prvWriteString( pucNextByte, pucLastByteInBuffer, pxSubscribeParams->pucTopic, pxSubscribeParams->usTopicLength );
+                    pucNextByte =
+                            &( mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                                    mqttSUBSCRIBE_TOPIC_OFFSET,
+                                    ucRemainingLengthFieldBytes)]);
+                    pucNextByte = prvWriteString(
+                            pucNextByte, pucLastByteInBuffer,
+                            pxSubscribeParams->pucTopic,
+                            pxSubscribeParams->usTopicLength);
 
                     /* Write the Requested QoS into the message. */
-                    *pucNextByte = ( uint8_t ) pxSubscribeParams->xQos;
+                    *pucNextByte = (uint8_t) pxSubscribeParams->xQos;
 
                     /* Store the packet identifier in TxBuffer also for matching with
                      * the one received in ACK later. */
-                    mqttbufferGET_PACKET_IDENTIFIER( xBuffer ) = pxSubscribeParams->usPacketIdentifier;
+                    mqttbufferGET_PACKET_IDENTIFIER( xBuffer ) =
+                            pxSubscribeParams->usPacketIdentifier;
 
                     /* Update the number of bytes written to the buffer. */
                     mqttbufferGET_DATA_LENGTH( xBuffer ) = ulTotalMessageLength;
@@ -2807,41 +3031,44 @@ MQTTReturnCode_t MQTT_Subscribe( MQTTContext_t * pxMQTTContext,
     }
 
     /* If the packet was successfully constructed, transmit it. */
-    if( xReturnCode == eMQTTSuccess )
+    if (xReturnCode == eMQTTSuccess)
     {
-        xReturnCode = prvSendData( pxMQTTContext, mqttbufferGET_DATA( xBuffer ), mqttbufferGET_DATA_LENGTH( xBuffer ) );
+        xReturnCode = prvSendData(pxMQTTContext, mqttbufferGET_DATA(xBuffer),
+                                  mqttbufferGET_DATA_LENGTH(xBuffer));
     }
 
     /* If some error occurred, return the buffer, otherwise it
      * will be returned upon receiving ACK or timeout. Also,
      * remove the subscription entry from the subscription
      * manager. */
-    if( xReturnCode != eMQTTSuccess )
+    if (xReturnCode != eMQTTSuccess)
     {
         /* Return the buffer to the free buffer pool. */
-        prvReturnBuffer( pxMQTTContext, xBuffer );
+        prvReturnBuffer(pxMQTTContext, xBuffer);
 
-        #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-            /* Remove the subscription entry from the subscription manager.
-             * This if check is an optimization - If the subscribe failed because
-             * we could not store the subscription, there is not need to remove
-             * it as it was never stored. */
-            if( xReturnCode != eMQTTSubscriptionManagerFull )
-            {
-                prvRemoveSubscription( pxMQTTContext, pxSubscribeParams->pucTopic, pxSubscribeParams->usTopicLength );
-            }
-        #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+        /* Remove the subscription entry from the subscription manager.
+         * This if check is an optimization - If the subscribe failed because
+         * we could not store the subscription, there is not need to remove
+         * it as it was never stored. */
+        if (xReturnCode != eMQTTSubscriptionManagerFull)
+        {
+            prvRemoveSubscription(pxMQTTContext, pxSubscribeParams->pucTopic,
+                                  pxSubscribeParams->usTopicLength);
+        }
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
     }
 
     return xReturnCode;
 }
 /*-----------------------------------------------------------*/
 
-MQTTReturnCode_t MQTT_Unsubscribe( MQTTContext_t * pxMQTTContext,
-                                   const MQTTUnsubscribeParams_t * const pxUnsubscribeParams )
+MQTTReturnCode_t MQTT_Unsubscribe(
+        MQTTContext_t * pxMQTTContext,
+        const MQTTUnsubscribeParams_t * const pxUnsubscribeParams)
 {
-    uint8_t * pucNextByte, * pucLastByteInBuffer, ucRemainingLengthFieldBytes;
+    uint8_t * pucNextByte, *pucLastByteInBuffer, ucRemainingLengthFieldBytes;
     uint32_t ulRemainingLength, ulTotalMessageLength;
     uint16_t usTopicLength;
     MQTTBufferHandle_t xBuffer = NULL;
@@ -2849,15 +3076,11 @@ MQTTReturnCode_t MQTT_Unsubscribe( MQTTContext_t * pxMQTTContext,
 
     /* These are checked here once and are later used without
      * NULL checks. */
-    mqttconfigASSERT( pxMQTTContext != NULL );
-    mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL );
-    mqttconfigASSERT( pxUnsubscribeParams != NULL );
+    mqttconfigASSERT( pxMQTTContext != NULL ); mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL ); mqttconfigASSERT( pxUnsubscribeParams != NULL );
 
     mqttconfigDEBUG_LOG( ( "Initiating MQTT unsubscribe.\r\n" ) );
 
-    if( pxMQTTContext->xConnectionState != eMQTTConnected )
+    if (pxMQTTContext->xConnectionState != eMQTTConnected)
     {
         /* Fail the unsubscribe operation immediately, if
          * MQTT client is not connected. */
@@ -2866,25 +3089,28 @@ MQTTReturnCode_t MQTT_Unsubscribe( MQTTContext_t * pxMQTTContext,
     else
     {
         /* Length of the topic in the actual MQTT message. */
-        usTopicLength = mqttSTRLEN( pxUnsubscribeParams->usTopicLength );
+        usTopicLength = mqttSTRLEN(pxUnsubscribeParams->usTopicLength);
 
         /* Calculate the "Remaining Length" i.e. length of the packet
          * excluding fixed header. */
-        ulRemainingLength = ( uint32_t ) mqttUNSUBSCRIBE_PACKET_IDENTIFER_LENGTH + ( uint32_t ) usTopicLength;
+        ulRemainingLength = (uint32_t) mqttUNSUBSCRIBE_PACKET_IDENTIFER_LENGTH
+                + (uint32_t) usTopicLength;
 
         /* Calculate the number of bytes occupied by the "Remaining Length" field. */
-        ucRemainingLengthFieldBytes = prvSizeOfRemainingLength( ulRemainingLength );
+        ucRemainingLengthFieldBytes = prvSizeOfRemainingLength(
+                ulRemainingLength);
 
         /* Make sure that "Remaining Length" is within the permissible limits. */
-        if( ucRemainingLengthFieldBytes > ( uint8_t ) 0 )
+        if (ucRemainingLengthFieldBytes > (uint8_t) 0)
         {
             /* Calculate total MQTT message length. */
-            ulTotalMessageLength = mqttTOTAL_MESSAGE_LENGTH( ucRemainingLengthFieldBytes, ulRemainingLength );
+            ulTotalMessageLength = mqttTOTAL_MESSAGE_LENGTH(
+                    ucRemainingLengthFieldBytes, ulRemainingLength);
 
             /* Try to get a buffer from the free buffer pool. */
-            xBuffer = prvGetFreeBuffer( pxMQTTContext, ulTotalMessageLength );
+            xBuffer = prvGetFreeBuffer(pxMQTTContext, ulTotalMessageLength);
 
-            if( xBuffer == NULL )
+            if (xBuffer == NULL)
             {
                 /* Fail the unsubscribe operation immediately, if
                  * no free buffer is available. */
@@ -2894,22 +3120,31 @@ MQTTReturnCode_t MQTT_Unsubscribe( MQTTContext_t * pxMQTTContext,
             else
             {
                 /* Add the buffer to the Tx buffer list. */
-                mqttbufferLIST_ADD( &( pxMQTTContext->xTxBufferListHead ), xBuffer );
+                mqttbufferLIST_ADD(&(pxMQTTContext->xTxBufferListHead), xBuffer);
 
                 /* To help debugging only. */
-                memset( mqttbufferGET_DATA( xBuffer ), 0x00, mqttbufferGET_EFFECTIVE_BUFFER_LENGTH( xBuffer ) );
+                memset(mqttbufferGET_DATA(xBuffer), 0x00,
+                       mqttbufferGET_EFFECTIVE_BUFFER_LENGTH(xBuffer));
 
                 /* Record time-stamp and store timeout. */
-                mqttbufferGET_PACKET_RECORDED_TICK_COUNT( xBuffer ) = prvGetCurrentTickCount( pxMQTTContext );
-                mqttbufferGET_PACKET_TIMEOUT_TICKS( xBuffer ) = pxUnsubscribeParams->ulTimeoutTicks;
+                mqttbufferGET_PACKET_RECORDED_TICK_COUNT( xBuffer ) =
+                        prvGetCurrentTickCount(pxMQTTContext);
+                mqttbufferGET_PACKET_TIMEOUT_TICKS( xBuffer ) =
+                        pxUnsubscribeParams->ulTimeoutTicks;
 
                 /* Write the Fixed Header control packet type and flags. */
-                mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] = mqttCONTROL_UNSUBSCRIBE | mqttFLAGS_UNSUBSCRIBE;
+                mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET] =
+                        mqttCONTROL_UNSUBSCRIBE | mqttFLAGS_UNSUBSCRIBE;
 
                 /* Write the encoded remaining length in the fixed header. */
-                pucNextByte = &( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET ] );
-                pucLastByteInBuffer = &( mqttbufferGET_DATA( xBuffer )[ mqttbufferGET_EFFECTIVE_BUFFER_LENGTH( xBuffer ) - ( uint32_t ) 1 ] );
-                ucRemainingLengthFieldBytes = prvEncodeRemainingLength( ulRemainingLength, pucNextByte, pucLastByteInBuffer );
+                pucNextByte =
+                        &( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET]);
+                pucLastByteInBuffer =
+                        &( mqttbufferGET_DATA( xBuffer )[ mqttbufferGET_EFFECTIVE_BUFFER_LENGTH(
+                                xBuffer)
+                                - (uint32_t) 1]);
+                ucRemainingLengthFieldBytes = prvEncodeRemainingLength(
+                        ulRemainingLength, pucNextByte, pucLastByteInBuffer);
 
                 /* We should have successfully encoded the remaining length field
                  * as we already have a large enough buffer. */
@@ -2917,21 +3152,33 @@ MQTTReturnCode_t MQTT_Unsubscribe( MQTTContext_t * pxMQTTContext,
 
                 /* Write variable header which happens to contain only
                  * packet identifier in this case. */
-                mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttUNSUBSCRIBE_PACKET_ID_MSB_OFFSET,
-                                                                  ucRemainingLengthFieldBytes ) ] = ( uint8_t ) ( pxUnsubscribeParams->usPacketIdentifier >> mqttBITS_PER_BYTE );
-                mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttUNSUBSCRIBE_PACKET_ID_LSB_OFFSET,
-                                                                  ucRemainingLengthFieldBytes ) ] = ( uint8_t ) ( pxUnsubscribeParams->usPacketIdentifier );
+                mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                        mqttUNSUBSCRIBE_PACKET_ID_MSB_OFFSET,
+                        ucRemainingLengthFieldBytes)] =
+                        (uint8_t) (pxUnsubscribeParams->usPacketIdentifier
+                                >> mqttBITS_PER_BYTE);
+                mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                        mqttUNSUBSCRIBE_PACKET_ID_LSB_OFFSET,
+                        ucRemainingLengthFieldBytes)] =
+                        (uint8_t) (pxUnsubscribeParams->usPacketIdentifier);
 
                 /* Write the topic into the message. */
-                pucNextByte = &( mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttUNSUBSCRIBE_TOPIC_OFFSET, ucRemainingLengthFieldBytes ) ] );
-                pucNextByte = prvWriteString( pucNextByte, pucLastByteInBuffer, pxUnsubscribeParams->pucTopic, pxUnsubscribeParams->usTopicLength );
+                pucNextByte =
+                        &( mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                                mqttUNSUBSCRIBE_TOPIC_OFFSET,
+                                ucRemainingLengthFieldBytes)]);
+                pucNextByte = prvWriteString(
+                        pucNextByte, pucLastByteInBuffer,
+                        pxUnsubscribeParams->pucTopic,
+                        pxUnsubscribeParams->usTopicLength);
 
                 /* MISRA compliance. */
-                ( void ) pucNextByte;
+                (void) pucNextByte;
 
                 /* Store the packet identifier in TxBuffer also for matching with
                  * the one received in ACK later. */
-                mqttbufferGET_PACKET_IDENTIFIER( xBuffer ) = pxUnsubscribeParams->usPacketIdentifier;
+                mqttbufferGET_PACKET_IDENTIFIER( xBuffer ) =
+                        pxUnsubscribeParams->usPacketIdentifier;
 
                 /* Update the number of bytes written to the buffer. */
                 mqttbufferGET_DATA_LENGTH( xBuffer ) = ulTotalMessageLength;
@@ -2943,27 +3190,28 @@ MQTTReturnCode_t MQTT_Unsubscribe( MQTTContext_t * pxMQTTContext,
     }
 
     /* If the packet was successfully constructed, transmit it. */
-    if( xReturnCode == eMQTTSuccess )
+    if (xReturnCode == eMQTTSuccess)
     {
-        xReturnCode = prvSendData( pxMQTTContext, mqttbufferGET_DATA( xBuffer ), mqttbufferGET_DATA_LENGTH( xBuffer ) );
+        xReturnCode = prvSendData(pxMQTTContext, mqttbufferGET_DATA(xBuffer),
+                                  mqttbufferGET_DATA_LENGTH(xBuffer));
     }
 
     /* If some error occurred, return the buffer, otherwise it
      * will be returned upon receiving ACK or timeout. */
-    if( xReturnCode != eMQTTSuccess )
+    if (xReturnCode != eMQTTSuccess)
     {
         /* Return the buffer to the free buffer pool. */
-        prvReturnBuffer( pxMQTTContext, xBuffer );
+        prvReturnBuffer(pxMQTTContext, xBuffer);
     }
 
     return xReturnCode;
 }
 /*-----------------------------------------------------------*/
 
-MQTTReturnCode_t MQTT_Publish( MQTTContext_t * pxMQTTContext,
-                               const MQTTPublishParams_t * const pxPublishParams )
+MQTTReturnCode_t MQTT_Publish(MQTTContext_t * pxMQTTContext,
+                              const MQTTPublishParams_t * const pxPublishParams)
 {
-    uint8_t * pucNextByte, * pucLastByteInBuffer, ucRemainingLengthFieldBytes;
+    uint8_t * pucNextByte, *pucLastByteInBuffer, ucRemainingLengthFieldBytes;
     uint32_t ulRemainingLength, ulTotalMessageLength;
     uint16_t usTopicLength;
     MQTTBufferHandle_t xBuffer = NULL;
@@ -2971,15 +3219,11 @@ MQTTReturnCode_t MQTT_Publish( MQTTContext_t * pxMQTTContext,
 
     /* These are checked here once and are later used without
      * NULL checks. */
-    mqttconfigASSERT( pxMQTTContext != NULL );
-    mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL );
-    mqttconfigASSERT( pxPublishParams != NULL );
+    mqttconfigASSERT( pxMQTTContext != NULL ); mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL ); mqttconfigASSERT( pxPublishParams != NULL );
 
     mqttconfigDEBUG_LOG( ( "Initiating MQTT publish.\r\n" ) );
 
-    if( pxMQTTContext->xConnectionState != eMQTTConnected )
+    if (pxMQTTContext->xConnectionState != eMQTTConnected)
     {
         /* Fail the publish operation immediately, if
          * MQTT client is not connected. */
@@ -2988,26 +3232,30 @@ MQTTReturnCode_t MQTT_Publish( MQTTContext_t * pxMQTTContext,
     else
     {
         /* Length of the topic in the actual MQTT message. */
-        usTopicLength = mqttSTRLEN( pxPublishParams->usTopicLength );
+        usTopicLength = mqttSTRLEN(pxPublishParams->usTopicLength);
 
         /* Calculate the "Remaining Length" i.e. length of the packet excluding Fixed Header. */
-        ulRemainingLength = ( uint32_t ) usTopicLength +
-                            ( pxPublishParams->xQos == eMQTTQoS0 ? ( uint32_t ) mqttPUBLISH_QOS0_PACKET_IDENTIFER_LENGTH : ( uint32_t ) mqttPUBLISH_QOS1_PACKET_IDENTIFER_LENGTH ) +
-                            pxPublishParams->ulDataLength;
+        ulRemainingLength = (uint32_t) usTopicLength
+                + (pxPublishParams->xQos == eMQTTQoS0 ?
+                        (uint32_t) mqttPUBLISH_QOS0_PACKET_IDENTIFER_LENGTH :
+                        (uint32_t) mqttPUBLISH_QOS1_PACKET_IDENTIFER_LENGTH)
+                + pxPublishParams->ulDataLength;
 
         /* Calculate the number of bytes occupied by the "Remaining Length" field. */
-        ucRemainingLengthFieldBytes = prvSizeOfRemainingLength( ulRemainingLength );
+        ucRemainingLengthFieldBytes = prvSizeOfRemainingLength(
+                ulRemainingLength);
 
         /* Make sure that "Remaining Length" is within the permissible limits. */
-        if( ucRemainingLengthFieldBytes > ( uint8_t ) 0 )
+        if (ucRemainingLengthFieldBytes > (uint8_t) 0)
         {
             /* Calculate total MQTT message length. */
-            ulTotalMessageLength = mqttTOTAL_MESSAGE_LENGTH( ucRemainingLengthFieldBytes, ulRemainingLength );
+            ulTotalMessageLength = mqttTOTAL_MESSAGE_LENGTH(
+                    ucRemainingLengthFieldBytes, ulRemainingLength);
 
             /* Try to get a buffer from the free buffer pool. */
-            xBuffer = prvGetFreeBuffer( pxMQTTContext, ulTotalMessageLength );
+            xBuffer = prvGetFreeBuffer(pxMQTTContext, ulTotalMessageLength);
 
-            if( xBuffer == NULL )
+            if (xBuffer == NULL)
             {
                 /* Fail the publish operation immediately, if
                  * no free buffer is available. */
@@ -3017,54 +3265,74 @@ MQTTReturnCode_t MQTT_Publish( MQTTContext_t * pxMQTTContext,
             else
             {
                 /* Add the buffer to the Tx buffer list. */
-                mqttbufferLIST_ADD( &( pxMQTTContext->xTxBufferListHead ), xBuffer );
+                mqttbufferLIST_ADD(&(pxMQTTContext->xTxBufferListHead), xBuffer);
 
                 /* To help debugging only. */
-                memset( mqttbufferGET_DATA( xBuffer ), 0x00, mqttbufferGET_EFFECTIVE_BUFFER_LENGTH( xBuffer ) );
+                memset(mqttbufferGET_DATA(xBuffer), 0x00,
+                       mqttbufferGET_EFFECTIVE_BUFFER_LENGTH(xBuffer));
 
                 /* Record time-stamp and store timeout. */
-                mqttbufferGET_PACKET_RECORDED_TICK_COUNT( xBuffer ) = prvGetCurrentTickCount( pxMQTTContext );
-                mqttbufferGET_PACKET_TIMEOUT_TICKS( xBuffer ) = pxPublishParams->ulTimeoutTicks;
+                mqttbufferGET_PACKET_RECORDED_TICK_COUNT( xBuffer ) =
+                        prvGetCurrentTickCount(pxMQTTContext);
+                mqttbufferGET_PACKET_TIMEOUT_TICKS( xBuffer ) =
+                        pxPublishParams->ulTimeoutTicks;
 
                 /* Write Control Packet Type. */
                 /*_TODO_ Note!  DUP and RETAIN are all currently all set to 0. */
-                mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] = mqttCONTROL_PUBLISH;
+                mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET] =
+                        mqttCONTROL_PUBLISH;
 
                 /* Set QoS. QoS2 is not supported.*/
                 mqttconfigASSERT( pxPublishParams->xQos == eMQTTQoS0 || pxPublishParams->xQos == eMQTTQoS1 );
-                mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] |= ( ( ( uint8_t ) ( pxPublishParams->xQos ) ) << 1 );
+                mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET] |=
+                        (((uint8_t) (pxPublishParams->xQos)) << 1);
 
                 /* Write encoded "Remaining Length" in the fixed header. */
-                pucNextByte = &( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET ] );
-                pucLastByteInBuffer = &( mqttbufferGET_DATA( xBuffer )[ mqttbufferGET_EFFECTIVE_BUFFER_LENGTH( xBuffer ) - ( uint32_t ) 1 ] );
-                ucRemainingLengthFieldBytes = prvEncodeRemainingLength( ulRemainingLength, pucNextByte, pucLastByteInBuffer );
+                pucNextByte =
+                        &( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET]);
+                pucLastByteInBuffer =
+                        &( mqttbufferGET_DATA( xBuffer )[ mqttbufferGET_EFFECTIVE_BUFFER_LENGTH(
+                                xBuffer)
+                                - (uint32_t) 1]);
+                ucRemainingLengthFieldBytes = prvEncodeRemainingLength(
+                        ulRemainingLength, pucNextByte, pucLastByteInBuffer);
 
                 /* We should have successfully encoded the remaining length field
                  * as we already have a large enough buffer. */
                 mqttconfigASSERT( ucRemainingLengthFieldBytes == prvSizeOfRemainingLength( ulRemainingLength ) );
 
                 /* Write the topic into the message (part of variable header). */
-                pucNextByte = &( mqttbufferGET_DATA( xBuffer )[ mqttADJUST_OFFSET( mqttPUBLISH_TOPIC_OFFSET, ucRemainingLengthFieldBytes ) ] );
-                pucNextByte = prvWriteString( pucNextByte, pucLastByteInBuffer, pxPublishParams->pucTopic, pxPublishParams->usTopicLength );
+                pucNextByte =
+                        &( mqttbufferGET_DATA( xBuffer )[mqttADJUST_OFFSET(
+                                mqttPUBLISH_TOPIC_OFFSET,
+                                ucRemainingLengthFieldBytes)]);
+                pucNextByte = prvWriteString(pucNextByte, pucLastByteInBuffer,
+                                             pxPublishParams->pucTopic,
+                                             pxPublishParams->usTopicLength);
 
                 /* Write packet identifier into the message, if it is not QoS0. */
-                if( pxPublishParams->xQos != eMQTTQoS0 )
+                if (pxPublishParams->xQos != eMQTTQoS0)
                 {
                     /* Write MSB. */
-                    *pucNextByte = ( uint8_t ) ( ( pxPublishParams->usPacketIdentifier ) >> mqttBITS_PER_BYTE );
+                    *pucNextByte =
+                            (uint8_t) ((pxPublishParams->usPacketIdentifier)
+                                    >> mqttBITS_PER_BYTE);
                     pucNextByte++;
 
                     /* Write LSB. */
-                    *pucNextByte = ( uint8_t ) ( pxPublishParams->usPacketIdentifier );
+                    *pucNextByte =
+                            (uint8_t) (pxPublishParams->usPacketIdentifier);
                     pucNextByte++;
                 }
 
                 /* Write the payload into the message. */
-                memcpy( pucNextByte, pxPublishParams->pvData, ( size_t ) pxPublishParams->ulDataLength );
+                memcpy(pucNextByte, pxPublishParams->pvData,
+                       (size_t) pxPublishParams->ulDataLength);
 
                 /* Store the packet identifier in TxBuffer also for matching
                  * ACK later. */
-                mqttbufferGET_PACKET_IDENTIFIER( xBuffer ) = pxPublishParams->usPacketIdentifier;
+                mqttbufferGET_PACKET_IDENTIFIER( xBuffer ) =
+                        pxPublishParams->usPacketIdentifier;
 
                 /* Update the number of bytes written to the buffer. */
                 mqttbufferGET_DATA_LENGTH( xBuffer ) = ulTotalMessageLength;
@@ -3076,27 +3344,28 @@ MQTTReturnCode_t MQTT_Publish( MQTTContext_t * pxMQTTContext,
     }
 
     /* If the packet was successfully constructed, transmit it. */
-    if( xReturnCode == eMQTTSuccess )
+    if (xReturnCode == eMQTTSuccess)
     {
-        xReturnCode = prvSendData( pxMQTTContext, mqttbufferGET_DATA( xBuffer ), mqttbufferGET_DATA_LENGTH( xBuffer ) );
+        xReturnCode = prvSendData(pxMQTTContext, mqttbufferGET_DATA(xBuffer),
+                                  mqttbufferGET_DATA_LENGTH(xBuffer));
     }
 
     /* If some error occurred or QOS0 (No ACK is expected in case of QOS0),
      * return the buffer, otherwise it will be returned upon receiving ACK
      * or timeout. */
-    if( ( xReturnCode != eMQTTSuccess ) || ( pxPublishParams->xQos == eMQTTQoS0 ) )
+    if ((xReturnCode != eMQTTSuccess) || (pxPublishParams->xQos == eMQTTQoS0))
     {
         /* Return the buffer to the free buffer pool. */
-        prvReturnBuffer( pxMQTTContext, xBuffer );
+        prvReturnBuffer(pxMQTTContext, xBuffer);
     }
 
     return xReturnCode;
 }
 /*-----------------------------------------------------------*/
 
-MQTTReturnCode_t MQTT_ParseReceivedData( MQTTContext_t * pxMQTTContext,
-                                         const uint8_t * pucReceivedData,
-                                         size_t xReceivedDataLength )
+MQTTReturnCode_t MQTT_ParseReceivedData(MQTTContext_t * pxMQTTContext,
+                                        const uint8_t * pucReceivedData,
+                                        size_t xReceivedDataLength)
 {
     MQTTReturnCode_t xReturnCode = eMQTTSuccess;
     MQTTEventCallbackParams_t xEventCallbackParams;
@@ -3104,20 +3373,17 @@ MQTTReturnCode_t MQTT_ParseReceivedData( MQTTContext_t * pxMQTTContext,
 
     /* These are checked here once and are later used without
      * NULL checks. */
-    mqttconfigASSERT( pxMQTTContext != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL );
-    mqttconfigASSERT( pucReceivedData != NULL );
+    mqttconfigASSERT( pxMQTTContext != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL ); mqttconfigASSERT( pucReceivedData != NULL );
 
     /* Keep processing until all the supplied bytes are over. */
-    while( xProcessedBytes < xReceivedDataLength )
+    while (xProcessedBytes < xReceivedDataLength)
     {
         /* Do not process any data received on the client
          * which is not connected. This check needs to be in
          * the loop because one iteration of the loop can result
          * in client getting disconnected because of a malformed
          * packet. */
-        if( pxMQTTContext->xConnectionState == eMQTTNotConnected )
+        if (pxMQTTContext->xConnectionState == eMQTTNotConnected)
         {
             xReturnCode = eMQTTClientNotConnected;
 
@@ -3125,12 +3391,12 @@ MQTTReturnCode_t MQTT_ParseReceivedData( MQTTContext_t * pxMQTTContext,
             break;
         }
 
-        if( pxMQTTContext->xRxMessageState.xRxNextByte == eMQTTRxNextBytePacketType )
+        if (pxMQTTContext->xRxMessageState.xRxNextByte
+                == eMQTTRxNextBytePacketType)
         {
             /* Looking for the start of a new MQTT message, which always begins with
              * one byte containing packet type and related flags. */
-            mqttconfigASSERT( pxMQTTContext->ulRxMessageReceivedLength == 0 );
-            mqttconfigASSERT( pxMQTTContext->xRxBuffer == NULL );
+            mqttconfigASSERT( pxMQTTContext->ulRxMessageReceivedLength == 0 ); mqttconfigASSERT( pxMQTTContext->xRxBuffer == NULL );
 
             /* We always write the packet type and "Remaining Length" in the fixed
              * header buffer so that we can decode the packet length even if no user
@@ -3139,34 +3405,45 @@ MQTTReturnCode_t MQTT_ParseReceivedData( MQTTContext_t * pxMQTTContext,
              * the next packet starts. */
 
             /* Copy one byte containing packet type and flags. */
-            mqttCOPY_BYTES( pucReceivedData, xProcessedBytes, pxMQTTContext->ucRxFixedHeaderBuffer, pxMQTTContext->ulRxMessageReceivedLength, 1 );
+            mqttCOPY_BYTES(pucReceivedData, xProcessedBytes,
+                           pxMQTTContext->ucRxFixedHeaderBuffer,
+                           pxMQTTContext->ulRxMessageReceivedLength, 1);
 
             /* Next bytes will contain "Remaining Length" field. */
-            pxMQTTContext->xRxMessageState.xRxNextByte = eMQTTRxNextBytePacketLength;
+            pxMQTTContext->xRxMessageState.xRxNextByte =
+                    eMQTTRxNextBytePacketLength;
         }
-        else if( pxMQTTContext->xRxMessageState.xRxNextByte == eMQTTRxNextBytePacketLength )
+        else if (pxMQTTContext->xRxMessageState.xRxNextByte
+                == eMQTTRxNextBytePacketLength)
         {
             /* Receiving "Remaining Length" field which is part of fixed header. */
             mqttconfigASSERT( pxMQTTContext->ulRxMessageReceivedLength < mqttFIXED_HEADER_MAX_SIZE );
 
-            mqttCOPY_BYTES( pucReceivedData, xProcessedBytes, pxMQTTContext->ucRxFixedHeaderBuffer, pxMQTTContext->ulRxMessageReceivedLength, 1 );
+            mqttCOPY_BYTES(pucReceivedData, xProcessedBytes,
+                           pxMQTTContext->ucRxFixedHeaderBuffer,
+                           pxMQTTContext->ulRxMessageReceivedLength, 1);
 
             /* Are there more bytes containing packet length i.e. is the "continuation bit"
              * set in the received length byte? */
-            if( ( ( pxMQTTContext->ucRxFixedHeaderBuffer[ pxMQTTContext->ulRxMessageReceivedLength - ( uint32_t ) 1 ] ) & mqttREMAINING_LENGTH_CONTINUATION_BITMASK ) != ( uint8_t ) 0 )
+            if (((pxMQTTContext->ucRxFixedHeaderBuffer[pxMQTTContext->ulRxMessageReceivedLength
+                    - (uint32_t) 1]) & mqttREMAINING_LENGTH_CONTINUATION_BITMASK)
+                    != (uint8_t) 0)
             {
                 /* "Remaining Length" field cannot span more than 4 bytes. */
-                if( pxMQTTContext->ulRxMessageReceivedLength >= ( uint32_t ) mqttFIXED_HEADER_MAX_SIZE )
+                if (pxMQTTContext->ulRxMessageReceivedLength
+                        >= (uint32_t) mqttFIXED_HEADER_MAX_SIZE)
                 {
                     mqttconfigDEBUG_LOG( ( "Packet with malformed \"Remaining Length\" received.\r\n" ) );
 
                     /* A malformed packet has been received - disconnect. */
-                    prvResetMQTTContext( pxMQTTContext );
+                    prvResetMQTTContext(pxMQTTContext);
 
                     /* Inform user about the malformed packet received. */
                     xEventCallbackParams.xEventType = eMQTTClientDisconnected;
-                    xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonMalformedPacket;
-                    ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                    xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                            eMQTTDisconnectReasonMalformedPacket;
+                    (void) prvInvokeCallback(pxMQTTContext,
+                                             &xEventCallbackParams);
 
                     xReturnCode = eMQTTMalformedPacketReceived;
                     break;
@@ -3175,102 +3452,135 @@ MQTTReturnCode_t MQTT_ParseReceivedData( MQTTContext_t * pxMQTTContext,
             else
             {
                 /* Packet length has been received, decode it. */
-                pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes = prvDecodeRemainingLength( &( pxMQTTContext->ucRxFixedHeaderBuffer[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET ] ),
-                                                                                                        &( pxMQTTContext->xRxMessageState.ulTotalMessageLength ) );
+                pxMQTTContext->xRxMessageState.ucRemaingingLengthFieldBytes =
+                        prvDecodeRemainingLength(
+                                &(pxMQTTContext->ucRxFixedHeaderBuffer[ mqttFIXED_HEADER_REMAINING_LENGTH_OFFSET]),
+                                &(pxMQTTContext->xRxMessageState.ulTotalMessageLength));
 
                 mqttconfigDEBUG_LOG( ( "Received fixed header, %d bytes to receive.\r\n", pxMQTTContext->xRxMessageState.ulTotalMessageLength ) );
 
                 /* "Remaining Length" does not include the length of fixed
                  * header, so this needs to be added. */
-                pxMQTTContext->xRxMessageState.ulTotalMessageLength += pxMQTTContext->ulRxMessageReceivedLength;
+                pxMQTTContext->xRxMessageState.ulTotalMessageLength +=
+                        pxMQTTContext->ulRxMessageReceivedLength;
 
                 /* Does the message contain anything after fixed header? */
-                if( pxMQTTContext->xRxMessageState.ulTotalMessageLength == pxMQTTContext->ulRxMessageReceivedLength )
+                if (pxMQTTContext->xRxMessageState.ulTotalMessageLength
+                        == pxMQTTContext->ulRxMessageReceivedLength)
                 {
                     /*..if not, process it. */
-                    prvProcessReceivedFixedHeaderOnlyMQTTPacket( pxMQTTContext );
+                    prvProcessReceivedFixedHeaderOnlyMQTTPacket(pxMQTTContext);
 
                     /* Complete message received, start looking for the start of
                      * the next. */
-                    prvResetRxMessageState( pxMQTTContext );
+                    prvResetRxMessageState(pxMQTTContext);
                 }
                 else
                 {
                     /* Get a buffer to store the received message. */
-                    pxMQTTContext->xRxBuffer = prvGetFreeBuffer( pxMQTTContext, pxMQTTContext->xRxMessageState.ulTotalMessageLength );
+                    pxMQTTContext->xRxBuffer =
+                            prvGetFreeBuffer(
+                                    pxMQTTContext,
+                                    pxMQTTContext->xRxMessageState.ulTotalMessageLength);
 
                     /* If we got a large enough free buffer, store the rest of the message. */
-                    if( pxMQTTContext->xRxBuffer != NULL )
+                    if (pxMQTTContext->xRxBuffer != NULL)
                     {
                         /* Copy the fixed header in the Rx buffer. */
-                        memcpy( mqttbufferGET_DATA( pxMQTTContext->xRxBuffer ), pxMQTTContext->ucRxFixedHeaderBuffer, pxMQTTContext->ulRxMessageReceivedLength );
-                        mqttbufferGET_DATA_LENGTH( pxMQTTContext->xRxBuffer ) = pxMQTTContext->ulRxMessageReceivedLength;
+                        memcpy(mqttbufferGET_DATA(pxMQTTContext->xRxBuffer),
+                               pxMQTTContext->ucRxFixedHeaderBuffer,
+                               pxMQTTContext->ulRxMessageReceivedLength);
+                        mqttbufferGET_DATA_LENGTH( pxMQTTContext->xRxBuffer ) =
+                                pxMQTTContext->ulRxMessageReceivedLength;
 
-                        pxMQTTContext->xRxMessageState.xRxNextByte = eMQTTRxNextByteMessage;
-                        pxMQTTContext->xRxMessageState.xRxMessageAction = eMQTTRxMessageStore; /*_TODO_ This needs a timeout in case the rest of the message never comes. */
+                        pxMQTTContext->xRxMessageState.xRxNextByte =
+                                eMQTTRxNextByteMessage;
+                        pxMQTTContext->xRxMessageState.xRxMessageAction =
+                                eMQTTRxMessageStore; /*_TODO_ This needs a timeout in case the rest of the message never comes. */
                     }
                     else
                     {
                         /* Otherwise drop the message. */
-                        pxMQTTContext->xRxMessageState.xRxNextByte = eMQTTRxNextByteMessage;
-                        pxMQTTContext->xRxMessageState.xRxMessageAction = eMQTTRxMessageDrop;
+                        pxMQTTContext->xRxMessageState.xRxNextByte =
+                                eMQTTRxNextByteMessage;
+                        pxMQTTContext->xRxMessageState.xRxMessageAction =
+                                eMQTTRxMessageDrop;
 
                         /* If a buffer was received and we are dropping because it is not
                          * large enough, return the buffer to the free buffer pool so that it
                          * can be used for other operations. */
-                        prvReturnBuffer( pxMQTTContext, pxMQTTContext->xRxBuffer );
+                        prvReturnBuffer(pxMQTTContext,
+                                        pxMQTTContext->xRxBuffer);
                         pxMQTTContext->xRxBuffer = NULL;
                     }
                 }
             }
         }
-        else if( ( pxMQTTContext->xRxMessageState.xRxNextByte == eMQTTRxNextByteMessage ) && ( pxMQTTContext->xRxMessageState.xRxMessageAction == eMQTTRxMessageStore ) )
+        else if ((pxMQTTContext->xRxMessageState.xRxNextByte
+                == eMQTTRxNextByteMessage)
+                && (pxMQTTContext->xRxMessageState.xRxMessageAction
+                        == eMQTTRxMessageStore))
         {
-            xExpectedBytes = pxMQTTContext->xRxMessageState.ulTotalMessageLength - mqttbufferGET_DATA_LENGTH( pxMQTTContext->xRxBuffer ); /* These many bytes are still needed to constitute a packet. */
-            xUnprocessedBytes = xReceivedDataLength - xProcessedBytes;                                                                    /* These many bytes are still there to be processed. */
+            xExpectedBytes = pxMQTTContext->xRxMessageState.ulTotalMessageLength
+                    - mqttbufferGET_DATA_LENGTH(pxMQTTContext->xRxBuffer); /* These many bytes are still needed to constitute a packet. */
+            xUnprocessedBytes = xReceivedDataLength - xProcessedBytes; /* These many bytes are still there to be processed. */
 
             /* If complete message has not been received, just copy the bytes
              * and keep waiting for the remaining ones. */
-            if( xUnprocessedBytes < xExpectedBytes )
+            if (xUnprocessedBytes < xExpectedBytes)
             {
-                mqttCOPY_BYTES( pucReceivedData, xProcessedBytes, mqttbufferGET_DATA( pxMQTTContext->xRxBuffer ), mqttbufferGET_DATA_LENGTH( pxMQTTContext->xRxBuffer ), xUnprocessedBytes );
+                mqttCOPY_BYTES(
+                        pucReceivedData, xProcessedBytes,
+                        mqttbufferGET_DATA( pxMQTTContext->xRxBuffer ),
+                        mqttbufferGET_DATA_LENGTH( pxMQTTContext->xRxBuffer ),
+                        xUnprocessedBytes);
             }
             else
             {
                 /* Sufficient bytes to form a complete packet have been received. */
-                mqttCOPY_BYTES( pucReceivedData, xProcessedBytes, mqttbufferGET_DATA( pxMQTTContext->xRxBuffer ), mqttbufferGET_DATA_LENGTH( pxMQTTContext->xRxBuffer ), xExpectedBytes );
+                mqttCOPY_BYTES(
+                        pucReceivedData, xProcessedBytes,
+                        mqttbufferGET_DATA( pxMQTTContext->xRxBuffer ),
+                        mqttbufferGET_DATA_LENGTH( pxMQTTContext->xRxBuffer ),
+                        xExpectedBytes);
 
                 /* Process the received packet. */
-                prvProcessReceivedMQTTPacket( pxMQTTContext );
+                prvProcessReceivedMQTTPacket(pxMQTTContext);
 
                 /* Reset Rx state to receive next packet. */
-                prvResetRxMessageState( pxMQTTContext );
+                prvResetRxMessageState(pxMQTTContext);
             }
         }
-        else if( ( pxMQTTContext->xRxMessageState.xRxNextByte == eMQTTRxNextByteMessage ) && ( pxMQTTContext->xRxMessageState.xRxMessageAction == eMQTTRxMessageDrop ) )
+        else if ((pxMQTTContext->xRxMessageState.xRxNextByte
+                == eMQTTRxNextByteMessage)
+                && (pxMQTTContext->xRxMessageState.xRxMessageAction
+                        == eMQTTRxMessageDrop))
         {
-            xExpectedBytes = pxMQTTContext->xRxMessageState.ulTotalMessageLength - pxMQTTContext->ulRxMessageReceivedLength; /* These many bytes are still needed to constitute a packet. */
-            xUnprocessedBytes = xReceivedDataLength - xProcessedBytes;                                                       /* These many bytes are still there to be processed. */
+            xExpectedBytes = pxMQTTContext->xRxMessageState.ulTotalMessageLength
+                    - pxMQTTContext->ulRxMessageReceivedLength; /* These many bytes are still needed to constitute a packet. */
+            xUnprocessedBytes = xReceivedDataLength - xProcessedBytes; /* These many bytes are still there to be processed. */
 
             /* If complete message has not been received, just drop the bytes
              * and keep waiting for the remaining ones. */
-            if( xUnprocessedBytes < xExpectedBytes )
+            if (xUnprocessedBytes < xExpectedBytes)
             {
                 xProcessedBytes += xUnprocessedBytes;
-                pxMQTTContext->ulRxMessageReceivedLength += ( uint32_t ) xUnprocessedBytes;
+                pxMQTTContext->ulRxMessageReceivedLength +=
+                        (uint32_t) xUnprocessedBytes;
             }
             else
             {
                 /* Sufficient bytes to form a complete packet have been received. */
                 xProcessedBytes += xExpectedBytes;
-                pxMQTTContext->ulRxMessageReceivedLength += ( uint32_t ) xExpectedBytes;
+                pxMQTTContext->ulRxMessageReceivedLength +=
+                        (uint32_t) xExpectedBytes;
 
                 /* Complete packet dropped. */
                 xEventCallbackParams.xEventType = eMQTTPacketDropped;
-                ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
 
                 /* Reset Rx state to receive next packet. */
-                prvResetRxMessageState( pxMQTTContext );
+                prvResetRxMessageState(pxMQTTContext);
             }
         }
         else
@@ -3283,63 +3593,63 @@ MQTTReturnCode_t MQTT_ParseReceivedData( MQTTContext_t * pxMQTTContext,
 }
 /*-----------------------------------------------------------*/
 
-MQTTReturnCode_t MQTT_ReturnBuffer( MQTTContext_t * pxMQTTContext,
-                                    MQTTBufferHandle_t xBufferHandle )
+MQTTReturnCode_t MQTT_ReturnBuffer(MQTTContext_t * pxMQTTContext,
+                                   MQTTBufferHandle_t xBufferHandle)
 {
     /* These are checked here once and are later used without
      * NULL checks. */
-    mqttconfigASSERT( pxMQTTContext != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL );
-    mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL );
-    mqttconfigASSERT( xBufferHandle != NULL );
+    mqttconfigASSERT( pxMQTTContext != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxGetBufferFxn != NULL ); mqttconfigASSERT( pxMQTTContext->xBufferPoolInterface.pxReturnBufferFxn != NULL ); mqttconfigASSERT( xBufferHandle != NULL );
 
     /* Return the buffer to the free buffer pool. */
-    prvReturnBuffer( pxMQTTContext, xBufferHandle );
+    prvReturnBuffer(pxMQTTContext, xBufferHandle);
 
     /* Return success. */
     return eMQTTSuccess;
 }
 /*-----------------------------------------------------------*/
 
-uint32_t MQTT_Periodic( MQTTContext_t * pxMQTTContext,
-                        uint64_t xCurrentTickCount )
+uint32_t MQTT_Periodic(MQTTContext_t * pxMQTTContext,
+                       uint64_t xCurrentTickCount)
 {
-    Link_t * pxLink, * pxTempLink;
+    Link_t * pxLink, *pxTempLink;
     MQTTBufferHandle_t xBuffer;
     MQTTEventCallbackParams_t xEventCallbackParams;
     uint32_t ulNextTimeoutTicks = UINT32_MAX;
-    static const uint8_t ucPingReqPacket[] =
-    {
-        mqttCONTROL_PINGREQ | mqttFLAGS_PINGREQ,
-        0 /* PINGREQ packet does not have any variable header or payload. */
+    static const uint8_t ucPingReqPacket[] = {
+    mqttCONTROL_PINGREQ | mqttFLAGS_PINGREQ,
+                                               0 /* PINGREQ packet does not have any variable header or payload. */
     };
 
     /* These are checked here once and are later used without
      * NULL checks. */
-    mqttconfigASSERT( pxMQTTContext != NULL );
-    mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL );
+    mqttconfigASSERT( pxMQTTContext != NULL ); mqttconfigASSERT( pxMQTTContext->pxMQTTSendFxn != NULL );
 
     /* Check if any of the sent packet timed out while waiting for ACK. */
     listFOR_EACH_SAFE( pxLink, pxTempLink, &( pxMQTTContext->xTxBufferListHead ) )
     {
         /* Get the buffer from the link. */
-        xBuffer = mqttbufferGET_BUFFER_HANDLE_FROM_LINK( pxLink );
+        xBuffer = mqttbufferGET_BUFFER_HANDLE_FROM_LINK(pxLink);
 
         /* If the operation has timed out, inform the user and
          * return the buffer to the free buffer pool. */
-        if( prvIsTimeElapsed( &( mqttbufferGET_PACKET_RECORDED_TICK_COUNT( xBuffer ) ), xCurrentTickCount, &( mqttbufferGET_PACKET_TIMEOUT_TICKS( xBuffer ) ) ) == eMQTTTrue )
+        if (prvIsTimeElapsed(
+                &(mqttbufferGET_PACKET_RECORDED_TICK_COUNT(xBuffer)),
+                xCurrentTickCount,
+                &(mqttbufferGET_PACKET_TIMEOUT_TICKS(xBuffer))) == eMQTTTrue)
         {
             /* If a connect timed out, disconnect the client and inform
              * the user about the same. */
-            if( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] == ( uint8_t ) ( mqttCONTROL_CONNECT | mqttFLAGS_CONNECT ) )
+            if ( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+                    == (uint8_t) ( mqttCONTROL_CONNECT | mqttFLAGS_CONNECT))
             {
                 /* Disconnect. */
-                prvResetMQTTContext( pxMQTTContext );
+                prvResetMQTTContext(pxMQTTContext);
 
                 /* Inform the user about disconnect. */
                 xEventCallbackParams.xEventType = eMQTTClientDisconnected;
-                xEventCallbackParams.u.xDisconnectData.xDisconnectReason = eMQTTDisconnectReasonConnectTimeout;
-                ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                xEventCallbackParams.u.xDisconnectData.xDisconnectReason =
+                        eMQTTDisconnectReasonConnectTimeout;
+                (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
 
                 /* No need to traverse the Tx list anymore as all
                  * the packets have already been returned to the
@@ -3348,46 +3658,55 @@ uint32_t MQTT_Periodic( MQTTContext_t * pxMQTTContext,
             }
             else
             {
-                #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
 
-                    /* If a subscribe message timed out, remove the corresponding
-                     * entry from the subscription manager. */
-                    if( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET ] == ( uint8_t ) ( mqttCONTROL_SUBSCRIBE | mqttFLAGS_SUBSCRIBE ) )
-                    {
-                        prvRemoveSubscriptionForSubscribeOrUnsubscribeBuffer( pxMQTTContext, xBuffer );
-                    }
-                #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+                /* If a subscribe message timed out, remove the corresponding
+                 * entry from the subscription manager. */
+                if ( mqttbufferGET_DATA( xBuffer )[ mqttFIXED_HEADER_CONTROL_BYTE_OFFSET]
+                        == (uint8_t) ( mqttCONTROL_SUBSCRIBE
+                                | mqttFLAGS_SUBSCRIBE))
+                {
+                    prvRemoveSubscriptionForSubscribeOrUnsubscribeBuffer(
+                            pxMQTTContext, xBuffer);
+                }
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 
                 /* Inform the user about the timeout. */
                 xEventCallbackParams.xEventType = eMQTTTimeout;
-                xEventCallbackParams.u.xTimeoutData.usPacketIdentifier = mqttbufferGET_PACKET_IDENTIFIER( xBuffer );
-                ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                xEventCallbackParams.u.xTimeoutData.usPacketIdentifier =
+                        mqttbufferGET_PACKET_IDENTIFIER(xBuffer);
+                (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
 
                 /* Return the buffer back to the free buffer pool. */
-                prvReturnBuffer( pxMQTTContext, xBuffer );
+                prvReturnBuffer(pxMQTTContext, xBuffer);
             }
         }
         else
         {
             /* If this Tx operation has not timed out yet, update when
              * the next earliest timeout will happen. */
-            ulNextTimeoutTicks = mqttMIN( ulNextTimeoutTicks, mqttbufferGET_PACKET_TIMEOUT_TICKS( xBuffer ) );
+            ulNextTimeoutTicks = mqttMIN(
+                    ulNextTimeoutTicks,
+                    mqttbufferGET_PACKET_TIMEOUT_TICKS( xBuffer ));
         }
     }
 
     /* Check if the previously sent keep alive timed out,
      * or it is time to send a keep alive message. */
-    if( pxMQTTContext->xConnectionState == eMQTTConnected )
+    if (pxMQTTContext->xConnectionState == eMQTTConnected)
     {
-        if( prvIsTimeElapsed( &( pxMQTTContext->xLastSentMessageTimestamp ), xCurrentTickCount, &( pxMQTTContext->ulNextPeriodicInvokeTicks ) ) == eMQTTTrue )
+        if (prvIsTimeElapsed(&(pxMQTTContext->xLastSentMessageTimestamp),
+                             xCurrentTickCount,
+                             &(pxMQTTContext->ulNextPeriodicInvokeTicks))
+                == eMQTTTrue)
         {
             /* If we were waiting for PINGRESP, it indicates that we failed to
              * receive PINGRESP in a reasonable time (mqttconfigKEEP_ALIVE_TIMEOUT_TICKS). */
-            if( pxMQTTContext->xWaitingForPingResp == eMQTTTrue )
+            if (pxMQTTContext->xWaitingForPingResp == eMQTTTrue)
             {
                 /* Inform the user about the ping timeout. */
                 xEventCallbackParams.xEventType = eMQTTPingTimeout;
-                ( void ) prvInvokeCallback( pxMQTTContext, &xEventCallbackParams );
+                (void) prvInvokeCallback(pxMQTTContext, &xEventCallbackParams);
 
                 /* Mark that we are no longer waiting for PINGRESP. Note
                  * that keep alive time-stamp and timeout are not updated so
@@ -3401,16 +3720,19 @@ uint32_t MQTT_Periodic( MQTTContext_t * pxMQTTContext,
                  * a PINGREQ. */
 
                 /* If the following call fails to send the keep alive message,
-                * the keep alive time-stamp and timeout are not updated - as
-                * a result of which we will try to re-transmit the keep alive
-                * message on the next invocation of this periodic function. */
-                if( prvSendData( pxMQTTContext, ucPingReqPacket, sizeof( ucPingReqPacket ) ) == eMQTTSuccess )
+                 * the keep alive time-stamp and timeout are not updated - as
+                 * a result of which we will try to re-transmit the keep alive
+                 * message on the next invocation of this periodic function. */
+                if (prvSendData(pxMQTTContext, ucPingReqPacket,
+                                sizeof(ucPingReqPacket)) == eMQTTSuccess)
                 {
                     /* Update the last sent message timestamp. */
-                    pxMQTTContext->xLastSentMessageTimestamp = prvGetCurrentTickCount( pxMQTTContext );
+                    pxMQTTContext->xLastSentMessageTimestamp =
+                            prvGetCurrentTickCount(pxMQTTContext);
 
                     /* We must get PINGRESP within a reasonable time. */
-                    pxMQTTContext->ulNextPeriodicInvokeTicks = pxMQTTContext->ulPingRequestTimeoutTicks;
+                    pxMQTTContext->ulNextPeriodicInvokeTicks =
+                            pxMQTTContext->ulPingRequestTimeoutTicks;
 
                     /* Mark that we are waiting for PINGRESP. */
                     pxMQTTContext->xWaitingForPingResp = eMQTTTrue;
@@ -3419,7 +3741,8 @@ uint32_t MQTT_Periodic( MQTTContext_t * pxMQTTContext,
         }
 
         /* Update when the next earliest timeout will happen. */
-        ulNextTimeoutTicks = mqttMIN( ulNextTimeoutTicks, pxMQTTContext->ulNextPeriodicInvokeTicks );
+        ulNextTimeoutTicks = mqttMIN(ulNextTimeoutTicks,
+                                     pxMQTTContext->ulNextPeriodicInvokeTicks);
     }
 
     return ulNextTimeoutTicks;
@@ -3428,6 +3751,6 @@ uint32_t MQTT_Periodic( MQTTContext_t * pxMQTTContext,
 
 /* Provide access to private members for testing. */
 #ifdef AMAZON_FREERTOS_ENABLE_UNIT_TESTS
-    #include "aws_mqtt_lib_test_access_define.h"
+#include "aws_mqtt_lib_test_access_define.h"
 #endif
 /*-----------------------------------------------------------*/

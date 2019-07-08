@@ -83,24 +83,23 @@ extern unsigned long __STACK_END;
 void (* const resetVectors[16])(void) =
 {
     (void (*)(void))((unsigned long)&__STACK_END),
-                                         // The initial stack pointer
-    resetISR,                            // The reset handler
-    nmiISR,                              // The NMI handler
-    faultISR,                            // The hard fault handler
-    defaultHandler,                      // The MPU fault handler
-    busFaultHandler,                     // The bus fault handler
-    defaultHandler,                      // The usage fault handler
-    0,                                   // Reserved
-    0,                                   // Reserved
-    0,                                   // Reserved
-    0,                                   // Reserved
-    vPortSVCHandler,                     // SVCall handler
-    defaultHandler,                      // Debug monitor handler
-    0,                                   // Reserved
-    xPortPendSVHandler,                  // The PendSV handler
-    xPortSysTickHandler                  // The SysTick handler
-};
-
+    // The initial stack pointer
+        resetISR,// The reset handler
+        nmiISR,// The NMI handler
+        faultISR,// The hard fault handler
+        defaultHandler,// The MPU fault handler
+        busFaultHandler,// The bus fault handler
+        defaultHandler,// The usage fault handler
+        0,// Reserved
+        0,// Reserved
+        0,// Reserved
+        0,// Reserved
+        vPortSVCHandler,// SVCall handler
+        defaultHandler,// Debug monitor handler
+        0,// Reserved
+        xPortPendSVHandler,// The PendSV handler
+        xPortSysTickHandler// The SysTick handler
+    };
 
 #pragma DATA_SECTION(ramVectors, ".ramVecs")
 static unsigned long ramVectors[195];
@@ -117,16 +116,16 @@ void initVectors(void)
     int i;
 
     /* Copy from reset vector table into RAM vector table */
-    memcpy(ramVectors, resetVectors, 16*4);
+    memcpy(ramVectors, resetVectors, 16 * 4);
 
     /* fill remaining vectors with default handler */
-    for (i=16; i < 195; i++)
+    for (i = 16; i < 195; i++)
     {
-        ramVectors[i] = (unsigned long)defaultHandler;
+        ramVectors[i] = (unsigned long) defaultHandler;
     }
 
     /* Set vector table base */
-    MAP_IntVTableBaseSet((unsigned long)&ramVectors[0]);
+    MAP_IntVTableBaseSet((unsigned long) &ramVectors[0]);
 
     /* Enable Processor */
     MAP_IntMasterEnable();
@@ -152,14 +151,14 @@ void resetISR(void)
      * load the stack pointer from the bootloader's vector table at address '0'.
      */
     __asm(" .global resetVectorAddr\n"
-          " ldr r0, resetVectorAddr\n"
-          " ldr r0, [r0]\n"
-          " mov sp, r0\n"
-          " bl initVectors");
+            " ldr r0, resetVectorAddr\n"
+            " ldr r0, [r0]\n"
+            " mov sp, r0\n"
+            " bl initVectors");
 
     /* Jump to the CCS C Initialization Routine. */
     __asm(" .global _c_int00\n"
-          " b.w     _c_int00");
+            " b.w     _c_int00");
 
     _Pragma("diag_suppress 1119");
     __asm("resetVectorAddr: .word resetVectors");
@@ -173,11 +172,10 @@ void resetISR(void)
 // by a debugger.
 //
 //*****************************************************************************
-static void
-nmiISR(void)
+static void nmiISR(void)
 {
     /* Enter an infinite loop. */
-    while(1)
+    while (1)
     {
     }
 }
@@ -189,11 +187,10 @@ nmiISR(void)
 // for examination by a debugger.
 //
 //*****************************************************************************
-static void
-faultISR(void)
+static void faultISR(void)
 {
     /* Enter an infinite loop. */
-    while(1)
+    while (1)
     {
     }
 }
@@ -206,11 +203,10 @@ faultISR(void)
 //
 //*****************************************************************************
 
-static void
-busFaultHandler(void)
+static void busFaultHandler(void)
 {
     /* Enter an infinite loop. */
-    while(1)
+    while (1)
     {
     }
 }
@@ -222,11 +218,10 @@ busFaultHandler(void)
 // for examination by a debugger.
 //
 //*****************************************************************************
-static void
-defaultHandler(void)
+static void defaultHandler(void)
 {
     /* Enter an infinite loop. */
-    while(1)
+    while (1)
     {
     }
 }

@@ -23,7 +23,6 @@
  * http://www.FreeRTOS.org
  */
 
-
 /**
  * @file aws_mqtt_agent.h
  * @brief MQTT Agent Interface.
@@ -58,12 +57,12 @@ typedef void * MQTTAgentHandle_t;
  */
 typedef enum
 {
-    eMQTTAgentSuccess,              /**< The operation was successful. */
-    eMQTTAgentFailure,              /**< The operation failed. */
-    eMQTTAgentTimeout,              /**< The operation timed out. */
+    eMQTTAgentSuccess, /**< The operation was successful. */
+    eMQTTAgentFailure, /**< The operation failed. */
+    eMQTTAgentTimeout, /**< The operation timed out. */
     eMQTTAgentAPICalledFromCallback /**< The MQTT agent APIs must not be called from MQTT callbacks as callbacks run
-                                     *   in the context of MQTT agent task and therefore can result in deadlock. This
-                                     *   error code is returned if any MQTT agent API is invoked from any callback. */
+     *   in the context of MQTT agent task and therefore can result in deadlock. This
+     *   error code is returned if any MQTT agent API is invoked from any callback. */
 } MQTTAgentReturnCode_t;
 
 /**
@@ -76,7 +75,7 @@ typedef enum
  */
 typedef enum
 {
-    eMQTTAgentPublish,   /**< A Publish message was received from the broker. */
+    eMQTTAgentPublish, /**< A Publish message was received from the broker. */
     eMQTTAgentDisconnect /**< The connection to the broker got disconnected. */
 } MQTTAgentEvent_t;
 
@@ -119,8 +118,9 @@ typedef struct MQTTAgentCallbackParams
  *
  * @see MQTTAgentCallbackParams_t.
  */
-typedef BaseType_t ( * MQTTAgentCallback_t )( void * pvUserData,
-                                              const MQTTAgentCallbackParams_t * const pxCallbackParams );
+typedef BaseType_t (*MQTTAgentCallback_t)(
+        void * pvUserData,
+        const MQTTAgentCallbackParams_t * const pxCallbackParams);
 
 /**
  * @brief Flags for the MQTT agent connect params.
@@ -134,18 +134,18 @@ typedef BaseType_t ( * MQTTAgentCallback_t )( void * pvUserData,
  */
 typedef struct MQTTAgentConnectParams
 {
-    const char * pcURL;             /**< The URL of the MQTT broker to connect to. */
-    BaseType_t xFlags;              /**< Flags to control the behavior of MQTT connect. */
-    BaseType_t xURLIsIPAddress;     /**< Deprecated. Set the mqttagentURL_IS_IP_ADDRESS bit in xFlags instead. */
-    uint16_t usPort;                /**< Port number at which MQTT broker is listening. This field is ignored if the mqttagentUSE_AWS_IOT_ALPN_443 flag is set. */
-    const uint8_t * pucClientId;    /**< Client Identifier of the MQTT client. It should be unique per broker. */
-    uint16_t usClientIdLength;      /**< The length of the client Id. */
-    BaseType_t xSecuredConnection;  /**< Deprecated. Set the mqttagentREQUIRE_TLS bit in xFlags instead. */
-    void * pvUserData;              /**< User data supplied back as it is in the callback. Can be NULL. */
+    const char * pcURL; /**< The URL of the MQTT broker to connect to. */
+    BaseType_t xFlags; /**< Flags to control the behavior of MQTT connect. */
+    BaseType_t xURLIsIPAddress; /**< Deprecated. Set the mqttagentURL_IS_IP_ADDRESS bit in xFlags instead. */
+    uint16_t usPort; /**< Port number at which MQTT broker is listening. This field is ignored if the mqttagentUSE_AWS_IOT_ALPN_443 flag is set. */
+    const uint8_t * pucClientId; /**< Client Identifier of the MQTT client. It should be unique per broker. */
+    uint16_t usClientIdLength; /**< The length of the client Id. */
+    BaseType_t xSecuredConnection; /**< Deprecated. Set the mqttagentREQUIRE_TLS bit in xFlags instead. */
+    void * pvUserData; /**< User data supplied back as it is in the callback. Can be NULL. */
     MQTTAgentCallback_t pxCallback; /**< Callback used to report various events. In addition to other events, this callback is invoked for the publish
-                                     *   messages received on the topics for which the user has not registered any subscription callback. Can be NULL. */
-    char * pcCertificate;           /**< Certificate used for secure connection. Can be NULL. If it is NULL, the one specified in the aws_credential_keys.h is used. */
-    uint32_t ulCertificateSize;     /**< Size of certificate used for secure connection. */
+     *   messages received on the topics for which the user has not registered any subscription callback. Can be NULL. */
+    char * pcCertificate; /**< Certificate used for secure connection. Can be NULL. If it is NULL, the one specified in the aws_credential_keys.h is used. */
+    uint32_t ulCertificateSize; /**< Size of certificate used for secure connection. */
 } MQTTAgentConnectParams_t;
 
 /**
@@ -153,16 +153,16 @@ typedef struct MQTTAgentConnectParams
  */
 typedef struct MQTTAgentSubscribeParams
 {
-    const uint8_t * pucTopic;                    /**< The topic to subscribe to. This can be a topic filter containing wild cards as permitted by the MQTT protocol. */
-    uint16_t usTopicLength;                      /**< The length of the topic. */
-    MQTTQoS_t xQoS;                              /**< Requested Quality of Service. */
-    #if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
-        void * pvPublishCallbackContext;         /**< Passed as it is in the publish callback. Can be NULL. */
-        MQTTPublishCallback_t pxPublishCallback; /**< Callback function to be called whenever a publish message is received on this topic or on a topic which matches this
-                                                  *   topic filter. If a publish message is received on a topic which matches more than one topic filters, the order in which
-                                                  *   the callbacks are invoked is undefined. This can be NULL if the user does not want to register a topic specific callback,
-                                                  *   in which case the generic callback ( if registered during connect ) is invoked. */
-    #endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
+    const uint8_t * pucTopic; /**< The topic to subscribe to. This can be a topic filter containing wild cards as permitted by the MQTT protocol. */
+    uint16_t usTopicLength; /**< The length of the topic. */
+    MQTTQoS_t xQoS; /**< Requested Quality of Service. */
+#if ( mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT == 1 )
+    void * pvPublishCallbackContext; /**< Passed as it is in the publish callback. Can be NULL. */
+    MQTTPublishCallback_t pxPublishCallback; /**< Callback function to be called whenever a publish message is received on this topic or on a topic which matches this
+     *   topic filter. If a publish message is received on a topic which matches more than one topic filters, the order in which
+     *   the callbacks are invoked is undefined. This can be NULL if the user does not want to register a topic specific callback,
+     *   in which case the generic callback ( if registered during connect ) is invoked. */
+#endif /* mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT */
 } MQTTAgentSubscribeParams_t;
 
 /**
@@ -171,7 +171,7 @@ typedef struct MQTTAgentSubscribeParams
 typedef struct MQTTAgentUnsubscribeParams
 {
     const uint8_t * pucTopic; /**< The topic to unsubscribe from. */
-    uint16_t usTopicLength;   /**< The length of the topic. */
+    uint16_t usTopicLength; /**< The length of the topic. */
 } MQTTAgentUnsubscribeParams_t;
 
 /**
@@ -180,10 +180,10 @@ typedef struct MQTTAgentUnsubscribeParams
 typedef struct MQTTAgentPublishParams
 {
     const uint8_t * pucTopic; /**< The topic string on which the message should be published. */
-    uint16_t usTopicLength;   /**< The length of the topic. */
-    MQTTQoS_t xQoS;           /**< Quality of Service (QoS). */
-    const void * pvData;      /**< The data to publish. This data is copied into the MQTT buffers and therefore the user can free the buffer after the MQTT_AGENT_Publish call returns. */
-    uint32_t ulDataLength;    /**< Length of the data. */
+    uint16_t usTopicLength; /**< The length of the topic. */
+    MQTTQoS_t xQoS; /**< Quality of Service (QoS). */
+    const void * pvData; /**< The data to publish. This data is copied into the MQTT buffers and therefore the user can free the buffer after the MQTT_AGENT_Publish call returns. */
+    uint32_t ulDataLength; /**< Length of the data. */
 } MQTTAgentPublishParams_t;
 
 /**
@@ -194,7 +194,7 @@ typedef struct MQTTAgentPublishParams
  *
  * @return pdPASS if everything succeeds, pdFAIL otherwise.
  */
-lib_initDECLARE_LIB_INIT( MQTT_AGENT_Init );
+lib_initDECLARE_LIB_INIT(MQTT_AGENT_Init);
 
 /**
  * @brief Creates a new MQTT client.
@@ -211,7 +211,7 @@ lib_initDECLARE_LIB_INIT( MQTT_AGENT_Init );
  * @return eMQTTAgentSuccess if a new client is successfully created, otherwise an error code
  * explaining the reason of the failure is returned.
  */
-MQTTAgentReturnCode_t MQTT_AGENT_Create( MQTTAgentHandle_t * const pxMQTTHandle );
+MQTTAgentReturnCode_t MQTT_AGENT_Create(MQTTAgentHandle_t * const pxMQTTHandle);
 
 /**
  * @brief Deletes the already created MQTT client.
@@ -225,7 +225,7 @@ MQTTAgentReturnCode_t MQTT_AGENT_Create( MQTTAgentHandle_t * const pxMQTTHandle 
  * @return eMQTTAgentSuccess if the client is successfully deleted, otherwise an
  * error code explaining the reason of the failure is returned.
  */
-MQTTAgentReturnCode_t MQTT_AGENT_Delete( MQTTAgentHandle_t xMQTTHandle );
+MQTTAgentReturnCode_t MQTT_AGENT_Delete(MQTTAgentHandle_t xMQTTHandle);
 
 /**
  * @brief Establishes a connection with the MQTT broker.
@@ -242,9 +242,10 @@ MQTTAgentReturnCode_t MQTT_AGENT_Delete( MQTTAgentHandle_t xMQTTHandle );
  * @return eMQTTAgentSuccess if the connect operation succeeds, otherwise an error code explaining the
  * reason of the failure is returned.
  */
-MQTTAgentReturnCode_t MQTT_AGENT_Connect( MQTTAgentHandle_t xMQTTHandle,
-                                          const MQTTAgentConnectParams_t * const pxConnectParams,
-                                          TickType_t xTimeoutTicks );
+MQTTAgentReturnCode_t MQTT_AGENT_Connect(
+        MQTTAgentHandle_t xMQTTHandle,
+        const MQTTAgentConnectParams_t * const pxConnectParams,
+        TickType_t xTimeoutTicks);
 
 /**
  * @brief Disconnects the connection with the MQTT broker.
@@ -260,8 +261,8 @@ MQTTAgentReturnCode_t MQTT_AGENT_Connect( MQTTAgentHandle_t xMQTTHandle,
  * @return eMQTTAgentSuccess if the disconnect operation succeeds, otherwise an error code explaining
  * the reason of the failure is returned.
  */
-MQTTAgentReturnCode_t MQTT_AGENT_Disconnect( MQTTAgentHandle_t xMQTTHandle,
-                                             TickType_t xTimeoutTicks );
+MQTTAgentReturnCode_t MQTT_AGENT_Disconnect(MQTTAgentHandle_t xMQTTHandle,
+                                            TickType_t xTimeoutTicks);
 
 /**
  * @brief Subscribes to a given topic.
@@ -297,9 +298,10 @@ MQTTAgentReturnCode_t MQTT_AGENT_Disconnect( MQTTAgentHandle_t xMQTTHandle,
  * @return eMQTTAgentSuccess if the subscribe operation succeeds, otherwise an error code explaining
  * the reason of the failure is returned.
  */
-MQTTAgentReturnCode_t MQTT_AGENT_Subscribe( MQTTAgentHandle_t xMQTTHandle,
-                                            const MQTTAgentSubscribeParams_t * const pxSubscribeParams,
-                                            TickType_t xTimeoutTicks );
+MQTTAgentReturnCode_t MQTT_AGENT_Subscribe(
+        MQTTAgentHandle_t xMQTTHandle,
+        const MQTTAgentSubscribeParams_t * const pxSubscribeParams,
+        TickType_t xTimeoutTicks);
 
 /**
  * @brief Unsubscribes from a given topic.
@@ -316,9 +318,10 @@ MQTTAgentReturnCode_t MQTT_AGENT_Subscribe( MQTTAgentHandle_t xMQTTHandle,
  * @return eMQTTAgentSuccess if the unsubscribe operation succeeds, otherwise an error code explaining
  * the reason of the failure is returned.
  */
-MQTTAgentReturnCode_t MQTT_AGENT_Unsubscribe( MQTTAgentHandle_t xMQTTHandle,
-                                              const MQTTAgentUnsubscribeParams_t * const pxUnsubscribeParams,
-                                              TickType_t xTimeoutTicks );
+MQTTAgentReturnCode_t MQTT_AGENT_Unsubscribe(
+        MQTTAgentHandle_t xMQTTHandle,
+        const MQTTAgentUnsubscribeParams_t * const pxUnsubscribeParams,
+        TickType_t xTimeoutTicks);
 
 /**
  * @brief Publishes a message to a given topic.
@@ -335,9 +338,10 @@ MQTTAgentReturnCode_t MQTT_AGENT_Unsubscribe( MQTTAgentHandle_t xMQTTHandle,
  * @return eMQTTAgentSuccess if the publish operation succeeds, otherwise an error code explaining
  * the reason of the failure is returned.
  */
-MQTTAgentReturnCode_t MQTT_AGENT_Publish( MQTTAgentHandle_t xMQTTHandle,
-                                          const MQTTAgentPublishParams_t * const pxPublishParams,
-                                          TickType_t xTimeoutTicks );
+MQTTAgentReturnCode_t MQTT_AGENT_Publish(
+        MQTTAgentHandle_t xMQTTHandle,
+        const MQTTAgentPublishParams_t * const pxPublishParams,
+        TickType_t xTimeoutTicks);
 
 /**
  * @brief Returns the buffer provided in the publish callback.
@@ -353,7 +357,7 @@ MQTTAgentReturnCode_t MQTT_AGENT_Publish( MQTTAgentHandle_t xMQTTHandle,
  * @return eMQTTAgentSuccess if the return buffer operation succeeds, otherwise an error
  * code explaining the reason of the failure is returned.
  */
-MQTTAgentReturnCode_t MQTT_AGENT_ReturnBuffer( MQTTAgentHandle_t xMQTTHandle,
-                                               MQTTBufferHandle_t xBufferHandle );
+MQTTAgentReturnCode_t MQTT_AGENT_ReturnBuffer(MQTTAgentHandle_t xMQTTHandle,
+                                              MQTTBufferHandle_t xBufferHandle);
 
 #endif /* _AWS_MQTT_AGENT_H_ */

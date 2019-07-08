@@ -144,7 +144,6 @@ uint8_t TwoWire::endTransmission(void)
 
     transactionContext.error = IOT_I2C_SUCCESS;
 
-    configPRINTF(("ERROR %d\r\n", transactionContext.error));
 
     return 0;
 }
@@ -256,12 +255,7 @@ uint8_t TwoWire::requestFrom( uint8_t addr, uint8_t num, uint32_t iaddress, uint
                 if( xSemaphoreTake( transactionContext.semaphore, pdMS_TO_TICKS( WIRE_TRANSACTION_TIMEOUT)) == pdTRUE )
                 {
                     transactionContext.available = num;
-                    configPRINTF(("a \r\n"));
                     return num;
-                }
-                else
-                {
-                    configPRINTF(("timeout \r\n"));
                 }
             }
         }
