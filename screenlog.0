@@ -1,0 +1,213 @@
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 470 [Tmr Svc] Wi-Fi module initialized.
+3 480 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 2808 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 280xampl9 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+6 2812 [Tmr Svc] Security alert threshold = 15
+Send s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!
+7 2812 [Tmr Svc] Current number of alerts = 0
+8 2812 [Tmr Svc] START OF PROGRAM9 2812 [Tmr Svc] Creating MQTT Echo Task...
+10 2812 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Object Temperature: 22.51500111 2859 [Arduino W*C
+ir] ERROR:  Echo failed to pubDie Temperature: lish '22.515001'
+25.40625012 2860 [MQTTEcho] MQTT echo connected.
+13 2860 [MQTTEcho] MQTT echo test echoing task created.
+14 2972 [MQTTEcho] MQT*CT Echo demo subscribed to freertos/demos/echo
+15 2973 [Arduino Wir] Echo successfully published '25.406250'
+
+Object Temperature: 21.733639*C16 4681 [Arduino Wir] Echo successfully published '21.733639'
+
+Die Temperature: 25.40625017 5288 [Arduino Wir] Echo successfully published '25.406250'
+*C
+Object Temperature: 21.23321218 6703 [Arduino Wir] Echo successfully published '21.233212'
+*C
+Die Temperature: 25.40625019 6817 [Arduino *C
+Wir] Echo successfully published '25.406250'
+Object Temperature: 21.12536420 8732 [Arduino Wir] Echo successfully published '21.125364'
+*C
+Die Temperature: 25.43750021 8846 [Arduino Wir] Echo successfully published '25.437500'
+*C
+Object Temperature: 22.00628722 10361 [Arduino Wir] Echo successfully published '22.006287'
+*C
+Die Temperature: 25.43750023 10475 [Arduino Wir] Echo successfully published '25.437500'
+*C
+Object Temperature: 20.98177724 11990 [Arduino Wir] Echo successfully published '20.981777'
+*C
+Die Temperature: 25.43750025 12104 [Arduino Wir] Echo successfully published '25.437500'
+*C
+Object Temperature: 21.24486226 13619 [Arduino Wir] Echo successfully published '21.244862'
+*C
+Die Temperature: 25.43750027 13733 [Arduino Wir] Echo successfully published '25.437500'
+*C
+Object Temperature: 21.53107628 14948 [Arduino Wir] Echo successfully published '21.531076'
+*C
+Die Temperature: 25.43750029 15162 [Arduino Wir] Echo successfully published '25.437500'
+*C
+Object Temperature: 20.93386830 16777 [Arduino Wir] Echo successfully published '20.933868'
+*C
+Die Temperature: 25.43750031 16891 [Arduino Wir] Echo successfully published '25.437500'
+*C
+Object Temperature: 21.55489032 18206 [Arduino Wir] Echo successfully published '21.554890'
+*C
+Die Temperature: 25.43750033 18320 [Arduino Wir] Echo successfully published '25.437500'
+*C
+Object Temperature: 21.41192134 19835 [Arduino Wir] Echo successfully published '21.411921'
+*C
+Die Temperature: 25.46875035 19949 [Arduino Wir] Echo successfully published '25.468750'
+*C
+Object Temperature: 21.85177436 21265 [Arduino W*Cir] Echo successfully published '21.851774'
+
+Die Temperature: 25.43750037 21872 [Arduino Wir] Echo successfully published '25.437500'
+*C
+Object Temperature: 21.01742438 23687 [Arduino Wir] Echo successfully published '21.017424'
+*C
+Die Temperature: 25.46875039 23801 [Arduino Wir] Echo successfully published '25.468750'
+*C
+Object Temperature: 21.28039940 25116 [Arduino Wir] Echo successfully published '21.280399'
+*C
+Die Temperature: 25.46875041 25230 [Arduino Wir] Echo successfully published '25.468750'
+*C
+Object Temperature: 21.66167842 26745 [Arduino Wir] Echo successfully published '21.661678'
+*C
+Die Temperature: 25.46875043 26859 [Arduino Wir] Echo successfully published '25.468750'
+*C
+Object Temperature: 21.04135944 28374 [Arduino Wir] Echo successfully published '21.041359'
+*C
+Die Temperature: 25.46875045 28488 [Arduino Wir] Echo successfully published '25.468750'
+*C
+Object Temperature: 21.00519846 30003 [Arduino Wir] Echo successfully published '21.005198'
+*C
+Die Temperature: 25.50000047 30117 [Arduino Wir] Echo successfully published '25.500000'
+*C
+Object Temperature: 21.02913548 31632 [Arduino Wir] Echo successfully published '21.029135'
+*C
+Die Temperature: 25.50000049 31746 [Arduino Wir] Echo successfully published '25.500000'
+*C
+Object Temperature: 21.12482650 33261 [Arduino*C
+ Wir] Echo successfully published '21.124826'
+Die Temperature: 25.50000051 33475 [Arduino*C
+ Wir] Echo successfully published '25.500000'
+Object Temperature: 21.13653052 34790 [Arduino Wir] Echo successfully published '21.136530'
+*C
+Die Temperature: 25.53125053 34904 [Arduino Wir] Echo successfully published '25.531250'
+*C
+Object Temperature: 21.25599354 36419 [Arduino Wir] Echo successfully published '21.255993'
+*C
+Die Temperature: 25.53125055 36533 [Arduino Wir] Echo successfully published '25.531250'
+*C
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 467 [Tmr Svc] Wi-Fi module initialized.
+3 478 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 3807 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 3807 [Tmr Svc] IP Ad
+dress acquired 192.168.1.73
+6 3810 [Tmr Svc] Security alert threshold = 15
+7 3810 [Tmr Svc] Current number of alerts = 0
+8 3810 [Tmr Svc] START OF PROGRAM9 3810 [Tmr Svc] Creating MQTT Echo Task...
+10 3811 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 4988 [Arduino Wir] ERROR:  Echo failed toSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!
+ publish 'Adafruit TMP006 example'
+Object Temperature: 12 5001 [Arduino Wir] 21.472475ERROR:  Echo failed to publis*C
+h 'Send s to enter sleep mo'
+Die Temperature: 13 5006 [Arduino Wir] ERROR:25.343750  Echo failed to publish 'Obj*C
+ect Temperature: '
+14 5009 [Arduino Wir] ERROR:  Echo failed to publish '21.472475'
+15 5012 [Arduino Wir] ERROR:  Echo failed to publish '*C'
+16 5017 [Arduino Wir] ERROR:  Echo failed to publish 'Die Temperature: '
+17 5020 [Arduino Wir] ERROR:  Echo failed to publish '25.343750'
+18 5023 [Arduino Wir] ERROR:  Echo failed to publish '*C'
+19 5324 [MQTTEcho] MQTT echo connected.
+20 5328 [MQTTEcho] MQTT echo test echoing task created.
+21 5530 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+Object Temperature: 22 6532 [Arduino 21.520134Wir] Echo successfully published 'Object Temperature: '
+23 6736 [Arduino Wir] Echo successfully published '21.520134'
+*C
+24 6845 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.37500025 7058 [Arduino Wir] Echo successfully published 'Die Temperature: '
+26 7362 [Arduino Wir] Echo successfully published '25.375000'
+*C
+27 7471 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 21.24546228 8783 [Arduino Wir] Echo successfully published 'Object Temperature: '
+29 8987 [Arduino Wir] Echo successfully published '21.245462'
+*C
+30 9096 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.37500031 9207 [Arduino Wir] Echo successfully published 'Die Temperature: '
+32 9611 [Arduino Wir] Echo successfully published '25.375000'
+*C
+33 9720 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 21.57933834 11032 [Arduino Wir] Echo successfully published 'Object Temperature: '
+35 11236 [Arduino Wir] Echo successfully published '21.579338'
+*C
+36 11345 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.37500037 11456 [Arduino Wir] Echo successfully published 'Die Temperature: '
+38 12060 [Arduino Wir] Echo successfully published '25.375000'
+*C
+39 12169 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 22.00697340 13481 [Arduino Wir] Echo successfully published 'Object Temperature: '
+41 13885 [Arduino Wir] Echo successfully published '22.006973'
+*C
+42 13994 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.37500043 14105 [Arduino Wir] Echo successfully published 'Die Temperature: '
+44 14309 [Arduino Wir] Echo successfully published '25.375000'
+*C
+45 14418 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 21.22157346 16430 [Arduino Wir] Echo successfully published 'Object Temperature: '
+47 17034 [Arduino Wir] Echo successfully published '21.221573'
+*C
+48 17143 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.37500049 17254 [Arduino Wir] Echo successfully published 'Die Temperature: '
+50 17658 [Arduino Wir] Echo successfully published '25.375000'
+*C
+51 18067 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 52 19674 [Arduino22.030678 Wir] Echo successfully published 'Object Temperature: '
+53 20079 [Arduino Wir] Echo successfully published '22.030678'
+*C
+54 20188 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.37500055 20299 [Arduino Wir] Echo successfully published 'Die Temperature: '
+56 20703 [Arduino Wir] Echo successfully published '25.375000'
+*C
+57 20812 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 24.00209658 22124 [Arduino Wir] Echo successfully published 'Object Temperature: '
+59 22528 [Arduino Wir] Echo successfully published '24.002096'
+*C
+60 22637 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.37500061 22748 [Arduino Wir] Echo successfully published 'Die Temperature: '
+62 23152 [Arduino Wir] Echo successfully published '25.375000'
+*C
+63 23261 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 21.86463264 24573 [Arduino Wir] Echo successfully published 'Object Temperature: '
+65 24977 [Arduino Wir] Echo successfully published '21.864632'
+*C
+66 25086 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.34375067 25197 [Arduino Wir] Echo successfully published 'Die Temperature: '
+68 25601 [Arduino Wir] Echo successfully published '25.343750'
+*C
+69 25710 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 22.86897370 27022 [Arduino Wir] Echo successfully published 'Object Temperature: '
+71 27226 [Arduino Wir] Echo successfully published '22.868973'
+*C
+72 27335 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.34375073 27446 [Arduino Wir] Echo successfully published 'Die Temperature: '
+74 28050 [Arduino W*Cir] Echo successfully published '25.343750'
+
+75 28852 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 21.54395576 30364 [Arduino Wir] Echo successfully published 'Object Temperature: '
+77 30768 [Arduino Wir] Echo successfully published '21.543955'
+*C

@@ -91,7 +91,7 @@ public:
     size_t print(float, char);
     size_t print(float, float);
 
-    void println(const char *);
+    void println(char *);
 
     int read();
 

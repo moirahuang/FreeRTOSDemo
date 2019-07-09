@@ -17,9 +17,16 @@ extern "C"{
 /* Logging includes. */
 #include "FreeRTOSConfig.h"
 #include "uart_term.h"
+#include "aws_hello_world.h"
+#include <stddef.h>
+// Import I2C Driver definitions
+#include <ti/drivers/I2C.h>
+#include "WireAdaptor.h"
 }
 #include "Serial.h"
 UART_Handle uartHandle;
+
+extern void vStartMQTTEchoDemo( void );
 SerialOutput::SerialOutput()
 {
 
@@ -91,6 +98,8 @@ size_t SerialOutput::print(char *print)
 {
     configPRINT_STRING((print));
     vTaskDelay( 1);
+
+    prvPublishNextMessage(print, 0.0);
     return sizeof(print);
 }
 size_t SerialOutput::print(float print)
@@ -99,16 +108,22 @@ size_t SerialOutput::print(float print)
 
     sprintf(buffer, "%lf", print);
     configPRINT_STRING((buffer));
+
+    prvPublishNextMessage(buffer, 0.0);
+
     vTaskDelay( 1);
+
     return sizeof(print);
 }
 //size_t SerialOutput::print(float, char);
 //size_t SerialOutput::print(float, float);
 
-void SerialOutput::println(const char *print)
+void SerialOutput::println(char *print)
 {
     configPRINT_STRING((print));
     configPRINT_STRING(("\r\n"));
+
+    prvPublishNextMessage(print, 0.0);
     vTaskDelay( 1);
 }
 
