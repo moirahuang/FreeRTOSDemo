@@ -57,7 +57,7 @@ public:
     void beginTransmission(uint8_t);
     void beginTransmission(int);
     uint8_t endTransmission(void);
-    uint8_t endTransmission(uint8_t);
+    uint8_t endTransmission(bool);
     uint8_t requestFrom(uint8_t, uint8_t);
     uint8_t requestFrom(uint8_t, uint8_t, uint8_t);
     uint8_t requestFrom(uint8_t, uint8_t, uint32_t, uint8_t, uint8_t);

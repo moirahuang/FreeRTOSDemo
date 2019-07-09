@@ -69,11 +69,6 @@ void Wire_begin()
     Wire.begin();
 }
 
-void Wire_end()
-{
-    Wire.end();
-}
-
 void Wire_setClock(uint32_t speed)
 {
     Wire.setClock(speed);
