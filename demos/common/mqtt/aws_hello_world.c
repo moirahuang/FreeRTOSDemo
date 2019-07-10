@@ -143,7 +143,7 @@ static BaseType_t prvCreateClientAndConnectToBroker( void );
  *
  * @param[in] xMessageNumber Appended to the message to make it unique.
  */
-void prvPublishNextMessage( char* message, double val );
+void prvPublishNextMessage( const char* message, double val );
 
 /**
  * @brief The callback registered with the MQTT client to get notified when
@@ -238,7 +238,7 @@ static BaseType_t prvCreateClientAndConnectToBroker( void )
 }
 /*-----------------------------------------------------------*/
 
-void prvPublishNextMessage( char* message, double val )
+void prvPublishNextMessage( const char* message, double val )
 {
     MQTTAgentPublishParams_t xPublishParameters;
     MQTTAgentReturnCode_t xReturned;

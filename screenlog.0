@@ -211,3 +211,1118 @@ Die Temperature: 25.34375073 27446 [Arduino Wir] Echo successfully published 'Di
 Object Temperature: 21.54395576 30364 [Arduino Wir] Echo successfully published 'Object Temperature: '
 77 30768 [Arduino Wir] Echo successfully published '21.543955'
 *C
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 467 [Tmr Svc] Wi-Fi module initialized.
+3 478 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 2812 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 2Adafruit TMP006 e813 [xamplTmr Svec] IP Address acquired
+ 192.168.1.73
+6 2815 [Tmr Svc] Security alert threshold = 15
+7 2816 [Tmr Svc] Current number of alerts = 0
+8 2816 [Tmr Svc] START OF PROGRAM9 2816 [Tmr Svc] Creating MQTT Echo Task...
+10 2816 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 4029 [Arduino Wir] ERROR:  Echo failed tSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!
+o publish 'Adafruit TMP006 example'
+Object Temperature: 12 4042 [Arduino Wir] 21.733007ERROR:  Echo failed to publi*C
+sh 'Send s to enter sleep mo'
+Die Temperature: 13 4047 [Arduino Wir] ERROR:25.468750  Echo failed to publish 'Ob*C
+ject Temperature: '
+14 4050 [Arduino Wir] ERROR:  Echo failed to publish '21.733007'
+15 4053 [Arduino Wir] ERROR:  Echo failed to publish '*C'
+16 4058 [Arduino Wir] ERROR:  Echo failed to publish 'Die Temperature: '
+17 4061 [Arduino Wir] ERROR:  Echo failed to publish '25.468750'
+18 4064 [Arduino Wir] ERROR:  Echo failed to publish '*C'
+19 4265 [MQTTEcho] MQTT echo connected.
+20 4269 [MQTTEcho] MQTT echo test echoing task created.
+21 4371 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+Object Temperature: 21.68546122 5271 [Arduino Wir] Echo successfully published 'Object Temperature: '
+23 6776 [Arduino Wir] Echo successfully published '21.685461'
+*C
+24 6885 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.46875025 6996 [Arduino Wir] Echo successfully published 'Die Temperature: '
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 2054 [Arduino Wir] ERROR:  Echo failed to pubSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!
+lish 'Adafruit TMP006 example'
+Object Temperature: 12 2068 [Arduino Wir] ERRO21.315933R:  Echo failed to publish '*C
+Send s to enter sleep mo'
+Die Temperature: 25.50000013 2073 [Arduino Wir] ER*C
+ROR:  Echo failed to publish 'Object Temperature: '
+14 2076 [Arduino Wir] ERROR:  Echo failed to publish '21.315933'
+15 2079 [Arduino Wir] ERROR:  Echo failed to publish '*C'
+16 2083 [Arduino Wir] ERROR:  Echo failed to publish 'Die Temperature: '
+17 2085 [Arduino Wir] ERROR:  Echo failed to publish '25.500000'
+18 2088 [Arduino Wir] ERROR:  Echo failed to publish '*C'
+19 2289 [MQTTEcho] MQTT echo connected.
+20 2293 [MQTTEcho] MQTT echo test echoing task created.
+21 2495 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+Object Temperature: 22.52572822 3295 [Arduino Wir] Echo successfully published 'Object Temperature: '
+23 3699 [Arduino Wir] Echo successfully published '22.525728'
+*C
+24 3808 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.50000025 4519 [Arduino Wir] Echo successfully published 'Die Temperature: '
+26 4924 [Arduino Wir] Echo successfully published '25.500000'
+*C
+27 5033 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 21.55430428 6545 [Arduino Wir] Echo successfully published 'Object Temperature: '
+29 6749 [Arduino W*Cir] Echo successful
+ly published '21.554304'
+30 7352 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.50000031 7463 [Arduino Wir] Echo successfully published 'Die Temperature: '
+32 7767 [Arduino Wir] Echo successfully published '25.500000'
+*C
+33 7876 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 21.83960034 9388 [Arduino Wir] Echo successfully published 'Object Temperature: '
+35 9592 [Arduino W*Cir] Echo successf
+ully published '21.839600'
+36 9998 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.50000037 10408 [Arduino Wir] Echo successfully published 'Die Temperature: '
+38 10712 [Arduino Wir] Echo successfully published '25.500000'
+*C
+39 10821 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 22.26602640 12533 [Arduino Wir] Echo successfully published 'Object Temperature: '
+41 12937 [Arduino Wir] Echo successfully published '22.266026'
+*C
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 474 [Tmr Svc] Wi-Fi module initialized.
+3 485 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 2812 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 281xampl3 [Tmre Svc] IP Address acquired 192.168.1.73
+6 2816 [Tmr Svc] Security alert threshold = 15
+7 2816 [Tmr Svc] Current number of alerts = 0
+8 2816 [Tmr Svc] START OF PROGRAM9 2816 [Tmr Svc] Creating MQTT Echo Task...
+10 2816 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 4071 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit TMP006 exa
+mple'
+12 4085 [Arduino Wir]Object Temperature:  ERROR:  Echo failed to pu0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmer Svc] IP Address acquired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 2011 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit TMP
+006 example'
+12 2024 [Arduino Wir] ERROR:  Echo failed to publish 'Send s to enter sleep mo'
+Object Temperature: 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1507 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmer Svc] IP Address acquired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 2023 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit TMP006 example'
+
+13 2036 [MQTTEcho] MQTT echo cObject Temperature: onnected.
+14 2036 [MQTTEcho] MQTT echo test echoing task created.
+12 2036 [Arduino Wir] ERROR:  Echo failed to publish 'Send s to enter sleep mo'
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 2003 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit TMP006 example'
+
+13 2016 [MQTTEcho] MQTT echo cObject Temperature: onnected.
+14 2016 [MQTTEcho] MQTT echo test echoing task created.
+12 2016 [Arduino Wir] ERROR:  Echo failed to publish 'Send s to enter sleep mo'
+15 2826 [MQTTEcho0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+2 32254 [Tmr Svc] 
+ sl_Start failed
+3 32255 [Tmr Svc] Wi-Fi module failed to initialize.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 474 [Tmr Svc] Wi-Fi module initialized.
+3 484 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 2812 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 28Adafruit TMP006 e13 [Txamplmr Svce] IP Address acquired 192.168.1.73
+
+6 2816 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 2816 [Tmr Svc] Current numbeObject Temperature: 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current numbeObject Temperature: r of alerts = 0
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmer Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] STARTObject Temperature:  OF PROGRAM0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+2 32255 [Tmr Svc] 
+ sl_Start failed
+3 32255 [Tmr Svc] Wi-Fi module failed to initialize.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 472 [Tmr Svc] Wi-Fi module initialized.
+3 483 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 2811 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5Adafruit TMP006 e 2812xampl [Tmr eSvc] IP Address acquired 192.168.1.73
+
+6 2815 [Tmr Svc] Security alert threshold = 15
+Send s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!7 2815 [Tmr Svc] Current number of a
+lerts = 0
+8 2815 [Tmr Svc] STObject Temperature: ART OF PROGRAM0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current number of Object Temperature: alerts = 0
+8 1510 [Tmr Svc] 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current number of Object Temperature: alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 473 [Tmr Svc] Wi-Fi module initialized.
+3 483 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 2811 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 281xampl2 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 2815 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 2815 [Tmr Svc] Current numbeObject Temperature: r of alerts = 0
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current numbeObject Temperature: r of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current numbeObject Temperature: r of alerts = 0
+8 1510 [Tmr Svc] 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current number of alerts = 0
+Object Temperature: 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current number of Object Temperature: alerts = 0
+8 1510 [Tmr Svc] 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Object Temperature: 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current number of Object Temperature: alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmer Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Object Temperature: 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current number of Object Temperature: alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+20*C11 1556 [Arduino Wi
+r] ERROR:  Echo failed Die Temperature: to publish '20'
+2412 1556 [MQTTEcho] MQTT echo connected.
+13 1557 [MQTTEcho] MQTT echo test echoing task created.
+14 1566 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/ech*Co
+15 1770 [Arduino Wir] Echo successfully published '24'
+
+Object Temperature: 1916 3077 [Arduino Wir] Echo successfully published '19'
+*C
+Die Temperature: 2417 3291 [Arduino Wir]*C Echo successfully published '24'
+
+Object Temperature: 2018 4799 [Arduino Wir] Echo successfully published '20'
+*C
+Die Temperature: 2419 5011 [Arduino Wir] Echo successfully published '24'
+*C
+Object Temperature: 2020 6224 [Arduino Wir] Echo successfully published '20'
+*C
+Die Temperature: 2421 6436 [Arduino Wir] Echo successfully published '24'
+*C
+Object Temperature: 2122 7649 [Arduino *CWir] Echo successfully published '21'
+
+Die Temperature: 2423 7861 [Arduino *CWir] Echo successfully published '24'
+
+Object Temperature: 2024 9575 [Arduino W*Cir] Echo successfully published '20'
+
+Die Temperature: 2425 10181 [Arduino Wir] Echo successfully published '24'
+*C
+Object Temperature: 2126 11994 [Arduino W*Cir] Echo successfully published '21'
+
+Die Temperature: 2427 12600 [Arduino Wir] Echo successfully published '24'
+*C
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 1959 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit TMP00
+6 example'
+12 1972 [Arduino Object Temperature: Wir] ERROR:  Echo failed to publish 'Send s to21 enter sleep mo'
+14 1979 [MQTTEcho] MQTT echo connected.
+15 1979 [MQTTEcho] MQTT echo test echoing task created.
+13 1979 [Arduino Wir] ERROR:  Echo failed to publish 'Object Temperature: '
+16 1982 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+*C17 2485 [Arduino Wir] Echo successfully published '21'
+
+18 2888 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 2419 3692 [Arduino Wir] Echo successfully published 'Die Temperature: '
+20 3895 [Arduino Wir] Echo successfully published '24'
+*C
+21 4004 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 2122 5412 [Arduino Wir] Echo successfully published 'Object Temperature: '
+23 6415 [Arduino Wir] Echo successfully published '21'
+*C
+24 6524 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 2425 7228 [Arduino Wir] Echo successfully published 'Die Temperature: '
+26 7431 [Arduino Wir] Echo successfully published '24'
+*C
+27 7540 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 2128 8850 [Arduino Wir] Echo successfully published 'Object Temperature: '
+29 9252 [Arduino Wir] Echo successfully published '21'
+*C
+30 9361 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 2431 9965 [Arduino Wir] Echo successfully published 'Die Temperature: '
+32 10268 [Arduino Wir] Echo successfully published '24'
+*C
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 15Adafruit TMP006 e07 [Txamplmr Svce] IP Address acquired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 2065 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit TMP006 
+example'
+12 2078 [Arduino WObject Temperature: ir] ERROR:  Echo failed to publish 'Send s to 19enter sleep mo'
+14 2086 [MQTTEcho] MQTT echo connected.
+15 2086 [MQTTEcho] MQTT echo test echoing task created.
+13 2086 [Arduino Wir] ERROR:  Echo failed to publish 'Object Temperature: '
+17 2191 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+16 2191 [Arduino Wir] Echo successfully published '19'
+*C
+Die Temperature: 18 2506 [Arduino Wir] Echo successfully published '*C'
+2419 3110 [Arduino Wir] Echo successfully published 'Die Temperature: '
+20 3313 [Arduino Wir] Echo successfully published '24'
+*C
+21 3422 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 1922 4730 [Arduino Wir] Echo successfully published 'Object Temperature: '
+23 4933 [Arduino *CWir] Echo successfully published '19'
+
+24 5142 [ArdDie Temperature: uino Wir] Echo successfully published '*C'
+2425 5846 [Arduino Wir] Echo successfully published 'Die Temperature: '
+26 6249 [Arduino Wir] Echo successfully published '24'
+*C
+27 6358 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 28 8061 [Arduino 20Wir] Echo successfully published 'Object Temperature: '
+29 8564 [Arduino Wir] Echo successfully published '20'
+*C
+30 8673 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 2431 9377 [Arduino Wir] Echo successfully published 'Die Temperature: '
+32 9780 [Arduino Wir] Echo successfully published '24'
+*C
+33 9889 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 2034 11801 [Arduino Wir] Echo successfully published 'Object Temperature: '
+35 12204 [Arduino Wir] Echo successfully published '20'
+*C
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 1980 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit
+ TMP006 example'
+Object Temperature: 12 1993 [Arduino Wir] ER-1073741824ROR:  Echo failed to publi*Csh 'Send s to enter sleep 
+mo'
+Die Temperature: 13 1999 [Arduino Wir] ERROR: 0 Echo failed to publish '*CObject Temperature: '
+
+14 2002 [Arduino Wir] ERROR:  Echo failed to publish '-1073741824'
+15 2005 [Arduino Wir] ERROR:  Echo failed to publish '*C'
+16 2010 [Arduino Wir] ERROR:  Echo failed to publish 'Die Temperature: '
+17 2012 [Arduino Wir] ERROR:  Echo failed to publish '0'
+18 2015 [Arduino Wir] ERROR:  Echo failed to publish '*C'
+19 2316 [MQTTEcho] MQTT echo connected.
+20 2320 [MQTTEcho] MQTT echo test echoing task created.
+Object Temperature: 107374182421 3122 [MQTTEcho] MQTT Echo demo subscribe*Cd to freertos/demos/echo
+22 3123 [Arduino Wir] Echo successfully published 'Object Temperature: '
+23 3227 [Arduino Wir] Echo successfully published '1073741824'
+
+24 3Die Temperature: 730 [Arduino Wir] Echo successfully published '*C'
+025 4334 [Arduino Wir] Echo successfully published 'Die Temperature: '
+26 4937 [Arduino Wir] Echo successfully published '0'
+*C
+27 5046 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 53687091228 6554 [Arduino Wir] Echo successfully published 'Object Temperature: '
+29 6759 [Arduino Wir] Echo successfully published '536870912'
+*C
+30 6968 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 031 7572 [Arduino Wir] Echo successfully published 'Die Temperature: '
+32 7875 [Arduino Wir] Echo successfully published '0'
+*C
+33 8184 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 161061273634 9492 [Arduino Wir] Echo successfully published 'Object Temperature: '
+35 9896 [Arduino Wir] Echo successfully published '1610612736'
+*C
+Die Temperature: 36 10299 [Arduino Wir] Echo successfully published '*C'
+037 10903 [Arduino Wir] Echo successfully published 'Die Temperature: '
+38 11308 [Arduino Wir] Echo successfully published '0'
+*C
+39 12717 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: -53687091240 13925 [Arduino Wir] Echo successfully published 'Object Temperature: '
+41 14529 [Arduino Wir] Echo successfully published '-536870912'
+*C
+42Die Temperature:  14939 [Arduino Wir] Echo successfully published '*C'
+043 15643 [Arduino Wir] Echo successfully published 'Die Temperature: '
+44 16046 [Arduino Wir] Echo successfully published '0'
+*C
+45 16155 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 53687091246 17463 [Arduino Wir] Echo successfully published 'Object Temperature: '
+47 17866 [Arduino Wir] Echo successfully published '536870912'
+*C
+48 18278 [ArduinoDie Temperature:  Wir] Echo successfully published '*C'
+049 18881 [Arduino Wir] Echo successfully published 'Die Temperature: '
+50 19284 [Arduino Wir] Echo successfully published '0'
+*C
+51 19393 [Arduino0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1516 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 151xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+6 1520 [Tmr Svc] Security alert threshold = 15
+7 1520 [Tmr Svc] Current number of alerts = 0
+8 1520 [Tmr Svc] START OF PROGRAM9 1520 [Tmr Svc] Creating MQTT Echo Task...
+10 1520 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 1974 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit
+ TMP006 example'
+Object Temperature: 12 1987 [Arduino Wir] ER-1073741824ROR:  Echo failed to publis*Ch 'Send s to enter sleep 
+mo'
+Die Temperature: 13 1993 [Arduino Wir] ERROR:  0Echo failed to publish 'O*Cbject Temperature: '
+
+14 1996 [Arduino Wir] ERROR:  Echo failed to publish '-1073741824'
+15 1999 [Arduino Wir] ERROR:  Echo failed to publish '*C'
+16 2004 [Arduino Wir] ERROR:  Echo failed to publish 'Die Temperature: '
+17 2006 [Arduino Wir] ERROR:  Echo failed to publish '0'
+18 2009 [Arduino Wir] ERROR:  Echo failed to publish '*C'
+19 2310 [MQTTEcho] MQTT echo connected.
+20 2314 [MQTTEcho] MQTT echo test echoing task created.
+21 2516 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+Object Temperature: -107374182422 3317 [Arduino Wir] Echo successfully published 'Object Temperature: '
+23 3720 [Arduino Wir] Echo successfully published '-1073741824'
+*C
+24 3830 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 025 4434 [Arduino Wir] Echo successfully published 'Die Temperature: '
+26 4737 [Arduino Wir] Echo successfully published '0'
+*C
+27 4846 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: -107374182428 6354 [Arduino Wir] Echo successfully published 'Object Temperature: '
+29 6559 [Arduino Wir] Echo successfully published '-1073741824'
+*C
+30 6669 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 031 7273 [Arduino Wir] Echo successfully published 'Die Temperature: '
+32 7576 [Arduino Wir] Echo successfully published '0'
+*C
+33 7685 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 34 9293 [Arduino 0Wir] Echo successfully published 'Object Temperature: '
+35 9596 [Arduino Wir] Echo successfully published '0'
+*C
+36 10204 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 37 11108 [Arduino0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 467 [Tmr Svc] Wi-Fi module initialized.
+3 478 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 2805 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 280xampl6 [Tmre Svc] IP Address acquired 192.168.1.73
+6 2809 [Tmr Svc] Security alert threshold = 15
+7 2809 [Tmr Svc] Current number of alerts = 0
+8 2809 [Tmr Svc] START OF PROGRAM9 2809 [Tmr Svc] Creating MQTT Echo Task...
+10 2809 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 4735 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit TMP006 
+example'
+12 4748 [Arduino WObject Temperature: ir] 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1507Adafruit TMP006  [Tmrexamp Svc] leIP Address acquired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 2640 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit TMP006 
+example'
+12 2653 [Arduino WObject Temperature: ir] ERROR:  Echo failed to publish 'Send s to -1610612736
+enter sleep mo'
+14 2661 [MQTTEcho] MQTT echo connected.
+15 2661 [MQTTEcho] MQTT echo test echoing task created.
+13 2661 [Arduino Wir] ERROR:  Echo failed to publish 'Object Temperature: '
+16 2665 [MQTTEcho] MQTT Echo demo subscrib*Ced to freertos/demos/echo
+17 2968 [Arduino Wir] Echo successfully published '-1610612736
+'
+
+Die Temperature: 18 3371 [Arduino Wir] Echo successfully published '*C'
+0
+19 3975 [Arduino Wir] Echo successfully published 'Die Temperature: '
+20 4379 [Arduino Wir] Echo successfully published '0
+'
+*C
+21 4488 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: -1610612736
+22 5895 [Arduino Wir] Echo successfully published 'Object Temperature: '
+23 6300 [Arduino Wir] Echo successfully published '-1610612736
+'
+*C
+Die Temperature: 24 7110 [Arduino Wir] Echo successfully published '*C'
+0
+25 7714 [Arduino Wir] Echo successfully published 'Die Temperature: '
+26 8319 [Arduino Wir*C] Echo successfully published '0
+'
+
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1507Adafruit TMP006  [Tmrexamp Svc] leIP Address acquired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 2049 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit TMP006
+ example'
+12 2062 [Arduino WObject Temperature: ir] ERROR:  Echo failed to publish 'Send s to536870912
+ enter sleep mo'
+14 2070 [MQTTEcho] MQTT echo connected.
+15 2070 [MQTTEcho] MQTT echo test echoing task created.
+13 2070 [Arduino Wir] ERROR:  Echo failed to publish 'Object Temperature: '
+16 2074 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+17 2876 [Arduino Wir] Echo successfully published '536870912
+'
+*C
+18 2986 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 0
+19 3690 [Arduino Wir] Echo successfully published 'Die Temperature: '
+20 3893 [Arduino Wir] Echo successfully published '0
+'
+*C
+21 4002 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 1610612736
+22 5310 [Arduino Wir] Echo successfully published 'Object Temperature: '
+23 5513 [Arduino *CWir] Echo successfully published '1610612736
+'
+
+24 5723 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 0
+25 5935 [Arduino Wir] Echo successfully published 'Die Temperature: '
+26 6238 [Arduino Wir] Echo successfully published '0
+'
+*C
+27 6347 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1507 Adafruit TMP006[Tmr  examSvc] IpleP Address acquired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 3281 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit TMP006 e
+xample'
+12 3294 [Arduino WiObject Temperature: r] ERROR:  Echo failed to publish 'Send s to -1073741824
+enter sleep mo'
+14 3302 [MQTTEcho] MQTT echo connected.
+15 3302 [MQTTEcho] MQTT echo test echoing task created.
+13 3302 [Arduino Wir] ERROR:  Echo failed to publish 'Object Temperature: '
+16 3306 [MQTTEcho] MQTT Echo demo subscrib*Ced to freertos/demos/echo
+17 3609 [Arduino Wir] Echo successfully published '-1073741824
+'
+
+18 3912 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 0
+19 4616 [Arduino Wir] Echo successfully published 'Die Temperature: '
+20 5220 [Arduino Wir] Echo successfully published '0
+'
+*C
+21 5329 [Arduino Wir] Echo successfully published '*C'
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+
+11 1941 [Arduino Wir] ERROR:  Echo failSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ed to publish 'Adafruit TMP006 exa
+mple'
+12 1955 [Arduino Wir]Object Temperature:  ERROR:  Echo failed to publish 'Send s to ent20.9940299988
+er sleep mo'
+14 1963 [MQTTEcho] MQTT echo connected.
+15 1963 [MQTTEcho] MQTT echo test echoing task created.
+13 1963 [Arduino Wir] ERROR:  Echo failed to publish 'Object Temperature: '
+16 1968 [MQTTEcho] MQTT Echo demo subscribe*Cd to freertos/demos/echo
+17 2269 [Arduino Wir] Echo successfully published '20.9940299988
+'
+
+18 2672 [ADie Temperature: rduino Wir] Echo successfully published '*C'
+25.4062500000
+19 4076 [Arduino Wir] Echo successfully published 'Die Temperature: '
+20 4281 [Arduino Wir] Echo successfully published '25.4062500000
+'
+*C
+21 4391 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 22 6499 [Arduino 21.1020317078
+Wir] Echo successfully published 'Object Temperature: '
+23 6905 [Arduino Wir] Echo successfully published '21.1020317078
+'
+*C
+24 7015 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.4062500000
+25 7527 [Arduino Wir] Echo successfully published 'Die Temperature: '
+26 7932 [Arduino Wir] Echo successfully published '25.4062500000
+'
+*C
+27 8042 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 28 9349 [Arduino 20.8262596130
+Wir] Echo successfully published 'Object Temperature: '
+29 9755 [Arduino Wir] Echo successfully published '20.8262596130
+'
+*C
+30 9865 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 31 10769 [Arduino25.4062500000
+ Wir] Echo successfully published 'Die Temperature: '
+32 11875 [Arduino Wir] Echo successfully published '25.4062500000
+'
+*C
+33 11985 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 34 13298 [Arduino21.0658454895
+ Wir] Echo successfully published 'Object Temperature: '
+35 13604 [Arduino Wir] Echo successfully published '21.0658454895
+'
+*C
+36 13714 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.4062500000
+37 13926 [Arduino Wir] Echo successfully published 'Die Temperature: '
+38 14631 [Arduino Wir] Echo successfully published '25.4062500000
+'
+*C
+39 14741 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 40 16249 [Arduino21.3048553467
+ Wir] Echo successfully published 'Object Temperature: '
+41 16555 [Arduino Wir] Echo successfully published '21.3048553467
+'
+*C
+42 16665 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.4062500000
+43 16877 [Arduino Wir] Echo successfully published 'Die Temperature: '
+44 17082 [Arduino *CWir] Echo successfully published '25.4062500000
+'
+
+45 17292 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 46 18905 [Arduino20.8022708893
+ Wir] Echo successfully published 'Object Temperature: '
+47 19210 [Arduino Wir] Echo successfully published '20.8022708893
+'
+*C
+48 19320 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 49 19824 [Arduino Wir] Echo successfully published 'Die Temperature: '
+25.4062500000
+50 20335 [Arduino*C Wir] Echo successfully published '25.4062500000
+'
+
+51 20545 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 52 21853 [Arduino Wir] Echo successfully published 'Object Temperature: '
+21.8171386719
+53 22065 [Arduino Wir] Echo successfully published '21.8171386719
+'
+*C
+54 22175 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 55 23380 [Arduino25.3750000000
+ Wir] Echo successfully published 'Die Temperature: '
+56 24386 [Arduino Wir] Echo successfully published '25.3750000000
+'
+*C
+57 24496 [Arduino Wir] Echo successfully published '*C'
+Object Temperature: 22.9038105011
+58 26004 [Arduino Wir] Echo successfully published 'Object Temperature: '
+59 26408 [Arduino Wir] Echo successfully published '22.9038105011
+'
+*C
+60 26518 [Arduino Wir] Echo successfully published '*C'
+Die Temperature: 25.3750000000
+61 27222 [Arduino Wir] Echo successfully published 'Die Temperature: '
+62 27627 [Arduino Wir] Echo successfully published '25.3750000000
+'
+*C
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current numbeObject Temperature: r of alerts = 0
+21.0302391052
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+*C
+11 2190 [Arduino Wir]Die Temperature:  ERROR:  Echo failed to publ25.3750000000
+ish 'Object Temperat*Cure:  '21'
+
+12 2202 [Arduino Wir] ERROR:  Echo failed to publish 'Die Temperature:  '25.37'
+13 2403 [MQTTEcho] MQTT echo connected.
+14 2407 [MQTTEcho] MQTT echo test echoing task created.
+15 2509 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+Object Temperature: 21.3648319244
+*C
+16 3611 [Arduino Wir] Echo successfully published 'Object Temperature:  '21'
+Die Temperature: 25.3750000000
+*C
+17 3727 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.37'
+Object Temperature: 21.0781059265
+*C
+18 4837 [Arduino Wir] Echo successfully published 'Object Temperature:  '21'
+Die Temperature: 25.3750000000
+*C
+19 6053 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.37'
+Object Temperature: 22.9394626617
+*C
+20 7563 [Arduino Wir] Echo successfully published 'Object Temperature:  '22'
+Die Temperature: 25.3437500000
+*C
+21 7679 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.34'
+Object Temperature: 20.8268394470
+*C
+22 8989 [Arduino Wir] Echo successfully published 'Object Temperature:  '20'
+Die Temperature: 25.3437500000
+*C
+23 9596 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.34'
+Object Temperature: 21.8531150818
+*C
+24 10806 [Arduino Wir] Echo successfully published 'Object Temperature:  '21'
+Die Temperature: 25.3437500000
+*C
+25 11822 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.34'
+Object Temperature: 20.9227523804
+*C
+26 13632 [Arduino Wir] Echo successfully published 'Object Temperature:  '20'
+Die Temperature: 25.3437500000
+*C
+27 13748 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.34'
+Object Temperature: 21.1621341705
+*C
+28 14858 [Arduino Wir] Echo successfully published 'Object Temperature:  '21'
+Die Temperature: 25.3437500000
+*C
+29 15074 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.34'
+Object Temperature: 21.5439548492
+*C
+Die Temperature: 30 16584 [Arduino Wir] Echo successfully published 'Object Temperature:  '21'
+25.3437500000
+*C
+31 17191 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.34'
+Object Temperature: 20.7788467407
+*C
+32 18401 [Arduino Wir] Echo successfully published 'Object Temperature:  '20'
+Die Temperature: 25.3437500000
+*C
+33 18817 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.34'
+Object Temperature: 21.2816104889
+*C
+34 20627 [Arduino Wir] Echo successfully published 'Object Temperature:  '21'
+Die Temperature: 25.3437500000
+*C
+35 20743 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.34'
+Object Temperature: 20.9104690552
+*C
+36 22550 [Arduino Wir] Echo successfully published 'Object Temperature:  '20'
+Die Temperature: 25.3750000000
+*C
+37 23057 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.37'
+Object Temperature: 20.8864974976
+*C
+38 24764 [Arduino Wir] Echo successfully published 'Object Temperature:  '20'
+Die Temperature: 25.3750000000
+*C
+39 25371 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.37'
+Object Temperature: 22.1254386902
+*C
+40 26781 [Arduino Wir] Echo successfully published 'Object Temperature:  '22'
+Die Temperature: 25.3750000000
+*C
+41 27588 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.37'
+Object Temperature: 21.6507377625
+*C
+42 29295 [Arduino Wir] Echo successfully published 'Object Temperature:  '21'
+Die Temperature: 25.3750000000
+*C
+43 29902 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.37'
+Object Temperature: 21.7220859528
+*C
+44 31111 [Arduino Wir] Echo successfully published 'Object Temperature:  '21'
+Die Temperature: 25.3750000000
+*C
+45 31718 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.37'
+Object Temperature: 22.1491146088
+*C
+46 33141 [Arduino Wir] Echo successfully published 'Object Temperature:  '22'
+Die Temperature: 25.3750000000
+*C
+47 33257 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.37'
+Object Temperature: 21.1259517670
+*C
+48 35164 [Arduino Wir] Echo successfully published 'Object Temperature:  '21'
+Die Temperature: 25.3750000000
+*C
+49 35280 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.37'
+Object Temperature: 21.1498641968
+*C

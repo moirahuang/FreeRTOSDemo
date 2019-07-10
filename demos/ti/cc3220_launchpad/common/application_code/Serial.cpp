@@ -5,7 +5,8 @@
  *      Author: huanmoir
  */
 
-extern "C"{
+extern "C"
+{
 #include <stdlib.h>
 #include <stdio.h>
 #include "iot_i2c.h"
@@ -19,17 +20,20 @@ extern "C"{
 #include "uart_term.h"
 #include "aws_hello_world.h"
 #include <stddef.h>
+#include <string.h>
 // Import I2C Driver definitions
 #include <ti/drivers/I2C.h>
 #include "WireAdaptor.h"
+#define _OPEN_SYS_ITOA_EXT
+#include <stdio.h>
+#include <stdlib.h>
 }
 #include "Serial.h"
 UART_Handle uartHandle;
 
-extern void vStartMQTTEchoDemo( void );
+extern void vStartMQTTEchoDemo(void);
 SerialOutput::SerialOutput()
 {
-
 }
 
 //    bool if(SerialOutput);
@@ -46,12 +50,10 @@ int SerialOutput::availableForWrite()
 
 void SerialOutput::begin(unsigned long baud, SerialConfig config)
 {
-
 }
 
 void SerialOutput::end()
 {
-
 }
 
 bool SerialOutput::find(char)
@@ -70,7 +72,6 @@ bool SerialOutput::findUntil(char, char)
 
 void SerialOutput::flush()
 {
-
 }
 
 float SerialOutput::parseFloat()
@@ -93,40 +94,152 @@ int SerialOutput::peek()
     //documentation said return -1 if no data available
     return -1;
 }
-
-size_t SerialOutput::print(char *print)
+size_t SerialOutput::print(const char str[])
 {
-    configPRINT_STRING((print));
-    vTaskDelay( 1);
+    configPRINT_STRING((str));
 
-    prvPublishNextMessage(print, 0.0);
-    return sizeof(print);
+    vTaskDelay(1);
+    return sizeof(str);
 }
-size_t SerialOutput::print(float print)
-{
-    char buffer[100];
 
-    sprintf(buffer, "%lf", print);
+size_t SerialOutput::print(char c)
+{
+    char buf[2] = {0};
+    buf[0] = c;
+    configPRINT_STRING((buf));
+    vTaskDelay(1);
+
+    return sizeof(c);
+}
+
+size_t SerialOutput::print(unsigned char b, int base)
+{
+  return print((unsigned long) b, base);
+}
+
+size_t SerialOutput::print(int n, int base)
+{
+  return print((long) n, base);
+}
+
+size_t SerialOutput::print(unsigned int n, int base)
+{
+  return print((unsigned long) n, base);
+}
+
+size_t SerialOutput::print(long n, int base)
+{
+    char buffer [sizeof(long)*8+1] = {0};
+    if (base == 10)
+    {
+        sprintf(buffer, "%d\n", n);
+    }
+    else if (base == 8)
+    {
+        sprintf(buffer, "%o\n", n);
+    }
+    else if (base == 16)
+    {
+        sprintf(buffer, "%x\n", n);
+    }
+    else
+    {
+        sprintf("unsupported conversion", "%lf", n);
+    }
     configPRINT_STRING((buffer));
 
-    prvPublishNextMessage(buffer, 0.0);
 
-    vTaskDelay( 1);
+    vTaskDelay(1);
 
-    return sizeof(print);
+    return sizeof(n);
 }
-//size_t SerialOutput::print(float, char);
-//size_t SerialOutput::print(float, float);
 
-void SerialOutput::println(char *print)
+size_t SerialOutput::print(unsigned long n, int base)
 {
-    configPRINT_STRING((print));
-    configPRINT_STRING(("\r\n"));
-
-    prvPublishNextMessage(print, 0.0);
-    vTaskDelay( 1);
+    return print((long) n, base);
 }
 
+size_t SerialOutput::print(double n, int base)
+{
+    return print((long) n, base);
+}
+size_t SerialOutput::print(float n, int base)
+{
+    char buffer [sizeof(float)*8+1] = {0};
+    char digit[2];
+    sprintf(digit, "%d", base);
+    char command[] = "%0.";
+    strcat(command, digit);
+    strcat(command, "f\n");
+
+    sprintf(buffer, command, n);
+
+    configPRINT_STRING((buffer));
+
+    vTaskDelay(1);
+
+    return sizeof(n);
+}
+size_t SerialOutput::println(void)
+{
+    configPRINT_STRING(("\r\n"));
+    return 0;
+}
+size_t SerialOutput::println(const char c[])
+{
+  size_t n = print(c);
+  n += println();
+  return n;
+}
+
+size_t SerialOutput::println(char c)
+{
+  size_t n = print(c);
+  n += println();
+  return n;
+}
+
+size_t SerialOutput::println(unsigned char b, int base)
+{
+  size_t n = print(b, base);
+  n += println();
+  return n;
+}
+
+size_t SerialOutput::println(int num, int base)
+{
+  size_t n = print(num, base);
+  n += println();
+  return n;
+}
+
+size_t SerialOutput::println(unsigned int num, int base)
+{
+  size_t n = print(num, base);
+  n += println();
+  return n;
+}
+
+size_t SerialOutput::println(float num, int base)
+{
+  size_t n = print(num, base);
+  n += println();
+  return n;
+}
+
+size_t SerialOutput::println(unsigned long num, int base)
+{
+  size_t n = print(num, base);
+  n += println();
+  return n;
+}
+
+size_t SerialOutput::println(double num, int digits)
+{
+  size_t n = print(num, digits);
+  n += println();
+  return n;
+}
 int SerialOutput::read()
 {
     return -1;
@@ -158,7 +271,6 @@ char SerialOutput::readStringUntil(char)
 
 void SerialOutput::setTiemout(long)
 {
-
 }
 
 size_t SerialOutput::write(int)
@@ -176,9 +288,4 @@ size_t SerialOutput::write(char, int)
 
 void serialEvent()
 {
-
 }
-
-
-
-

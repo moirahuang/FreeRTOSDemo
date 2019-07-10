@@ -34,8 +34,10 @@ bool Adafruit_TMP006::begin(uint8_t samplerate)
     mid = read16(TMP006_MANID);
     did = read16(TMP006_DEVID);
 #ifdef TMP006_DEBUG
-    Serial.print("mid = 0x"); Serial.println(mid, HEX);
-    Serial.print("did = 0x"); Serial.println(did, HEX);
+    Serial.print("mid = 0x");
+    Serial.println(mid, HEX);
+    Serial.print("did = 0x");
+    Serial.println(did, HEX);
 #endif
     if (mid != 0x5449)
         return false;
@@ -67,7 +69,9 @@ double Adafruit_TMP006::readDieTempC(void)
     double Tdie = readRawDieTemperature();
     Tdie *= 0.03125; // convert to celsius
 #ifdef TMP006_DEBUG
-            Serial.print("Tdie = "); Serial.print(Tdie); Serial.println(" C");
+    Serial.print("Tdie = ");
+    Serial.print(Tdie);
+    Serial.println(" C");
 #endif
     return Tdie;
 }
@@ -77,26 +81,30 @@ double Adafruit_TMP006::readObjTempC(void)
     double Tdie = readRawDieTemperature();
     double Vobj = readRawVoltage();
     Vobj *= 156.25;  // 156.25 nV per LSB
-    Vobj /= 1000; // nV -> uV
-    Vobj /= 1000; // uV -> mV
-    Vobj /= 1000; // mV -> V
+    Vobj /= 1000;    // nV -> uV
+    Vobj /= 1000;    // uV -> mV
+    Vobj /= 1000;    // mV -> V
     Tdie *= 0.03125; // convert to celsius
-    Tdie += 273.15; // convert to kelvin
+    Tdie += 273.15;  // convert to kelvin
 
 #ifdef TMP006_DEBUG
-    Serial.print("Vobj = "); Serial.print(Vobj * 1000000); Serial.println("uV");
-    Serial.print("Tdie = "); Serial.print(Tdie); Serial.println(" C");
+    Serial.print("Vobj = ");
+    Serial.print(Vobj * 1000000);
+    Serial.println("uV");
+    Serial.print("Tdie = ");
+    Serial.print(Tdie);
+    Serial.println(" C");
 #endif
 
     double tdie_tref = Tdie - TMP006_TREF;
     double S = (1 + TMP006_A1 * tdie_tref +
-    TMP006_A2 * tdie_tref * tdie_tref);
+                TMP006_A2 * tdie_tref * tdie_tref);
     S *= TMP006_S0;
     S /= 10000000;
     S /= 10000000;
 
     double Vos = TMP006_B0 + TMP006_B1 * tdie_tref +
-    TMP006_B2 * tdie_tref * tdie_tref;
+                 TMP006_B2 * tdie_tref * tdie_tref;
 
     double fVobj = (Vobj - Vos) + TMP006_C2 * (Vobj - Vos) * (Vobj - Vos);
 
@@ -116,11 +124,14 @@ int16_t Adafruit_TMP006::readRawDieTemperature(void)
     raw = TESTDIE;
 #endif
 
-    Serial.print("Raw Tambient: 0x"); Serial.print (raw, HEX);
+    Serial.print("Raw Tambient: 0x");
+    Serial.print(raw, HEX);
 
-    float v = raw/4;
+    float v = raw / 4;
     v *= 0.03125;
-    Serial.print(" ("); Serial.print(v); Serial.println(" *C)");
+    Serial.print(" (");
+    Serial.print(v);
+    Serial.println(" *C)");
 #endif
     raw >>= 2;
     return raw;
@@ -138,11 +149,14 @@ int16_t Adafruit_TMP006::readRawVoltage(void)
     raw = TESTVOLT;
 #endif
 
-    Serial.print("Raw voltage: 0x"); Serial.print (raw, HEX);
+    Serial.print("Raw voltage: 0x");
+    Serial.print(raw, HEX);
     float v = raw;
     v *= 156.25;
     v /= 1000;
-    Serial.print(" ("); Serial.print(v); Serial.println(" uV)");
+    Serial.print(" (");
+    Serial.print(v);
+    Serial.println(" uV)");
 #endif
     return raw;
 }
@@ -153,24 +167,24 @@ uint16_t Adafruit_TMP006::read16(uint8_t a)
 {
     uint16_t ret;
 
-    Wire.beginTransmission(_addr); // start transmission to device 
+    Wire.beginTransmission(_addr); // start transmission to device
 #if (ARDUINO >= 100)
     Wire.write(a); // reads register address to read from
 #else
-            Wire.read(a); // reads register address to read from
+    Wire.read(a);       // reads register address to read from
 #endif
     Wire.endTransmission(); // end transmission
 
-    Wire.beginTransmission(_addr); // start transmission to device 
-    Wire.requestFrom(_addr, (uint8_t) 2); // read data n-bytes read
+    Wire.beginTransmission(_addr);       // start transmission to device
+    Wire.requestFrom(_addr, (uint8_t)2); // read data n-bytes read
 #if (ARDUINO >= 100)
     ret = Wire.read(); // write DATA
     ret <<= 8;
     ret |= Wire.read(); // write DATA
 #else
-            ret = Wire.write(); // write DATA
-            ret <<= 8;
-            ret |= Wire.write();// write DATA
+    ret = Wire.write(); // write DATA
+    ret <<= 8;
+    ret |= Wire.write(); // write DATA
 #endif
     Wire.endTransmission(); // end transmission
 
@@ -179,16 +193,15 @@ uint16_t Adafruit_TMP006::read16(uint8_t a)
 
 void Adafruit_TMP006::write16(uint8_t a, uint16_t d)
 {
-    Wire.beginTransmission(_addr); // start transmission to device 
+    Wire.beginTransmission(_addr); // start transmission to device
 #if (ARDUINO >= 100)
-    Wire.write(a); // reads register address to read from
-    Wire.write(d >> 8);  // write data
-    Wire.write(d);  // write data
+    Wire.write(a);      // reads register address to read from
+    Wire.write(d >> 8); // write data
+    Wire.write(d);      // write data
 #else
-            Wire.read(a); // reads register address to read from
-            Wire.read(d>>8);// write data
-            Wire.read(d);// write data
+    Wire.read(a);        // reads register address to read from
+    Wire.read(d >> 8);   // write data
+    Wire.read(d);        // write data
 #endif
     Wire.endTransmission(); // end transmission
 }
-

@@ -18,8 +18,14 @@
 
  Modified 2012 by Todd Krein (todd@krein.org) to implement repeated starts
  */
+#define DEC 10
+#define HEX 16
+#define OCT 8
+#define BIN 2
+
 #include "uart.h"
-enum SerialConfig {
+enum SerialConfig
+{
     SERIAL_5N1 = UART_5N1,
     SERIAL_6N1 = UART_6N1,
     SERIAL_7N1 = UART_7N1,
@@ -45,7 +51,8 @@ enum SerialConfig {
     SERIAL_7O2 = UART_7O2,
     SERIAL_8O2 = UART_8O2,
 };
-enum SerialMode {
+enum SerialMode
+{
     SERIAL_FULL = UART_FULL,
     SERIAL_RX_ONLY = UART_RX_ONLY,
     SERIAL_TX_ONLY = UART_TX_ONLY
@@ -55,7 +62,7 @@ class SerialOutput
 public:
     SerialOutput();
 
-//    bool if(SerialOutput);
+    //    bool if(SerialOutput);
 
     int available();
 
@@ -77,29 +84,49 @@ public:
     void flush();
 
     float parseFloat();
-//    float parseFloat(LookaheadMode);
-//    float parseFloat(LookaheadMode, char);
+    //    float parseFloat(LookaheadMode);
+    //    float parseFloat(LookaheadMode, char);
 
     long parseInt();
-//    long parseInt(LookaheadMode);
-//    long parseInt(LookaheadMode, char);
+    //    long parseInt(LookaheadMode);
+    //    long parseInt(LookaheadMode, char);
 
     int peek();
 
-    size_t print(char *);
-    size_t print(float);
-    size_t print(float, char);
-    size_t print(float, float);
+    //    size_t print(const __FlashStringHelper *);
+    //    size_t print(const String &);
+    size_t print(const char[]);
+    size_t print(char);
+    size_t print(unsigned char, int = DEC);
+    size_t print(int, int = DEC);
+    size_t print(unsigned int, int = DEC);
+    size_t print(long, int = DEC);
+    size_t print(unsigned long, int = DEC);
+    size_t print(double, int = DEC);
+    size_t print(float, int = DEC);
+    //    size_t print(const Printable&);
 
-    void println(char *);
+    //    size_t println(const __FlashStringHelper *);
+    //    size_t println(const String &s);
+    size_t println(const char[]);
+    size_t println(char);
+    size_t println(unsigned char, int = DEC);
+    size_t println(int, int = DEC);
+    size_t println(unsigned int, int = DEC);
+    size_t println(long, int = DEC);
+    size_t println(unsigned long, int = DEC);
+    size_t println(double, int = DEC);
+    size_t println(float, int = DEC);
+    //    size_t println(const Printable&);
+    size_t println(void);
 
     int read();
 
     size_t readBytes(char[], int);
-//    size_t readBytes(byte[], int);
+    //    size_t readBytes(byte[], int);
 
     size_t readBytesUntil(char, char, int);
-//    size_t readBytesUntil(char, byte, int);
+    //    size_t readBytesUntil(char, byte, int);
 
     char readString();
 
@@ -115,5 +142,3 @@ public:
 };
 
 extern SerialOutput Serial;
-
-

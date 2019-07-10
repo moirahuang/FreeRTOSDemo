@@ -77,11 +77,11 @@ void SensorsLoop( void * context )
 //    int i = 0;
 //    for ( i = 0; i < 2 ; i++ )
 //    {
-        int reqFrmVal = Wire_requestFrom( 0x41, 2 );
-        int upper = Wire_read();
-        int lower = Wire_read();
-        int val = ((upper << 8) + lower) >> 2;
-        prvPublishNextMessage("Read value '%lf'\r\n", val/32.0);
+//        int reqFrmVal = Wire_requestFrom( 0x41, 2 );
+//        int upper = Wire_read();
+//        int lower = Wire_read();
+//        int val = ((upper << 8) + lower) >> 2;
+//        prvPublishNextMessage("Read value '%lf'\r\n", val/32.0);
 //        configPRINTF(("Read value '%lf'\r\n", val/32.0));
 //
 //        vTaskDelay( 1000 );

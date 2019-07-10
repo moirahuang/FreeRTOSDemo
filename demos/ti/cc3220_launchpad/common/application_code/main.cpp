@@ -72,34 +72,35 @@ extern "C"
 #include "aws_application_version.h"
 }
 /* Declare the firmware version structure for all to see. */
-const AppVersion32_t xAppFirmwareVersion = { .u.x.ucMajor = APP_VERSION_MAJOR,
-                                             .u.x.ucMinor = APP_VERSION_MINOR,
-                                             .u.x.usBuild = APP_VERSION_BUILD, };
+const AppVersion32_t xAppFirmwareVersion = {
+    .u.x.ucMajor = APP_VERSION_MAJOR,
+    .u.x.ucMinor = APP_VERSION_MINOR,
+    .u.x.usBuild = APP_VERSION_BUILD,
+};
 
 /* The length of the logging task's queue to hold messages. */
-#define mainLOGGING_MESSAGE_QUEUE_LENGTH    ( 15 )
+#define mainLOGGING_MESSAGE_QUEUE_LENGTH (15)
 
 /* The task delay for allowing the lower priority logging task to print out Wi-Fi
  * failure status before blocking indefinitely. */
-#define mainLOGGING_WIFI_STATUS_DELAY       pdMS_TO_TICKS( 1000 )
+#define mainLOGGING_WIFI_STATUS_DELAY pdMS_TO_TICKS(1000)
 extern "C"
 {
-void vApplicationDaemonTaskStartupHook(void);
-static void prvWifiConnect(void);
-static CK_RV prvProvisionRootCA(void);
-static void prvShowTiCc3220SecurityAlertCounts(void);
-void vApplicationGetIdleTaskMemory(StaticTask_t ** ppxIdleTaskTCBBuffer,
-                                   StackType_t ** ppxIdleTaskStackBuffer,
-                                   uint32_t * pulIdleTaskStackSize);
-void vApplicationGetIdleTaskMemory(StaticTask_t ** ppxIdleTaskTCBBuffer,
-                                   StackType_t ** ppxIdleTaskStackBuffer,
-                                   uint32_t * pulIdleTaskStackSize);
-void vApplicationGetTimerTaskMemory(StaticTask_t ** ppxTimerTaskTCBBuffer,
-                                    StackType_t ** ppxTimerTaskStackBuffer,
-                                    uint32_t * pulTimerTaskStackSize);
-void vApplicationStackOverflowHook(TaskHandle_t xTask, char * pcTaskName);
-void vApplicationMallocFailedHook();
-
+    void vApplicationDaemonTaskStartupHook(void);
+    static void prvWifiConnect(void);
+    static CK_RV prvProvisionRootCA(void);
+    static void prvShowTiCc3220SecurityAlertCounts(void);
+    void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer,
+                                       StackType_t **ppxIdleTaskStackBuffer,
+                                       uint32_t *pulIdleTaskStackSize);
+    void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer,
+                                       StackType_t **ppxIdleTaskStackBuffer,
+                                       uint32_t *pulIdleTaskStackSize);
+    void vApplicationGetTimerTaskMemory(StaticTask_t **ppxTimerTaskTCBBuffer,
+                                        StackType_t **ppxTimerTaskStackBuffer,
+                                        uint32_t *pulTimerTaskStackSize);
+    void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName);
+    void vApplicationMallocFailedHook();
 }
 
 /**
@@ -116,13 +117,13 @@ int main(void)
 {
     /* Call board init functions. */
     Board_initGeneral();
-//
-//        /* Start logging task. */
-    xLoggingTaskInitialize( democonfigTASKSTACKSIZE,
-    tskIDLE_PRIORITY,
+    //
+    //        /* Start logging task. */
+    xLoggingTaskInitialize(democonfigTASKSTACKSIZE,
+                           tskIDLE_PRIORITY,
                            mainLOGGING_MESSAGE_QUEUE_LENGTH);
-//
-//        /* Start the FreeRTOS scheduler. */
+    //
+    //        /* Start the FreeRTOS scheduler. */
     vTaskStartScheduler();
 
     return (0);
@@ -150,7 +151,7 @@ void vApplicationDaemonTaskStartupHook(void)
     xtUartHndl = InitTerm();
     UART_control(xtUartHndl, UART_CMD_RXDISABLE, NULL);
 
-    configPRINTF(( "Starting Wi-Fi Module ...\r\n" ));
+    configPRINTF(("Starting Wi-Fi Module ...\r\n"));
 
     /* Initialize Wi-Fi module. This is called before key provisioning because
      * initializing the Wi-Fi module also initializes the CC3220SF's file system. */
@@ -158,14 +159,14 @@ void vApplicationDaemonTaskStartupHook(void)
 
     if (xWifiStatus == eWiFiSuccess)
     {
-        configPRINTF(( "Wi-Fi module initialized.\r\n" ));
+        configPRINTF(("Wi-Fi module initialized.\r\n"));
     }
     else
     {
-        configPRINTF(( "Wi-Fi module failed to initialize.\r\n" ));
+        configPRINTF(("Wi-Fi module failed to initialize.\r\n"));
 
         /* Delay to allow the lower priority logging task to print the above status. */
-        vTaskDelay( mainLOGGING_WIFI_STATUS_DELAY);
+        vTaskDelay(mainLOGGING_WIFI_STATUS_DELAY);
 
         while (1)
         {
@@ -176,8 +177,8 @@ void vApplicationDaemonTaskStartupHook(void)
      * flash using PKCS#11 interface. This should be replaced
      * by production ready key provisioning mechanism. This function must be called after
      * initializing the TI File System using WIFI_On. */
-//        vDevModeKeyProvisioning();
-//
+    //        vDevModeKeyProvisioning();
+    //
     prvProvisionRootCA();
 
     /* Initialize the AWS Libraries system. */
@@ -192,7 +193,6 @@ void vApplicationDaemonTaskStartupHook(void)
         prvShowTiCc3220SecurityAlertCounts();
         configPRINTF(("START OF PROGRAM"));
         DEMO_RUNNER_RunDemos();
-
     }
 }
 
@@ -204,7 +204,7 @@ void vApplicationDaemonTaskStartupHook(void)
  */
 CK_RV prvProvisionRootCA(void)
 {
-    uint8_t * pucRootCA = NULL;
+    uint8_t *pucRootCA = NULL;
     uint32_t ulRootCALength = 0;
     CK_RV xResult = CKR_OK;
     CK_FUNCTION_LIST_PTR xFunctionList;
@@ -216,12 +216,12 @@ CK_RV prvProvisionRootCA(void)
      * depending on whether this is an ATS endpoint. */
     if (strstr(clientcredentialMQTT_BROKER_ENDPOINT, "-ats.iot") == NULL)
     {
-        pucRootCA = (uint8_t *) tlsVERISIGN_ROOT_CERTIFICATE_PEM;
+        pucRootCA = (uint8_t *)tlsVERISIGN_ROOT_CERTIFICATE_PEM;
         ulRootCALength = tlsVERISIGN_ROOT_CERTIFICATE_LENGTH;
     }
     else
     {
-        pucRootCA = (uint8_t *) tlsSTARFIELD_ROOT_CERTIFICATE_PEM;
+        pucRootCA = (uint8_t *)tlsSTARFIELD_ROOT_CERTIFICATE_PEM;
         ulRootCALength = tlsSTARFIELD_ROOT_CERTIFICATE_LENGTH;
     }
 
@@ -230,9 +230,9 @@ CK_RV prvProvisionRootCA(void)
     if (xResult == CKR_OK)
     {
         xResult = xProvisionCertificate(
-                xSessionHandle, pucRootCA, ulRootCALength,
-                (uint8_t*) pkcs11configLABEL_ROOT_CERTIFICATE,
-                &xCertificateHandle);
+            xSessionHandle, pucRootCA, ulRootCALength,
+            (uint8_t *)pkcs11configLABEL_ROOT_CERTIFICATE,
+            &xCertificateHandle);
     }
 
     return xResult;
@@ -252,9 +252,9 @@ static void prvWifiConnect(void)
 
     /* Initialize Network params. */
     xNetworkParams.pcSSID = clientcredentialWIFI_SSID;
-    xNetworkParams.ucSSIDLength = sizeof( clientcredentialWIFI_SSID);
+    xNetworkParams.ucSSIDLength = sizeof(clientcredentialWIFI_SSID);
     xNetworkParams.pcPassword = clientcredentialWIFI_PASSWORD;
-    xNetworkParams.ucPasswordLength = sizeof( clientcredentialWIFI_PASSWORD);
+    xNetworkParams.ucPasswordLength = sizeof(clientcredentialWIFI_PASSWORD);
     xNetworkParams.xSecurity = clientcredentialWIFI_SECURITY;
     xNetworkParams.cChannel = 0;
 
@@ -264,14 +264,14 @@ static void prvWifiConnect(void)
     if (xWifiStatus == eWiFiSuccess)
     {
         configPRINTF(
-                ( "Wi-Fi connected to AP %s.\r\n", xNetworkParams.pcSSID ));
+            ("Wi-Fi connected to AP %s.\r\n", xNetworkParams.pcSSID));
 
         xWifiStatus = WIFI_GetIP(ucTempIp);
 
         if (eWiFiSuccess == xWifiStatus)
         {
             configPRINTF(
-                    ( "IP Address acquired %d.%d.%d.%d\r\n", ucTempIp[ 0 ], ucTempIp[ 1 ], ucTempIp[ 2 ], ucTempIp[ 3 ] ));
+                ("IP Address acquired %d.%d.%d.%d\r\n", ucTempIp[0], ucTempIp[1], ucTempIp[2], ucTempIp[3]));
         }
     }
     else
@@ -282,7 +282,7 @@ static void prvWifiConnect(void)
 
         /* Connection failed, configure SoftAP. */
         configPRINTF(
-                ( "Wi-Fi failed to connect to AP %s.\r\n", xNetworkParams.pcSSID ));
+            ("Wi-Fi failed to connect to AP %s.\r\n", xNetworkParams.pcSSID));
 
         xNetworkParams.pcSSID = wificonfigACCESS_POINT_SSID_PREFIX;
         xNetworkParams.pcPassword = wificonfigACCESS_POINT_PASSKEY;
@@ -290,15 +290,15 @@ static void prvWifiConnect(void)
         xNetworkParams.cChannel = wificonfigACCESS_POINT_CHANNEL;
 
         configPRINTF(
-                ( "Connect to SoftAP %s using password %s. \r\n", xNetworkParams.pcSSID, xNetworkParams.pcPassword ));
+            ("Connect to SoftAP %s using password %s. \r\n", xNetworkParams.pcSSID, xNetworkParams.pcPassword));
 
         while (WIFI_ConfigureAP(&xNetworkParams) != eWiFiSuccess)
         {
             configPRINTF(
-                    ( "Connect to SoftAP %s using password %s and configure Wi-Fi. \r\n", xNetworkParams.pcSSID, xNetworkParams.pcPassword ));
+                ("Connect to SoftAP %s using password %s and configure Wi-Fi. \r\n", xNetworkParams.pcSSID, xNetworkParams.pcPassword));
         }
 
-        configPRINTF(( "Wi-Fi configuration successful. \r\n" ));
+        configPRINTF(("Wi-Fi configuration successful. \r\n"));
     }
 }
 /*-----------------------------------------------------------*/
@@ -315,8 +315,7 @@ static void prvWifiConnect(void)
  */
 void vApplicationMallocFailedHook()
 {
-    taskDISABLE_INTERRUPTS()
-    ;
+    taskDISABLE_INTERRUPTS();
 
     for (;;)
     {
@@ -336,10 +335,9 @@ void vApplicationMallocFailedHook()
  * has occurred.
  *
  */
-void vApplicationStackOverflowHook(TaskHandle_t xTask, char * pcTaskName)
+void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName)
 {
-    portDISABLE_INTERRUPTS()
-    ;
+    portDISABLE_INTERRUPTS();
 
     /* Loop forever */
     for (;;)
@@ -352,15 +350,15 @@ void vApplicationStackOverflowHook(TaskHandle_t xTask, char * pcTaskName)
 /* configUSE_STATIC_ALLOCATION is set to 1, so the application must provide an
  * implementation of vApplicationGetIdleTaskMemory() to provide the memory that is
  * used by the Idle task. */
-void vApplicationGetIdleTaskMemory(StaticTask_t ** ppxIdleTaskTCBBuffer,
-                                   StackType_t ** ppxIdleTaskStackBuffer,
-                                   uint32_t * pulIdleTaskStackSize)
+void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer,
+                                   StackType_t **ppxIdleTaskStackBuffer,
+                                   uint32_t *pulIdleTaskStackSize)
 {
     /* If the buffers to be provided to the Idle task are declared inside this
      * function then they must be declared static - otherwise they will be allocated on
      * the stack and so not exists after this function exits. */
     static StaticTask_t xIdleTaskTCB;
-    static StackType_t uxIdleTaskStack[ configMINIMAL_STACK_SIZE];
+    static StackType_t uxIdleTaskStack[configMINIMAL_STACK_SIZE];
 
     /* Pass out a pointer to the StaticTask_t structure in which the Idle
      * task's state will be stored. */
@@ -381,15 +379,15 @@ void vApplicationGetIdleTaskMemory(StaticTask_t ** ppxIdleTaskTCBBuffer,
  * application must provide an implementation of vApplicationGetTimerTaskMemory()
  * to provide the memory that is used by the Timer service task. */
 
-void vApplicationGetTimerTaskMemory(StaticTask_t ** ppxTimerTaskTCBBuffer,
-                                    StackType_t ** ppxTimerTaskStackBuffer,
-                                    uint32_t * pulTimerTaskStackSize)
+void vApplicationGetTimerTaskMemory(StaticTask_t **ppxTimerTaskTCBBuffer,
+                                    StackType_t **ppxTimerTaskStackBuffer,
+                                    uint32_t *pulTimerTaskStackSize)
 {
     /* If the buffers to be provided to the Timer task are declared inside this
      * function then they must be declared static - otherwise they will be allocated on
      * the stack and so not exists after this function exits. */
     static StaticTask_t xTimerTaskTCB;
-    static StackType_t uxTimerTaskStack[ configTIMER_TASK_STACK_DEPTH];
+    static StackType_t uxTimerTaskStack[configTIMER_TASK_STACK_DEPTH];
 
     /* Pass out a pointer to the StaticTask_t structure in which the Timer
      * task's state will be stored. */
@@ -414,19 +412,19 @@ static void prvShowTiCc3220SecurityAlertCounts(void)
     int32_t lResult;
     SlFsControlGetStorageInfoResponse_t xStorageResponseInfo;
 
-    lResult = sl_FsCtl((SlFsCtl_e) SL_FS_CTL_GET_STORAGE_INFO, 0, NULL, NULL, 0,
-                       ( _u8 *) &xStorageResponseInfo,
+    lResult = sl_FsCtl((SlFsCtl_e)SL_FS_CTL_GET_STORAGE_INFO, 0, NULL, NULL, 0,
+                       (_u8 *)&xStorageResponseInfo,
                        sizeof(SlFsControlGetStorageInfoResponse_t), NULL);
 
     if (lResult == 0)
     {
         configPRINTF(
-                ( "Security alert threshold = %d\r\n", xStorageResponseInfo.FilesUsage.NumOfAlertsThreshold ));
+            ("Security alert threshold = %d\r\n", xStorageResponseInfo.FilesUsage.NumOfAlertsThreshold));
         configPRINTF(
-                ( "Current number of alerts = %d\r\n", xStorageResponseInfo.FilesUsage.NumOfAlerts ));
+            ("Current number of alerts = %d\r\n", xStorageResponseInfo.FilesUsage.NumOfAlerts));
     }
     else
     {
-        configPRINTF(( "sl_FsCtl failed with error code: %d\r\n", lResult ));
+        configPRINTF(("sl_FsCtl failed with error code: %d\r\n", lResult));
     }
 }
