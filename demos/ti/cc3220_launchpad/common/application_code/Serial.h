@@ -18,12 +18,13 @@
 
  Modified 2012 by Todd Krein (todd@krein.org) to implement repeated starts
  */
+#include "uart.h"
+
 #define DEC 10
 #define HEX 16
 #define OCT 8
 #define BIN 2
 
-#include "uart.h"
 enum SerialConfig
 {
     SERIAL_5N1 = UART_5N1,
@@ -51,18 +52,20 @@ enum SerialConfig
     SERIAL_7O2 = UART_7O2,
     SERIAL_8O2 = UART_8O2,
 };
+
 enum SerialMode
 {
     SERIAL_FULL = UART_FULL,
     SERIAL_RX_ONLY = UART_RX_ONLY,
     SERIAL_TX_ONLY = UART_TX_ONLY
 };
+
 class SerialOutput
 {
 public:
     SerialOutput();
 
-    //    bool if(SerialOutput);
+//    bool if(SerialOutput);
 
     int available();
 

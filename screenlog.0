@@ -1326,3 +1326,325 @@ Die Temperature: 25.3750000000
 49 35280 [Arduino Wir] Echo successfully published 'Die Temperature:  '25.37'
 Object Temperature: 21.1498641968
 *C
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1507 [TmAdafruit TMPr Svc006 e] IP Axampleddress acquired 192.168.1.73
+
+6 1510 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 1510 [Tmr Svc] Current numbeObject Temperature: r of alerts = 0
+21.4840583801
+8 1510 [Tmr Svc] STA*CRT OF PROGRAM
+9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 2490 [Arduino Wir]Die Temperature:  ERROR:  Echo failed25.3437500000
+ to publish 'Object T*Cemperature: 21.4'
+
+12 2502 [Arduino Wir] ERROR:  Echo failed to publish 'Die Temperature: 25.3437'
+13 2803 [MQTTEcho] MQTT echo connected.
+14 2807 [MQTTEcho] MQTT echo test echoing task created.
+15 3009 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+Object Temperature: 22.3032512665
+*C
+16 4013 [Arduino Wir] Echo successfully published 'Object Temperature: 22.3'
+Die Temperature: 25.3437500000
+*C
+17 4129 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3437'
+Object Temperature: 21.6391830444
+*C
+18 6136 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.3437500000
+*C
+19 6252 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3437'
+Object Temperature: 21.0664501190
+*C
+20 7959 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.3437500000
+*C
+21 8075 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3437'
+Object Temperature: 21.5800266266
+*C
+22 9782 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.3125000000
+*C
+23 9898 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 21.2938842773
+*C
+24 11605 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.3125000000
+*C
+25 11721 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 21.0308647156
+*C
+26 13428 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.3125000000
+*C
+27 14244 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 24.5593624115
+*C
+28 15951 [Arduino Wir] Echo successfully published 'Object Temperature: 24.5'
+Die Temperature: 25.3437500000
+*C
+29 16067 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3437'
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 474 [Tmr Svc] Wi-Fi module initialized.
+3 485 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 2813 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 281xampl4 [Tmer Svc] IP Address acquired 192.168.1.73
+
+6 2817 [Tmr Svc] Security alert threshoSend s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!ld = 15
+
+7 2817 [Tmr Svc] Current numbeObject Temperature: r of alerts = 0
+21
+8 2817 [Tmr Svc] START OF *CPROGRAM
+9 2817 [Tmr Svc] Creating MQTT Echo Task...
+10 2817 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 4531 [Arduino Wir]Die Temperature:  ERROR:  Echo failed to 25
+publish 'Object Temp*Cerature: 21.0'
+
+12 4542 [Arduino Wir] ERROR:  Echo failed to publish 'Die Temperature: 25.3125'
+13 4943 [MQTTEcho] MQTT echo connected.
+14 4943 [MQTTEcho] MQTT echo test echoing task created.
+15 5146 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+Object Temperature: 21
+*C
+Die Temperature: 16 5751 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+25
+*C
+17 6357 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 21
+*C
+18 8265 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25
+*C
+19 8780 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 21
+*C
+20 10289 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25
+*C
+21 11294 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 20
+*C
+22 12703 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25
+*C
+23 12818 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 20
+*C
+24 14427 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25
+*C
+25 14741 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3437'
+Object Temperature: 20
+*C
+26 15950 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25
+*C
+27 16065 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3437'
+Object Temperature: 21
+*C
+28 17174 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25
+*C
+29 17289 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3437'
+Object Temperature: 20
+*C
+30 19095 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25
+*C
+31 19410 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3437'
+Object Temperature: 21
+*C
+32 21116 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25
+*C
+33 21231 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3437'
+Object Temperature: 20
+*C
+34 22937 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25
+*C
+35 23052 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 21
+*C
+36 24758 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25
+*C
+37 24873 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 20
+*C
+38 26679 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25
+*C
+39 26994 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 20
+*C
+40 28903 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25
+*C
+41 29018 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 21
+*C
+42 30724 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25
+*C
+43 31139 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 21
+*C
+44 32945 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25
+*C
+45 33060 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 21
+*C
+46 34866 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25
+*C
+47 35281 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 20
+*C
+48 36889 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25
+*C
+49 37004 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 20
+*C
+50 38710 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25
+*C
+51 38825 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21
+*C
+52 40531 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25
+*C
+53 40646 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21
+*C
+54 42454 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25
+*C
+55 42568 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21
+*C
+56 44474 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25
+*C
+57 44889 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21
+*C
+58 46695 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25
+*C
+59 46810 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21
+*C
+60 48516 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25
+*C
+61 48631 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21
+*C
+62 50337 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25
+*C
+63 50452 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21
+*C
+64 52258 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25
+*C
+65 53073 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21
+*C
+66 54879 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25
+*C
+67 54994 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21
+*C
+68 56700 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25
+*C
+69 57305 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21
+*C
+70 59011 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25
+*C
+71 59816 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 473 [Tmr Svc] Wi-Fi module initialized.
+3 483 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 2811 [Tmr Svc] Wi-Fi connected to AP AFR-Li0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Li0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Li0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Li0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Li
