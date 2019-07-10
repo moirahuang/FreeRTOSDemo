@@ -172,7 +172,7 @@ size_t SerialOutput::print(float n, int base)
     char buffer [sizeof(float)*8+1] = {0};
     if (base != 10)
     {
-       sprintf(buffer, "Base type not supported.\n");
+       sprintf(buffer, "Only support float type for decimal.\n");
     }
     else if (base == 10)
     {
