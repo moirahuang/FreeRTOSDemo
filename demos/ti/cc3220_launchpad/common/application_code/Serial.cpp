@@ -10,6 +10,7 @@ extern "C"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "FreeRTOS.h"
 #include "queue.h"
 #include "FreeRTOSConfig.h"
 }
@@ -169,13 +170,19 @@ size_t SerialOutput::print(double n, int base)
 size_t SerialOutput::print(float n, int base)
 {
     char buffer [sizeof(float)*8+1] = {0};
-    char digit[2];
-    sprintf(digit, "%d", base);
-    char command[] = "%0.";
-    strcat(command, digit);
-    strcat(command, "f\n");
-
-    sprintf(buffer, command, n);
+    if (base != 10)
+    {
+       sprintf(buffer, "Base type not supported.\n");
+    }
+    else if (base == 10)
+    {
+        char digit[2];
+        sprintf(digit, "%d", base);
+        char command[] = "%0.";
+        strcat(command, digit);
+        strcat(command, "f\n");
+        sprintf(buffer, command, n);
+    }
 
     configPRINT_STRING((buffer));
 

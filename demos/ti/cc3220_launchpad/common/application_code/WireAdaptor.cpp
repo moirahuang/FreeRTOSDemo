@@ -67,7 +67,7 @@ void loop()
   // Grab temperature measurements and print them.
   float objt = tmp006.readObjTempC();
   Serial.print("Object Temperature: ");
-  Serial.print(objt);
+  Serial.print(objt, HEX);
   Serial.println("*C");
   prvPublishNextMessage("Object Temperature: %lf'\r\n", objt);
   float diet = tmp006.readDieTempC();
