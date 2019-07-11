@@ -113,3 +113,883 @@ ired 192.168.1.73
 7 2510 [Tmr Svc] Current number of alerts = 0
 8 2510 [Tmr Svc] START OF PROGRAM9 2510 [Tmr Svc] Creating MQTT Echo Task...
 10 2511 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+20.5437660217285156
+*C
+38 22885 [Arduino Wir] Echo successfully published 'Object Temperature: 20.5'
+Die Temperature: 24.8750000000
+*C
+39 23799 [Arduino Wir] Echo successfully published 'Die Temperature: 24.8750'
+Object Temperature: 20.4358139038085938
+*C
+40 25308 [Arduino Wir] Echo successfully published 'Object Temperature: 20.4'
+Die Temperature: 24.8750000000
+*C
+41 25422 [Arduino Wir] Echo successfully published 'Die Temperature: 24.8750'
+Object Temperature: 20.3875904083251953
+*C
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.730 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.730 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1507 [Tmr Svc] IP Address Adafruacquiit TMred 19P006 example
+2.168.1.73
+6 1510 [Tmr Svc] 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 7506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 750xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+6 7510 [Tmr Svc] Security alert threshold = 15
+7 7510 [Tmr Svc] Current number of alerts = 0
+8 7510 [Tmr Svc] START OF PROGRAM9 7510 [Tmr Svc] Creating MQTT Echo Task...
+10 7510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+6 1510 [Tmr Svc] Secu0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+6 1510 [Tmr Svc] 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+[ERROR] - FATAL ERROR: Sync loss detected n2 134 [Tmr Svc] 
+ sl_Start failed
+3 134 [Tmr Svc] Wi-Fi module failed to initialize.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 467 [Tmr Svc] Wi-Fi module initialized.
+3 479 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 2806 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 280xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.730 0 [Tmr Svc] Starting Wi-Fi Module ...
+[ERROR] - FATAL ERROR: Sync loss detected n1 0 [Tmr Svc] Simple Link task created
+2 60 [Tmr Svc] 
+ sl_Start failed
+3 60 [Tmr Svc] Wi-Fi module failed to initialize.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 473 [Tmr Svc] Wi-Fi module initialized.
+3 485 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 2813 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 2813 [Tmr Svc] IP Add
+ress acquired 192.168.1.73
+6 2816 [Tmr Svc] Security alert threshold = 15
+7 2816 [Tmr Svc] Current number of alerts = 0
+8 2816 [Tmr Svc] START OF PROGRAM9 2816 [Tmr Svc] Creating MQTT Echo Task...
+10 2816 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 3947 [MQTTEcho] MQTT echo connected.
+12 3951 [MQTTEcho] MQTT echo test echoing task created.
+13 4153 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 2639 [MQTTEcho] MQTT echo connected.
+12 2643 [MQTTEcho] MQTT echo test echoing task created.
+13 2745 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 2867 [MQTTEcho] MQTT echo connected.
+12 2867 [MQTTEcho] MQTT echo test echoing task created.
+13 2970 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 2420 [MQTTEcho] MQTT echo connected.
+12 2424 [MQTTEcho] MQTT echo test echoing task created.
+13 2626 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 2240 [MQTTEcho] MQTT echo connected.
+12 2244 [MQTTEcho] MQTT echo test echoing task created.
+13 2346 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1507 [Tmr Svc] IP Address acquireAdafrud 192.it TM168.1P006 example
+.73
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 3110 [MQTTEcho] MQTT echo connected.
+12 3114 [MQTTEcho] MQTT echo test echoing task created.
+13 3216 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.73 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 e5 150xampl7 [Tmre Svc] IP Address acqu
+ired 192.168.1.730 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 468 [Tmr Svc] Wi-Fi module initialized.
+3 479 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # 0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 471 [Tmr Svc] Wi-Fi module initialized.
+3 482 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # AFR-Libraries-24
+Trying to connect to AP: AFR-Libraries-24 ...
+Device disconnected from the AP on an ERROR..!! 
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 466 [Tmr Svc] Wi-Fi module initialized.
+3 478 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # MoGuest
+Trying to connect to AP: MoGuest ...
+Device disconnected from the AP on an ERROR..!! 
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 472 [Tmr Svc] Wi-Fi module initialized.
+3 484 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 24595 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 24598 [Tmr Svc] IP Address Adafruacquiit TMred 1P006 e92.168xampl.46.2e
+40
+6 24600 [Tmr Svc] Security alert threshold = 15
+7 24600 [Tmr Svc] Current number of alerts = 0
+8 24600 [Tmr Svc] START OF PROGRAM9 24600 [Tmr Svc] Creating MQTT Echo Task...
+10 24601 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 25436 [MQTTEcho] MQTT echo connected.
+12 25440 [MQTTEcho] MQTT echo test echoing task created.
+13 25742 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 17125 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 17125 [Tmr Svc] IP Address acquirAdafrued 192it T.168.4MP006 example
+6.240
+6 17128 [Tmr Svc] Security alert threshold = 15
+7 17128 [Tmr Svc] Current number of alerts = 0
+8 17128 [Tmr Svc] START OF PROGRAM9 17128 [Tmr Svc] Creating MQTT Echo Task...
+10 17129 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 18386 [MQTTEcho] MQTT echo connected.
+12 18390 [MQTTEcho] MQTT echo test echoing task created.
+13 18692 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 20654 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 20654 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 20657 [Tmr Svc] Security alert threshold = 15
+7 20657 [Tmr Svc] Current number of alerts = 0
+8 20657 [Tmr Svc] START OF PROGRAM9 20657 [Tmr Svc] Creating MQTT Echo Task...
+10 20658 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 20970 [MQTTEcho] MQTT echo connected.
+12 20970 [MQTTEcho] MQTT echo test echoing task created.
+13 21873 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 20435 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 20435 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 20438 [Tmr Svc] Security alert threshold = 15
+7 20438 [Tmr Svc] Current number of alerts = 0
+8 20438 [Tmr Svc] START OF PROGRAM9 20438 [Tmr Svc] Creating MQTT Echo Task...
+10 20438 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 21712 [MQTTEcho] MQTT echo connected.
+12 21716 [MQTTEcho] MQTT echo test echoing task created.
+13 22018 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 27009 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 27009 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 27012 [Tmr Svc] Security alert threshold = 15
+7 27012 [Tmr Svc] Current number of alerts = 0
+8 27012 [Tmr Svc] START OF PROGRAM9 27012 [Tmr Svc] Creating MQTT Echo Task...
+10 27013 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 27328 [MQTTEcho] MQTT echo connected.
+12 27328 [MQTTEcho] MQTT echo test echoing task created.
+13 27631 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 51689 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 51689 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 51692 [Tmr Svc] Security alert threshold = 15
+7 51692 [Tmr Svc] Current number of alerts = 0
+8 51692 [Tmr Svc] START OF PROGRAM9 51692 [Tmr Svc] Creating MQTT Echo Task...
+10 51693 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 52729 [MQTTEcho] MQTT echo connected.
+12 52733 [MQTTEcho] MQTT echo test echoing task created.
+13 52935 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 14737 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 14737 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 14740 [Tmr Svc] Security alert threshold = 15
+7 14740 [Tmr Svc] Current number of alerts = 0
+8 14740 [Tmr Svc] START OF PROGRAM9 14740 [Tmr Svc] Creating MQTT Echo Task...
+10 14741 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 16140 [MQTTEcho] MQTT echo connected.
+12 16140 [MQTTEcho] MQTT echo test echoing task created.
+13 16343 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 14114 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 14114 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 14117 [Tmr Svc] Security alert threshold = 15
+7 14117 [Tmr Svc] Current number of alerts = 0
+8 14117 [Tmr Svc] START OF PROGRAM9 14117 [Tmr Svc] Creating MQTT Echo Task...
+10 14118 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+11 14230 [MQTTEcho] MQTT echo connected.
+12 14230 [MQTTEcho] MQTT echo test echoing task created.
+13 14436 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 20751 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example
+5 20751 [Tmr Svc] IP Address acquired 192.168.46.240
+6 20754 [Tmr Svc] Security alert threshold = 15
+7 20754 [Tmr Svc] Current number of alerts = 0
+8 20754 [Tmr Svc] START OF PROGRAM9 20754 [Tmr Svc] Creating MQTT Echo Task...
+10 20755 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:2f:f2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 17856 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 17856 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 17859 [Tmr Svc] Security alert threshold = 15
+7 17859 [Tmr Svc] Current number of alerts = 0
+8 17859 [Tmr Svc] START OF PROGRAM9 17859 [Tmr Svc] Creating MQTT Echo Task...
+10 17860 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 180 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 15661 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 15663 [Tmr Svc] IP Address Adafruacquiit TMred 1P006 e92.168xampl.46.24e
+0
+6 15666 [Tmr Svc] Securi0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+[ERROR] - FATAL ERROR: Sync loss detected n2 134 [Tmr Svc] 
+ sl_Start failed
+3 134 [Tmr Svc] Wi-Fi module failed to initialize.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 468 [Tmr Svc] Wi-Fi module initialized.
+3 480 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 16251 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example
+5 16252 [Tmr Svc] IP Address acquired 192.168.46.240
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+[ERROR] - FATAL ERROR: Sync loss detected n2 134 [Tmr Svc] 
+ sl_Start failed
+3 134 [Tmr Svc] Wi-Fi module failed to initialize.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 470 [Tmr Svc] Wi-Fi module initialized.
+3 482 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 15336 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 15336 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 14713 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example
+5 14713 [Tmr Svc] IP Address acquired 192.168.46.240
+6 14716 [Tmr Svc]0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 18330 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 18330 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 18333 [Tmr Svc] Security alert th0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 13647 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 13647 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 13650 [Tmr Svc]0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+[ERROR] - FATAL ERROR: Sync loss detected n2 134 [Tmr Svc] 
+ sl_Start failed
+3 134 [Tmr Svc] Wi-Fi module failed to initialize.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 474 [Tmr Svc] Wi-Fi module initialized.
+3 485 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 16022 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 16022 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+[WLAN EVENT] Unexpected event 13
+1 0 [Tmr Svc] Simple [WLAN EVENT] Unexpected event 13
+Link task created
+Device came up in Station mode
+2 188 [Tmr Svc] Wi-Fi module initialized.
+3 199 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 17851 [Tmr Svc] Wi-Fi connected to AP AFR-LAdafruit TMP006 eibraries-24.
+5 17851 [Tmr Svc] IP Address acquired 192.168.46.240
+6 17854 [Tmr Svc] Security alert threshold = 15
+7 17854 [Tmr Svc] Current number of alerts = 0
+8 17854 [Tmr Svc] START OF PROGRAM9 17854 [Tmr Svc] Creating MQTT Echo Task...
+10 17855 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+xample
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+[ERROR] - FATAL ERROR: Sync loss detected n2 134 [Tmr Svc] 
+ sl_Start failed
+3 134 [Tmr Svc] Wi-Fi module failed to initialize.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 472 [Tmr Svc] Wi-Fi module initialized.
+3 484 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 15485 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 15485 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 15488 [Tmr Svc]0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+[ERROR] - FATAL ERROR: Sync loss detected n2 134 [Tmr Svc] 
+ sl_Start failed
+3 134 [Tmr Svc] Wi-Fi module failed to initialize.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 472 [Tmr Svc] Wi-Fi module initialized.
+3 484 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 17512 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 17512 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 17515 [Tmr Svc]0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 15535 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 15535 [Tmr Svc] IP Address acq
+uired 192.168.40 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+Device could not connect to AFR-Libraries-24
+
+
+Please enter the AP(open) SSID name # Guest
+Trying to connect to AP: Guest ...
+Device disconnected from the AP on an ERROR..!! 
+[WLAN EVENT] STA Connected to the AP: Guest , BSSID: 24:de:c6:5d:32:a2
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to Guest
+Device IP Address is 192.168.46.240 
+
+4 14173 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+Adafruit TMP006 example5 14173 [Tmr Svc] IP Address acq
+uired 192.168.46.240
+6 14176 [Tmr Svc] Security alert threshold = 15
+7 14176 [Tmr Svc] Current number of alerts = 0
+8 14176 [Tmr Svc] START OF PROGRAM9 14176 [Tmr Svc] Creating MQTT Echo Task...
+10 14177 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.

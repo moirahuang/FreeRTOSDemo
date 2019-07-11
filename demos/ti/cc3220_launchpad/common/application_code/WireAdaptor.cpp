@@ -24,82 +24,93 @@ SerialOutput Serial = SerialOutput();
 
 TwoWire Wire = TwoWire();
 //Adafruit_TMP006 tmp006;
-Adafruit_TMP006 tmp006(0x41);  // start with a diferent i2c address!
+Adafruit_TMP006 tmp006(0x41); // start with a diferent i2c address!
 
-void setup() {
+void setup()
+{
   Serial.begin(9600);
-  Serial.println( "Adafruit TMP006 example");
+  Serial.println("Adafruit TMP006 example");
 
   // you can also use tmp006.begin(TMP006_CFG_1SAMPLE) or 2SAMPLE/4SAMPLE/8SAMPLE to have
   // lower precision, higher rate sampling. default is TMP006_CFG_16SAMPLE which takes
   // 4 seconds per reading (16 samples)
-  if (! tmp006.begin()) {
+  if (!tmp006.begin())
+  {
     Serial.println("No sensor found");
-    while (1);
+    while (1)
+      ;
   }
 
   Serial.println("Send s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!");
 }
 
-void loop() {
+void loop()
+{
   // Check for sleep/wake command.
-  while (Serial.available() > 0) {
+  while (Serial.available() > 0)
+  {
     char c = Serial.read();
-    if (c == 'w') {
-      Serial.println( "Waking up!");
+    if (c == 'w')
+    {
+      Serial.println("Waking up!");
       tmp006.wake();
     }
-    else if (c == 's') {
-      Serial.println( "Going to sleep!");
+    else if (c == 's')
+    {
+      Serial.println("Going to sleep!");
       tmp006.sleep();
     }
   }
 
   // Grab temperature measurements and print them.
   float objt = tmp006.readObjTempC();
-  Serial.print( "Object Temperature: "); Serial.print(objt); Serial.println( "*C");
+  Serial.print("Object Temperature: ");
+  Serial.print(objt);
+  Serial.println("*C");
   float diet = tmp006.readDieTempC();
-  Serial.print( "Die Temperature: "); Serial.print(diet); Serial.println( "*C");
+  Serial.print("Die Temperature: ");
+  Serial.print(diet);
+  Serial.println("*C");
 
-//  delay(4000); // 4 seconds per reading for 16 samples per reading
+  //  delay(4000); // 4 seconds per reading for 16 samples per reading
 }
 
 void Wire_begin()
 {
-    Wire.begin();
+  Wire.begin();
 }
 
 void Wire_setClock(uint32_t speed)
 {
-    Wire.setClock(speed);
+  Wire.setClock(speed);
 }
 
 void Wire_beginTransmission(int addr)
 {
-    Wire.beginTransmission(addr);
+  Wire.beginTransmission(addr);
 }
 
 uint8_t Wire_endTransmission(void)
 {
-    return Wire.endTransmission();
+  return Wire.endTransmission();
 }
 
 size_t Wire_write(uint8_t val)
 {
-    return Wire.write(val);
+  return Wire.write(val);
 }
 
 int Wire_read()
 {
-    return Wire.read();
+  return Wire.read();
 }
 
 uint8_t Wire_requestFrom(uint8_t addr, uint8_t num)
 {
-    return Wire.requestFrom(addr, num);
+  return Wire.requestFrom(addr, num);
 }
 
 int Wire_available(void)
 {
-    return Wire.available();
+  return Wire.available();
 }
