@@ -50,7 +50,8 @@ void SensorsLoop( void * context )
         loop();
         vTaskDelay( 1000 );
     }
-//    Wire_begin();
+
+    Wire_begin();
 //
 //    Wire_beginTransmission(0x41);
 //
@@ -130,7 +131,7 @@ void SensorsLoop( void * context )
 //        }
 //    }
 //endTransmission();
-
+    vTaskDelete(NULL);
 }
 
 /**
@@ -138,11 +139,10 @@ void SensorsLoop( void * context )
  */
 void DEMO_RUNNER_RunDemos( void )
 {
-    vStartMQTTEchoDemo();
-
+//
     ( void ) xTaskCreate( SensorsLoop,          /* The function that implements the demo task. */
                           "Arduino Wire Loop",  /* The name to assign to the task being created. */
-                          1024,                  /* The size, in WORDS (not bytes), of the stack to allocate for the task being created. */
+                          1048,                  /* The size, in WORDS (not bytes), of the stack to allocate for the task being created. */
                           NULL,                 /* The task parameter is not being used. */
                           0,                    /* The priority at which the task being created will run. */
                           NULL                  /* Not storing the task handle. */
