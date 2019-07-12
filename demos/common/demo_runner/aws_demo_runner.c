@@ -45,11 +45,12 @@ extern void vStartMQTTEchoDemo( void );
 
 void SensorsLoop( void * context )
 {
-    setup();
-    for (; ;) {
-        loop();
-        vTaskDelay( 1000 );
-    }
+//    setup();
+//    for (; ;) {
+//        loop();
+//        vTaskDelay( 1000 );
+//    }
+
 //    Wire_begin();
 //
 //    Wire_beginTransmission(0x41);
@@ -130,7 +131,7 @@ void SensorsLoop( void * context )
 //        }
 //    }
 //endTransmission();
-
+    vTaskDelete(NULL);
 }
 
 /**

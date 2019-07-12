@@ -68,6 +68,6 @@ static const char clientcredentialMQTT_BROKER_ENDPOINT[] = "a3bl899qy9xyqv-ats.i
  * Possible values are - eWiFiSecurityOpen, eWiFiSecurityWEP, eWiFiSecurityWPA,
  * eWiFiSecurityWPA2
  */
-#define clientcredentialWIFI_SECURITY   eWiFiSecurityWPA
+#define clientcredentialWIFI_SECURITY   eWiFiSecurityWPA2
 
 #endif
