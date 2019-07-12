@@ -145,6 +145,17 @@ uint8_t TwoWire::endTransmission(void)
     {
         iot_i2c_ioctl( transactionContext.handle, eI2CSendStop, NULL);
     }
+//    if (status == IOT_I2C_SUCCESS)
+//    {
+//               if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
+//               {
+           vPortFree(transactionContext.writeBuffer);
+
+            transactionContext.writeBuffer = NULL;
+            transactionContext.writeBufferSize = 0;
+            transactionContext.writeAvailable = 0;
+//               }
+//    }
 
     transactionContext.error = IOT_I2C_SUCCESS;
 
