@@ -141,10 +141,14 @@ void TwoWire::beginTransmission(uint8_t addr)
 
 uint8_t TwoWire::endTransmission(void)
 {
+    int status = 4;
+
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {
         iot_i2c_ioctl( transactionContext.handle, eI2CSendStop, NULL);
     }
+    status = iot_i2c_write_async(transactionContext.handle, transactionContext.writeBuffer, transactionContext.writeBufferSize);
+
 //    if (status == IOT_I2C_SUCCESS)
 //    {
 //               if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
@@ -186,16 +190,15 @@ size_t TwoWire::write(const uint8_t *data, size_t quantity)
             transactionContext.writeAvailable = 0;
         }
 
-        uint8_t writeBuffer[ 1 ] = {data[0]};
-
-        for(size_t i = 0; i < quantity; ++i){
-
-            writeBuffer[ 1 ]= { data[i] };
+        for (int i = 0; i < quantity; i++)
+        {
+            transactionContext.writeBuffer[transactionContext.writeAvailable] = data[i];
+            transactionContext.writeAvailable++;
+            if (transactionContext.writeAvailable >= transactionContext.writeBufferSize)
+            {
+                return i;
+            }
         }
-
-        iot_i2c_write_async( transactionContext.handle, writeBuffer, 1 );
-
-        xSemaphoreTake( transactionContext.semaphore, pdMS_TO_TICKS( WIRE_TRANSACTION_TIMEOUT ) );
 
         return 1;
     }
