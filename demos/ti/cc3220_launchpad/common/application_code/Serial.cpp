@@ -5,7 +5,8 @@
  *      Author: huanmoir
  */
 
-extern "C"{
+extern "C"
+{
 #include <stdlib.h>
 #include <stdio.h>
 #include "iot_i2c.h"
@@ -22,7 +23,6 @@ extern "C"{
 UART_Handle uartHandle;
 SerialOutput::SerialOutput()
 {
-
 }
 
 //    bool if(SerialOutput);
@@ -39,12 +39,10 @@ int SerialOutput::availableForWrite()
 
 void SerialOutput::begin(unsigned long baud, SerialConfig config)
 {
-
 }
 
 void SerialOutput::end()
 {
-
 }
 
 bool SerialOutput::find(char)
@@ -63,7 +61,6 @@ bool SerialOutput::findUntil(char, char)
 
 void SerialOutput::flush()
 {
-
 }
 
 float SerialOutput::parseFloat()
@@ -90,7 +87,7 @@ int SerialOutput::peek()
 size_t SerialOutput::print(char *print)
 {
     configPRINT_STRING((print));
-    vTaskDelay( 1);
+    vTaskDelay(1);
     return sizeof(print);
 }
 size_t SerialOutput::print(float print)
@@ -99,7 +96,7 @@ size_t SerialOutput::print(float print)
 
     sprintf(buffer, "%lf", print);
     configPRINT_STRING((buffer));
-    vTaskDelay( 1);
+    vTaskDelay(1);
     return sizeof(print);
 }
 //size_t SerialOutput::print(float, char);
@@ -109,7 +106,7 @@ void SerialOutput::println(const char *print)
 {
     configPRINT_STRING((print));
     configPRINT_STRING(("\r\n"));
-    vTaskDelay( 1);
+    vTaskDelay(1);
 }
 
 int SerialOutput::read()
@@ -143,7 +140,6 @@ char SerialOutput::readStringUntil(char)
 
 void SerialOutput::setTiemout(long)
 {
-
 }
 
 size_t SerialOutput::write(int)
@@ -161,9 +157,4 @@ size_t SerialOutput::write(char, int)
 
 void serialEvent()
 {
-
 }
-
-
-
-

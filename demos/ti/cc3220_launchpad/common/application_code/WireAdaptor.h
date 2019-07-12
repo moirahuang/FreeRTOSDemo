@@ -22,42 +22,43 @@ Modified 2012 by Todd Krein (todd@krein.org) to implement repeated starts
 #include <inttypes.h>
 #include <stdlib.h>
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
-void Wire_begin();
-// void begin(uint8_t);
-// void begin(int);
-void Wire_end();
-void Wire_setClock(uint32_t);
- void Wire_beginTransmission(int);
-uint8_t Wire_endTransmission(void);
-//uint8_t Wire_endTransmission(uint8_t);
-uint8_t Wire_requestFrom(uint8_t, uint8_t);
-// uint8_t requestFrom(uint8_t, uint8_t, uint8_t);
-// uint8_t requestFrom(uint8_t, uint8_t, uint32_t, uint8_t, uint8_t);
-// uint8_t requestFrom(int, int);
-// uint8_t requestFrom(int, int, int);
-size_t Wire_write(uint8_t);
-// virtual size_t write(const uint8_t *, size_t);
-int Wire_available(void);
-int Wire_read(void);
-// virtual int peek(void);
-// virtual void flush(void);
-// void onReceive( void (*)(int) );
-// void onRequest( void (*)(void) );
-//
-// inline size_t write(unsigned long n) { return write((uint8_t)n); }
-// inline size_t write(long n) { return write((uint8_t)n); }
-// inline size_t write(unsigned int n) { return write((uint8_t)n); }
-// inline size_t write(int n) { return write((uint8_t)n); }
-// using Print::write;
+    void Wire_begin();
+    // void begin(uint8_t);
+    // void begin(int);
+    void Wire_end();
+    void Wire_setClock(uint32_t);
+    void Wire_beginTransmission(int);
+    uint8_t Wire_endTransmission(void);
+    //uint8_t Wire_endTransmission(uint8_t);
+    uint8_t Wire_requestFrom(uint8_t, uint8_t);
+    // uint8_t requestFrom(uint8_t, uint8_t, uint8_t);
+    // uint8_t requestFrom(uint8_t, uint8_t, uint32_t, uint8_t, uint8_t);
+    // uint8_t requestFrom(int, int);
+    // uint8_t requestFrom(int, int, int);
+    size_t Wire_write(uint8_t);
+    // virtual size_t write(const uint8_t *, size_t);
+    int Wire_available(void);
+    int Wire_read(void);
+    // virtual int peek(void);
+    // virtual void flush(void);
+    // void onReceive( void (*)(int) );
+    // void onRequest( void (*)(void) );
+    //
+    // inline size_t write(unsigned long n) { return write((uint8_t)n); }
+    // inline size_t write(long n) { return write((uint8_t)n); }
+    // inline size_t write(unsigned int n) { return write((uint8_t)n); }
+    // inline size_t write(int n) { return write((uint8_t)n); }
+    // using Print::write;
 
-//add wire struct w pointers to functions
+    //add wire struct w pointers to functions
 
-//if written in c++ need to use externc for include files other issues etc
-//
-void setup();
-void loop();
+    //if written in c++ need to use externc for include files other issues etc
+    //
+    void setup();
+    void loop();
 #ifdef __cplusplus
 }
 #endif

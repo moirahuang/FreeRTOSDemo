@@ -19,7 +19,8 @@
  Modified 2012 by Todd Krein (todd@krein.org) to implement repeated starts
  */
 #include "uart.h"
-enum SerialConfig {
+enum SerialConfig
+{
     SERIAL_5N1 = UART_5N1,
     SERIAL_6N1 = UART_6N1,
     SERIAL_7N1 = UART_7N1,
@@ -45,7 +46,8 @@ enum SerialConfig {
     SERIAL_7O2 = UART_7O2,
     SERIAL_8O2 = UART_8O2,
 };
-enum SerialMode {
+enum SerialMode
+{
     SERIAL_FULL = UART_FULL,
     SERIAL_RX_ONLY = UART_RX_ONLY,
     SERIAL_TX_ONLY = UART_TX_ONLY
@@ -55,7 +57,7 @@ class SerialOutput
 public:
     SerialOutput();
 
-//    bool if(SerialOutput);
+    //    bool if(SerialOutput);
 
     int available();
 
@@ -77,12 +79,12 @@ public:
     void flush();
 
     float parseFloat();
-//    float parseFloat(LookaheadMode);
-//    float parseFloat(LookaheadMode, char);
+    //    float parseFloat(LookaheadMode);
+    //    float parseFloat(LookaheadMode, char);
 
     long parseInt();
-//    long parseInt(LookaheadMode);
-//    long parseInt(LookaheadMode, char);
+    //    long parseInt(LookaheadMode);
+    //    long parseInt(LookaheadMode, char);
 
     int peek();
 
@@ -96,10 +98,10 @@ public:
     int read();
 
     size_t readBytes(char[], int);
-//    size_t readBytes(byte[], int);
+    //    size_t readBytes(byte[], int);
 
     size_t readBytesUntil(char, char, int);
-//    size_t readBytesUntil(char, byte, int);
+    //    size_t readBytesUntil(char, byte, int);
 
     char readString();
 
@@ -115,5 +117,3 @@ public:
 };
 
 extern SerialOutput Serial;
-
-
