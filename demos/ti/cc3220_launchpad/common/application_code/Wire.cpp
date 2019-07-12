@@ -21,9 +21,13 @@ typedef struct I2CTrasanctionContext
         IotI2CHandle_t handle;
         uint8_t OPT_ADDR;
         uint8_t error; // no error is zero (0)
-        uint8_t * buffer;
-        uint32_t bufferSize;
-        uint32_t available;
+        uint8_t *readBuffer;
+        uint32_t readBufferSize;
+        uint32_t readAvailable;
+        uint8_t *writeBuffer;
+        uint32_t writeBufferSize;
+        uint32_t writeAvailable;
+
         SemaphoreHandle_t semaphore;
         StaticSemaphore_t semaphoreBuffer;
 
@@ -189,19 +193,19 @@ int TwoWire::read()
 {
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {
-        if( transactionContext.available > 0 )
+        if( transactionContext.readAvailable > 0 )
         {
 //            configPRINTF(("r %d\r\n", transactionContext.available));
-            configASSERT( transactionContext.bufferSize >= transactionContext.available );
+            configASSERT( transactionContext.readBufferSize >= transactionContext.readAvailable );
 
-            uint8_t val = transactionContext.buffer[ transactionContext.bufferSize - transactionContext.available ];
+            uint8_t val = transactionContext.readBuffer[ transactionContext.readBufferSize - transactionContext.readAvailable ];
 
-            if( --transactionContext.available == 0)
+            if( --transactionContext.readAvailable == 0)
             {
-                vPortFree( transactionContext.buffer );
+                vPortFree( transactionContext.readBuffer );
 
-                transactionContext.buffer = NULL;
-                transactionContext.bufferSize = 0;
+                transactionContext.readBuffer = NULL;
+                transactionContext.readBufferSize = 0;
             }
 
             return val;
@@ -213,12 +217,12 @@ int TwoWire::peek()
 {
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {
-        if( transactionContext.available > 0 )
+        if( transactionContext.readAvailable > 0 )
         {
 //            configPRINTF(("r %d\r\n", transactionContext.available));
-            configASSERT( transactionContext.bufferSize >= transactionContext.available );
+            configASSERT( transactionContext.readBufferSize >= transactionContext.readAvailable );
 
-            uint8_t val = transactionContext.buffer[ transactionContext.bufferSize - transactionContext.available ];
+            uint8_t val = transactionContext.readBuffer[ transactionContext.readBufferSize - transactionContext.readAvailable ];
             return val;
         }
     }
@@ -231,30 +235,30 @@ uint8_t TwoWire::requestFrom( uint8_t addr, uint8_t num, uint32_t iaddress, uint
 
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {
-        if( transactionContext.buffer != NULL )
+        if( transactionContext.readBuffer != NULL )
         {
-            vPortFree( transactionContext.buffer );
+            vPortFree( transactionContext.readBuffer );
 
-            transactionContext.buffer = NULL;
-            transactionContext.bufferSize = 0;
-            transactionContext.available = 0;
+            transactionContext.readBuffer = NULL;
+            transactionContext.readBufferSize = 0;
+            transactionContext.readAvailable = 0;
 
         }
 
-        transactionContext.buffer = (uint8_t*) pvPortMalloc( num * sizeof( uint8_t) );
+        transactionContext.readBuffer = (uint8_t*) pvPortMalloc( num * sizeof( uint8_t) );
 
 
-        if( transactionContext.buffer != NULL )
+        if( transactionContext.readBuffer != NULL )
         {
-            transactionContext.bufferSize = num;
+            transactionContext.readBufferSize = num;
 
-            int status = iot_i2c_read_async( transactionContext.handle, transactionContext.buffer, num );
+            int status = iot_i2c_read_async( transactionContext.handle, transactionContext.readBuffer, num );
 
             if( status == IOT_I2C_SUCCESS )
             {
                 if( xSemaphoreTake( transactionContext.semaphore, pdMS_TO_TICKS( WIRE_TRANSACTION_TIMEOUT)) == pdTRUE )
                 {
-                    transactionContext.available = num;
+                    transactionContext.readAvailable = num;
                     return num;
                 }
             }
@@ -284,7 +288,7 @@ uint8_t TwoWire::requestFrom(int address, int quantity, int sendStop)
 
 int TwoWire::available(void)
 {
-    return transactionContext.available;
+    return transactionContext.readAvailable;
 }
 
 
