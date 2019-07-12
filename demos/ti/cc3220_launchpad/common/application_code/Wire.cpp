@@ -158,11 +158,7 @@ size_t TwoWire::write(uint8_t val)
     {
         uint8_t writeBuffer[ 1 ]= { val };
 
-        iot_i2c_write_async( transactionContext.handle, writeBuffer, 1 );
-
-        xSemaphoreTake( transactionContext.semaphore, pdMS_TO_TICKS( WIRE_TRANSACTION_TIMEOUT ) );
-
-        return 1;
+        return write(writeBuffer, 1);
     }
 
     return 0;
