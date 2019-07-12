@@ -168,6 +168,13 @@ size_t TwoWire::write(const uint8_t *data, size_t quantity)
 {
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {
+        if (transactionContext.writeBuffer == NULL)
+        {
+            transactionContext.writeBuffer = (uint8_t *)pvPortMalloc(BUFFER_LENGTH * 2 * sizeof(uint8_t));
+            transactionContext.writeBufferSize = BUFFER_LENGTH;
+            transactionContext.writeAvailable = 0;
+        }
+
         uint8_t writeBuffer[ 1 ] = {data[0]};
 
         for(size_t i = 0; i < quantity; ++i){
