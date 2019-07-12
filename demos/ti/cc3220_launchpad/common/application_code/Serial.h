@@ -65,7 +65,7 @@ class SerialOutput
 public:
     SerialOutput();
 
-//    bool if(SerialOutput);
+    //    bool if(SerialOutput);
 
     int available();
 

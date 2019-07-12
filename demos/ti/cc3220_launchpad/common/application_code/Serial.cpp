@@ -18,7 +18,6 @@ extern "C"
 
 SerialOutput::SerialOutput()
 {
-
 }
 
 int SerialOutput::available()
@@ -33,12 +32,10 @@ int SerialOutput::availableForWrite()
 
 void SerialOutput::begin(unsigned long baud, SerialConfig config)
 {
-
 }
 
 void SerialOutput::end()
 {
-
 }
 
 bool SerialOutput::find(char)
@@ -58,7 +55,6 @@ bool SerialOutput::findUntil(char, char)
 
 void SerialOutput::flush()
 {
-
 }
 
 float SerialOutput::parseFloat()
@@ -99,22 +95,22 @@ size_t SerialOutput::print(char c)
 
 size_t SerialOutput::print(unsigned char b, int base)
 {
-  return print((unsigned long) b, base);
+    return print((unsigned long)b, base);
 }
 
 size_t SerialOutput::print(int n, int base)
 {
-  return print((long) n, base);
+    return print((long)n, base);
 }
 
 size_t SerialOutput::print(unsigned int n, int base)
 {
-  return print((unsigned long) n, base);
+    return print((unsigned long)n, base);
 }
 
 size_t SerialOutput::print(long n, int base)
 {
-    char buffer[sizeof(long)*8+1] = {0};
+    char buffer[sizeof(long) * 8 + 1] = {0};
     if (base == 10)
     {
         sprintf(buffer, "%d\n", n);
@@ -139,7 +135,7 @@ size_t SerialOutput::print(long n, int base)
 
 size_t SerialOutput::print(unsigned long n, int base)
 {
-    char buffer[sizeof(long)*8+1] = {0};
+    char buffer[sizeof(long) * 8 + 1] = {0};
     if (base == 10)
     {
         sprintf(buffer, "%u\n", n);
@@ -164,15 +160,15 @@ size_t SerialOutput::print(unsigned long n, int base)
 
 size_t SerialOutput::print(double n, int base)
 {
-    return print((long) n, base);
+    return print((long)n, base);
 }
 
 size_t SerialOutput::print(float n, int base)
 {
-    char buffer [sizeof(float)*8+1] = {0};
+    char buffer[sizeof(float) * 8 + 1] = {0};
     if (base != 10)
     {
-       sprintf(buffer, "Only support float type for decimal.\n");
+        sprintf(buffer, "Only support float type for decimal.\n");
     }
     else if (base == 10)
     {
@@ -199,58 +195,58 @@ size_t SerialOutput::println(void)
 
 size_t SerialOutput::println(const char c[])
 {
-  size_t n = print(c);
-  n += println();
-  return n;
+    size_t n = print(c);
+    n += println();
+    return n;
 }
 
 size_t SerialOutput::println(char c)
 {
-  size_t n = print(c);
-  n += println();
-  return n;
+    size_t n = print(c);
+    n += println();
+    return n;
 }
 
 size_t SerialOutput::println(unsigned char b, int base)
 {
-  size_t n = print(b, base);
-  n += println();
-  return n;
+    size_t n = print(b, base);
+    n += println();
+    return n;
 }
 
 size_t SerialOutput::println(int num, int base)
 {
-  size_t n = print(num, base);
-  n += println();
-  return n;
+    size_t n = print(num, base);
+    n += println();
+    return n;
 }
 
 size_t SerialOutput::println(unsigned int num, int base)
 {
-  size_t n = print(num, base);
-  n += println();
-  return n;
+    size_t n = print(num, base);
+    n += println();
+    return n;
 }
 
 size_t SerialOutput::println(float num, int base)
 {
-  size_t n = print(num, base);
-  n += println();
-  return n;
+    size_t n = print(num, base);
+    n += println();
+    return n;
 }
 
 size_t SerialOutput::println(unsigned long num, int base)
 {
-  size_t n = print(num, base);
-  n += println();
-  return n;
+    size_t n = print(num, base);
+    n += println();
+    return n;
 }
 
 size_t SerialOutput::println(double num, int base)
 {
-  size_t n = print(num, base);
-  n += println();
-  return n;
+    size_t n = print(num, base);
+    n += println();
+    return n;
 }
 
 int SerialOutput::read()
@@ -286,7 +282,6 @@ char SerialOutput::readStringUntil(char)
 
 void SerialOutput::setTiemout(long)
 {
-
 }
 
 size_t SerialOutput::write(int)
@@ -306,5 +301,4 @@ size_t SerialOutput::write(char, int)
 
 void serialEvent()
 {
-
 }
