@@ -21,7 +21,7 @@ extern "C"
 #include "Adafruit_TMP006.h"
 #include "Serial.h"
 }
-extern void vStartMQTTEchoDemo( void );
+extern void vStartMQTTEchoDemo(void);
 SerialOutput Serial = SerialOutput();
 
 TwoWire Wire = TwoWire();
@@ -30,7 +30,7 @@ Adafruit_TMP006 tmp006(0x41); // start with a diferent i2c address!
 
 void setup()
 {
-vStartMQTTEchoDemo( );
+  vStartMQTTEchoDemo();
   Serial.begin(9600);
   Serial.println("Adafruit TMP006 example");
 

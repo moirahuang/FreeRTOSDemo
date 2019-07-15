@@ -61,7 +61,7 @@ bool Adafruit_TMP006::begin(uint8_t samplerate)
         return false;
     }
 
-        configPRINTF(("FOUND %d \n", did));
+    configPRINTF(("FOUND %d \n", did));
 
     return true;
 }

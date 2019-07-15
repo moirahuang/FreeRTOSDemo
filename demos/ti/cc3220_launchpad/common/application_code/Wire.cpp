@@ -19,18 +19,18 @@ extern "C"
 
 typedef struct I2CTrasanctionContext
 {
-        IotI2CHandle_t handle;
-        uint8_t OPT_ADDR;
-        uint8_t error; // no error is zero (0)
-        uint8_t *readBuffer;
-        uint32_t readBufferSize;
-        uint32_t readAvailable;
-        uint8_t *writeBuffer;
-        uint32_t writeBufferSize;
-        uint32_t writeAvailable;
+    IotI2CHandle_t handle;
+    uint8_t OPT_ADDR;
+    uint8_t error; // no error is zero (0)
+    uint8_t *readBuffer;
+    uint32_t readBufferSize;
+    uint32_t readAvailable;
+    uint8_t *writeBuffer;
+    uint32_t writeBufferSize;
+    uint32_t writeAvailable;
 
-        SemaphoreHandle_t semaphore;
-        StaticSemaphore_t semaphoreBuffer;
+    SemaphoreHandle_t semaphore;
+    StaticSemaphore_t semaphoreBuffer;
 
 } I2CTransactionContext_t;
 
@@ -86,7 +86,7 @@ void TwoWire::setClock(uint32_t speed)
 
 void TwoWire::beginTransmission(int addr)
 {
-    if(transactionContext.error == IOT_I2C_SUCCESS)
+    if (transactionContext.error == IOT_I2C_SUCCESS)
     {
         IotI2CIoctlConfig_t config = {100000, 100000};
 
@@ -144,7 +144,7 @@ uint8_t TwoWire::endTransmission(void)
         iot_i2c_ioctl(transactionContext.handle, eI2CSendStop, NULL);
     }
 
-    int status = iot_i2c_write_async( transactionContext.handle, transactionContext.writeBuffer, transactionContext.writeAvailable );
+    int status = iot_i2c_write_async(transactionContext.handle, transactionContext.writeBuffer, transactionContext.writeAvailable);
 
     if (status == IOT_I2C_SUCCESS)
     {
@@ -211,15 +211,15 @@ int TwoWire::read()
 {
     if (transactionContext.error == IOT_I2C_SUCCESS)
     {
-        if( transactionContext.readAvailable > 0 )
+        if (transactionContext.readAvailable > 0)
         {
-            configASSERT( transactionContext.readBufferSize >= transactionContext.readAvailable );
+            configASSERT(transactionContext.readBufferSize >= transactionContext.readAvailable);
 
-            uint8_t val = transactionContext.readBuffer[ transactionContext.readBufferSize - transactionContext.readAvailable ];
+            uint8_t val = transactionContext.readBuffer[transactionContext.readBufferSize - transactionContext.readAvailable];
 
-            if( --transactionContext.readAvailable == 0)
+            if (--transactionContext.readAvailable == 0)
             {
-                vPortFree( transactionContext.readBuffer );
+                vPortFree(transactionContext.readBuffer);
 
                 transactionContext.readBuffer = NULL;
                 transactionContext.readBufferSize = 0;
@@ -235,11 +235,11 @@ int TwoWire::peek()
     if (transactionContext.error == IOT_I2C_SUCCESS)
     {
 
-        if( transactionContext.readAvailable > 0 )
+        if (transactionContext.readAvailable > 0)
         {
-            configASSERT( transactionContext.readBufferSize >= transactionContext.readAvailable );
+            configASSERT(transactionContext.readBufferSize >= transactionContext.readAvailable);
 
-            uint8_t val = transactionContext.readBuffer[ transactionContext.readBufferSize - transactionContext.readAvailable ];
+            uint8_t val = transactionContext.readBuffer[transactionContext.readBufferSize - transactionContext.readAvailable];
             return val;
         }
     }
@@ -253,21 +253,21 @@ uint8_t TwoWire::requestFrom(uint8_t addr, uint8_t num, uint32_t iaddress, uint8
     if (transactionContext.error == IOT_I2C_SUCCESS)
     {
 
-        if( transactionContext.readBuffer != NULL )
+        if (transactionContext.readBuffer != NULL)
         {
-            vPortFree( transactionContext.readBuffer );
+            vPortFree(transactionContext.readBuffer);
             transactionContext.readBuffer = NULL;
             transactionContext.readBufferSize = 0;
             transactionContext.readAvailable = 0;
         }
 
-        transactionContext.readBuffer = (uint8_t*) pvPortMalloc( num * sizeof( uint8_t) );
+        transactionContext.readBuffer = (uint8_t *)pvPortMalloc(num * sizeof(uint8_t));
 
-        if( transactionContext.readBuffer != NULL )
+        if (transactionContext.readBuffer != NULL)
         {
             transactionContext.readBufferSize = num;
 
-            int status = iot_i2c_read_async( transactionContext.handle, transactionContext.readBuffer, num );
+            int status = iot_i2c_read_async(transactionContext.handle, transactionContext.readBuffer, num);
 
             if (status == IOT_I2C_SUCCESS)
             {
@@ -282,7 +282,8 @@ uint8_t TwoWire::requestFrom(uint8_t addr, uint8_t num, uint32_t iaddress, uint8
 
     return 0;
 }
-uint8_t TwoWire::requestFrom(uint8_t address, uint8_t quantity, uint8_t sendStop) {
+uint8_t TwoWire::requestFrom(uint8_t address, uint8_t quantity, uint8_t sendStop)
+{
     return requestFrom((uint8_t)address, (uint8_t)quantity, (uint32_t)0, (uint8_t)0, (uint8_t)sendStop);
 }
 
