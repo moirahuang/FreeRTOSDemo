@@ -15,7 +15,18 @@
  ****************************************************/
 
 #include "Adafruit_TMP006.h"
+#include "Serial.h"
+/* FreeRTOS includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
 
+/* Logging includes. */
+#include "aws_logging_task.h"
+/* Standard includes. */
+#include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
 //#define TESTDIE 0x0C78
 //#define TESTVOLT 0xFEED
 
@@ -33,16 +44,30 @@ bool Adafruit_TMP006::begin(uint8_t samplerate)
     uint16_t mid, did;
     mid = read16(TMP006_MANID);
     did = read16(TMP006_DEVID);
+<<<<<<< HEAD
 #ifdef TMP006_DEBUG
     Serial.print("mid = 0x");
     Serial.println(mid, HEX);
     Serial.print("did = 0x");
     Serial.println(did, HEX);
 #endif
+=======
+//    Serial.print("mid = 0x"); Serial.println(mid, HEX);
+//    Serial.print("did = 0x"); Serial.println(did, HEX);
+>>>>>>> writeBuffer
     if (mid != 0x5449)
+    {
+        configPRINTF(("mid %d \n", mid));
         return false;
+    }
     if (did != 0x67)
+    {
+        configPRINTF(("did %d \n", did));
         return false;
+    }
+
+        configPRINTF(("FOUND %d \n", did));
+
     return true;
 }
 
