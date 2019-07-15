@@ -13,22 +13,14 @@ extern "C"
 #include "iot_i2c.h"
 #include "FreeRTOS.h"
 #include "semphr.h"
-<<<<<<< HEAD
-#include "aws_demo_runner.h"
-=======
 #include "task.h"
 #include "aws_demo_runner.h"
-
 #include "WireAdaptor.h"
->>>>>>> writeBuffer
 #include "aws_hello_world.h"
-}
 #include "Wire.h"
-#include "WireAdaptor.h"
 #include "Adafruit_TMP006.h"
-
 #include "Serial.h"
-
+}
 SerialOutput Serial = SerialOutput();
 
 TwoWire Wire = TwoWire();

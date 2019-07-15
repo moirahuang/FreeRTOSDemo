@@ -116,17 +116,10 @@ extern "C"
 int main(void){
     /* Call board init functions. */
     Board_initGeneral();
-<<<<<<< HEAD
-    //
-    //        /* Start logging task. */
-    xLoggingTaskInitialize(democonfigTASKSTACKSIZE,
-                           tskIDLE_PRIORITY,
-=======
 //
 //        /* Start logging task. */
     xLoggingTaskInitialize( democonfigTASKSTACKSIZE,
     10,
->>>>>>> writeBuffer
                            mainLOGGING_MESSAGE_QUEUE_LENGTH);
     //
     //        /* Start the FreeRTOS scheduler. */

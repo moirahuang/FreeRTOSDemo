@@ -44,17 +44,12 @@ bool Adafruit_TMP006::begin(uint8_t samplerate)
     uint16_t mid, did;
     mid = read16(TMP006_MANID);
     did = read16(TMP006_DEVID);
-<<<<<<< HEAD
 #ifdef TMP006_DEBUG
     Serial.print("mid = 0x");
     Serial.println(mid, HEX);
     Serial.print("did = 0x");
     Serial.println(did, HEX);
 #endif
-=======
-//    Serial.print("mid = 0x"); Serial.println(mid, HEX);
-//    Serial.print("did = 0x"); Serial.println(did, HEX);
->>>>>>> writeBuffer
     if (mid != 0x5449)
     {
         configPRINTF(("mid %d \n", mid));
