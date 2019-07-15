@@ -86,8 +86,6 @@ void TwoWire::setClock(uint32_t speed)
 
 void TwoWire::beginTransmission(int addr)
 {
-    iot_i2c_set_completion_callback( transactionContext.handle, Wire_CallbackInternal );
-
     if(transactionContext.error == IOT_I2C_SUCCESS)
     {
         IotI2CIoctlConfig_t config = {100000, 100000};
@@ -145,21 +143,28 @@ uint8_t TwoWire::endTransmission(void)
     {
         iot_i2c_ioctl( transactionContext.handle, eI2CSendStop, NULL);
     }
-    iot_i2c_write_async( transactionContext.handle, transactionContext.writeBuffer, 1 );
-//    if (status == IOT_I2C_SUCCESS)
-//    {
-//               if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
-//               {
-           vPortFree(transactionContext.writeBuffer);
+
+
+    int status = iot_i2c_write_async( transactionContext.handle, transactionContext.writeBuffer, transactionContext.writeAvailable );
+
+    if (status == IOT_I2C_SUCCESS)
+    {
+        if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
+        {
+            vPortFree(transactionContext.writeBuffer);
 
             transactionContext.writeBuffer = NULL;
             transactionContext.writeBufferSize = 0;
             transactionContext.writeAvailable = 0;
-//               }
-//    }
+        }
+        else
+        {
+            return 1;
+            //didn't happen
+        }
+    }
 
     transactionContext.error = IOT_I2C_SUCCESS;
-
 
     return 0;
 }
@@ -209,7 +214,6 @@ int TwoWire::read()
     {
         if( transactionContext.readAvailable > 0 )
         {
-//            configPRINTF(("r %d\r\n", transactionContext.available));
             configASSERT( transactionContext.readBufferSize >= transactionContext.readAvailable );
 
             uint8_t val = transactionContext.readBuffer[ transactionContext.readBufferSize - transactionContext.readAvailable ];
@@ -233,7 +237,6 @@ int TwoWire::peek()
     {
         if( transactionContext.readAvailable > 0 )
         {
-//            configPRINTF(("r %d\r\n", transactionContext.available));
             configASSERT( transactionContext.readBufferSize >= transactionContext.readAvailable );
 
             uint8_t val = transactionContext.readBuffer[ transactionContext.readBufferSize - transactionContext.readAvailable ];
@@ -256,11 +259,9 @@ uint8_t TwoWire::requestFrom( uint8_t addr, uint8_t num, uint32_t iaddress, uint
             transactionContext.readBuffer = NULL;
             transactionContext.readBufferSize = 0;
             transactionContext.readAvailable = 0;
-
         }
 
         transactionContext.readBuffer = (uint8_t*) pvPortMalloc( num * sizeof( uint8_t) );
-
 
         if( transactionContext.readBuffer != NULL )
         {
@@ -281,6 +282,7 @@ uint8_t TwoWire::requestFrom( uint8_t addr, uint8_t num, uint32_t iaddress, uint
 
     return 0;
 }
+
 uint8_t TwoWire::requestFrom(uint8_t address, uint8_t quantity, uint8_t sendStop) {
     return requestFrom((uint8_t)address, (uint8_t)quantity, (uint32_t)0, (uint8_t)0, (uint8_t)sendStop);
 }
@@ -304,5 +306,3 @@ int TwoWire::available(void)
 {
     return transactionContext.readAvailable;
 }
-
-

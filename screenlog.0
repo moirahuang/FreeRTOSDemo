@@ -1,0 +1,1085 @@
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 471 [Tmr Svc] Wi-Fi module initialized.
+3 481 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 2809 [Tmr Svc] Wi-Fi connected to AP AFR-LiAdafruit TMP006 ebraries-24.
+5 2810 [Tmr Svc] IP Address acquired 192.168.1.5
+6 2813 [Tmr Svc] Security alert threshold = 15
+7 2813 [Tmr Svc] Current number of alerts = 0
+8 2813 [Tmr Svc] START OF PROGRAM9 2813 [Tmr Svc] Creatinxampleg MQTT Echo Task...
+
+10 2813 [MQTTEcho] MQTT echo atte0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-LiAdafruit TMP006 ebraries-24.
+5 1507 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+xample
+11 1544 [Arduino Wi0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-LiAdafruit TMP006 ebraries-24.
+5 1507 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+xample
+11 1544 [Arduino Wi0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 178 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-LiAdafruit TMP006 ebraries-24.
+5 1507 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1510 [Tmr Svc] Security alert threshold = 15
+7 1510 [Tmr Svc] Current number of alerts = 0
+8 1510 [Tmr Svc] START OF PROGRAM9 1510 [Tmr Svc] Creating MQTT Echo Task...
+10 1510 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+xample
+11 1544 [Arduino Wir] BEGNo sensor found
+IN12 1544 [Arduino Wir] quantity 0
+13 1544 [Arduino Wir] quantity 0
+14 1544 [Arduino Wir] quantity 0
+15 1544 [Arduino Wir] quantity 0
+16 1545 [Arduino Wir] quantity 0
+17 2390 [MQTTEcho] MQTT echo connected.
+18 2490 [MQTTEcho] MQTT echo test echoing task created.
+19 2693 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 168 [Tmr Svc] Wi-Fi module initialized.
+3 179 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1506 [Tmr Svc] Wi-Fi connected to AP AFR-Li0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 0 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 478 [Tmr Svc] Wi-Fi module initialized.
+3 489 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 2890 [Tmr Svc] Wi-Fi connected to Adafruit TMP006 eAP AFR-Libraries-24.
+5 2891 [Tmr Svc] IP Address acquired 192.168.1.5
+6 2893 [Tmr Svc] Security alert threshold = 15
+7 2893 [Tmr Svc] Current number of alerts = 0
+8 2893 [Tmr Svc] START OF PROGRAM9 2893 [Tmr Svc] Creating MQTT Echo Task...
+10 2894 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+xample
+No sensor found
+11 3761 [MQTTEcho] MQTT echo connected.
+12 3861 [MQTTEcho] MQTT echo test echoing task created.
+13 4163 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi M0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 190 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 2524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 2530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 2538 [Tmr Svc] Security alert threshold = 15
+7 2542 [Tmr Svc] Current number of alerts = 0
+8 2547 [Tmr Svc] START OF PROGRAM9 2550 [Tmr Svc] Creating MQTT Echo Task...
+10 2554 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+No sensor found
+11 4488 [MQTTEcho] MQTT echo connected.
+12 4692 [MQTTEcho] MQTT echo test echoing task created.
+13 5099 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 191 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] writing async12 1569 [Arduino Wir] writing async13 1573 [Arduino Wir] writing async14 1576 [Arduino Wir] writing async15 1579 [Arduino Wir] writing asyncNo sensor found
+16 2987 [MQTTEcho] MQTT echo connected.
+17 3091 [MQTTEcho] MQTT echo test echoing task created.
+18 3398 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 191 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1554 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1567 [Arduino Wir] writing async12 1571 [Arduino Wir] writing async13 1576 [Arduino Wir] writing async14 1581 [Arduino Wir] writing async15 1585 [Arduino Wir] writing asyncNo sensor found
+16 2997 [MQTTEcho] MQTT echo connected.
+17 3201 [MQTTEcho] MQTT echo test echoing task created.
+18 3608 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 191 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] writing async12 1571 [Arduino Wir] writing async13 1576 [Arduino Wir] writing async14 1580 [Arduino Wir] writing async15 1584 [Arduino Wir] writing asyncNo sensor found
+16 2956 [MQTTEcho] MQTT echo connected.
+17 3160 [MQTTEcho] MQTT echo test echoing task created.
+18 3567 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 191 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1570 [Arduino Wir] end transmission 
+13 1574 [Arduino Wir] begin transmssion 
+14 1580 [Arduino Wir] end transmission 
+15 1585 [Arduino Wir] begin transmssion 
+16 1591 [Arduino Wir] end transmission 
+17 1595 [Arduino Wir] begin transmssion 
+18 1599 [Arduino Wir] end transmission 
+19 1604 [Arduino Wir] begin transmssion 
+20 1608 [Arduino Wir] end transmission 
+No sensor found
+21 1705 [MQTTEcho] MQTT echo connected.
+22 1909 [MQTTEcho] MQTT echo test echoing task created.
+23 2416 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 191 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1570 [Arduino Wir] end transmission 
+13 1574 [Arduino Wir] begin transmssion 
+14 1579 [Arduino Wir] end transmission 
+15 1584 [Arduino Wir] begin transmssion 
+16 1590 [Arduino Wir] end transmission 
+17 1594 [Arduino Wir] begin transmssion 
+18 1599 [Arduino Wir] end transmission 
+19 1603 [Arduino Wir] begin transmssion 
+2g 1607 [Arduino Wir] end transmission 
+No sensor found
+21 1904 [MQTTEcho] MQTT echo connected.
+22 2108 [MQTTEcho] MQTT echo test echoing task created.
+23 2515 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 191 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1570 [Arduino Wir] end transmission 
+13 1574 [Arduino Wir] begin transmssion 
+14 1580 [Arduino Wir] end transmission 
+15 1585 [Arduino Wir] begin transmssion 
+16 1590 [Arduino Wir] end transmission 
+17 1594 [Arduino Wir] begin transmssion 
+18 1599 [Arduino Wir] end transmission 
+19 1604 [Arduino Wir] begin transmssion 
+20 1607 [Arduino Wir] end transmission 
+21 1611 [Arduino Wir] mid 12617 
+No sensor found
+22 1704 [MQTTEcho] MQTT echo connected.
+23 1908 [MQTTEcho] MQTT echo test echoing task created.
+24 2215 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 191 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1570 [Arduino Wir] end transmission 
+13 1573 [Arduino Wir] begin transmssion 
+14 1577 [Arduino Wir] end transmission 
+15 1581 [Arduino Wir] begin transmssion 
+1I 1585 [Arduino Wir] end transmission 
+17 1589 [Arduino Wir] begin transmssion 
+18 1593 [Arduino Wir] end transmission 
+19 1596 [Arduino Wir] begin transmssion 
+2g 1600 [Arduino Wir] end transmission 
+21 1605 [Arduino Wir] mid 12597 
+No sensor found
+22 2417 [MQTTEcho] MQTT echo connected.
+23 2621 [MQTTEcho] MQTT echo test echoing task created.
+24 3028 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 191 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1570 [Arduino Wir] end transmission 
+13 1573 [Arduino Wir] begin transmssion 
+14 1577 [Arduino Wir] end transmission 
+15 1581 [Arduino Wir] begin transmssion 
+1I 1585 [Arduino Wir] end transmission 
+17 1589 [Arduino Wir] begin transmssion 
+18 1593 [Arduino Wir] end transmission 
+19 1596 [Arduino Wir] begin transmssion 
+2g 1600 [Arduino Wir] end transmission 
+21 1605 [Arduino Wir] mid 12597 
+No sensor found
+22 2838 [MQTTEcho] MQTT echo connected.
+23 3042 [MQTTEcho] MQTT echo test echoing task created.
+24 3449 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 191 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1570 [Arduino Wir] end transmission 
+13 1574 [Arduino Wir] begin transmssion 
+14 1579 [Arduino Wir] end transmission 
+15 1584 [Arduino Wir] begin transmssion 
+16 1589 [Arduino Wir] end transmission 
+17 1594 [Arduino Wir] begin transmssion 
+18 1598 [Arduino Wir] end transmission 
+19 1601 [Arduino Wir] begin transmssion 
+2g 1605 [Arduino Wir] end transmission 
+21 1610 [Arduino Wir] mid 12597 
+No sensor found
+22 2218 [MQTTEcho] MQTT echo connected.
+23 2322 [MQTTEcho] MQTT echo test echoing task created.
+24 3429 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 191 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1571 [Arduino Wir] end transmission 
+13 1577 [Arduino Wir] begin transmssion 
+14 1581 [Arduino Wir] end transmission 
+15 1586 [Arduino Wir] begin transmssion 
+16 1590 [Arduino Wir] end transmission 
+17 1594 [Arduino Wir] begin transmssion 
+18 1598 [Arduino Wir] end transmission 
+19 1601 [Arduino Wir] begin transmssion 
+20 1605 [Arduino Wir] end transmission 
+21 1609 [Arduino Wir] mid 65137 
+No sensor found
+22 2342 [MQTTEcho] MQTT echo connected.
+23 2546 [MQTTEcho] MQTT echo test echoing task created.
+24 2953 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 190 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1514 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1520 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1527 [Tmr Svc] Security alert threshold = 15
+7 1532 [Tmr Svc] Current number of alerts = 0
+8 1536 [Tmr Svc] START OF PROGRAM9 1539 [Tmr Svc] Creating MQTT Echo Task...
+10 1543 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1556 [Arduino Wir] begin transmssion 
+12 1560 [Arduino Wir] end transmission 
+13 1564 [Arduino Wir] begin transmssion 
+14 1569 [Arduino Wir] end transmission 
+15 1574 [Arduino Wir] begin transmssion 
+16 1579 [Arduino Wir] end transmission 
+17 1584 [Arduino Wir] begin transmssion 
+18 1588 [Arduino Wir] end transmission 
+19 1591 [Arduino Wir] begin transmssion 
+2g 1595 [Arduino Wir] end transmission 
+21 1600 [Arduino Wir] mid 12597 
+No sensor found
+22 3148 [MQTTEcho] MQTT echo connected.
+23 3352 [MQTTEcho] MQTT echo test echoing task created.
+24 3959 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 190 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1514 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1520 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1527 [Tmr Svc] Security alert threshold = 15
+7 1532 [Tmr Svc] Current number of alerts = 0
+8 1536 [Tmr Svc] START OF PROGRAM9 1539 [Tmr Svc] Creating MQTT Echo Task...
+10 1543 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1556 [Arduino Wir] begin transmssion 
+12 1560 [Arduino Wir] end transmission 
+13 1564 [Arduino Wir] begin transmssion 
+14 1569 [Arduino Wir] end transmission 
+15 1574 [Arduino Wir] begin transmssion 
+16 1579 [Arduino Wir] end transmission 
+17 1584 [Arduino Wir] begin transmssion 
+18 1587 [Arduino Wir] end transmission 
+19 1591 [Arduino Wir] begin transmssion 
+2g 1595 [Arduino Wir] end transmission 
+21 1599 [Arduino Wir] mid 12597 
+No sensor found
+22 2333 [MQTTEcho] MQTT echo connected.
+23 2537 [MQTTEcho] MQTT echo test echoing task created.
+24 2944 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 190 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1570 [Arduino Wir] end transmission 
+13 1574 [Arduino Wir] begin transmssion 
+14 1579 [Arduino Wir] end transmission 
+15 1584 [Arduino Wir] begin transmssion 
+16 1589 [Arduino Wir] end transmission 
+17 1593 [Arduino Wir] begin transmssion 
+18 1597 [Arduino Wir] end transmission 
+19 1601 [Arduino Wir] begin transmssion 
+2g 1605 [Arduino Wir] end transmission 
+21 1609 [Arduino Wir] mid 21759 
+No sensor found
+22 2421 [MQTTEcho] MQTT echo connected.
+23 2625 [MQTTEcho] MQTT echo test echoing task created.
+24 3032 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 190 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1570 [Arduino Wir] end transmission 
+13 1573 [Arduino Wir] begin transmssion 
+14 1577 [Arduino Wir] end transmission 
+15 1581 [Arduino Wir] begin transmssion 
+16 1585 [Arduino Wir] read 313520
+17 1588 [Arduino Wir] end transmission 
+18 1592 [Arduino Wir] begin transmssion 
+19 1596 [Arduino Wir] end transmission 
+20 1600 [Arduino Wir] begin transmssion 
+21 1604 [Arduino Wir] read 323020
+22 1607 [Arduino Wir] end transmission 
+23 1611 [Arduino Wir] FOUND 103 
+Send s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!
+24 1623 [Arduino Wir] begin transmssion 
+25 1626 [Arduino Wir] end transmission 
+26 1630 [Arduino Wir] begin transmssion 
+27 1634 [Arduino Wir] read 323620
+28 1637 [Arduino Wir] end transmission 
+29 1641 [Arduino Wir] begin transmssion 
+30 1645 [Arduino Wir] end transmission 
+31 1649 [Arduino Wir] begin transmssion 
+32 1653 [Arduino Wir] read 333120
+33 1656 [Arduino Wir] end transmission 
+Object Temperature: 26.892370*C
+34 1668 [Arduino Wir] begin transmssion 
+35 1672 [Arduino Wir] end transmission 
+36 1676 [Arduino Wir] begin transmssion 
+37 1680 [Arduino Wir] read 333620
+38 1683 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+39 2691 [Arduino Wir] begin transmssion 
+40 2694 [Arduino Wir] end transmission 
+41 2698 [Arduino Wir] begin transmssion 
+42 2702 [Arduino Wir] read 343120
+43 2705 [Arduino Wir] end transmission 
+44 2709 [Arduino Wir] begin transmssion 
+45 2713 [Arduino Wir] end transmission 
+46 2717 [Arduino Wir] begin transmssion 
+47 2721 [Arduino Wir] read 343620
+48 2724 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+49 2733 [Arduino Wir] begin transmssion 
+50 2736 [Arduino Wir] end transmission 
+51 2740 [Arduino Wir] begin transmssion 
+52 2744 [Arduino Wir] read 353120
+53 2747 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+54 3390 [MQTTEcho] MQTT echo connected.
+55 3394 [MQTTEcho] MQTT echo test echoing task created.
+56 3501 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+57 3756 [Arduino Wir] begin transmssion 
+58 3801 [Arduino Wir] end transmission 
+59 4004 [Arduino Wir] begin transmssion 
+60 4208 [Arduino Wir] read 353920
+61 4308 [Arduino Wir] end transmission 
+62 4511 [Arduino Wir] begin transmssion 
+63 4615 [Arduino Wir] end transmission 
+64 4818 [Arduino Wir] begin transmssion 
+65 5022 [Arduino Wir] read 363420
+66 5122 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+67 5728 [Arduino Wir] begin transmssion 
+68 5825 [Arduino Wir] end transmission 
+69 6028 [Arduino Wir] begin transmssion 
+70 6232 [Arduino Wir] read 363920
+71 6332 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+72 7539 [Arduino Wir] begin transmssion 
+73 7636 [Arduino Wir] end transmission 
+74 7740 [Arduino Wir] begin transmssion 
+75 7944 [Arduino Wir] read 373420
+76 8044 [Arduino Wir] end transmission 
+77 8148 [Arduino Wir] begin transmssion 
+78 8252 [Arduino Wir] end transmission 
+79 8455 [Arduino Wir] begin transmssion 
+80 8659 [Arduino Wir] read 373920
+81 8759 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+82 9266 [Arduino Wir] begin transmssion 
+83 9363 [Arduino Wir] end transmission 
+84 9467 [Arduino Wir] begin transmssion 
+85 9671 [Arduino Wir] read 383420
+86 9771 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+87 10978 [Arduino Wir] begin transmssion 
+88 11075 [Arduino Wir] end transmission 
+89 11179 [Arduino Wir] begin transmssion 
+90 11383 [Arduino Wir] read 383920
+91 11483 [Arduino Wir] end transmission 
+92 11587 [Arduino Wir] begin transmssion 
+93 11691 [Arduino Wir] end transmission 
+94 11795 [Arduino Wir] begin transmssion 
+95 11999 [Arduino Wir] read 393420
+96 12099 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+97 12606 [Arduino Wir] begin transmssion 
+98 12703 [Arduino Wir] end transmission 
+99 12907 [Arduino Wir] begin transmssion 
+100 13111 [Arduino Wir] read 393920
+101 13211 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+102 14518 [Arduino Wir] begin transmssion 
+103 14615 [Arduino Wir] end transmission 
+104 14819 [Arduino Wir] begin transmssion 
+105 15023 [Arduino Wir] read 313034
+106 15123 [Arduino Wir] end transmission 
+107 15327 [Arduino Wir] begin transmssion 
+108 15431 [Arduino Wir] end transmission 
+109 15535 [Arduino Wir] begin transmssion 
+110 15739 [Arduino Wir] read 313039
+111 15839 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+112 16346 [Arduino Wir] begin transmssion 
+113 16443 [Arduino Wir] end transmission 
+114 16547 [Arduino Wir] begin transmssion 
+115 16751 [Arduino Wir] read 313134
+116 16851 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+117 18058 [Arduino Wir] begin transmssion 
+118 18155 [Arduino Wir] end transmission 
+119 18259 [Arduino Wir] begin transmssion 
+120 18463 [Arduino Wir] read 313139
+121 18563 [Arduino Wir] end transmission 
+122 18667 [Arduino Wir] begin transmssion 
+123 18771 [Arduino Wir] end transmission 
+124 18875 [Arduino Wir] begin transmssion 
+125 19079 [Arduino Wir] read 313234
+126 19179 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+127 19686 [Arduino Wir] begin transmssion 
+128 19783 [Arduino Wir] end transmission 
+129 19887 [Arduino Wir] begin transmssion 
+130 20091 [Arduino Wir] read 313239
+131 20191 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+132 21498 [Arduino Wir] begin transmssion 
+133 21595 [Arduino Wir] end transmission 
+134 21699 [Arduino Wir] begin transmssion 
+135 21903 [Arduino Wir] read 313334
+136 22003 [Arduino Wir] end transmission 
+137 22207 [Arduino Wir] begin transmssion 
+138 22311 [Arduino Wir] end transmission 
+139 22515 [Arduino Wir] begin transmssion 
+140 22719 [Arduino Wir] read 313339
+141 22819 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+142 23426 [Arduino Wir] begin transmssion 
+143 23523 [Arduino Wir] end transmission 
+144 23727 [Arduino Wir] begin transmssion 
+145 23931 [Arduino Wir] read 313434
+146 24031 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+147 25238 [Arduino Wir] begin transmssion 
+148 25335 [Arduino Wir] end transmission 
+149 25439 [Arduino Wir] begin transmssion 
+150 25643 [Arduino Wir] read 313439
+151 25743 [Arduino Wir] end transmission 
+152 25847 [Arduino Wir] begin transmssion 
+153 25951 [Arduino Wir] end transmission 
+154 26055 [Arduino Wir] begin transmssion 
+155 26259 [Arduino Wir] read 313534
+156 26359 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+157 26866 [Arduino Wir] begin transmssion 
+158 26963 [Arduino Wir] end transmission 
+159 27067 [Arduino Wir] begin transmssion 
+160 27271 [Arduino Wir] read 313539
+161 27371 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+162 28578 [Arduino Wir] begin transmssion 
+163 28675 [Arduino Wir] end transmission 
+164 28779 [Arduino Wir] begin transmssion 
+165 28983 [Arduino Wir] read 313634
+166 29083 [Arduino Wir] end transmission 
+167 29187 [Arduino Wir] begin transmssion 
+168 29291 [Arduino Wir] end transmission 
+169 29495 [Arduino Wir] begin transmssion 
+170 29699 [Arduino Wir] read 313639
+171 29799 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+172 30306 [Arduino Wir] begin transmssion 
+173 30403 [Arduino Wir] end transmission 
+174 30607 [Arduino Wir] begin transmssion 
+175 30811 [Arduino Wir] read 313734
+176 30911 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+177 32218 [Arduino Wir] begin transmssion 
+178 32315 [Arduino Wir] end transmission 
+179 32519 [Arduino Wir] begin transmssion 
+180 32723 [Arduino Wir] read 313739
+181 32823 [Arduino Wir] end transmission 
+182 33027 [Arduino Wir] begin transmssion 
+183 33131 [Arduino Wir] end transmission 
+184 33235 [Arduino Wir] begin transmssion 
+185 33439 [Arduino Wir] read 313834
+186 33539 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+187 34046 [Arduino Wir] begin transmssion 
+188 34143 [Arduino Wir] end transmission 
+189 34247 [Arduino Wir] begin transmssion 
+190 34451 [Arduino Wir] read 313839
+191 34551 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+192 35758 [Arduino Wir] begin transmssion 
+193 35855 [Arduino Wir] end transmission 
+194 35959 [Arduino Wir] begin transmssion 
+195 36163 [Arduino Wir] read 313934
+196 36263 [Arduino Wir] end transmission 
+197 36467 [Arduino Wir] begin transmssion 
+198 36571 [Arduino Wir] end transmission 
+199 36675 [Arduino Wir] begin transmssion 
+200 36879 [Arduino Wir] read 313939
+201 36979 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+202 37486 [Arduino Wir] begin transmssion 
+203 37583 [Arduino Wir] end transmission 
+204 37687 [Arduino Wir] begin transmssion 
+205 37891 [Arduino Wir] read 323034
+206 37991 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+207 39198 [Arduino Wir] begin transmssion 
+208 39295 [Arduino Wir] end transmission 
+209 39499 [Arduino Wir] begin transmssion 
+210 39703 [Arduino Wir] read 323039
+211 39803 [Arduino Wir] end transmission 
+212 40007 [Arduino Wir] begin transmssion 
+213 40111 [Arduino Wir] end transmission 
+214 40315 [Arduino Wir] begin transmssion 
+215 40519 [Arduino Wir] read 323134
+216 40619 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+217 41226 [Arduino Wir] begin transmssion 
+218 41323 [Arduino Wir] end transmission 
+219 41527 [Arduino Wir] begin transmssion 
+220 41731 [Arduino Wir] read 323139
+221 41831 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+222 43038 [Arduino Wir] begin transmssion 
+223 43135 [Arduino Wir] end transmission 
+224 43239 [Arduino Wir] begin transmssion 
+225 43443 [Arduino Wir] read 323234
+226 43543 [Arduino Wir] end transmission 
+227 43647 [Arduino Wir] begin transmssion 
+228 43751 [Arduino Wir] end transmission 
+229 43855 [Arduino Wir] begin transmssion 
+230 44059 [Arduino Wir] read 323239
+231 44159 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+232 44666 [Arduino Wir] begin transmssion 
+233 44763 [Arduino Wir] end transmission 
+234 44867 [Arduino Wir] begin transmssion 
+235 45071 [Arduino Wir] read 323334
+236 45171 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+237 46378 [Arduino Wir] begin transmssion 
+238 46475 [Arduino Wir] end transmission 
+239 46579 [Arduino Wir] begin transmssion 
+240 46783 [Arduino Wir] read 323339
+241 46883 [Arduino Wir] end transmission 
+242 46987 [Arduino Wir] begin transmssion 
+243 47091 [Arduino Wir] end transmission 
+244 47195 [Arduino Wir] begin transmssion 
+245 47399 [Arduino Wir] read 323434
+246 47499 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+247 48006 [Arduino Wir] begin transmssion 
+248 48103 [Arduino Wir] end transmission 
+249 48307 [Arduino Wir] begin transmssion 
+250 48511 [Arduino Wir] read 323439
+251 48611 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+252 49918 [Arduino Wir] begin transmssion 
+253 50015 [Arduino Wir] end transmission 
+254 50219 [Arduino Wir] begin transmssion 
+255 50423 [Arduino Wir] read 323534
+256 50523 [Arduino Wir] end transmission 
+257 50727 [Arduino Wir] begin transmssion 
+258 50831 [Arduino Wir] end transmission 
+259 50935 [Arduino Wir] begin transmssion 
+260 51139 [Arduino Wir] read 323539
+261 51239 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+262 51846 [Arduino Wir] begin transmssion 
+263 51943 [Arduino Wir] end transmission 
+264 52047 [Arduino Wir] begin transmssion 
+265 52251 [Arduino Wir] read 323634
+266 52351 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+267 53558 [Arduino Wir] begin transmssion 
+268 53655 [Arduino Wir] end transmission 
+269 53759 [Arduino Wir] begin transmssion 
+270 53963 [Arduino Wir] read 323639
+271 54063 [Arduino Wir] end transmission 
+272 54167 [Arduino Wir] begin transmssion 
+273 54271 [Arduino Wir] end transmission 
+274 54475 [Arduino Wir] begin transmssion 
+275 54679 [Arduino Wir] read 323734
+276 54779 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+277 55286 [Arduino Wir] begin transmssion 
+278 55383 [Arduino Wir] end transmission 
+279 55487 [Arduino Wir] begin transmssion 
+280 55691 [Arduino Wir] read 323739
+281 55791 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+282 56998 [Arduino Wir] begin transmssion 
+283 57095 [Arduino Wir] end transmission 
+284 57199 [Arduino Wir] begin transmssion 
+285 57403 [Arduino Wir] read 323834
+286 57503 [Arduino Wir] end transmission 
+287 57707 [Arduino Wir] begin transmssion 
+288 57811 [Arduino Wir] end transmission 
+289 58015 [Arduino Wir] begin transmssion 
+290 58219 [Arduino Wir] read 323839
+291 58319 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+292 58926 [Arduino Wir] begin transmssion 
+293 59023 [Arduino Wir] end transmission 
+294 59227 [Arduino Wir] begin transmssion 
+295 59431 [Arduino Wir] read 323934
+296 59531 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+297 60738 [Arduino Wir] begin transmssion 
+298 60835 [Arduino Wir] end transmission 
+299 60939 [Arduino Wir] begin transmssion 
+300 61143 [Arduino Wir] read 323939
+301 61243 [Arduino Wir] end transmission 
+302 61447 [Arduino Wir] begin transmssion 
+303 61551 [Arduino Wir] end transmission 
+304 61655 [Arduino Wir] begin transmssion 
+305 61859 [Arduino Wir] read 333034
+306 61959 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+307 62466 [Arduino Wir] begin transmssion 
+308 62563 [Arduino Wir] end transmission 
+309 62667 [Arduino Wir] begin transmssion 
+310 62871 [Arduino Wir] read 333039
+311 62971 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+312 64178 [Arduino Wir] begin transmssion 
+313 64275 [Arduino Wir] end transmission 
+314 64479 [Arduino Wir] begin transmssion 
+315 64683 [Arduino Wir] read 333134
+316 64783 [Arduino Wir] end transmission 
+317 64887 [Arduino Wir] begin transmssion 
+318 64991 [Arduino Wir] end transmission 
+319 65095 [Arduino Wir] begin transmssion 
+320 65299 [Arduino Wir] read 333139
+321 65399 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+322 65906 [Arduino Wir] begin transmssion 
+323 66003 [Arduino Wir] end transmission 
+324 66207 [Arduino Wir] begin transmssion 
+325 66411 [Arduino Wir] read 333234
+326 66511 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+327 67818 [Arduino Wir] begin transmssion 
+328 67915 [Arduino Wir] end transmission 
+329 68119 [Arduino Wir] begin transmssion 
+330 68323 [Arduino Wir] read 333239
+331 68423 [Arduino Wir] end transmission 
+332 68627 [Arduino Wir] begin transmssion 
+333 68731 [Arduino Wir] end transmission 
+334 68835 [Arduino Wir] begin transmssion 
+335 69039 [Arduino Wir] read 333334
+336 69139 [Arduino Wir] end transmission 
+Object Temperature: 29.244125*C
+337 69646 [Arduino Wir] begin transmssion 
+338 69743 [Arduino Wir] end transmission 
+339 69847 [Arduino Wir] begin transmssion 
+340 70051 [Arduino Wir] read 333339
+341 70151 [Arduino Wir] end transmission 
+Die Temperature: 28.812500*C
+342 71458 [Arduino Wir] begin transmssion 
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 190 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1570 [Arduino Wir] end transmission 
+13 1573 [Arduino Wir] begin transmssion 
+14 1577 [Arduino Wir] end transmission 
+15 1581 [Arduino Wir] begin transmssion 
+16 1586 [Arduino Wir] read 313520
+17 1590 [Arduino Wir] end transmission 
+18 1594 [Arduino Wir] begin transmssion 
+19 1599 [Arduino Wir] end transmission 
+20 1604 [Arduino Wir] begin transmssion 
+21 1609 [Arduino Wir] read 54ff20
+22 1612 [Arduino Wir] end transmission 
+23 1616 [Arduino Wir] mid 21759 
+No sensor found
+24 2705 [MQTTEcho] MQTT echo connected.
+25 2909 [MQTTEcho] MQTT echo test echoing task created.
+26 3316 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 190 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1570 [Arduino Wir] end transmission 
+13 1573 [Arduino Wir] begin transmssion 
+14 1577 [Arduino Wir] end transmission 
+15 1581 [Arduino Wir] begin transmssion 
+16 1586 [Arduino Wir] read 313520
+17 1590 [Arduino Wir] end transmission 
+18 1594 [Arduino Wir] begin transmssion 
+19 1599 [Arduino Wir] end transmission 
+20 1604 [Arduino Wir] begin transmssion 
+21 1609 [Arduino Wir] read 54ff20
+22 1612 [Arduino Wir] end transmission 
+23 1616 [Arduino Wir] mid 21759 
+No sensor found
+24 2494 [MQTTEcho] MQTT echo connected.
+25 2698 [MQTTEcho] MQTT echo test echoing task created.
+26 3705 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 190 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1514 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1520 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1527 [Tmr Svc] Security alert threshold = 15
+7 1532 [Tmr Svc] Current number of alerts = 0
+8 1536 [Tmr Svc] START OF PROGRAM9 1539 [Tmr Svc] Creating MQTT Echo Task...
+10 1543 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1556 [Arduino Wir] begin transmssion 
+12 1560 [Arduino Wir] end transmission 
+13 1563 [Arduino Wir] begin transmssion 
+14 1567 [Arduino Wir] end transmission 
+15 1571 [Arduino Wir] begin transmssion 
+16 1576 [Arduino Wir] read 54ff20
+17 1580 [Arduino Wir] end transmission 
+18 1585 [Arduino Wir] begin transmssion 
+19 1589 [Arduino Wir] end transmission 
+20 1594 [Arduino Wir] begin transmssion 
+21 1599 [Arduino Wir] read 0ff20
+22 1603 [Arduino Wir] end transmission 
+23 1606 [Arduino Wir] mid 21759 
+No sensor found
+24 1621 [pthread] [SimpleLinkSockEventHandler ERROR]: Handshake Failed - socket 0, reason: -708.
+25 1631 [MQTTEcho] ERROR:  MQTT echo failed to connect with error 1.
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 190 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1524 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1530 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1537 [Tmr Svc] Security alert threshold = 15
+7 1542 [Tmr Svc] Current number of alerts = 0
+8 1546 [Tmr Svc] START OF PROGRAM9 1549 [Tmr Svc] Creating MQTT Echo Task...
+10 1553 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1566 [Arduino Wir] begin transmssion 
+12 1570 [Arduino Wir] end transmission 
+13 1573 [Arduino Wir] begin transmssion 
+14 1577 [Arduino Wir] end transmission 
+15 1581 [Arduino Wir] begin transmssion 
+16 1586 [Arduino Wir] read 313520
+17 1591 [Arduino Wir] end transmission 
+18 1595 [Arduino Wir] begin transmssion 
+19 1600 [Arduino Wir] end transmission 
+20 1605 [Arduino Wir] begin transmssion 
+21 1608 [Arduino Wir] read 323020
+22 1612 [Arduino Wir] end transmission 
+23 1616 [Arduino Wir] mid 21759 
+No sensor found
+24 2444 [MQTTEcho] MQTT echo connected.
+25 2648 [MQTTEcho] MQTT echo test echoing task created.
+26 3055 [MQTTEcho] MQTT Echo demo subscribed to freertos/demos/echo
+0 0 [Tmr Svc] Starting Wi-Fi Module ...
+1 4 [Tmr Svc] Simple Link task created
+Device came up in Station mode
+2 175 [Tmr Svc] Wi-Fi module initialized.
+3 190 [Tmr Svc] Write certificate...
+[WLAN EVENT] STA Connected to the AP: AFR-Libraries-24 , BSSID: cc:40:d0:15:4a:3b
+[NETAPP EVENT] IP acquired by the device
+
+Device has connected to AFR-Libraries-24
+Device IP Address is 192.168.1.5 
+
+4 1514 [Tmr Svc] Wi-Fi connected to AP AFR-Libraries-24.
+5 1520 [Tmr Svc] IP Address acquired 192.168.1.5
+6 1527 [Tmr Svc] Security alert threshold = 15
+7 1532 [Tmr Svc] Current number of alerts = 0
+8 1536 [Tmr Svc] START OF PROGRAM9 1539 [Tmr Svc] Creating MQTT Echo Task...
+10 1543 [MQTTEcho] MQTT echo attempting to connect to a3bl899qy9xyqv-ats.iot.us-east-2.amazonaws.com.
+Adafruit TMP006 example
+11 1556 [Arduino Wir] begin transmssion 
+12 1560 [Arduino Wir] end transmission 
+13 1563 [Arduino Wir] begin transmssion 
+14 1567 [Arduino Wir] end transmission 
+15 1571 [Arduino Wir] begin transmssion 
+16 1576 [Arduino Wir] read 313520

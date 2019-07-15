@@ -13,6 +13,11 @@ extern "C"
 #include "iot_i2c.h"
 #include "FreeRTOS.h"
 #include "semphr.h"
+#include "task.h"
+#include "aws_demo_runner.h"
+
+#include "WireAdaptor.h"
+#include "aws_hello_world.h"
 }
 #include "Wire.h"
 #include "WireAdaptor.h"
@@ -58,8 +63,10 @@ void loop() {
   // Grab temperature measurements and print them.
   float objt = tmp006.readObjTempC();
   Serial.print( "Object Temperature: "); Serial.print(objt); Serial.println( "*C");
+  prvPublishNextMessage("Object Temperature %lf'\r\n", objt);
   float diet = tmp006.readDieTempC();
   Serial.print( "Die Temperature: "); Serial.print(diet); Serial.println( "*C");
+  prvPublishNextMessage("Die Temperature %lf'\r\n", diet);
 
 //  delay(4000); // 4 seconds per reading for 16 samples per reading
 }

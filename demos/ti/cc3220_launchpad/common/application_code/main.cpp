@@ -112,14 +112,13 @@ void vApplicationMallocFailedHook();
  *
  * @return This function should not return.
  */
-int main(void)
-{
+int main(void){
     /* Call board init functions. */
     Board_initGeneral();
 //
 //        /* Start logging task. */
     xLoggingTaskInitialize( democonfigTASKSTACKSIZE,
-    tskIDLE_PRIORITY,
+    10,
                            mainLOGGING_MESSAGE_QUEUE_LENGTH);
 //
 //        /* Start the FreeRTOS scheduler. */
