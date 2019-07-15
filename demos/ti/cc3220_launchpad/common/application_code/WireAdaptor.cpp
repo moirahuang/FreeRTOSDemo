@@ -21,6 +21,7 @@ extern "C"
 #include "Adafruit_TMP006.h"
 #include "Serial.h"
 }
+extern void vStartMQTTEchoDemo( void );
 SerialOutput Serial = SerialOutput();
 
 TwoWire Wire = TwoWire();
@@ -29,6 +30,7 @@ Adafruit_TMP006 tmp006(0x41); // start with a diferent i2c address!
 
 void setup()
 {
+vStartMQTTEchoDemo( );
   Serial.begin(9600);
   Serial.println("Adafruit TMP006 example");
 
@@ -66,7 +68,7 @@ void loop()
   // Grab temperature measurements and print them.
   float objt = tmp006.readObjTempC();
   Serial.print("Object Temperature: ");
-  Serial.print(objt, HEX);
+  Serial.print(objt);
   Serial.println("*C");
   prvPublishNextMessage("Object Temperature: %lf'\r\n", objt);
   float diet = tmp006.readDieTempC();
