@@ -118,9 +118,9 @@ IotI2CHandle_t iot_i2c_open(int32_t I2CInstance)
  * @param[in] pxI2CPeripheral The I2C peripheral handle returned in the open() call.
  * @param[in] xCallback The callback function to be called on completion of transaction.
  */
-void iot_i2c_set_callback( IotI2CHandle_t const pxI2CPeripheral,
-                           IotI2CCallback_t xCallback,
-                           void * pvUserContext )
+void iot_i2c_set_callback(IotI2CHandle_t const pxI2CPeripheral,
+                          IotI2CCallback_t xCallback,
+                          void *pvUserContext)
 {
         IotI2CHandle_t pDescriptor = pxI2CPeripheral;
 

@@ -41,23 +41,23 @@
 /**
  * The speeds supported by I2C bus.
  */
-#define IOT_I2C_STANDARD_MODE_BPS         ( 100000 )
-#define IOT_I2C_FAST_MODE_BPS             ( 400000 )
-#define IOT_I2C_FAST_MODE_PLUS_BPS        ( 1000000 )
-#define IOT_I2C_HIGH_SPEED_BPS            ( 3400000 )
+#define IOT_I2C_STANDARD_MODE_BPS (100000)
+#define IOT_I2C_FAST_MODE_BPS (400000)
+#define IOT_I2C_FAST_MODE_PLUS_BPS (1000000)
+#define IOT_I2C_HIGH_SPEED_BPS (3400000)
 
 /**
  * The return codes for the functions in I2C.
  */
-#define IOT_I2C_SUCCESS                       ( 0 )
-#define IOT_I2C_INVALID_VALUE                 ( 1 )
-#define IOT_I2C_BUSY                          ( 2 )
-#define IOT_I2C_WRITE_FAILED                  ( 3 )
-#define IOT_I2C_READ_FAILED                   ( 4 )
-#define IOT_I2C_NACK                          ( 5 )
-#define IOT_I2C_BUS_TIMEOUT                   ( 6 )
-#define IOT_I2C_NOTHING_TO_CANCEL             ( 7 )
-#define IOT_I2C_FUNCTION_NOT_SUPPORTED        ( 8 )
+#define IOT_I2C_SUCCESS (0)
+#define IOT_I2C_INVALID_VALUE (1)
+#define IOT_I2C_BUSY (2)
+#define IOT_I2C_WRITE_FAILED (3)
+#define IOT_I2C_READ_FAILED (4)
+#define IOT_I2C_NACK (5)
+#define IOT_I2C_BUS_TIMEOUT (6)
+#define IOT_I2C_NOTHING_TO_CANCEL (7)
+#define IOT_I2C_FUNCTION_NOT_SUPPORTED (8)
 
 /**
  * @brief I2C Bus status
@@ -84,8 +84,8 @@ typedef enum
  */
 typedef struct IotI2CConfig
 {
-    uint32_t ulMasterTimeout;   /**<! Master timeout value in msec, to relinquish the bus if slave does not respond */
-    uint32_t ulBusFreq;         /**<! Bus frequency/baud rate */
+    uint32_t ulMasterTimeout; /**<! Master timeout value in msec, to relinquish the bus if slave does not respond */
+    uint32_t ulBusFreq;       /**<! Bus frequency/baud rate */
 } IotI2CConfig_t;
 
 /**
@@ -93,31 +93,31 @@ typedef struct IotI2CConfig
  */
 typedef enum
 {
-    eI2CSendNoStopFlag,     /**<! Set flag to not send stop after transaction */
-                            /**<! Default is always stop for every transaction */
-                            /**<! Flag will auto reset to stop after one transaction if you set no stop */
-    eI2CSetSlaveAddrWrite,  /**<! Master sends the start condition followed by slave address to Write. */
-    eI2CSetSlaveAddrRead,   /**<! Master sends the start condition followed by slave address to Read.  */
-    eI2CSetMasterConfig,    /**<! Sets the I2C bus frequency and timeout using the struct IotI2CIoctlConfig_t,
+    eI2CSendNoStopFlag,    /**<! Set flag to not send stop after transaction */
+                           /**<! Default is always stop for every transaction */
+                           /**<! Flag will auto reset to stop after one transaction if you set no stop */
+    eI2CSetSlaveAddrWrite, /**<! Master sends the start condition followed by slave address to Write. */
+    eI2CSetSlaveAddrRead,  /**<! Master sends the start condition followed by slave address to Read.  */
+    eI2CSetMasterConfig,   /**<! Sets the I2C bus frequency and timeout using the struct IotI2CIoctlConfig_t,
                               *   default speed is Standard, fast, fast-plus and High speed. */
-    eI2CGetMasterConfig,    /**<! Gets the I2C bus frequency and timeout set for the I2C master. */
-    eI2CGetBusState,        /**<! Get the current I2C bus status. Returns eI2CBusIdle or eI2CBusy */
-    eI2CBusReset,           /**<! Master resets the bus by sending 9 clock signals. */
-    eI2CGetTxNoOfbytes,     /**<! Get the number of bytes sent in write operation. */
-    eI2CGetRxNoOfbytes,     /**<! Get the number of bytes received in read operation. */
+    eI2CGetMasterConfig,   /**<! Gets the I2C bus frequency and timeout set for the I2C master. */
+    eI2CGetBusState,       /**<! Get the current I2C bus status. Returns eI2CBusIdle or eI2CBusy */
+    eI2CBusReset,          /**<! Master resets the bus by sending 9 clock signals. */
+    eI2CGetTxNoOfbytes,    /**<! Get the number of bytes sent in write operation. */
+    eI2CGetRxNoOfbytes,    /**<! Get the number of bytes received in read operation. */
 } IotI2CIoctlRequest_t;
 
 /**
  * @brief The I2C descriptor type defined in the source file.
  */
-struct                    IotI2CDescriptor;
+struct IotI2CDescriptor;
 
 /**
  * @brief IotI2CHandle_t is the handle type returned by calling iot_i2c_open().
  *        This is initialized in open and returned to caller. The caller must pass
  *        this pointer to the rest of APIs.
  */
-typedef struct IotI2CDescriptor   * IotI2CHandle_t;
+typedef struct IotI2CDescriptor *IotI2CHandle_t;
 
 /**
  * @brief The callback function for completion of I2C operation.
@@ -129,7 +129,7 @@ typedef struct IotI2CDescriptor   * IotI2CHandle_t;
  *                          passed back to the caller in the callback.
  *
  */
-typedef void (* IotI2CCallback_t) ( IotI2COperationStatus_t xOpStatus, void * pvUserContext );
+typedef void (*IotI2CCallback_t)(IotI2COperationStatus_t xOpStatus, void *pvUserContext);
 
 /**
  * @brief Initiates the I2C bus as master.
@@ -138,7 +138,7 @@ typedef void (* IotI2CCallback_t) ( IotI2COperationStatus_t xOpStatus, void * pv
  *
  * @return The handle to the I2C port if SUCCESS else NULL.
  */
-IotI2CHandle_t iot_i2c_open( int32_t lI2CInstance );
+IotI2CHandle_t iot_i2c_open(int32_t lI2CInstance);
 
 /**
  * @brief Sets the application callback to be called on completion of an operation.
@@ -147,9 +147,9 @@ IotI2CHandle_t iot_i2c_open( int32_t lI2CInstance );
  * @param[in] xCallback The callback function to be called on completion of transaction.
  * @param[in] pvUserContext The user context to be passed back when callback is called.
  */
-void iot_i2c_set_callback( IotI2CHandle_t const pxI2CPeripheral,
-                           IotI2CCallback_t xCallback,
-                           void * pvUserContext );
+void iot_i2c_set_callback(IotI2CHandle_t const pxI2CPeripheral,
+                          IotI2CCallback_t xCallback,
+                          void *pvUserContext);
 
 /**
  * @brief Starts the I2C master read operation in blocking mode.
@@ -163,9 +163,9 @@ void iot_i2c_set_callback( IotI2CHandle_t const pxI2CPeripheral,
  *         NACK = IOT_I2C_NACK,
  *         Driver_Error = IOT_I2C_READ_FAILED,
  */
-int32_t iot_i2c_read_sync( IotI2CHandle_t const pxI2CPeripheral,
-                           uint8_t * const pucBuffer,
-                           size_t xBytes );
+int32_t iot_i2c_read_sync(IotI2CHandle_t const pxI2CPeripheral,
+                          uint8_t *const pucBuffer,
+                          size_t xBytes);
 
 /**
  * @brief Starts the I2C master write operation in blocking mode.
@@ -179,9 +179,9 @@ int32_t iot_i2c_read_sync( IotI2CHandle_t const pxI2CPeripheral,
  *         NACK = IOT_I2C_NACK,
  *         Driver_Error = IOT_I2C_WRITE_FAILED,
  */
-int32_t iot_i2c_write_sync( IotI2CHandle_t const pxI2CPeripheral,
-                            uint8_t * const pucBuffer,
-                            size_t xBytes );
+int32_t iot_i2c_write_sync(IotI2CHandle_t const pxI2CPeripheral,
+                           uint8_t *const pucBuffer,
+                           size_t xBytes);
 
 /**
  * @brief Starts the I2C master read operation in non-blocking mode.
@@ -195,9 +195,9 @@ int32_t iot_i2c_write_sync( IotI2CHandle_t const pxI2CPeripheral,
  *         FAILED = IOT_I2C_INVALID_VALUE
  *         BUSY = IOT_I2C_BUSY
  */
-int32_t iot_i2c_read_async( IotI2CHandle_t const pxI2CPeripheral,
-                            uint8_t * const pucBuffer,
-                            size_t xBytes );
+int32_t iot_i2c_read_async(IotI2CHandle_t const pxI2CPeripheral,
+                           uint8_t *const pucBuffer,
+                           size_t xBytes);
 
 /**
  * @brief Starts the I2C master write operation in non-blocking mode.
@@ -211,9 +211,9 @@ int32_t iot_i2c_read_async( IotI2CHandle_t const pxI2CPeripheral,
  *         FAILED = IOT_I2C_INVALID_VALUE,
  *         BUSY = IOT_I2C_BUSY
  */
-int32_t iot_i2c_write_async( IotI2CHandle_t const pxI2CPeripheral,
-                             uint8_t * const pucBuffer,
-                             size_t xBytes );
+int32_t iot_i2c_write_async(IotI2CHandle_t const pxI2CPeripheral,
+                            uint8_t *const pucBuffer,
+                            size_t xBytes);
 
 /**
  * @brief Configures the I2C master with user configuration.
@@ -226,10 +226,9 @@ int32_t iot_i2c_write_async( IotI2CHandle_t const pxI2CPeripheral,
  *         FAILED = IOT_I2C_FUNCTION_NOT_SUPPORTED,
  *         Busy(For eGetBusState, eSetSlaveAddrWrite/Read, eSendStop) = IOT_I2C_BUSY,
  */
-int32_t iot_i2c_ioctl( IotI2CHandle_t const pxI2CPeripheral,
-                       IotI2CIoctlRequest_t xI2CRequest,
-                       void * const pvBuffer );
-
+int32_t iot_i2c_ioctl(IotI2CHandle_t const pxI2CPeripheral,
+                      IotI2CIoctlRequest_t xI2CRequest,
+                      void *const pvBuffer);
 
 /**
  * @brief Stops the ongoing operation and de-initializes the I2C peripheral.
@@ -239,7 +238,7 @@ int32_t iot_i2c_ioctl( IotI2CHandle_t const pxI2CPeripheral,
  * @return SUCCESS = IOT_I2C_SUCCESS,
  *         FAILED = IOT_I2C_INVALID_VALUE,
  */
-int32_t iot_i2c_close( IotI2CHandle_t const pxI2CPeripheral );
+int32_t iot_i2c_close(IotI2CHandle_t const pxI2CPeripheral);
 
 /**
  * @brief This function is used to cancel the current operation in progress
@@ -251,7 +250,7 @@ int32_t iot_i2c_close( IotI2CHandle_t const pxI2CPeripheral );
  *          FAILED = IOT_I2C_FUNCTION_INVALID_VALUE
  *          or IOT_I2C_FUNCTION_NOT_SUPPORTED, IOT_I2C_NOTHING_TO_CANCEL
  */
-int32_t iot_i2c_cancel( IotI2CHandle_t const pxI2CPeripheral );
+int32_t iot_i2c_cancel(IotI2CHandle_t const pxI2CPeripheral);
 
 /**
  * @}

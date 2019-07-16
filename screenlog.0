@@ -2895,3 +2895,4175 @@ Object Temperature: 21.2616138458
 Die Temperature: 25.0625000000
 *C
 34 23064 [Arduino Wir] Echo successfully published 'Die Temperature: 25.0625'
+Object Temperature: 22.2244110107
+*C
+35 24679 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.9687500000
+*C
+36 25294 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.5080451965
+*C
+37 27310 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.0625000000
+*C
+38 27724 [Arduino Wir] Echo successfully published 'Die Temperature: 25.0625'
+Object Temperature: 21.3925247192
+*C
+39 29837 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+40 30451 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3208980560
+*C
+41 31667 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+42 32281 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8660583496
+*C
+43 33697 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.0625000000
+*C
+44 34111 [Arduino Wir] Echo successfully published 'Die Temperature: 25.0625'
+Object Temperature: 21.6785240173
+*C
+45 35727 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+46 36141 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 24.2396545410
+*C
+47 37757 [Arduino Wir] Echo successfully published 'Object Temperature: 24.2'
+Die Temperature: 25.0625000000
+*C
+48 38172 [Arduino Wir] Echo successfully published 'Die Temperature: 25.0625'
+Object Temperature: 22.6731300354
+*C
+49 39788 [Arduino Wir] Echo successfully published 'Object Temperature: 22.6'
+Die Temperature: 25.9687500000
+*C
+50 40202 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.9841289520
+*C
+51 41518 [Arduino Wir] Echo successfully published 'Object Temperature: 23.9'
+Die Temperature: 25.0625000000
+*C
+52 41733 [Arduino Wir] Echo successfully published 'Die Temperature: 25.0625'
+Object Temperature: 23.1790332794
+*C
+53 43149 [Arduino Wir] Echo successfully published 'Object Temperature: 23.1'
+Die Temperature: 25.9687500000
+*C
+54 44160 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.5911407471
+*C
+55 45576 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.9687500000
+*C
+56 46190 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.0111579895
+*C
+57 47606 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.9687500000
+*C
+58 48020 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6785240173
+*C
+59 49636 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.0625000000
+*C
+60 50051 [Arduino Wir] Echo successfully published 'Die Temperature: 25.0625'
+Object Temperature: 20.9859542847
+*C
+61 51267 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+62 51881 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.7613258362
+*C
+63 53097 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.0937500000
+*C
+64 53312 [Arduino Wir] Echo successfully published 'Die Temperature: 25.0937'
+Object Temperature: 21.8326339722
+*C
+65 55028 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+66 56239 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.7137584686
+*C
+67 57655 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.0937500000
+*C
+68 58069 [Arduino Wir] Echo successfully published 'Die Temperature: 25.0937'
+Object Temperature: 21.2607364655
+*C
+69 59485 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+70 59898 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.1310443878
+*C
+71 61514 [Arduino Wir] Echo successfully published 'Object Temperature: 23.1'
+Die Temperature: 25.0937500000
+*C
+72 62326 [Arduino Wir] Echo successfully published 'Die Temperature: 25.0937'
+Object Temperature: 22.1761054993
+*C
+73 63942 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.9687500000
+*C
+74 64456 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5347442627
+*C
+75 65872 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.1250000000
+*C
+76 66286 [Arduino Wir] Echo successfully published 'Die Temperature: 25.1250'
+Object Temperature: 21.7727642059
+*C
+77 67702 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.1250000000
+*C
+78 68116 [Arduino Wir] Echo successfully published 'Die Temperature: 25.1250'
+Object Temperature: 21.1766452789
+*C
+79 69532 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.1562500000
+*C
+80 69946 [Arduino Wir] Echo successfully published 'Die Temperature: 25.1562'
+Object Temperature: 23.2472057343
+*C
+81 71362 [Arduino Wir] Echo successfully published 'Object Temperature: 23.2'
+Die Temperature: 25.9687500000
+*C
+82 71976 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.4110507965
+*C
+83 73392 [Arduino Wir] Echo successfully published 'Object Temperature: 23.4'
+Die Temperature: 25.9687500000
+*C
+84 73806 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6652946472
+*C
+85 75422 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.1562500000
+*C
+86 75937 [Arduino Wir] Echo successfully published 'Die Temperature: 25.1562'
+Object Temperature: 21.0322685242
+*C
+87 77353 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+88 78364 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.0804538727
+*C
+89 79980 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.1875000000
+*C
+90 80394 [Arduino Wir] Echo successfully published 'Die Temperature: 25.1875'
+Object Temperature: 21.3192291260
+*C
+91 81809 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.1875000000
+*C
+92 82223 [Arduino Wir] Echo successfully published 'Die Temperature: 25.1875'
+Object Temperature: 21.6882648468
+*C
+93 83639 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+94 84053 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2113361359
+*C
+95 85569 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+96 86083 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9258785248
+*C
+97 87399 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.9687500000
+*C
+98 88113 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4739284515
+*C
+99 89428 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+100 89843 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8309001923
+*C
+101 91459 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+102 92073 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9733333588
+*C
+103 93688 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.2187500000
+*C
+104 94102 [Arduino Wir] Echo successfully published 'Die Temperature: 25.2187'
+Object Temperature: 21.6644725800
+*C
+105 95518 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+106 95932 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4377803802
+*C
+107 97348 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.2500000000
+*C
+108 97762 [Arduino Wir] Echo successfully published 'Die Temperature: 25.2500'
+Object Temperature: 21.4616260529
+*C
+109 99278 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+110 99792 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 24.0626888275
+*C
+111 101109 [Arduino Wir] Echo successfully published 'Object Temperature: 24.0'
+Die Temperature: 25.9687500000
+*C
+112 102523 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.5995559692
+*C
+113 103939 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.2500000000
+*C
+114 104353 [Arduino Wir] Echo successfully published 'Die Temperature: 25.2500'
+Object Temperature: 23.2696266174
+*C
+115 106169 [Arduino Wir] Echo successfully published 'Object Temperature: 23.2'
+Die Temperature: 25.9687500000
+*C
+116 106983 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.8237056732
+*C
+117 108199 [Arduino Wir] Echo successfully published 'Object Temperature: 22.8'
+Die Temperature: 25.9687500000
+*C
+118 108613 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8423748016
+*C
+119 109829 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+120 110243 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9136047363
+*C
+121 111559 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.9687500000
+*C
+122 112173 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5807666779
+*C
+123 113589 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.2500000000
+*C
+124 114004 [Arduino Wir] Echo successfully published 'Die Temperature: 25.2500'
+Object Temperature: 23.8999214172
+*C
+125 115420 [Arduino Wir] Echo successfully published 'Object Temperature: 23.8'
+Die Temperature: 25.9687500000
+*C
+126 115834 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 24.0626888275
+*C
+127 117250 [Arduino Wir] Echo successfully published 'Object Temperature: 24.0'
+Die Temperature: 25.2187500000
+*C
+128 118064 [Arduino Wir] Echo successfully published 'Die Temperature: 25.2187'
+Object Temperature: 22.5288143158
+*C
+129 119580 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.9687500000
+*C
+130 120094 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5807666779
+*C
+131 121910 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.2500000000
+*C
+132 122125 [Arduino Wir] Echo successfully published 'Die Temperature: 25.2500'
+Object Temperature: 21.9373359680
+*C
+133 123441 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.9687500000
+*C
+134 123955 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3662109375
+*C
+135 125671 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.2500000000
+*C
+136 126286 [Arduino Wir] Echo successfully published 'Die Temperature: 25.2500'
+Object Temperature: 21.3184700012
+*C
+137 127702 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.2500000000
+*C
+138 128116 [Arduino Wir] Echo successfully published 'Die Temperature: 25.2500'
+Object Temperature: 20.8994197845
+*C
+139 129532 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+140 130146 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3300457001
+*C
+141 131562 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+142 131976 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2106132507
+*C
+143 133592 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.2812500000
+*C
+144 134205 [Arduino Wir] Echo successfully published 'Die Temperature: 25.2812'
+Object Temperature: 21.4370574951
+*C
+145 135821 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.3125000000
+*C
+146 136036 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 21.3416328430
+*C
+147 137352 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+148 137966 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2938842773
+*C
+149 139382 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.3125000000
+*C
+150 139796 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 21.9839992523
+*C
+151 141212 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.3125000000
+*C
+152 142626 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 22.2918224335
+*C
+153 144042 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.3125000000
+*C
+154 144655 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 21.8890933990
+*C
+155 145871 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+156 146284 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4132099152
+*C
+157 147600 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+158 148811 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.5371131897
+*C
+159 150227 [Arduino Wir] Echo successfully published 'Object Temperature: 23.5'
+Die Temperature: 25.3125000000
+*C
+160 151441 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3125'
+Object Temperature: 21.0664501190
+*C
+161 152857 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+162 153471 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6629753113
+*C
+163 154687 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.3437500000
+*C
+164 155101 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3437'
+Object Temperature: 22.0902805328
+*C
+165 156517 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.9687500000
+*C
+166 156931 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.2911796570
+*C
+167 158247 [Arduino Wir] Echo successfully published 'Object Temperature: 23.2'
+Die Temperature: 25.9687500000
+*C
+168 158861 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3054885864
+*C
+169 160277 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+170 161091 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 25.0085735321
+*C
+171 162507 [Arduino Wir] Echo successfully published 'Object Temperature: 25.0'
+Die Temperature: 25.3437500000
+*C
+172 162922 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3437'
+Object Temperature: 21.6867637634
+*C
+173 164338 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+174 164952 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.0069732666
+*C
+175 166368 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.9687500000
+*C
+176 166782 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8408889771
+*C
+177 168198 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.3750000000
+*C
+178 169712 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 22.6921253204
+*C
+179 171128 [Arduino Wir] Echo successfully published 'Object Temperature: 22.6'
+Die Temperature: 25.3750000000
+*C
+180 171742 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 22.7156677246
+*C
+181 173158 [Arduino Wir] Echo successfully published 'Object Temperature: 22.7'
+Die Temperature: 25.3750000000
+*C
+182 173572 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 23.3960151672
+*C
+183 174988 [Arduino Wir] Echo successfully published 'Object Temperature: 23.3'
+Die Temperature: 25.9687500000
+*C
+184 175402 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.3024482727
+*C
+185 176818 [Arduino Wir] Echo successfully published 'Object Temperature: 23.3'
+Die Temperature: 25.3750000000
+*C
+186 177232 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 22.2674102783
+*C
+187 178648 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.9687500000
+*C
+188 179062 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1259517670
+*C
+189 180778 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+190 181192 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.1017570496
+*C
+191 182808 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.3750000000
+*C
+192 183222 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 22.5271720886
+*C
+193 184638 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.3750000000
+*C
+194 185252 [Arduino Wir] Echo successfully published 'Die Temperature: 25.3750'
+Object Temperature: 21.7933845520
+*C
+195 186668 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.4062500000
+*C
+196 187082 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.4241466522
+*C
+197 188598 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+198 189112 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2809791565
+*C
+199 190528 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+200 190942 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.7270469666
+*C
+201 192258 [Arduino Wir] Echo successfully published 'Object Temperature: 22.7'
+Die Temperature: 25.9687500000
+*C
+202 193469 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6623020172
+*C
+203 194885 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.4062500000
+*C
+204 195499 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.6976566315
+*C
+205 196915 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.4375000000
+*C
+206 197529 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 22.4320564270
+*C
+207 198945 [Arduino Wir] Echo successfully published 'Object Temperature: 22.4'
+Die Temperature: 25.4375000000
+*C
+208 199359 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.9351482391
+*C
+209 201375 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.4375000000
+*C
+210 201590 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 22.0299873352
+*C
+211 202906 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.9687500000
+*C
+212 204117 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9941082001
+*C
+213 205533 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.4687500000
+*C
+214 206147 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.3962974548
+*C
+215 207563 [Arduino Wir] Echo successfully published 'Object Temperature: 22.3'
+Die Temperature: 25.4687500000
+*C
+216 208177 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.7498340607
+*C
+217 209593 [Arduino Wir] Echo successfully published 'Object Temperature: 22.7'
+Die Temperature: 25.4687500000
+*C
+218 210007 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.4906940460
+*C
+219 211523 [Arduino Wir] Echo successfully published 'Object Temperature: 22.4'
+Die Temperature: 25.4687500000
+*C
+220 211838 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.9941082001
+*C
+221 213954 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.9687500000
+*C
+222 214368 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.1599121094
+*C
+223 215984 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.9687500000
+*C
+224 216398 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5426845551
+*C
+225 217814 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.4687500000
+*C
+226 218428 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.4906940460
+*C
+227 219844 [Arduino Wir] Echo successfully published 'Object Temperature: 22.4'
+Die Temperature: 25.5000000000
+*C
+228 220458 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.1965332031
+*C
+229 221873 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5000000000
+*C
+230 222287 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.4351902008
+*C
+231 223803 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+232 224814 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.0767269135
+*C
+233 226231 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.9687500000
+*C
+234 226645 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.6200008392
+*C
+235 228062 [Arduino Wir] Echo successfully published 'Object Temperature: 22.6'
+Die Temperature: 25.5000000000
+*C
+236 228676 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.5493049622
+*C
+237 230092 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.5000000000
+*C
+238 230706 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 23.5578765869
+*C
+239 232122 [Arduino Wir] Echo successfully published 'Object Temperature: 23.5'
+Die Temperature: 25.5000000000
+*C
+240 232337 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.3962974548
+*C
+241 233952 [Arduino Wir] Echo successfully published 'Object Temperature: 22.3'
+Die Temperature: 25.4687500000
+*C
+242 234366 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.0415096283
+*C
+243 236281 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.4687500000
+*C
+244 236496 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 24.1284713745
+*C
+245 237913 [Arduino Wir] Echo successfully published 'Object Temperature: 24.1'
+Die Temperature: 25.9687500000
+*C
+246 238327 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.1490097046
+*C
+247 240343 [Arduino Wir] Echo successfully published 'Object Temperature: 23.1'
+Die Temperature: 25.4687500000
+*C
+248 240957 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 24.1516761780
+*C
+249 242373 [Arduino Wir] Echo successfully published 'Object Temperature: 24.1'
+Die Temperature: 25.4687500000
+*C
+250 242787 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.1599121094
+*C
+251 244203 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.9687500000
+*C
+252 244617 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.9426383972
+*C
+253 246233 [Arduino Wir] Echo successfully published 'Object Temperature: 23.9'
+Die Temperature: 25.9687500000
+*C
+254 247047 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5902996063
+*C
+255 248363 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+256 248777 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.7092361450
+*C
+257 250393 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.9687500000
+*C
+258 250807 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5902996063
+*C
+259 252423 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+260 253137 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0530662537
+*C
+261 254453 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+262 254867 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9345188141
+*C
+263 256583 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.9687500000
+*C
+264 257097 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4828529358
+*C
+265 258513 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.5000000000
+*C
+266 258927 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.4313697815
+*C
+267 260243 [Arduino Wir] Echo successfully published 'Object Temperature: 22.4'
+Die Temperature: 25.9687500000
+*C
+268 261454 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8633384705
+*C
+269 262870 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.5000000000
+*C
+270 263484 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.8158569336
+*C
+271 264900 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.5000000000
+*C
+272 265314 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.9492530823
+*C
+273 266730 [Arduino Wir] Echo successfully published 'Object Temperature: 22.9'
+Die Temperature: 25.9687500000
+*C
+274 267144 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6494922638
+*C
+275 268759 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.5000000000
+*C
+276 269372 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.0887050629
+*C
+277 270888 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+278 271302 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.5371875763
+*C
+279 272920 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.9687500000
+*C
+280 273334 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6135292053
+*C
+281 274751 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.5312500000
+*C
+282 275365 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.2798690796
+*C
+283 276981 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+284 277395 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.8552913666
+*C
+285 279011 [Arduino Wir] Echo successfully published 'Object Temperature: 22.8'
+Die Temperature: 25.5000000000
+*C
+286 279425 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.1126194000
+*C
+287 280841 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5312500000
+*C
+288 281255 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.0408554077
+*C
+289 283171 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+290 283585 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3753147125
+*C
+291 285201 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5312500000
+*C
+292 286015 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.7799434662
+*C
+293 287431 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.5312500000
+*C
+294 287845 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.0647830963
+*C
+295 289261 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5312500000
+*C
+296 289775 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.3991622925
+*C
+297 291291 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5625000000
+*C
+298 291706 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.7440338135
+*C
+299 292922 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.9687500000
+*C
+300 293336 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0286579132
+*C
+301 294652 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+302 295066 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0286579132
+*C
+303 296682 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5625000000
+*C
+304 297096 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 22.4543285370
+*C
+305 298512 [Arduino Wir] Echo successfully published 'Object Temperature: 22.4'
+Die Temperature: 25.5625000000
+*C
+306 299126 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 20.9568386078
+*C
+307 300542 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.5937500000
+*C
+308 301156 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5937'
+Object Temperature: 21.1599674225
+*C
+309 302572 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5937500000
+*C
+310 302986 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5937'
+Object Temperature: 21.2793884277
+*C
+311 304402 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+312 304816 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5178031921
+*C
+313 306432 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.5937500000
+*C
+314 306849 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5937'
+Object Temperature: 21.3869857788
+*C
+315 308165 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+316 309376 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6965007782
+*C
+317 310792 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.5937500000
+*C
+318 311406 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5937'
+Object Temperature: 21.4108295441
+*C
+319 312822 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.5625000000
+*C
+320 313236 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.6489448547
+*C
+321 314652 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+322 315066 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5537662506
+*C
+323 316681 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.5625000000
+*C
+324 317096 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.1243381500
+*C
+325 318412 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+326 318826 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.7915439606
+*C
+327 320442 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.5625000000
+*C
+328 320856 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.2915573120
+*C
+329 322272 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.5625000000
+*C
+330 322886 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 20.8370227814
+*C
+331 324301 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.5625000000
+*C
+332 325315 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.3631381989
+*C
+333 326731 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5625000000
+*C
+334 327145 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.4584980011
+*C
+335 328561 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+336 328975 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.6690387726
+*C
+337 330690 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25.5625000000
+*C
+338 330905 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.4584980011
+*C
+339 332321 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+340 332735 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9102191925
+*C
+341 334351 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.9687500000
+*C
+342 334765 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0286579132
+*C
+343 336381 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+344 336795 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4584980011
+*C
+345 338411 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+346 339125 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6965007782
+*C
+347 340542 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+348 341056 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3869857788
+*C
+349 342272 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5625000000
+*C
+350 342686 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.1721439362
+*C
+351 344202 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+352 344616 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6489448547
+*C
+353 346232 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.5625000000
+*C
+354 347046 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.5775699615
+*C
+355 348462 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+356 349276 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3631381989
+*C
+357 350692 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+358 351106 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4584980011
+*C
+359 352722 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+360 353136 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5421237946
+*C
+361 354852 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+362 355266 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2199268341
+*C
+363 356882 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+364 357296 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5061435699
+*C
+365 358912 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+366 359326 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4346656799
+*C
+367 361342 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.5625000000
+*C
+368 361757 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.4346656799
+*C
+369 363373 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.5625000000
+*C
+370 363788 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.5775699615
+*C
+371 365503 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+372 366217 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5775699615
+*C
+373 367534 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+374 367948 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.9606380463
+*C
+375 369564 [Arduino Wir] Echo successfully published 'Object Temperature: 22.9'
+Die Temperature: 25.5625000000
+*C
+376 370078 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 22.0171966553
+*C
+377 371394 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.5312500000
+*C
+378 371808 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 20.9929847717
+*C
+379 373224 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+380 373638 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0047245026
+*C
+381 375254 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+382 375668 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2199268341
+*C
+383 376884 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+384 377298 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.3484115601
+*C
+385 379009 [Arduino Wir] Echo successfully published 'Object Temperature: 22.3'
+Die Temperature: 25.9687500000
+*C
+386 379423 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0286579132
+*C
+387 381039 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5625000000
+*C
+388 381453 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 20.7650642395
+*C
+389 382869 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.5625000000
+*C
+390 383283 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.0047245026
+*C
+391 384699 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+392 385113 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.7410659790
+*C
+393 386530 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.5625000000
+*C
+394 386944 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.2676868439
+*C
+395 388360 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.5937500000
+*C
+396 389375 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5937'
+Object Temperature: 22.3241901398
+*C
+397 390691 [Arduino Wir] Echo successfully published 'Object Temperature: 22.3'
+Die Temperature: 25.9687500000
+*C
+398 391105 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6605796814
+*C
+399 392522 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+400 392936 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.8781032562
+*C
+401 394552 [Arduino Wir] Echo successfully published 'Object Temperature: 22.8'
+Die Temperature: 25.9687500000
+*C
+402 395166 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9685955048
+*C
+403 396582 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+404 396996 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3032550812
+*C
+405 398412 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+406 399126 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9925365448
+*C
+407 400642 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.5937500000
+*C
+408 400857 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5937'
+Object Temperature: 21.1360664368
+*C
+409 402373 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+410 403384 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.3234882355
+*C
+411 404800 [Arduino Wir] Echo successfully published 'Object Temperature: 23.3'
+Die Temperature: 25.9687500000
+*C
+412 405214 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.1361980438
+*C
+413 406830 [Arduino Wir] Echo successfully published 'Object Temperature: 23.1'
+Die Temperature: 25.5625000000
+*C
+414 407244 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 24.8213787079
+*C
+415 408660 [Arduino Wir] Echo successfully published 'Object Temperature: 24.8'
+Die Temperature: 25.5312500000
+*C
+416 409074 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 23.7556533813
+*C
+417 410490 [Arduino Wir] Echo successfully published 'Object Temperature: 23.7'
+Die Temperature: 25.9687500000
+*C
+418 410904 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 24.1396408081
+*C
+419 412320 [Arduino Wir] Echo successfully published 'Object Temperature: 24.1'
+Die Temperature: 25.5000000000
+*C
+420 412734 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 24.2092285156
+*C
+421 414050 [Arduino Wir] Echo successfully published 'Object Temperature: 24.2'
+Die Temperature: 25.9687500000
+*C
+422 414464 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4351902008
+*C
+423 415880 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+424 416294 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.1958675385
+*C
+425 417710 [Arduino Wir] Echo successfully published 'Object Temperature: 23.1'
+Die Temperature: 25.4687500000
+*C
+426 418124 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.1248264313
+*C
+427 419540 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+428 419954 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8854255676
+*C
+429 421570 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.5000000000
+*C
+430 421785 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.6494922638
+*C
+431 423201 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+432 423615 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0769920349
+*C
+433 425031 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5000000000
+*C
+434 425445 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.6572399139
+*C
+435 426860 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25.9687500000
+*C
+436 427274 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.1603469849
+*C
+437 428591 [Arduino Wir] Echo successfully published 'Object Temperature: 23.1'
+Die Temperature: 25.9687500000
+*C
+438 429005 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6732769012
+*C
+439 430621 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+440 431035 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.6511840820
+*C
+441 432651 [Arduino Wir] Echo successfully published 'Object Temperature: 23.6'
+Die Temperature: 25.4687500000
+*C
+442 433067 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.5066757202
+*C
+443 434583 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.5000000000
+*C
+444 434898 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.0530662537
+*C
+445 436314 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+446 436728 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0291347504
+*C
+447 438144 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5000000000
+*C
+448 438558 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.9333515167
+*C
+449 439974 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+450 440388 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.0900325775
+*C
+451 441604 [Arduino Wir] Echo successfully published 'Object Temperature: 23.0'
+Die Temperature: 25.9687500000
+*C
+452 442018 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5304927826
+*C
+453 443335 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+454 444546 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8492317200
+*C
+455 445962 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.5312500000
+*C
+456 446377 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.3753147125
+*C
+457 447793 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+458 448207 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0887050629
+*C
+459 449823 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5312500000
+*C
+460 450237 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.1604347229
+*C
+461 451853 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5312500000
+*C
+462 452268 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 20.9690399170
+*C
+463 453884 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.5312500000
+*C
+464 454498 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.4230022430
+*C
+465 456014 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+466 456428 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0765094757
+*C
+467 457846 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5625000000
+*C
+468 458659 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.2438087463
+*C
+469 460075 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+470 460489 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0286579132
+*C
+471 461905 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5625000000
+*C
+472 462319 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.2199268341
+*C
+473 463736 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+474 464150 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1482429504
+*C
+475 466065 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5625000000
+*C
+476 466878 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.3631381989
+*C
+477 468296 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+478 468710 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1960372925
+*C
+479 470326 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+480 470740 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5299587250
+*C
+481 472356 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.5625000000
+*C
+482 472969 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 20.8849658966
+*C
+483 474385 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+484 474799 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2798690796
+*C
+485 476216 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.5312500000
+*C
+486 477330 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 20.8732051849
+*C
+487 478746 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+488 479360 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9450893402
+*C
+489 480776 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.5312500000
+*C
+490 481390 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.0169239044
+*C
+491 483006 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5312500000
+*C
+492 484418 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.4230022430
+*C
+493 485636 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.5312500000
+*C
+494 486050 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.3037395477
+*C
+495 487367 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+496 487881 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6135292053
+*C
+497 489196 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+498 489611 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3991622925
+*C
+499 491227 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5000000000
+*C
+500 492441 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.2443103790
+*C
+501 493857 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.5000000000
+*C
+502 494271 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.2443103790
+*C
+503 495687 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+504 496101 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8374767303
+*C
+505 498017 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+506 498531 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.4878387451
+*C
+507 499848 [Arduino Wir] Echo successfully published 'Object Temperature: 23.4'
+Die Temperature: 25.9687500000
+*C
+508 500262 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8134937286
+*C
+509 501878 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+510 502292 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8854255676
+*C
+511 503908 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+512 504322 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6019096375
+*C
+513 505938 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.5000000000
+*C
+514 506353 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.5543041229
+*C
+515 507969 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.5000000000
+*C
+516 508384 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.8614540100
+*C
+517 510000 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+518 510414 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3636531830
+*C
+519 511730 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+520 513341 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.0530395508
+*C
+521 514757 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.5000000000
+*C
+522 515071 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.6732769012
+*C
+523 516587 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.5000000000
+*C
+524 517001 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.2920646667
+*C
+525 518617 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+526 519031 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1726360321
+*C
+527 520247 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+528 520661 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0291347504
+*C
+529 521877 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+530 522291 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3875045776
+*C
+531 524207 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+532 524621 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0769920349
+*C
+533 526037 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+534 526451 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.7655105591
+*C
+535 527667 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.9687500000
+*C
+536 528081 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.6934928894
+*C
+537 529497 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25.5000000000
+*C
+538 529911 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.1009120941
+*C
+539 531327 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+540 531741 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4230022430
+*C
+541 533356 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.5312500000
+*C
+542 533571 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.5543041229
+*C
+543 534987 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+544 535401 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0647830963
+*C
+545 536717 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+546 537531 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3037395477
+*C
+547 538947 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+548 539561 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3037395477
+*C
+549 540977 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5312500000
+*C
+550 541591 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.0887050629
+*C
+551 543307 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+552 543821 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1126194000
+*C
+553 545236 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5312500000
+*C
+554 546047 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.1365299225
+*C
+555 547363 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+556 547777 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2082252502
+*C
+557 549395 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+558 549808 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.5728759766
+*C
+559 551418 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.9687500000
+*C
+560 551832 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5543041229
+*C
+561 553448 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+562 554162 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0647830963
+*C
+563 555478 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+564 555892 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0408554077
+*C
+565 557101 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+566 557514 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1365299225
+*C
+567 558830 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+568 559244 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0169239044
+*C
+569 561060 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5000000000
+*C
+570 561474 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.3397960663
+*C
+571 562890 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+572 563304 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3875045776
+*C
+573 564920 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5000000000
+*C
+574 565535 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.3397960663
+*C
+575 566951 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+576 567365 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2920646667
+*C
+577 568781 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.5000000000
+*C
+578 569195 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.8158569336
+*C
+579 570711 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+580 571125 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.2545318604
+*C
+581 572541 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.9687500000
+*C
+582 573155 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4950485229
+*C
+583 574571 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.4687500000
+*C
+584 574985 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.1131305695
+*C
+585 576401 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+586 577115 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5902996063
+*C
+587 578432 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+588 579146 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3997058868
+*C
+589 580462 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+590 580876 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2565212250
+*C
+591 582591 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+592 583602 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0535964966
+*C
+593 585018 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+594 585432 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0296611786
+*C
+595 586848 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.4375000000
+*C
+596 587262 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.7452011108
+*C
+597 588678 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.9687500000
+*C
+598 589092 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6025009155
+*C
+599 590507 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.4375000000
+*C
+600 590922 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.6976566315
+*C
+601 592338 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+602 592752 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.7619647980
+*C
+603 594068 [Arduino Wir] Echo successfully published 'Object Temperature: 22.7'
+Die Temperature: 25.4375000000
+*C
+604 594283 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 22.0299873352
+*C
+605 595699 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.9687500000
+*C
+606 596113 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5548896790
+*C
+607 597528 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+608 598142 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1731796265
+*C
+609 599558 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+610 600172 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.7179946899
+*C
+611 601588 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.4375000000
+*C
+612 602002 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.5194778442
+*C
+613 603418 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+614 604132 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4595985413
+*C
+615 605448 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+616 606262 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.8795261383
+*C
+617 607777 [Arduino Wir] Echo successfully published 'Object Temperature: 22.8'
+Die Temperature: 25.9687500000
+*C
+618 608191 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1014461517
+*C
+619 609607 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+620 610021 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9338684082
+*C
+621 611637 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.4375000000
+*C
+622 612051 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 20.8139953613
+*C
+623 613667 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+624 614483 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2448616028
+*C
+625 615898 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.4375000000
+*C
+626 616312 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.3642177582
+*C
+627 618428 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+628 619442 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.6939792633
+*C
+629 620858 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25.4375000000
+*C
+630 621273 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.0057220459
+*C
+631 622688 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+632 623102 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8976593018
+*C
+633 624718 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.4687500000
+*C
+634 625133 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.3758563995
+*C
+635 626749 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.4375000000
+*C
+636 627164 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 20.8257312775
+*C
+637 628780 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.4687500000
+*C
+638 629595 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.5855979919
+*C
+639 630911 [Arduino Wir] Echo successfully published 'Object Temperature: 20.5'
+Die Temperature: 25.9687500000
+*C
+640 631325 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3997058868
+*C
+641 632941 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.4687500000
+*C
+642 633555 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.5664958954
+*C
+643 634971 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.4687500000
+*C
+644 635385 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.7777519226
+*C
+645 636801 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.4687500000
+*C
+646 637215 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.2565212250
+*C
+647 638631 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+648 639045 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6854610443
+*C
+649 640461 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.4687500000
+*C
+650 640875 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.8257312775
+*C
+651 642391 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+652 643105 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9455814362
+*C
+653 644422 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+654 645236 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.7777519226
+*C
+655 646652 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.4687500000
+*C
+656 647266 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.5188694000
+*C
+657 648682 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.4687500000
+*C
+658 649096 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.6817207336
+*C
+659 650512 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25.9687500000
+*C
+660 650926 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0652885437
+*C
+661 652542 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+662 652956 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0892124176
+*C
+663 654272 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+664 655483 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2087478638
+*C
+665 656899 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.4687500000
+*C
+666 657514 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.7567710876
+*C
+667 658930 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.5000000000
+*C
+668 659344 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.7415103912
+*C
+669 661360 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.5000000000
+*C
+670 661775 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.7175045013
+*C
+671 663192 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.9687500000
+*C
+672 663606 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9934825897
+*C
+673 664923 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+674 665637 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8042831421
+*C
+675 666954 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+676 667368 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5664958954
+*C
+677 668984 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+678 669398 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.0415096283
+*C
+679 670815 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.4687500000
+*C
+680 671429 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.0892124176
+*C
+681 672845 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.4687500000
+*C
+682 673259 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.5426845551
+*C
+683 674675 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+684 675089 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2326374054
+*C
+685 676805 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+686 678016 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8280315399
+*C
+687 679432 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.4687500000
+*C
+688 680444 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.7384357452
+*C
+689 681860 [Arduino Wir] Echo successfully published 'Object Temperature: 22.7'
+Die Temperature: 25.4687500000
+*C
+690 682274 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.1484107971
+*C
+691 683690 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.9687500000
+*C
+692 684104 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.2725563049
+*C
+693 685520 [Arduino Wir] Echo successfully published 'Object Temperature: 20.2'
+Die Temperature: 25.4687500000
+*C
+694 686134 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.9934825897
+*C
+695 687350 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+696 687964 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8517742157
+*C
+697 689479 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+698 689893 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8017444611
+*C
+699 691509 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+700 691923 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9934825897
+*C
+701 693539 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.4687500000
+*C
+702 693953 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.1848526001
+*C
+703 695569 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.4687500000
+*C
+704 695984 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.0652885437
+*C
+705 697600 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5000000000
+*C
+706 698213 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.1248264313
+*C
+707 699929 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5000000000
+*C
+708 700144 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.3159332275
+*C
+709 701560 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+710 701974 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8614540100
+*C
+711 703389 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+712 703803 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.2896633148
+*C
+713 705419 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.9687500000
+*C
+714 706033 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8870716095
+*C
+715 707450 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.5000000000
+*C
+716 708063 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.4828529358
+*C
+717 709580 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+718 710591 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9333515167
+*C
+719 712007 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+720 712420 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.7895050049
+*C
+721 713835 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.5000000000
+*C
+722 714451 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.2681903839
+*C
+723 715866 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.5000000000
+*C
+724 716480 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.6694736481
+*C
+725 717896 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25.5000000000
+*C
+726 718310 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.8134937286
+*C
+727 719726 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+728 720340 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4828529358
+*C
+729 722456 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+730 723170 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4590244293
+*C
+731 724686 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.5000000000
+*C
+732 725100 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.1487350464
+*C
+733 726516 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5000000000
+*C
+734 727130 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.9093914032
+*C
+735 728546 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+736 728960 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2681903839
+*C
+737 730377 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+738 730791 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.5370559692
+*C
+739 732208 [Arduino Wir] Echo successfully published 'Object Temperature: 20.5'
+Die Temperature: 25.5312500000
+*C
+740 733322 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.3276023865
+*C
+741 735338 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5312500000
+*C
+742 735752 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 20.5611038208
+*C
+743 737168 [Arduino Wir] Echo successfully published 'Object Temperature: 20.5'
+Die Temperature: 25.5312500000
+*C
+744 737782 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 20.8971729279
+*C
+745 739198 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.5312500000
+*C
+746 740212 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.0647830963
+*C
+747 741630 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5312500000
+*C
+748 742044 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.5659313202
+*C
+749 743560 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+750 744571 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0647830963
+*C
+751 745987 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+752 746401 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9929847717
+*C
+753 747816 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.5312500000
+*C
+754 748430 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 22.2775287628
+*C
+755 749846 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.5312500000
+*C
+756 750260 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.3514614105
+*C
+757 751876 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5312500000
+*C
+758 752190 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 22.1356143951
+*C
+759 753706 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.5312500000
+*C
+760 753921 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.1365299225
+*C
+761 755437 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+762 756251 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9690399170
+*C
+763 757867 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+764 759080 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.6812591553
+*C
+765 760596 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25.9687500000
+*C
+766 761110 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1843318939
+*C
+767 762526 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5312500000
+*C
+768 763140 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.4944934845
+*C
+769 764356 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.5312500000
+*C
+770 765471 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.0647830963
+*C
+771 766887 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+772 767301 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.7491359711
+*C
+773 769317 [Arduino Wir] Echo successfully published 'Object Temperature: 22.7'
+Die Temperature: 25.9687500000
+*C
+774 769731 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8732051849
+*C
+775 771347 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.5312500000
+*C
+776 772362 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.4468383789
+*C
+777 773780 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+778 774193 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4468383789
+*C
+779 775509 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+780 775925 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3514614105
+*C
+781 777541 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5312500000
+*C
+782 777956 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.0647830963
+*C
+783 779572 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5312500000
+*C
+784 779987 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.3991622925
+*C
+785 781402 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+786 782116 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.7020740509
+*C
+787 783632 [Arduino Wir] Echo successfully published 'Object Temperature: 22.7'
+Die Temperature: 25.5312500000
+*C
+788 784046 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 20.8492317200
+*C
+789 785662 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.5312500000
+*C
+790 786077 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.0169239044
+*C
+791 787793 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+792 788804 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0647830963
+*C
+793 790220 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+794 790634 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9929847717
+*C
+795 792250 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.5312500000
+*C
+796 793062 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 20.9450893402
+*C
+797 794678 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.5312500000
+*C
+798 795292 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 22.1829414368
+*C
+799 797208 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.9687500000
+*C
+800 797622 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.0075778961
+*C
+801 799238 [Arduino Wir] Echo successfully published 'Object Temperature: 23.0'
+Die Temperature: 25.5312500000
+*C
+802 800052 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.1604347229
+*C
+803 801468 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5312500000
+*C
+804 801882 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.0887050629
+*C
+805 803298 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+806 803712 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5183124542
+*C
+807 805128 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.5312500000
+*C
+808 805542 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 20.9450893402
+*C
+809 806958 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+810 807372 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5183124542
+*C
+811 808588 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+812 809201 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6611042023
+*C
+813 810517 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+814 810931 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.1592807770
+*C
+815 812349 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.9687500000
+*C
+816 812964 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.7799434662
+*C
+817 814380 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.5312500000
+*C
+818 814794 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.3753147125
+*C
+819 816210 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5312500000
+*C
+820 817424 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.3276023865
+*C
+821 818840 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+822 819254 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9690399170
+*C
+823 820470 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+824 820884 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5304927826
+*C
+825 822200 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+826 823411 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9333515167
+*C
+827 824827 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.5000000000
+*C
+828 825441 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.8614540100
+*C
+829 826857 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.5000000000
+*C
+830 827571 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.1009120941
+*C
+831 828887 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5000000000
+*C
+832 829301 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.4351902008
+*C
+833 831117 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+834 832431 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1487350464
+*C
+835 833849 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5000000000
+*C
+836 834861 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.3397960663
+*C
+837 836277 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+838 836891 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.1835746765
+*C
+839 838307 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.4687500000
+*C
+840 838721 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 23.6632480621
+*C
+841 840137 [Arduino Wir] Echo successfully published 'Object Temperature: 23.6'
+Die Temperature: 25.9687500000
+*C
+842 840651 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.9378776550
+*C
+843 842067 [Arduino Wir] Echo successfully published 'Object Temperature: 22.9'
+Die Temperature: 25.9687500000
+*C
+844 842481 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9466857910
+*C
+845 844298 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.9687500000
+*C
+846 844712 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3520011902
+*C
+847 846328 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.4687500000
+*C
+848 846742 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.8992424011
+*C
+849 848158 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.4687500000
+*C
+850 848572 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.5426845551
+*C
+851 849988 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+852 850402 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6378917694
+*C
+853 851818 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.4687500000
+*C
+854 852430 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.9455814362
+*C
+855 853646 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+856 854060 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9455814362
+*C
+857 855376 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+858 856388 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.6817207336
+*C
+859 857804 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25.9687500000
+*C
+860 858218 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.2427024841
+*C
+861 859834 [Arduino Wir] Echo successfully published 'Object Temperature: 23.2'
+Die Temperature: 25.9687500000
+*C
+862 860248 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3758563995
+*C
+863 861664 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.4687500000
+*C
+864 862078 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.8257312775
+*C
+865 863494 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.4687500000
+*C
+866 863908 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.5375022888
+*C
+867 865324 [Arduino Wir] Echo successfully published 'Object Temperature: 20.5'
+Die Temperature: 25.4687500000
+*C
+868 865738 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.4235496521
+*C
+869 867254 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+870 868265 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5664958954
+*C
+871 870281 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.4687500000
+*C
+872 870895 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.2308845520
+*C
+873 872311 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.4687500000
+*C
+874 872725 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.0652885437
+*C
+875 874140 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+876 874554 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4712200165
+*C
+877 876069 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+878 877083 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2565212250
+*C
+879 878498 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+880 878912 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1009120941
+*C
+881 880328 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.4687500000
+*C
+882 880742 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.1714210510
+*C
+883 882158 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.5000000000
+*C
+884 882772 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.9466857910
+*C
+885 884188 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.4687500000
+*C
+886 885202 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.8497142792
+*C
+887 886518 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+888 887033 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5304927826
+*C
+889 888549 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+890 888963 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2443103790
+*C
+891 890579 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.5000000000
+*C
+892 890993 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.4048957825
+*C
+893 892609 [Arduino Wir] Echo successfully published 'Object Temperature: 20.4'
+Die Temperature: 25.9687500000
+*C
+894 893023 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.7895050049
+*C
+895 894639 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.5000000000
+*C
+896 895054 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.8374767303
+*C
+897 896570 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+898 896984 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2920646667
+*C
+899 898300 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+900 898714 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8854255676
+*C
+901 899930 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+902 900344 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8134937286
+*C
+903 901660 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+904 902074 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9573059082
+*C
+905 903690 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.5000000000
+*C
+906 904104 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.0530662537
+*C
+907 905520 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.5000000000
+*C
+908 906134 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.8395996094
+*C
+909 907549 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.5312500000
+*C
+910 907963 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.4468383789
+*C
+911 909379 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+912 910093 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.5492973328
+*C
+913 911809 [Arduino Wir] Echo successfully published 'Object Temperature: 20.5'
+Die Temperature: 25.5000000000
+*C
+914 912224 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.8614540100
+*C
+915 913541 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+916 913955 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5543041229
+*C
+917 915571 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.5000000000
+*C
+918 915786 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.5543041229
+*C
+919 917202 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+920 917616 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6732769012
+*C
+921 919232 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+922 919646 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6019096375
+*C
+923 921062 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.5000000000
+*C
+924 921476 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.6019096375
+*C
+925 922892 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+926 923306 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1131305695
+*C
+927 924722 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.4687500000
+*C
+928 925136 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.1009120941
+*C
+929 926552 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.4687500000
+*C
+930 926967 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.0888862610
+*C
+931 928480 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.9687500000
+*C
+932 928894 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.2427024841
+*C
+933 930310 [Arduino Wir] Echo successfully published 'Object Temperature: 23.2'
+Die Temperature: 25.4687500000
+*C
+934 930724 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.1609516144
+*C
+935 932340 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+936 932754 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3997058868
+*C
+937 934370 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.4687500000
+*C
+938 934785 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.8017444611
+*C
+939 936401 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.4687500000
+*C
+940 936817 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.3758563995
+*C
+941 938433 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.4687500000
+*C
+942 938848 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.2087478638
+*C
+943 940064 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+944 940471 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9455814362
+*C
+945 941787 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.9687500000
+*C
+946 942201 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.7777519226
+*C
+947 943817 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.9687500000
+*C
+948 944231 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.7537517548
+*C
+949 945847 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.4687500000
+*C
+950 946659 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.3520011902
+*C
+951 948275 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.4687500000
+*C
+952 948690 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.4473876953
+*C
+953 950107 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.4687500000
+*C
+954 950521 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.8017444611
+*C
+955 952037 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+956 952451 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4473876953
+*C
+957 953867 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+958 954281 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8042831421
+*C
+959 955697 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+960 956111 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6378917694
+*C
+961 957528 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.4687500000
+*C
+962 958142 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.9229660034
+*C
+963 959558 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.4687500000
+*C
+964 959972 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.0174236298
+*C
+965 961387 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+966 961801 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9229660034
+*C
+967 963217 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.4687500000
+*C
+968 963631 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.1484107971
+*C
+969 965147 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.9687500000
+*C
+970 965561 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1609516144
+*C
+971 967177 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.4687500000
+*C
+972 967789 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.5188694000
+*C
+973 969205 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+974 969619 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1848526001
+*C
+975 971235 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.4375000000
+*C
+976 971649 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.4357624054
+*C
+977 973465 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.4375000000
+*C
+978 973880 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.1014461517
+*C
+979 975297 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+980 975710 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2448616028
+*C
+981 977026 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.4375000000
+*C
+982 977640 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.0535964966
+*C
+983 979057 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+984 980067 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.6459331512
+*C
+985 981483 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25.4375000000
+*C
+986 981897 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.1253643036
+*C
+987 983513 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+988 983927 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.9969520569
+*C
+989 985343 [Arduino Wir] Echo successfully published 'Object Temperature: 22.9'
+Die Temperature: 25.4375000000
+*C
+990 985757 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 24.4537906647
+*C
+991 987173 [Arduino Wir] Echo successfully published 'Object Temperature: 24.4'
+Die Temperature: 25.4062500000
+*C
+992 987587 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.8524188995
+*C
+993 988903 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+994 990114 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1136932373
+*C
+995 991530 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.4062500000
+*C
+996 992144 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.2093200684
+*C
+997 993559 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.4062500000
+*C
+998 993973 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.4956531525
+*C
+999 995389 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+1000 996103 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3764476776
+*C
+1001 997519 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+1002 998430 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2570991516
+*C
+1003 999946 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+1004 1000360 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4241466522
+*C
+1005 1001777 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.4062500000
+*C
+1006 1002391 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.6385116577
+*C
+1007 1003807 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.4062500000
+*C
+1008 1004421 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 22.0895595551
+*C
+1009 1005837 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.4062500000
+*C
+1010 1006251 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.6623020172
+*C
+1011 1007667 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.4062500000
+*C
+1012 1008281 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.0897712708
+*C
+1013 1009697 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+1014 1010111 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0897712708
+*C
+1015 1011827 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.4062500000
+*C
+1016 1012641 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 20.8022708893
+*C
+1017 1014257 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.4062500000
+*C
+1018 1014671 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 20.7660064697
+*C
+1019 1016087 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.4062500000
+*C
+1020 1016401 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.8164730072
+*C
+1021 1017917 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+1022 1018331 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9351482391
+*C
+1023 1019747 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.4062500000
+*C
+1024 1020161 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.1253643036
+*C
+1025 1022277 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.4375000000
+*C
+1026 1023292 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 20.9099044800
+*C
+1027 1024708 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.4375000000
+*C
+1028 1025322 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 20.5738201141
+*C
+1029 1026738 [Arduino Wir] Echo successfully published 'Object Temperature: 20.5'
+Die Temperature: 25.4375000000
+*C
+1030 1027352 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 20.6939792633
+*C
+1031 1028968 [Arduino Wir] Echo successfully published 'Object Temperature: 20.6'
+Die Temperature: 25.4687500000
+*C
+1032 1029383 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.9455814362
+*C
+1033 1030799 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.4687500000
+*C
+1034 1031214 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.7330074310
+*C
+1035 1032731 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.9687500000
+*C
+1036 1033942 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8497142792
+*C
+1037 1035358 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.4687500000
+*C
+1038 1035972 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.9466857910
+*C
+1039 1037388 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.9687500000
+*C
+1040 1038002 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0174236298
+*C
+1041 1039518 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+1042 1040032 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8042831421
+*C
+1043 1041448 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.4687500000
+*C
+1044 1041862 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.2326374054
+*C
+1045 1043378 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+1046 1044092 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.7567710876
+*C
+1047 1045409 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.9687500000
+*C
+1048 1045823 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4473876953
+*C
+1049 1047439 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+1050 1047853 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5188694000
+*C
+1051 1049469 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.4687500000
+*C
+1052 1049884 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.1131305695
+*C
+1053 1051300 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.4687500000
+*C
+1054 1051714 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.3758563995
+*C
+1055 1053130 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+1056 1053744 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5664958954
+*C
+1057 1055160 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+1058 1055674 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8976593018
+*C
+1059 1057290 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+1060 1057704 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.7895050049
+*C
+1061 1059517 [Arduino Wir] Echo successfully published 'Object Temperature: 20.7'
+Die Temperature: 25.5000000000
+*C
+1062 1059931 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 20.9333515167
+*C
+1063 1061347 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.5000000000
+*C
+1064 1061762 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.1965332031
+*C
+1065 1063178 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5000000000
+*C
+1066 1063592 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.8042831421
+*C
+1067 1065008 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+1068 1065422 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5664958954
+*C
+1069 1067038 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.5000000000
+*C
+1070 1067455 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.5902996063
+*C
+1071 1068771 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+1072 1069782 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0413589478
+*C
+1073 1071198 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+1074 1071612 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5304927826
+*C
+1075 1073228 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+1076 1073642 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.8134937286
+*C
+1077 1075258 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.5000000000
+*C
+1078 1075673 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.0892124176
+*C
+1079 1077289 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.4687500000
+*C
+1080 1078104 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 20.8017444611
+*C
+1081 1080216 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.9687500000
+*C
+1082 1081030 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4235496521
+*C
+1083 1082546 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+1084 1083060 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2087478638
+*C
+1085 1084476 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.4687500000
+*C
+1086 1084890 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.1131305695
+*C
+1087 1086306 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+1088 1086720 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3042716980
+*C
+1089 1088436 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+1090 1088850 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4950485229
+*C
+1091 1090466 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.4687500000
+*C
+1092 1090682 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.4473876953
+*C
+1093 1092098 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+1094 1092512 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3042716980
+*C
+1095 1094128 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+1096 1094542 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9099044800
+*C
+1097 1095958 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.4375000000
+*C
+1098 1096372 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.1492748260
+*C
+1099 1097788 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+1100 1098202 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0535964966
+*C
+1101 1099618 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+1102 1100032 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2926216125
+*C
+1103 1101448 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+1104 1102064 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6860866547
+*C
+1105 1103380 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+1106 1104394 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9817771912
+*C
+1107 1105810 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.4375000000
+*C
+1108 1106425 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 22.1132431030
+*C
+1109 1107841 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.4062500000
+*C
+1110 1108555 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.2570991516
+*C
+1111 1109871 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.4062500000
+*C
+1112 1110285 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.2332115173
+*C
+1113 1112301 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.4062500000
+*C
+1114 1112516 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 20.5257148743
+*C
+1115 1113732 [Arduino Wir] Echo successfully published 'Object Temperature: 20.5'
+Die Temperature: 25.4062500000
+*C
+1116 1114246 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.9473419189
+*C
+1117 1115862 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.9687500000
+*C
+1118 1116276 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.7574062347
+*C
+1119 1118292 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.9687500000
+*C
+1120 1118706 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0775241852
+*C
+1121 1120322 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.4375000000
+*C
+1122 1120937 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.6500911713
+*C
+1123 1122553 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.4062500000
+*C
+1124 1122967 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4062'
+Object Temperature: 21.5310764313
+*C
+1125 1124383 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+1126 1124997 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6262989044
+*C
+1127 1126313 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+1128 1126728 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.0062866211
+*C
+1129 1128144 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.9687500000
+*C
+1130 1128558 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.0907917023
+*C
+1131 1129974 [Arduino Wir] Echo successfully published 'Object Temperature: 23.0'
+Die Temperature: 25.4375000000
+*C
+1132 1130388 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.0296611786
+*C
+1133 1131804 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.9687500000
+*C
+1134 1132218 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.5119972229
+*C
+1135 1133834 [Arduino Wir] Echo successfully published 'Object Temperature: 23.5'
+Die Temperature: 25.4375000000
+*C
+1136 1134249 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 22.1720790863
+*C
+1137 1136065 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.4375000000
+*C
+1138 1136480 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.1970806122
+*C
+1139 1137696 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.4375000000
+*C
+1140 1138110 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 26.2532691956
+*C
+1141 1139627 [Arduino Wir] Echo successfully published 'Object Temperature: 26.2'
+Die Temperature: 25.9687500000
+*C
+1142 1140041 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6500911713
+*C
+1143 1141458 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+1144 1141872 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1492748260
+*C
+1145 1143288 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+1146 1143702 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 20.9578247070
+*C
+1147 1145514 [Arduino Wir] Echo successfully published 'Object Temperature: 20.9'
+Die Temperature: 25.4375000000
+*C
+1148 1146128 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 23.0673408508
+*C
+1149 1147744 [Arduino Wir] Echo successfully published 'Object Temperature: 23.0'
+Die Temperature: 25.4375000000
+*C
+1150 1148159 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.9114246368
+*C
+1151 1149775 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.4375000000
+*C
+1152 1150190 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.4357624054
+*C
+1153 1151506 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+1154 1151920 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.0057220459
+*C
+1155 1153537 [Arduino Wir] Echo successfully published 'Object Temperature: 21.0'
+Die Temperature: 25.4375000000
+*C
+1156 1153952 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.3520011902
+*C
+1157 1155568 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.4687500000
+*C
+1158 1155982 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.8517742157
+*C
+1159 1157398 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.4687500000
+*C
+1160 1158012 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.3042716980
+*C
+1161 1159428 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.4687500000
+*C
+1162 1160042 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.4235496521
+*C
+1163 1161658 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.4687500000
+*C
+1164 1162073 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.6378917694
+*C
+1165 1163389 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+1166 1163803 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2565212250
+*C
+1167 1165419 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.4687500000
+*C
+1168 1165833 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.7733573914
+*C
+1169 1167249 [Arduino Wir] Echo successfully published 'Object Temperature: 22.7'
+Die Temperature: 25.4687500000
+*C
+1170 1167865 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.1835746765
+*C
+1171 1169281 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.4687500000
+*C
+1172 1169895 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.6378917694
+*C
+1173 1171311 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.4687500000
+*C
+1174 1171725 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.2326374054
+*C
+1175 1173141 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+1176 1174055 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.2781734467
+*C
+1177 1175472 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.9687500000
+*C
+1178 1175886 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.2308845520
+*C
+1179 1177302 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.9687500000
+*C
+1180 1177716 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.2308845520
+*C
+1181 1179332 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.4687500000
+*C
+1182 1179747 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 23.0907917023
+*C
+1183 1181363 [Arduino Wir] Echo successfully published 'Object Temperature: 23.0'
+Die Temperature: 25.9687500000
+*C
+1184 1181777 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4357624054
+*C
+1185 1183193 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.4375000000
+*C
+1186 1184207 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 23.0673408508
+*C
+1187 1185623 [Arduino Wir] Echo successfully published 'Object Temperature: 23.0'
+Die Temperature: 25.4375000000
+*C
+1188 1186037 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 21.8876953125
+*C
+1189 1187253 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.4375000000
+*C
+1190 1187567 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 23.1142387390
+*C
+1191 1189183 [Arduino Wir] Echo successfully published 'Object Temperature: 23.1'
+Die Temperature: 25.9687500000
+*C
+1192 1189597 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6025009155
+*C
+1193 1191213 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.4687500000
+*C
+1194 1192024 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.0773735046
+*C
+1195 1193440 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.9687500000
+*C
+1196 1194154 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.8090057373
+*C
+1197 1195670 [Arduino Wir] Echo successfully published 'Object Temperature: 22.8'
+Die Temperature: 25.4375000000
+*C
+1198 1196085 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 23.1498012543
+*C
+1199 1197501 [Arduino Wir] Echo successfully published 'Object Temperature: 23.1'
+Die Temperature: 25.4375000000
+*C
+1200 1197915 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 23.3717918396
+*C
+1201 1199431 [Arduino Wir] Echo successfully published 'Object Temperature: 23.3'
+Die Temperature: 25.9687500000
+*C
+1202 1200245 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3642177582
+*C
+1203 1201662 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.4375000000
+*C
+1204 1202077 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4375'
+Object Temperature: 23.3717918396
+*C
+1205 1203493 [Arduino Wir] Echo successfully published 'Object Temperature: 23.3'
+Die Temperature: 25.9687500000
+*C
+1206 1203907 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4712200165
+*C
+1207 1205523 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+1208 1205937 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.0178127289
+*C
+1209 1207553 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.4687500000
+*C
+1210 1208167 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.7092361450
+*C
+1211 1209583 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.4687500000
+*C
+1212 1209997 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.4473876953
+*C
+1213 1211213 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+1214 1211720 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.1611156464
+*C
+1215 1213136 [Arduino Wir] Echo successfully published 'Object Temperature: 23.1'
+Die Temperature: 25.9687500000
+*C
+1216 1214151 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.1599121094
+*C
+1217 1216168 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.4687500000
+*C
+1218 1216583 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.2781734467
+*C
+1219 1218199 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.9687500000
+*C
+1220 1218613 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4473876953
+*C
+1221 1220229 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.4687500000
+*C
+1222 1220644 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 21.4473876953
+*C
+1223 1222362 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+1224 1222776 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.3726825714
+*C
+1225 1224392 [Arduino Wir] Echo successfully published 'Object Temperature: 22.3'
+Die Temperature: 25.9687500000
+*C
+1226 1225106 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.1125679016
+*C
+1227 1226822 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.4687500000
+*C
+1228 1227237 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.6792259216
+*C
+1229 1228653 [Arduino Wir] Echo successfully published 'Object Temperature: 22.6'
+Die Temperature: 25.4687500000
+*C
+1230 1229067 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.3962974548
+*C
+1231 1230483 [Arduino Wir] Echo successfully published 'Object Temperature: 22.3'
+Die Temperature: 25.9687500000
+*C
+1232 1230897 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.0888862610
+*C
+1233 1232313 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.4687500000
+*C
+1234 1232727 [Arduino Wir] Echo successfully published 'Die Temperature: 25.4687'
+Object Temperature: 22.0888862610
+*C
+1235 1234243 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.9687500000
+*C
+1236 1234657 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6257038116
+*C
+1237 1236273 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.5000000000
+*C
+1238 1236688 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.8787899017
+*C
+1239 1238104 [Arduino Wir] Echo successfully published 'Object Temperature: 22.8'
+Die Temperature: 25.5000000000
+*C
+1240 1238718 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.2896633148
+*C
+1241 1240134 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.5000000000
+*C
+1242 1240748 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.1714210510
+*C
+1243 1242164 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.5000000000
+*C
+1244 1243178 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.7683525085
+*C
+1245 1244394 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.9687500000
+*C
+1246 1244808 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.5142803192
+*C
+1247 1246124 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.9687500000
+*C
+1248 1246538 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6019096375
+*C
+1249 1248154 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.5000000000
+*C
+1250 1248569 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.7921066284
+*C
+1251 1249985 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.5000000000
+*C
+1252 1250401 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.4077663422
+*C
+1253 1251817 [Arduino Wir] Echo successfully published 'Object Temperature: 22.4'
+Die Temperature: 25.9687500000
+*C
+1254 1252631 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8395996094
+*C
+1255 1254048 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.5000000000
+*C
+1256 1254462 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 24.2092285156
+*C
+1257 1255878 [Arduino Wir] Echo successfully published 'Object Temperature: 24.2'
+Die Temperature: 25.9687500000
+*C
+1258 1256292 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9345188141
+*C
+1259 1258109 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.5000000000
+*C
+1260 1258523 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.4785594940
+*C
+1261 1260039 [Arduino Wir] Echo successfully published 'Object Temperature: 22.4'
+Die Temperature: 25.9687500000
+*C
+1262 1260453 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.3018093109
+*C
+1263 1261871 [Arduino Wir] Echo successfully published 'Object Temperature: 22.3'
+Die Temperature: 25.9687500000
+*C
+1264 1262285 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3997058868
+*C
+1265 1263901 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.5000000000
+*C
+1266 1264515 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.2681903839
+*C
+1267 1265931 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.5000000000
+*C
+1268 1266345 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.3605422974
+*C
+1269 1267961 [Arduino Wir] Echo successfully published 'Object Temperature: 22.3'
+Die Temperature: 25.5000000000
+*C
+1270 1268575 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.7208251953
+*C
+1271 1269791 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.9687500000
+*C
+1272 1270205 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5781097412
+*C
+1273 1271521 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.5000000000
+*C
+1274 1271836 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 24.8564033508
+*C
+1275 1273552 [Arduino Wir] Echo successfully published 'Object Temperature: 24.8'
+Die Temperature: 25.9687500000
+*C
+1276 1273966 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3636531830
+*C
+1277 1275582 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+1278 1275996 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9582347870
+*C
+1279 1277612 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.5000000000
+*C
+1280 1278026 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.8158569336
+*C
+1281 1279642 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.5000000000
+*C
+1282 1280057 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.8787899017
+*C
+1283 1281673 [Arduino Wir] Echo successfully published 'Object Temperature: 22.8'
+Die Temperature: 25.5000000000
+*C
+1284 1282088 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.2308845520
+*C
+1285 1283304 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.9687500000
+*C
+1286 1283718 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.8633384705
+*C
+1287 1285034 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+1288 1285448 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.0293464661
+*C
+1289 1287064 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.5000000000
+*C
+1290 1287480 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.1714210510
+*C
+1291 1288896 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.5000000000
+*C
+1292 1289510 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.3132953644
+*C
+1293 1290926 [Arduino Wir] Echo successfully published 'Object Temperature: 22.3'
+Die Temperature: 25.5000000000
+*C
+1294 1291540 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.9345188141
+*C
+1295 1293156 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.5312500000
+*C
+1296 1293571 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.5659313202
+*C
+1297 1294987 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.5312500000
+*C
+1298 1295401 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 22.0645809174
+*C
+1299 1296817 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.5312500000
+*C
+1300 1297231 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 22.3484115601
+*C
+1301 1298947 [Arduino Wir] Echo successfully published 'Object Temperature: 22.3'
+Die Temperature: 25.9687500000
+*C
+1302 1299361 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.9841098785
+*C
+1303 1300977 [Arduino Wir] Echo successfully published 'Object Temperature: 22.9'
+Die Temperature: 25.9687500000
+*C
+1304 1301391 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 24.5333328247
+*C
+1305 1303007 [Arduino Wir] Echo successfully published 'Object Temperature: 24.5'
+Die Temperature: 25.5000000000
+*C
+1306 1303421 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.7847614288
+*C
+1307 1304837 [Arduino Wir] Echo successfully published 'Object Temperature: 22.7'
+Die Temperature: 25.5000000000
+*C
+1308 1305251 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 23.8840770721
+*C
+1309 1307067 [Arduino Wir] Echo successfully published 'Object Temperature: 23.8'
+Die Temperature: 25.9687500000
+*C
+1310 1307881 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.7377147675
+*C
+1311 1309197 [Arduino Wir] Echo successfully published 'Object Temperature: 22.7'
+Die Temperature: 25.9687500000
+*C
+1312 1309611 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5421237946
+*C
+1313 1311227 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.5312500000
+*C
+1314 1311642 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.8986396790
+*C
+1315 1313258 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+1316 1313672 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.1119422913
+*C
+1317 1315288 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.5312500000
+*C
+1318 1315703 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 24.4056949615
+*C
+1319 1317119 [Arduino Wir] Echo successfully published 'Object Temperature: 24.4'
+Die Temperature: 25.5312500000
+*C
+1320 1317535 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 22.1829414368
+*C
+1321 1318951 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.9687500000
+*C
+1322 1319365 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.1356143951
+*C
+1323 1320581 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.9687500000
+*C
+1324 1320995 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.5691547394
+*C
+1325 1322312 [Arduino Wir] Echo successfully published 'Object Temperature: 23.5'
+Die Temperature: 25.9687500000
+*C
+1326 1322726 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 24.6488342285
+*C
+1327 1324342 [Arduino Wir] Echo successfully published 'Object Temperature: 24.6'
+Die Temperature: 25.5000000000
+*C
+1328 1324557 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.4077663422
+*C
+1329 1326174 [Arduino Wir] Echo successfully published 'Object Temperature: 22.4'
+Die Temperature: 25.5000000000
+*C
+1330 1327188 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.5728759766
+*C
+1331 1328604 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.5000000000
+*C
+1332 1329018 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.5257282257
+*C
+1333 1330434 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.9687500000
+*C
+1334 1330848 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.0196666718
+*C
+1335 1332464 [Arduino Wir] Echo successfully published 'Object Temperature: 23.0'
+Die Temperature: 25.9687500000
+*C
+1336 1333178 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.2660255432
+*C
+1337 1334494 [Arduino Wir] Echo successfully published 'Object Temperature: 22.2'
+Die Temperature: 25.5000000000
+*C
+1338 1334709 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.8395996094
+*C
+1339 1336225 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.5000000000
+*C
+1340 1336840 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.1240863800
+*C
+1341 1338256 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.9687500000
+*C
+1342 1339070 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.5021476746
+*C
+1343 1340486 [Arduino Wir] Echo successfully published 'Object Temperature: 22.5'
+Die Temperature: 25.5000000000
+*C
+1344 1341100 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.0293464661
+*C
+1345 1342516 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.5000000000
+*C
+1346 1342931 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.8633384705
+*C
+1347 1344347 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.5000000000
+*C
+1348 1344762 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.1004104614
+*C
+1349 1346478 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.5000000000
+*C
+1350 1346991 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 22.0767269135
+*C
+1351 1348507 [Arduino Wir] Echo successfully published 'Object Temperature: 22.0'
+Die Temperature: 25.9687500000
+*C
+1352 1348921 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9934978485
+*C
+1353 1350537 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.9687500000
+*C
+1354 1351151 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6611042023
+*C
+1355 1352567 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+1356 1352981 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.1119422913
+*C
+1357 1354397 [Arduino Wir] Echo successfully published 'Object Temperature: 22.1'
+Die Temperature: 25.9687500000
+*C
+1358 1355111 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.6671028137
+*C
+1359 1356427 [Arduino Wir] Echo successfully published 'Object Temperature: 22.6'
+Die Temperature: 25.5000000000
+*C
+1360 1356841 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.9819431305
+*C
+1361 1358257 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.9687500000
+*C
+1362 1358671 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 25.5681228638
+*C
+1363 1359987 [Arduino Wir] Echo successfully published 'Object Temperature: 25.5'
+Die Temperature: 25.9687500000
+*C
+1364 1360401 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.8552913666
+*C
+1365 1361817 [Arduino Wir] Echo successfully published 'Object Temperature: 22.8'
+Die Temperature: 25.9687500000
+*C
+1366 1362431 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9223632813
+*C
+1367 1363847 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.5312500000
+*C
+1368 1364461 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 20.8252544403
+*C
+1369 1366077 [Arduino Wir] Echo successfully published 'Object Temperature: 20.8'
+Die Temperature: 25.5312500000
+*C
+1370 1366690 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 22.6078872681
+*C
+1371 1368106 [Arduino Wir] Echo successfully published 'Object Temperature: 22.6'
+Die Temperature: 25.9687500000
+*C
+1372 1368520 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 24.8794403076
+*C
+1373 1370138 [Arduino Wir] Echo successfully published 'Object Temperature: 24.8'
+Die Temperature: 25.5000000000
+*C
+1374 1370750 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5000'
+Object Temperature: 21.7445926666
+*C
+1375 1372266 [Arduino Wir] Echo successfully published 'Object Temperature: 21.7'
+Die Temperature: 25.9687500000
+*C
+1376 1372680 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 22.4192447662
+*C
+1377 1374298 [Arduino Wir] Echo successfully published 'Object Temperature: 22.4'
+Die Temperature: 25.5312500000
+*C
+1378 1375310 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.1604347229
+*C
+1379 1377326 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.5312500000
+*C
+1380 1377741 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5312'
+Object Temperature: 21.2559928894
+*C
+1381 1379157 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+1382 1379571 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5421237946
+*C
+1383 1380788 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+1384 1381202 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2438087463
+*C
+1385 1382518 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+1386 1383132 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.1960372925
+*C
+1387 1384548 [Arduino Wir] Echo successfully published 'Object Temperature: 21.1'
+Die Temperature: 25.9687500000
+*C
+1388 1386160 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4346656799
+*C
+1389 1387576 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.5625000000
+*C
+1390 1387990 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 23.1596279144
+*C
+1391 1389506 [Arduino Wir] Echo successfully published 'Object Temperature: 23.1'
+Die Temperature: 25.9687500000
+*C
+1392 1389920 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.9813575745
+*C
+1393 1391438 [Arduino Wir] Echo successfully published 'Object Temperature: 21.9'
+Die Temperature: 25.5625000000
+*C
+1394 1391653 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5625'
+Object Temperature: 21.8743629456
+*C
+1395 1393170 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+1396 1393584 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4701652527
+*C
+1397 1395200 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+1398 1395614 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2077522278
+*C
+1399 1397230 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+1400 1397644 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.2077522278
+*C
+1401 1399260 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.5937500000
+*C
+1402 1400275 [Arduino Wir] Echo successfully published 'Die Temperature: 25.5937'
+Object Temperature: 21.2672309875
+*C
+1403 1401691 [Arduino Wir] Echo successfully published 'Object Temperature: 21.2'
+Die Temperature: 25.9687500000
+*C
+1404 1402105 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6722240448
+*C
+1405 1403521 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.6250000000
+*C
+1406 1403935 [Arduino Wir] Echo successfully published 'Die Temperature: 25.6250'
+Object Temperature: 21.6008739471
+*C
+1407 1405451 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.9687500000
+*C
+1408 1406662 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.3388195038
+*C
+1409 1408078 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.6250000000
+*C
+1410 1408692 [Arduino Wir] Echo successfully published 'Die Temperature: 25.6250'
+Object Temperature: 21.5056610107
+*C
+1411 1410308 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.9687500000
+*C
+1412 1411122 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.6838798523
+*C
+1413 1412738 [Arduino Wir] Echo successfully published 'Object Temperature: 21.6'
+Die Temperature: 25.6562500000
+*C
+1414 1413153 [Arduino Wir] Echo successfully published 'Die Temperature: 25.6562'
+Object Temperature: 21.8026618958
+*C
+1415 1414469 [Arduino Wir] Echo successfully published 'Object Temperature: 21.8'
+Die Temperature: 25.9687500000
+*C
+1416 1414883 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.5649547577
+*C
+1417 1416499 [Arduino Wir] Echo successfully published 'Object Temperature: 21.5'
+Die Temperature: 25.6562500000
+*C
+1418 1416913 [Arduino Wir] Echo successfully published 'Die Temperature: 25.6562'
+Object Temperature: 21.3505344391
+*C
+1419 1418329 [Arduino Wir] Echo successfully published 'Object Temperature: 21.3'
+Die Temperature: 25.9687500000
+*C
+1420 1418943 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4697132111
+*C
+1421 1420559 [Arduino Wir] Echo successfully published 'Object Temperature: 21.4'
+Die Temperature: 25.9687500000
+*C
+1422 1420973 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 23.0297279358
+*C
+1423 1422383 [Arduino Wir] Echo successfully published 'Object Temperature: 23.0'
+Die Temperature: 25.9687500000
+*C
+1424 1423097 [Arduino Wir] Echo successfully published 'Die Temperature: 25.9687'
+Object Temperature: 21.4697132111
+*C

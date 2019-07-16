@@ -26,7 +26,7 @@
 /*
  * Debug setup instructions:
  * 1) Open the debug configuration dialog.
- * 2) Go to the target tab.
+ * 2) Go to the target tab.+
  * 3) Ensure that check box 'Reset target on a connect' is selected.
  */
 extern "C"
