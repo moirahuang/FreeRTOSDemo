@@ -10,7 +10,6 @@
 //MOIRA'S IMPLEMENTATION OF WIRE API, IN BETWEEN ARDUINO AND AFR I2C
 extern "C"
 {
-#include <stdlib.h>
 #include "iot_i2c.h"
 #include "FreeRTOS.h"
 #include "semphr.h"
@@ -71,7 +70,7 @@ void TwoWire::begin()
 
     transactionContext.semaphore = xSemaphoreCreateBinaryStatic(&transactionContext.semaphoreBuffer);
 
-    iot_i2c_set_completion_callback(transactionContext.handle, Wire_CallbackInternal);
+    iot_i2c_set_callback(transactionContext.handle, (IotI2CCallback_t) Wire_CallbackInternal, &transactionContext);
 }
 
 void TwoWire::end()
@@ -81,14 +80,14 @@ void TwoWire::end()
 
 void TwoWire::setClock(uint32_t speed)
 {
-    setFrequency(transactionContext.handle, (void *)&speed);
+    setFrequency(transactionContext.handle, &speed);
 }
 
 void TwoWire::beginTransmission(int addr)
 {
     if (transactionContext.error == IOT_I2C_SUCCESS)
     {
-        IotI2CIoctlConfig_t config = {100000, 100000};
+        IotI2CConfig_t config = {100000, 100000};
 
         uint32_t error = iot_i2c_ioctl(transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr);
 
@@ -111,11 +110,11 @@ void TwoWire::beginTransmission(int addr)
 }
 void TwoWire::beginTransmission(uint8_t addr)
 {
-    iot_i2c_set_completion_callback(transactionContext.handle, Wire_CallbackInternal);
+    iot_i2c_set_callback(transactionContext.handle, (IotI2CCallback_t)Wire_CallbackInternal, &transactionContext);
 
     if (transactionContext.error == IOT_I2C_SUCCESS)
     {
-        IotI2CIoctlConfig_t config = {100000, 100000};
+        IotI2CConfig_t config = {100000, 100000};
 
         uint32_t error = iot_i2c_ioctl(transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr);
 
@@ -141,7 +140,8 @@ uint8_t TwoWire::endTransmission(void)
 {
     if (transactionContext.error == IOT_I2C_SUCCESS)
     {
-        iot_i2c_ioctl(transactionContext.handle, eI2CSendStop, NULL);
+//        iot_i2c_ioctl(transactionContext.handle, eI2CSendStop, NULL);
+        //exit
     }
 
     int status = iot_i2c_write_async(transactionContext.handle, transactionContext.writeBuffer, transactionContext.writeAvailable);

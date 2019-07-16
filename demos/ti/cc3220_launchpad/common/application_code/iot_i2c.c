@@ -28,7 +28,8 @@
  * @file iot_i2c.c
  * @brief file containing the implementation of UART APIs calling STM drivers.
  */
-
+#include <stddef.h>
+#include <stdint.h>
 #include "iot_i2c.h"
 #include "Board.h"
 #include <ti/devices/cc32xx/inc/hw_memmap.h>
@@ -52,13 +53,6 @@ typedef struct IotI2CDescriptor
         bool busy;
 } IotI2CDescriptor_t;
 
-typedef struct IotI2CConfig
-{
-        uint32_t ulMasterTimeout; /**<! Master timeout value in msec, to relinquish the bus if slave
-                                      does not respond */
-        uint32_t ulBusFreq;       /**<! Bus frequency/baud rate */
-} IotI2CConfig_t;
-
 #define I2C_INSTANCES (2)
 
 IotI2CDescriptor_t i2cInstances[I2C_INSTANCES] = {0, NULL, {I2C_MODE_BLOCKING}, {0}, NULL, NULL, false};
@@ -81,7 +75,7 @@ static void I2C_CallbackInternal(I2C_Handle handle, I2C_Transaction *transaction
 
         if (pDescriptor != NULL && pDescriptor->userCallback)
         {
-                pDescriptor->userCallback(NULL);
+                pDescriptor->userCallback(NULL, pDescriptor->userCallback);
         }
 }
 
@@ -124,8 +118,9 @@ IotI2CHandle_t iot_i2c_open(int32_t I2CInstance)
  * @param[in] pxI2CPeripheral The I2C peripheral handle returned in the open() call.
  * @param[in] xCallback The callback function to be called on completion of transaction.
  */
-void iot_i2c_set_completion_callback(IotI2CHandle_t const pxI2CPeripheral,
-                                     IotI2CCallback_t xCallback)
+void iot_i2c_set_callback( IotI2CHandle_t const pxI2CPeripheral,
+                           IotI2CCallback_t xCallback,
+                           void * pvUserContext )
 {
         IotI2CHandle_t pDescriptor = pxI2CPeripheral;
 
@@ -148,7 +143,7 @@ int32_t iot_i2c_read_sync(IotI2CHandle_t const pxI2CPeripheral,
                           size_t xBytes)
 {
         bool status = false;
-        int32_t readStatus = IOT_I2C_READ_FAIL;
+        int32_t readStatus = IOT_I2C_READ_FAILED;
 
         pxI2CPeripheral->transaction.writeBuf = NULL;
         pxI2CPeripheral->transaction.writeCount = 0;
@@ -187,7 +182,7 @@ int32_t iot_i2c_write_sync(IotI2CHandle_t const pxI2CPeripheral,
 {
         bool status = false;
         uint8_t *writeBuffer = pvBuffer;
-        int32_t writeStatus = IOT_I2C_WRITE_FAIL;
+        int32_t writeStatus = IOT_I2C_WRITE_FAILED;
 
         pxI2CPeripheral->transaction.writeBuf = writeBuffer;
         pxI2CPeripheral->transaction.writeCount = xBytes;
@@ -223,7 +218,7 @@ int32_t iot_i2c_read_async(IotI2CHandle_t const pxI2CPeripheral,
                            size_t xBytes)
 {
         bool status = false;
-        int32_t readStatus = IOT_I2C_READ_FAIL;
+        int32_t readStatus = IOT_I2C_READ_FAILED;
 
         pxI2CPeripheral->transaction.writeBuf = NULL;
         pxI2CPeripheral->transaction.writeCount = 0;
@@ -257,7 +252,7 @@ int32_t iot_i2c_write_async(IotI2CHandle_t const pxI2CPeripheral,
                             size_t xBytes)
 {
         bool status = false;
-        int32_t writeStatus = IOT_I2C_WRITE_FAIL;
+        int32_t writeStatus = IOT_I2C_WRITE_FAILED;
         uint8_t *writeBuffer = pvBuffer;
 
         pxI2CPeripheral->transaction.writeBuf = writeBuffer;
@@ -336,12 +331,6 @@ int32_t iot_i2c_ioctl(IotI2CHandle_t const pxI2CPeripheral,
 
                 pDescriptor->transaction.slaveAddress = (uint_least8_t)*address;
 
-                ioctlStatus = IOT_I2C_SUCCESS;
-        }
-        break;
-
-        case eI2CSendStop:
-        {
                 ioctlStatus = IOT_I2C_SUCCESS;
         }
         break;
