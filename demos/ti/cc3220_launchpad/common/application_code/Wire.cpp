@@ -20,14 +20,13 @@ typedef struct I2CTrasanctionContext
 {
     IotI2CHandle_t handle;
     uint8_t OPT_ADDR;
-    uint8_t error; // no error is zero (0)
+    uint8_t error;
     uint8_t *readBuffer;
     uint32_t readBufferSize;
     uint32_t readAvailable;
     uint8_t *writeBuffer;
     uint32_t writeBufferSize;
     uint32_t writeAvailable;
-
     SemaphoreHandle_t semaphore;
     StaticSemaphore_t semaphoreBuffer;
 
@@ -35,20 +34,14 @@ typedef struct I2CTrasanctionContext
 
 I2CTransactionContext_t transactionContext = {0};
 
-#define WIRE_TRANSACTION_TIMEOUT 10000
-
+#define DEFAULT_WIRE_TRANSACTION_TIMEOUT 1000
+#define DEFAULT_WIRE_BAUD_RATE 100000
 #define WIRE_OK ((uint8_t)0)
 #define WIRE_TOO_LONG ((uint8_t)1)
 #define WIRE_ADDR_NACK ((uint8_t)2)
 #define WIRE_DATA_NACK ((uint8_t)3)
 #define WIRE_FAIL ((uint8_t)4)
 
-/* ------------------------------------------------------------------------ */
-//constructors
-
-TwoWire::TwoWire()
-{
-}
 /* ------------------------------------------------------------------------ */
 
 void Wire_CallbackInternal(void *context)
@@ -62,6 +55,11 @@ void Wire_CallbackInternal(void *context)
 
 /* ------------------------------------------------------------------------ */
 
+TwoWire::TwoWire()
+{
+
+}
+
 void TwoWire::begin()
 {
     IotI2CHandle_t handle = iot_i2c_open(0);
@@ -73,6 +71,18 @@ void TwoWire::begin()
     iot_i2c_set_callback(transactionContext.handle, (IotI2CCallback_t) Wire_CallbackInternal, &transactionContext);
 }
 
+void TwoWire::begin(uint8_t slaveAddr)
+{
+    transactionContext.error = IOT_I2C_FUNCTION_NOT_SUPPORTED;
+
+    return;
+}
+
+void TwoWire::begin(int slaveAddr)
+{
+    begin((uint8_t) slaveAddr);
+}
+
 void TwoWire::end()
 {
     iot_i2c_close(transactionContext.handle);
@@ -80,41 +90,25 @@ void TwoWire::end()
 
 void TwoWire::setClock(uint32_t speed)
 {
-    setFrequency(transactionContext.handle, &speed);
+    IotI2CConfig_t config = {DEFAULT_WIRE_TRANSACTION_TIMEOUT, speed};
+
+    uint8_t error = iot_i2c_ioctl(transactionContext.handle, eI2CSetMasterConfig, &config);
+
+    transactionContext.error = error;
 }
 
 void TwoWire::beginTransmission(int addr)
 {
-    if (transactionContext.error == IOT_I2C_SUCCESS)
-    {
-        IotI2CConfig_t config = {100000, 100000};
-
-        uint32_t error = iot_i2c_ioctl(transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr);
-
-        if (error != IOT_I2C_SUCCESS)
-        {
-            transactionContext.error = error;
-
-            return;
-        }
-
-        error = iot_i2c_ioctl(transactionContext.handle, eI2CSetMasterConfig, &config);
-
-        if (error != IOT_I2C_SUCCESS)
-        {
-            transactionContext.error = error;
-
-            return;
-        }
-    }
+    beginTransmission((uint8_t) addr);
 }
+
 void TwoWire::beginTransmission(uint8_t addr)
 {
     iot_i2c_set_callback(transactionContext.handle, (IotI2CCallback_t)Wire_CallbackInternal, &transactionContext);
 
     if (transactionContext.error == IOT_I2C_SUCCESS)
     {
-        IotI2CConfig_t config = {100000, 100000};
+        IotI2CConfig_t config = {DEFAULT_WIRE_TRANSACTION_TIMEOUT, DEFAULT_WIRE_BAUD_RATE};
 
         uint32_t error = iot_i2c_ioctl(transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr);
 
@@ -136,116 +130,59 @@ void TwoWire::beginTransmission(uint8_t addr)
     }
 }
 
-uint8_t TwoWire::endTransmission(void)
+uint8_t TwoWire::endTransmission()
+{
+    return endTransmission(1);
+}
+
+uint8_t TwoWire::endTransmission(uint8_t stop)
 {
     if (transactionContext.error == IOT_I2C_SUCCESS)
     {
-//        iot_i2c_ioctl(transactionContext.handle, eI2CSendStop, NULL);
-        //exit
-    }
-
-    int status = iot_i2c_write_async(transactionContext.handle, transactionContext.writeBuffer, transactionContext.writeAvailable);
-
-    if (status == IOT_I2C_SUCCESS)
-    {
-        if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
+        if (stop == 1)
         {
-            vPortFree(transactionContext.writeBuffer);
+            int status = iot_i2c_write_async(transactionContext.handle, transactionContext.writeBuffer, transactionContext.writeAvailable);
 
-            transactionContext.writeBuffer = NULL;
-            transactionContext.writeBufferSize = 0;
-            transactionContext.writeAvailable = 0;
+            if (status == IOT_I2C_SUCCESS)
+            {
+                if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(DEFAULT_WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
+                {
+                    vPortFree(transactionContext.writeBuffer);
+
+                    transactionContext.writeBuffer = NULL;
+                    transactionContext.writeBufferSize = 0;
+                    transactionContext.writeAvailable = 0;
+                }
+            }
+            if (status == IOT_I2C_NACK)
+                    {
+                        return 2;
+                    }
+                    if (status == IOT_I2C_WRITE_FAILED)
+                    {
+                        return 3;
+                    }
         }
-        else
+        else if (stop == 0)
         {
-            return 1;
-            //didn't happen
+            //do nothing, keep everything on the buffer until the next endTransmission
         }
     }
-
     transactionContext.error = IOT_I2C_SUCCESS;
 
     return 0;
 }
 
-size_t TwoWire::write(uint8_t val)
+uint8_t TwoWire::requestFrom(uint8_t address, uint8_t quantity)
 {
-    if (transactionContext.error == IOT_I2C_SUCCESS)
-    {
-        uint8_t writeBuffer[1] = {val};
-
-        return write(writeBuffer, 1);
-    }
-
-    return 0;
+    return requestFrom((uint8_t)address, (uint8_t)quantity, (uint8_t) true);
 }
 
-size_t TwoWire::write(const uint8_t *data, size_t quantity)
+uint8_t TwoWire::requestFrom(uint8_t address, uint8_t quantity, uint8_t sendStop)
 {
-    if (transactionContext.error == IOT_I2C_SUCCESS)
-    {
-        if (transactionContext.writeBuffer == NULL)
-        {
-            transactionContext.writeBuffer = (uint8_t *)pvPortMalloc(BUFFER_LENGTH * 2 * sizeof(uint8_t));
-            transactionContext.writeBufferSize = BUFFER_LENGTH;
-            transactionContext.writeAvailable = 0;
-        }
-        for (int i = 0; i < quantity; i++)
-        {
-            transactionContext.writeBuffer[transactionContext.writeAvailable] = data[i];
-            transactionContext.writeAvailable++;
-
-            if (transactionContext.writeAvailable >= transactionContext.writeBufferSize)
-            {
-                return i;
-            }
-        }
-
-        return quantity;
-    }
-
-    return 0;
+    return requestFrom((uint8_t)address, (uint8_t)quantity, (uint32_t)0, (uint8_t)0, (uint8_t)sendStop);
 }
 
-int TwoWire::read()
-{
-    if (transactionContext.error == IOT_I2C_SUCCESS)
-    {
-        if (transactionContext.readAvailable > 0)
-        {
-            configASSERT(transactionContext.readBufferSize >= transactionContext.readAvailable);
-
-            uint8_t val = transactionContext.readBuffer[transactionContext.readBufferSize - transactionContext.readAvailable];
-
-            if (--transactionContext.readAvailable == 0)
-            {
-                vPortFree(transactionContext.readBuffer);
-
-                transactionContext.readBuffer = NULL;
-                transactionContext.readBufferSize = 0;
-            }
-
-            return val;
-        }
-    }
-    return -1;
-}
-int TwoWire::peek()
-{
-    if (transactionContext.error == IOT_I2C_SUCCESS)
-    {
-
-        if (transactionContext.readAvailable > 0)
-        {
-            configASSERT(transactionContext.readBufferSize >= transactionContext.readAvailable);
-
-            uint8_t val = transactionContext.readBuffer[transactionContext.readBufferSize - transactionContext.readAvailable];
-            return val;
-        }
-    }
-
-    return -1;
-}
 uint8_t TwoWire::requestFrom(uint8_t addr, uint8_t num, uint32_t iaddress, uint8_t isize, uint8_t sendStop)
 {
     iot_i2c_ioctl(transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr);
@@ -271,7 +208,7 @@ uint8_t TwoWire::requestFrom(uint8_t addr, uint8_t num, uint32_t iaddress, uint8
 
             if (status == IOT_I2C_SUCCESS)
             {
-                if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
+                if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(DEFAULT_WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
                 {
                     transactionContext.readAvailable = num;
                     return num;
@@ -281,15 +218,6 @@ uint8_t TwoWire::requestFrom(uint8_t addr, uint8_t num, uint32_t iaddress, uint8
     }
 
     return 0;
-}
-uint8_t TwoWire::requestFrom(uint8_t address, uint8_t quantity, uint8_t sendStop)
-{
-    return requestFrom((uint8_t)address, (uint8_t)quantity, (uint32_t)0, (uint8_t)0, (uint8_t)sendStop);
-}
-
-uint8_t TwoWire::requestFrom(uint8_t address, uint8_t quantity)
-{
-    return requestFrom((uint8_t)address, (uint8_t)quantity, (uint8_t) true);
 }
 
 uint8_t TwoWire::requestFrom(int address, int quantity)
@@ -302,7 +230,102 @@ uint8_t TwoWire::requestFrom(int address, int quantity, int sendStop)
     return requestFrom((uint8_t)address, (uint8_t)quantity, (uint8_t)sendStop);
 }
 
-int TwoWire::available(void)
+size_t TwoWire::write(uint8_t val)
+{
+    if (transactionContext.error == IOT_I2C_SUCCESS)
+    {
+        uint8_t writeBuffer[1] = {val};
+
+        return write(writeBuffer, 1);
+    }
+
+    return 0;
+}
+
+size_t TwoWire::write(const uint8_t *data, size_t quantity)
+{
+    if (transactionContext.error == IOT_I2C_SUCCESS)
+    {
+        if (transactionContext.writeBuffer == NULL)
+        {
+            transactionContext.writeBuffer = (uint8_t *)pvPortMalloc(BUFFER_LENGTH * sizeof(uint8_t));
+            transactionContext.writeBufferSize = BUFFER_LENGTH;
+            transactionContext.writeAvailable = 0;
+        }
+        for (int i = 0; i < quantity; i++)
+        {
+            transactionContext.writeBuffer[transactionContext.writeAvailable] = data[i];
+            transactionContext.writeAvailable++;
+
+            if (transactionContext.writeAvailable >= transactionContext.writeBufferSize)
+            {
+                return i;
+            }
+        }
+
+        return quantity;
+    }
+
+    return 0;
+}
+
+int TwoWire::available()
 {
     return transactionContext.readAvailable;
+}
+
+int TwoWire::read()
+{
+    if (transactionContext.error == IOT_I2C_SUCCESS)
+    {
+        if (transactionContext.readAvailable > 0)
+        {
+            configASSERT(transactionContext.readBufferSize >= transactionContext.readAvailable);
+
+            uint8_t val = transactionContext.readBuffer[transactionContext.readBufferSize - transactionContext.readAvailable];
+
+            if (--transactionContext.readAvailable == 0)
+            {
+                vPortFree(transactionContext.readBuffer);
+
+                transactionContext.readBuffer = NULL;
+                transactionContext.readBufferSize = 0;
+            }
+
+            return val;
+        }
+    }
+
+    return -1;
+}
+
+int TwoWire::peek()
+{
+    if (transactionContext.error == IOT_I2C_SUCCESS)
+    {
+
+        if (transactionContext.readAvailable > 0)
+        {
+            configASSERT(transactionContext.readBufferSize >= transactionContext.readAvailable);
+
+            uint8_t val = transactionContext.readBuffer[transactionContext.readBufferSize - transactionContext.readAvailable];
+            return val;
+        }
+    }
+
+    return -1;
+}
+
+void TwoWire::onReceive( void (*function)(int) )
+{
+    transactionContext.error = IOT_I2C_FUNCTION_NOT_SUPPORTED;
+
+    return;
+}
+
+void TwoWire::onRequest( void (*function)(void) )
+{
+    transactionContext.error = IOT_I2C_FUNCTION_NOT_SUPPORTED;
+
+    return;
 }

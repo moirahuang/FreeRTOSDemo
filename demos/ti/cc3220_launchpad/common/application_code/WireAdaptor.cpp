@@ -28,7 +28,7 @@ TwoWire Wire = TwoWire();
 //Adafruit_TMP006 tmp006;
 Adafruit_TMP006 tmp006(0x41); // start with a diferent i2c address!
 
-void setup()
+void setup(void)
 {
   vStartMQTTEchoDemo();
   Serial.begin(9600);
@@ -47,45 +47,29 @@ void setup()
   Serial.println("Send s to enter sleep mode, or w to wake up.  Measurements are not updated while asleep!");
 }
 
-void loop()
+void loop(void)
 {
-  // Check for sleep/wake command.
-  while (Serial.available() > 0)
-  {
-    char c = Serial.read();
-    if (c == 'w')
-    {
-      Serial.println("Waking up!");
-      tmp006.wake();
-    }
-    else if (c == 's')
-    {
-      Serial.println("Going to sleep!");
-      tmp006.sleep();
-    }
-  }
-
   // Grab temperature measurements and print them.
-  float objt = tmp006.readObjTempC();
-  Serial.print("Object Temperature: ");
+  double objt = tmp006.readObjTempC();
+  Serial.print("Object Temperature: "); //can take out serial, can just use configprintf
   Serial.print(objt);
   Serial.println("*C");
-  prvPublishNextMessage("Object Temperature: %lf'\r\n", objt);
-  float diet = tmp006.readDieTempC();
+//  prvPublishNextMessage("Object Temperature: %lf'\r\n", objt); //have screen w code, diagram, console, mqtt screen
+  double diet = tmp006.readDieTempC();
   Serial.print("Die Temperature: ");
   Serial.print(diet);
   Serial.println("*C");
-  prvPublishNextMessage("Die Temperature: %lf'\r\n", diet);
+//  prvPublishNextMessage("Die Temperature: %lf'\r\n", diet);
 
   //  delay(4000); // 4 seconds per reading for 16 samples per reading
 }
 
-void Wire_begin()
+void Wire_begin(void)
 {
   Wire.begin();
 }
 
-void Wire_end()
+void Wire_end(void)
 {
   Wire.end();
 }
@@ -110,7 +94,7 @@ size_t Wire_write(uint8_t val)
   return Wire.write(val);
 }
 
-int Wire_read()
+int Wire_read(void)
 {
   return Wire.read();
 }

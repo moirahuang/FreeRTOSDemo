@@ -45,92 +45,13 @@ extern void vStartMQTTEchoDemo( void );
 
 void SensorsLoop( void * context )
 {
-    setup();
+    setup(); //breakpoint
     for (; ;) {
-        loop();
-        vTaskDelay( 1000 );
+        loop(); //setup, step into loop, show diagram before so when they look at the code they have a picture of the architcture know the layers they're stepping into
+        //call loop 1(written in C++, use only a:FR and adafruit lirbary), loop 2 (what I have right now)
+        vTaskDelay( 500 );
     }
 
-    Wire_begin();
-//
-//    Wire_beginTransmission(0x41);
-//
-//    int dataReady = 0;
-//    while (dataReady == 0)
-//    {
-//        Wire_write(2);
-//        Wire_requestFrom(0x41, 2);
-//        Wire_read();
-//        int dataReady = ((Wire_read() >> 7)) & 1;
-//        configPRINTF(("Read 2 value '%d'\r\n", dataReady));
-//        if (dataReady == 1)
-//        {
-//            break;
-//        }
-//    }
-//
-//    Wire_endTransmission();
-//
-//    Wire_beginTransmission(0x41);
-//
-//    Wire_write(1);
-//
-//    int i = 0;
-//    for ( i = 0; i < 2 ; i++ )
-//    {
-//        int reqFrmVal = Wire_requestFrom( 0x41, 2 );
-//        int upper = Wire_read();
-//        int lower = Wire_read();
-//        int val = ((upper << 8) + lower) >> 2;
-//        prvPublishNextMessage("Read value '%lf'\r\n", val/32.0);
-//        configPRINTF(("Read value '%lf'\r\n", val/32.0));
-//
-//        vTaskDelay( 1000 );
-//    }
-//
-//    Wire_endTransmission();
-//
-//    Wire_beginTransmission(0x18);
-//
-//    Wire_write(15);
-//
-//    Wire_requestFrom( 0x18, 1 );
-//
-//    int range = Wire_read();
-//
-//    Wire_write(2);
-//
-//    for ( ; ; )
-//    {
-//        Wire_requestFrom( 0x18, 6 );
-//        i = 0;
-//        for ( i = 0; i < 3 ; i++ )
-//        {
-//            int check = Wire_read() & 1;
-//            if (check)
-//            {
-//                double val = range * ((int8_t)Wire_read())/127.0;
-//                if (i == 0)
-//                {
-//                    prvPublishNextMessage("Read x value %lf\r\n",  val);
-//                    configPRINTF(("Read x value %lf\r\n", val));
-//                }
-//                if (i == 1)
-//                {
-//                    prvPublishNextMessage("Read Y value %lf\r\n", val);
-//                    configPRINTF(("Read Y value %lf\r\n", val));
-//                }
-//                if (i == 2)
-//                {
-//                    prvPublishNextMessage("Read z value %lf\r\n", val);
-//                    configPRINTF(("Read z value %lf\r\n", val));
-//                }
-//            }
-//
-//            vTaskDelay( 1000 );
-//        }
-//    }
-//endTransmission();
     vTaskDelete(NULL);
 }
 

@@ -520,3 +520,4 @@ void vStartMQTTEchoDemo( void )
 }
 /*-----------------------------------------------------------*/
 
+//add setup and loop functions to here

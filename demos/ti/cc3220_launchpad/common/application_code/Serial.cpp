@@ -158,26 +158,21 @@ size_t SerialOutput::print(unsigned long n, int base)
     return sizeof(n);
 }
 
-size_t SerialOutput::print(double n, int base)
-{
-    return print((long)n, base);
-}
-
 size_t SerialOutput::print(float n, int base)
 {
-    char buffer[sizeof(float) * 8 + 1] = {0};
+    return print((double)n, base);
+}
+
+size_t SerialOutput::print(double n, int base)
+{
+    char buffer[33] = {0};
     if (base != 10)
     {
         sprintf(buffer, "Only support float type for decimal.\n");
     }
     else if (base == 10)
     {
-        char digit[2];
-        sprintf(digit, "%d", base);
-        char command[] = "%0.";
-        strcat(command, digit);
-        strcat(command, "f\n");
-        sprintf(buffer, command, n);
+        sprintf(buffer, "%lf", n);
     }
 
     configPRINT_STRING((buffer));
@@ -187,7 +182,7 @@ size_t SerialOutput::print(float n, int base)
     return sizeof(n);
 }
 
-size_t SerialOutput::println(void)
+size_t SerialOutput::println()
 {
     configPRINT_STRING(("\r\n"));
     return 0;

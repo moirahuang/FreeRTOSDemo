@@ -25,10 +25,10 @@ Modified 2012 by Todd Krein (todd@krein.org) to implement repeated starts
 extern "C"
 {
 #endif
-    void Wire_begin();
+    void Wire_begin(void);
     // void begin(uint8_t);
     // void begin(int);
-    void Wire_end();
+    void Wire_end(void);
     void Wire_setClock(uint32_t);
     void Wire_beginTransmission(int);
     uint8_t Wire_endTransmission(void);
@@ -57,8 +57,8 @@ extern "C"
 
     //if written in c++ need to use externc for include files other issues etc
     //
-    void setup();
-    void loop();
+    void setup(void);
+    void loop(void);
 #ifdef __cplusplus
 }
 #endif

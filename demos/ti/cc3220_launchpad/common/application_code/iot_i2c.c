@@ -28,18 +28,8 @@
  * @file iot_i2c.c
  * @brief file containing the implementation of UART APIs calling STM drivers.
  */
-#include <stddef.h>
-#include <stdint.h>
 #include "iot_i2c.h"
 #include "Board.h"
-#include <ti/devices/cc32xx/inc/hw_memmap.h>
-#include <ti/devices/cc32xx/inc/hw_ints.h>
-#include <ti/devices/cc32xx/inc/hw_types.h>
-#include <ti/drivers/I2C.h>
-#include <ti/devices/cc32xx/driverlib/i2c.h>
-#include <ti/drivers/i2c/I2CCC32XX.h>
-#include <stdio.h>
-
 /**
  * @brief The I2C descriptor type defined in the source file.
  */
@@ -51,6 +41,7 @@ typedef struct IotI2CDescriptor
         I2C_Transaction transaction;
         IotI2CCallback_t userCallback;
         bool busy;
+//        bool transactionInProgress; toggle in the callback
 } IotI2CDescriptor_t;
 
 #define I2C_INSTANCES (2)
@@ -190,6 +181,7 @@ int32_t iot_i2c_write_sync(IotI2CHandle_t const pxI2CPeripheral,
         pxI2CPeripheral->transaction.readCount = 0;
 
         status = I2C_transfer(pxI2CPeripheral->handle, &pxI2CPeripheral->transaction);
+        //semaphore to wait until done and then return
 
         if (status == false)
         {
@@ -295,49 +287,54 @@ int32_t iot_i2c_ioctl(IotI2CHandle_t const pxI2CPeripheral,
 
         switch (xI2CRequest)
         {
-        case eI2CSetMasterConfig:
-        {
-                IotI2CConfig_t *config = (IotI2CConfig_t *)pvBuffer;
+            case eI2CSetMasterConfig:
+            {
+                    IotI2CConfig_t *config = (IotI2CConfig_t *)pvBuffer;
 
-                pDescriptor->params.bitRate = FrequencyToBitRate(config->ulBusFreq);
+                    pDescriptor->params.bitRate = FrequencyToBitRate(config->ulBusFreq);
 
-                I2C_Handle i2cHandle = NULL;
+                    I2C_Handle i2cHandle = NULL;
 
-                if (pDescriptor->busy == false)
-                {
-                        i2cHandle = I2C_open(pDescriptor->instance, &pDescriptor->params);
-                        if (i2cHandle != NULL)
-                        {
-                                pDescriptor->handle = i2cHandle;
-                        }
+                    if (pDescriptor->busy == false)
+                    {
+                            i2cHandle = I2C_open(pDescriptor->instance, &pDescriptor->params);
 
-                        pDescriptor->busy = true;
+                            if (i2cHandle != NULL)
+                            {
+                                    pDescriptor->handle = i2cHandle;
+                            }
 
-                        ioctlStatus = IOT_I2C_SUCCESS;
-                }
-                else if (pxI2CPeripheral != NULL)
-                {
-                        pDescriptor->handle = pxI2CPeripheral->handle;
+                            pDescriptor->busy = true;
 
-                        ioctlStatus = IOT_I2C_SUCCESS;
-                }
-        }
-        break;
+                            ioctlStatus = IOT_I2C_SUCCESS;
+                    }
+                    else if (pxI2CPeripheral != NULL)
+                    {
+                            pDescriptor->handle = pxI2CPeripheral->handle;
 
-        case eI2CSetSlaveAddrWrite:
-        case eI2CSetSlaveAddrRead:
-        {
+                            ioctlStatus = IOT_I2C_SUCCESS;
+                    }
+            }
+            break;
+            case eI2CSetSlaveAddrWrite:
+            case eI2CSetSlaveAddrRead:
+            {
                 uint8_t *address = (uint8_t *)pvBuffer;
 
                 pDescriptor->transaction.slaveAddress = (uint_least8_t)*address;
 
                 ioctlStatus = IOT_I2C_SUCCESS;
-        }
-        break;
-        default:
-        {
+            }
+            break;
+            case eI2CSendNoStopFlag:
+            {
+
+            }
+            break;
+            default:
+            {
                 break;
-        }
+            }
         }
 
         return ioctlStatus;

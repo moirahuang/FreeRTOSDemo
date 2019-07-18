@@ -48,7 +48,7 @@ class TwoWire
     //    static void onRequestService(void);
     //    static void onReceiveService(uint8_t*, int);
 public:
-    TwoWire();
+    TwoWire(void);
     void begin();
     void begin(uint8_t);
     void begin(int);
