@@ -35,7 +35,7 @@
 // Define the slave address of device on the SENSORS bus
 #define OPT_ADDR 0x18
 
-#include "WireAdaptor.h"
+#include "AdafruitAdaptor.h"
 #include "aws_hello_world.h"
 
 /* Demo declarations. */
@@ -47,8 +47,7 @@ void SensorsLoop( void * context )
 {
     setup(); //breakpoint
     for (; ;) {
-        loop(); //setup, step into loop, show diagram before so when they look at the code they have a picture of the architcture know the layers they're stepping into
-        //call loop 1(written in C++, use only a:FR and adafruit lirbary), loop 2 (what I have right now)
+        loop();
         vTaskDelay( 500 );
     }
 

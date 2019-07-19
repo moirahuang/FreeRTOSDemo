@@ -60,6 +60,8 @@ TwoWire::TwoWire()
 
 }
 
+//"opens" handle but doesn't actually open yet, just sets necessary parameters, creates semaphore, sets callback
+//doesn't open yet because TI open() needs sensor address which isn't known yet
 void TwoWire::begin()
 {
     IotI2CHandle_t handle = iot_i2c_open(0);
@@ -71,6 +73,7 @@ void TwoWire::begin()
     iot_i2c_set_callback(transactionContext.handle, (IotI2CCallback_t) Wire_CallbackInternal, &transactionContext);
 }
 
+//CommonIO and TI both don't support being the slave
 void TwoWire::begin(uint8_t slaveAddr)
 {
     transactionContext.error = IOT_I2C_FUNCTION_NOT_SUPPORTED;
@@ -88,6 +91,7 @@ void TwoWire::end()
     iot_i2c_close(transactionContext.handle);
 }
 
+//modifies clock frequency
 void TwoWire::setClock(uint32_t speed)
 {
     IotI2CConfig_t config = {DEFAULT_WIRE_TRANSACTION_TIMEOUT, speed};
@@ -102,6 +106,8 @@ void TwoWire::beginTransmission(int addr)
     beginTransmission((uint8_t) addr);
 }
 
+//begin transmission to I2C slave device with given address
+//queue bytes for transmission with write() function and transmit when endTransmission() is called
 void TwoWire::beginTransmission(uint8_t addr)
 {
     iot_i2c_set_callback(transactionContext.handle, (IotI2CCallback_t)Wire_CallbackInternal, &transactionContext);
@@ -135,6 +141,9 @@ uint8_t TwoWire::endTransmission()
     return endTransmission(1);
 }
 
+//Ends a transmission to a slave device that was begun by beginTransmission() and transmits the bytes that were queued by write().
+//If true, endTransmission(), release the I2C bus, TI sends stop by default, clear the buffer
+//If false, endTransmission() the bus is not released and everything is kept on the buffer
 uint8_t TwoWire::endTransmission(uint8_t stop)
 {
     if (transactionContext.error == IOT_I2C_SUCCESS)
@@ -148,20 +157,19 @@ uint8_t TwoWire::endTransmission(uint8_t stop)
                 if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(DEFAULT_WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
                 {
                     vPortFree(transactionContext.writeBuffer);
-
                     transactionContext.writeBuffer = NULL;
                     transactionContext.writeBufferSize = 0;
                     transactionContext.writeAvailable = 0;
                 }
             }
             if (status == IOT_I2C_NACK)
-                    {
-                        return 2;
-                    }
-                    if (status == IOT_I2C_WRITE_FAILED)
-                    {
-                        return 3;
-                    }
+            {
+                return 2;
+            }
+            if (status == IOT_I2C_WRITE_FAILED)
+            {
+                return 3;
+            }
         }
         else if (stop == 0)
         {
@@ -183,6 +191,7 @@ uint8_t TwoWire::requestFrom(uint8_t address, uint8_t quantity, uint8_t sendStop
     return requestFrom((uint8_t)address, (uint8_t)quantity, (uint32_t)0, (uint8_t)0, (uint8_t)sendStop);
 }
 
+//request bytes and save to the buffer to be accessed later by read()
 uint8_t TwoWire::requestFrom(uint8_t addr, uint8_t num, uint32_t iaddress, uint8_t isize, uint8_t sendStop)
 {
     iot_i2c_ioctl(transactionContext.handle, eI2CSetSlaveAddrWrite, (void *)&addr);
@@ -242,6 +251,7 @@ size_t TwoWire::write(uint8_t val)
     return 0;
 }
 
+//queues bytes into buffer for transmission when endTransmission() is called
 size_t TwoWire::write(const uint8_t *data, size_t quantity)
 {
     if (transactionContext.error == IOT_I2C_SUCCESS)
@@ -269,11 +279,13 @@ size_t TwoWire::write(const uint8_t *data, size_t quantity)
     return 0;
 }
 
+//return number of bytes available for retrieval with read()
 int TwoWire::available()
 {
     return transactionContext.readAvailable;
 }
 
+//returns a byte from the buffer that was queued during requestFrom()
 int TwoWire::read()
 {
     if (transactionContext.error == IOT_I2C_SUCCESS)
@@ -299,6 +311,7 @@ int TwoWire::read()
     return -1;
 }
 
+//return first byte available without removing it from the buffer
 int TwoWire::peek()
 {
     if (transactionContext.error == IOT_I2C_SUCCESS)
@@ -316,6 +329,7 @@ int TwoWire::peek()
     return -1;
 }
 
+//registers a function to be called when slave device receives transmission from master NOT SUPPORTED
 void TwoWire::onReceive( void (*function)(int) )
 {
     transactionContext.error = IOT_I2C_FUNCTION_NOT_SUPPORTED;
@@ -323,6 +337,7 @@ void TwoWire::onReceive( void (*function)(int) )
     return;
 }
 
+//Register a function to be called when a master requests data from this slave device NOT SUPPORTED
 void TwoWire::onRequest( void (*function)(void) )
 {
     transactionContext.error = IOT_I2C_FUNCTION_NOT_SUPPORTED;

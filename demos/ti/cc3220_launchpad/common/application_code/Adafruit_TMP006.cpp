@@ -96,20 +96,12 @@ double Adafruit_TMP006::readObjTempC(void)
 {
     double Tdie = readRawDieTemperature();
     double Vobj = readRawVoltage();
-    Serial.print(Vobj);
     Vobj *= 156.25;  // 156.25 nV per LSB
     Vobj /= 1000;    // nV -> uV
     Vobj /= 1000;    // uV -> mV
     Vobj /= 1000;    // mV -> V
     Tdie *= 0.03125; // convert to celsius
     Tdie += 273.15;  // convert to kelvin
-
-    Serial.print("Vobj = ");
-    Serial.print(Vobj * 1000000);
-    Serial.println("uV");
-    Serial.print("Tdie = ");
-    Serial.print(Tdie);
-    Serial.println(" C");
 
 #ifdef TMP006_DEBUG
     Serial.print("Vobj = ");
