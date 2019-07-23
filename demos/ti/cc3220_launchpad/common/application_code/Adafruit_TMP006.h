@@ -67,19 +67,19 @@
 class Adafruit_TMP006
 {
 public:
-  Adafruit_TMP006(uint8_t addr = TMP006_I2CADDR);
-  boolean begin(uint8_t samplerate = TMP006_CFG_16SAMPLE); // by default go highres
+    Adafruit_TMP006(uint8_t addr = TMP006_I2CADDR);
+    boolean begin(uint8_t samplerate = TMP006_CFG_16SAMPLE); // by default go highres
 
-  void sleep(); // Put chip into low power mode (disables temperature measurements).
-  void wake();  // Wake from low power mode.
+    void sleep(); // Put chip into low power mode (disables temperature measurements).
+    void wake();  // Wake from low power mode.
 
-  int16_t readRawDieTemperature(void);
-  int16_t readRawVoltage(void);
-  double readObjTempC(void);
-  double readDieTempC(void);
+    int16_t readRawDieTemperature(void);
+    int16_t readRawVoltage(void);
+    double readObjTempC(void);
+    double readDieTempC(void);
 
 private:
-  uint8_t _addr;
-  uint16_t read16(uint8_t addr);
-  void write16(uint8_t addr, uint16_t data);
+    uint8_t _addr;
+    uint16_t read16(uint8_t addr);
+    void write16(uint8_t addr, uint16_t data);
 };

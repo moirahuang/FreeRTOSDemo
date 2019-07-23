@@ -57,7 +57,6 @@ void Wire_CallbackInternal(void *context)
 
 TwoWire::TwoWire()
 {
-
 }
 
 //"opens" handle but doesn't actually open yet, just sets necessary parameters, creates semaphore, sets callback
@@ -70,7 +69,7 @@ void TwoWire::begin()
 
     transactionContext.semaphore = xSemaphoreCreateBinaryStatic(&transactionContext.semaphoreBuffer);
 
-    iot_i2c_set_callback(transactionContext.handle, (IotI2CCallback_t) Wire_CallbackInternal, &transactionContext);
+    iot_i2c_set_callback(transactionContext.handle, (IotI2CCallback_t)Wire_CallbackInternal, &transactionContext);
 }
 
 //CommonIO and TI both don't support being the slave
@@ -83,7 +82,7 @@ void TwoWire::begin(uint8_t slaveAddr)
 
 void TwoWire::begin(int slaveAddr)
 {
-    begin((uint8_t) slaveAddr);
+    begin((uint8_t)slaveAddr);
 }
 
 void TwoWire::end()
@@ -103,7 +102,7 @@ void TwoWire::setClock(uint32_t speed)
 
 void TwoWire::beginTransmission(int addr)
 {
-    beginTransmission((uint8_t) addr);
+    beginTransmission((uint8_t)addr);
 }
 
 //begin transmission to I2C slave device with given address
@@ -156,13 +155,13 @@ uint8_t TwoWire::endTransmission(uint8_t stop)
 
                 if (status == IOT_I2C_SUCCESS)
                 {
-    //                if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(DEFAULT_WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
-    //                {
-                        vPortFree(transactionContext.writeBuffer);
-                        transactionContext.writeBuffer = NULL;
-                        transactionContext.writeBufferSize = 0;
-                        transactionContext.writeAvailable = 0;
-    //                }
+                    //                if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(DEFAULT_WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
+                    //                {
+                    vPortFree(transactionContext.writeBuffer);
+                    transactionContext.writeBuffer = NULL;
+                    transactionContext.writeBufferSize = 0;
+                    transactionContext.writeAvailable = 0;
+                    //                }
                 }
                 if (status == IOT_I2C_NACK)
                 {
@@ -220,11 +219,11 @@ uint8_t TwoWire::requestFrom(uint8_t addr, uint8_t num, uint32_t iaddress, uint8
 
             if (status == IOT_I2C_SUCCESS)
             {
-//                if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(DEFAULT_WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
-//                {
-                    transactionContext.readAvailable = num;
-                    return num;
-//                }
+                //                if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(DEFAULT_WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
+                //                {
+                transactionContext.readAvailable = num;
+                return num;
+                //                }
             }
         }
     }
@@ -333,7 +332,7 @@ int TwoWire::peek()
 }
 
 //registers a function to be called when slave device receives transmission from master NOT SUPPORTED
-void TwoWire::onReceive( void (*function)(int) )
+void TwoWire::onReceive(void (*function)(int))
 {
     transactionContext.error = IOT_I2C_FUNCTION_NOT_SUPPORTED;
 
@@ -341,7 +340,7 @@ void TwoWire::onReceive( void (*function)(int) )
 }
 
 //Register a function to be called when a master requests data from this slave device NOT SUPPORTED
-void TwoWire::onRequest( void (*function)(void) )
+void TwoWire::onRequest(void (*function)(void))
 {
     transactionContext.error = IOT_I2C_FUNCTION_NOT_SUPPORTED;
 

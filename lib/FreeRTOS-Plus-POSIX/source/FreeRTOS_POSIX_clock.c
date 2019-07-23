@@ -40,28 +40,28 @@
 
 /* Declaration of snprintf. The header stdio.h is not included because it
  * includes conflicting symbols on some platforms. */
-extern int snprintf( char * s,
-                     size_t n,
-                     const char * format,
-                     ... );
+extern int snprintf(char *s,
+                    size_t n,
+                    const char *format,
+                    ...);
 
 /*-----------------------------------------------------------*/
 
-clock_t clock( void )
+clock_t clock(void)
 {
     /* This function is currently unsupported. It will always return -1. */
 
-    return ( clock_t ) -1;
+    return (clock_t)-1;
 }
 
 /*-----------------------------------------------------------*/
 
-int clock_getcpuclockid( pid_t pid,
-                         clockid_t * clock_id )
+int clock_getcpuclockid(pid_t pid,
+                        clockid_t *clock_id)
 {
     /* Silence warnings about unused parameters. */
-    ( void ) pid;
-    ( void ) clock_id;
+    (void)pid;
+    (void)clock_id;
 
     /* This function is currently unsupported. It will always return -1 and
      * set errno to EPERM. */
@@ -72,14 +72,14 @@ int clock_getcpuclockid( pid_t pid,
 
 /*-----------------------------------------------------------*/
 
-int clock_getres( clockid_t clock_id,
-                  struct timespec * res )
+int clock_getres(clockid_t clock_id,
+                 struct timespec *res)
 {
     /* Silence warnings about unused parameters. */
-    ( void ) clock_id;
+    (void)clock_id;
 
     /* Convert FreeRTOS tick resolution as timespec. */
-    if( res != NULL )
+    if (res != NULL)
     {
         res->tv_sec = 0;
         res->tv_nsec = NANOSECONDS_PER_TICK;
@@ -90,10 +90,10 @@ int clock_getres( clockid_t clock_id,
 
 /*-----------------------------------------------------------*/
 
-int clock_gettime( clockid_t clock_id,
-                   struct timespec * tp )
+int clock_gettime(clockid_t clock_id,
+                  struct timespec *tp)
 {
-    TimeOut_t xCurrentTime = { 0 };
+    TimeOut_t xCurrentTime = {0};
     int iStatus = 0;
 
     /* Intermediate variable used to convert TimeOut_t to struct timespec.
@@ -102,31 +102,31 @@ int clock_gettime( clockid_t clock_id,
     uint64_t ullTickCount = 0ULL;
 
     /* Silence warnings about unused parameters. */
-    ( void ) clock_id;
+    (void)clock_id;
 
     /* Check tp. */
-    if( tp == NULL )
+    if (tp == NULL)
     {
         /* POSIX does not specify this function setting errno for invalid
          * parameters, so just set the return value. */
         iStatus = -1;
     }
 
-    if( iStatus == 0 )
+    if (iStatus == 0)
     {
         /* Get the current tick count and overflow count. vTaskSetTimeOutState()
          * is used to get these values because they are both static in tasks.c. */
-        vTaskSetTimeOutState( &xCurrentTime );
+        vTaskSetTimeOutState(&xCurrentTime);
 
         /* Adjust the tick count for the number of times a TickType_t has overflowed.
          * portMAX_DELAY should be the maximum value of a TickType_t. */
-        ullTickCount = ( uint64_t ) ( xCurrentTime.xOverflowCount ) << ( sizeof( TickType_t ) * 8 );
+        ullTickCount = (uint64_t)(xCurrentTime.xOverflowCount) << (sizeof(TickType_t) * 8);
 
         /* Add the current tick count. */
         ullTickCount += xCurrentTime.xTimeOnEntering;
 
         /* Convert ullTickCount to timespec. */
-        UTILS_NanosecondsToTimespec( ( int64_t ) ullTickCount * NANOSECONDS_PER_TICK, tp );
+        UTILS_NanosecondsToTimespec((int64_t)ullTickCount * NANOSECONDS_PER_TICK, tp);
     }
 
     return iStatus;
@@ -134,70 +134,70 @@ int clock_gettime( clockid_t clock_id,
 
 /*-----------------------------------------------------------*/
 
-int clock_nanosleep( clockid_t clock_id,
-                     int flags,
-                     const struct timespec * rqtp,
-                     struct timespec * rmtp )
+int clock_nanosleep(clockid_t clock_id,
+                    int flags,
+                    const struct timespec *rqtp,
+                    struct timespec *rmtp)
 {
     int iStatus = 0;
     TickType_t xSleepTime = 0;
-    struct timespec xCurrentTime = { 0 };
+    struct timespec xCurrentTime = {0};
 
     /* Silence warnings about unused parameters. */
-    ( void ) clock_id;
-    ( void ) rmtp;
-    ( void ) flags; /* This is only ignored if INCLUDE_vTaskDelayUntil is 0. */
+    (void)clock_id;
+    (void)rmtp;
+    (void)flags; /* This is only ignored if INCLUDE_vTaskDelayUntil is 0. */
 
     /* Check rqtp. */
-    if( UTILS_ValidateTimespec( rqtp ) == false )
+    if (UTILS_ValidateTimespec(rqtp) == false)
     {
         iStatus = EINVAL;
     }
 
     /* Get current time */
-    if( ( iStatus == 0 ) && ( clock_gettime( CLOCK_REALTIME, &xCurrentTime ) != 0 ) )
+    if ((iStatus == 0) && (clock_gettime(CLOCK_REALTIME, &xCurrentTime) != 0))
     {
         iStatus = EINVAL;
     }
 
-    if( iStatus == 0 )
+    if (iStatus == 0)
     {
         /* Check for absolute time sleep. */
-        if( ( flags & TIMER_ABSTIME ) == TIMER_ABSTIME )
+        if ((flags & TIMER_ABSTIME) == TIMER_ABSTIME)
         {
             /* Get current time */
-            if( clock_gettime( CLOCK_REALTIME, &xCurrentTime ) != 0 )
+            if (clock_gettime(CLOCK_REALTIME, &xCurrentTime) != 0)
             {
                 iStatus = EINVAL;
             }
             /* Get number of ticks until absolute time. */
-            if( ( iStatus == 0 ) && ( UTILS_AbsoluteTimespecToDeltaTicks( rqtp, &xCurrentTime, &xSleepTime ) == 0 ) )
+            if ((iStatus == 0) && (UTILS_AbsoluteTimespecToDeltaTicks(rqtp, &xCurrentTime, &xSleepTime) == 0))
             {
-                /* Delay until absolute time if vTaskDelayUntil is available. */
-                #if ( INCLUDE_vTaskDelayUntil == 1 )
+/* Delay until absolute time if vTaskDelayUntil is available. */
+#if (INCLUDE_vTaskDelayUntil == 1)
 
-                    /* Get the current tick count. This variable isn't declared
+                /* Get the current tick count. This variable isn't declared
                      * at the top of the function because it's only used and needed
                      * if vTaskDelayUntil is available. */
-                    TickType_t xCurrentTicks = xTaskGetTickCount();
+                TickType_t xCurrentTicks = xTaskGetTickCount();
 
-                    /* Delay until absolute time. */
-                    vTaskDelayUntil( &xCurrentTicks, xSleepTime );
-                #else
+                /* Delay until absolute time. */
+                vTaskDelayUntil(&xCurrentTicks, xSleepTime);
+#else
 
-                    /* If vTaskDelayUntil isn't available, ignore the TIMER_ABSTIME flag
+                /* If vTaskDelayUntil isn't available, ignore the TIMER_ABSTIME flag
                      * and sleep for a relative time. */
-                    vTaskDelay( xSleepTime );
-                #endif
+                vTaskDelay(xSleepTime);
+#endif
             }
         }
         else
         {
             /* If TIMER_ABSTIME isn't specified, convert rqtp to ticks and
              * sleep for a relative time. */
-            if( UTILS_TimespecToTicks( rqtp, &xSleepTime ) == 0 )
+            if (UTILS_TimespecToTicks(rqtp, &xSleepTime) == 0)
             {
-                vTaskDelay( xSleepTime );
+                vTaskDelay(xSleepTime);
             }
         }
     }
@@ -207,12 +207,12 @@ int clock_nanosleep( clockid_t clock_id,
 
 /*-----------------------------------------------------------*/
 
-int clock_settime( clockid_t clock_id,
-                   const struct timespec * tp )
+int clock_settime(clockid_t clock_id,
+                  const struct timespec *tp)
 {
     /* Silence warnings about unused parameters. */
-    ( void ) clock_id;
-    ( void ) tp;
+    (void)clock_id;
+    (void)tp;
 
     /* This function is currently unsupported. It will always return -1 and
      * set errno to EPERM. */
@@ -223,54 +223,54 @@ int clock_settime( clockid_t clock_id,
 
 /*-----------------------------------------------------------*/
 
-struct tm * localtime_r( const time_t * timer,
-                         struct tm * result )
+struct tm *localtime_r(const time_t *timer,
+                       struct tm *result)
 {
     /* Silence warnings about unused parameters. */
-    ( void ) timer;
-    ( void ) result;
+    (void)timer;
+    (void)result;
 
-    /* This function is only supported if the "custom" FreeRTOS+POSIX tm struct
+/* This function is only supported if the "custom" FreeRTOS+POSIX tm struct
      * is used. */
-    #if ( posixconfigENABLE_TM == 0 )
-        errno = ENOTSUP;
+#if (posixconfigENABLE_TM == 0)
+    errno = ENOTSUP;
 
-        return NULL;
-    #else
+    return NULL;
+#else
 
-        /* Zero the tm, then store the FreeRTOS tick count. The input parameter
+    /* Zero the tm, then store the FreeRTOS tick count. The input parameter
          * timer isn't used. */
-        ( void ) memset( result, 0x00, sizeof( struct tm ) );
-        result->tm_tick = ( time_t ) xTaskGetTickCount();
+    (void)memset(result, 0x00, sizeof(struct tm));
+    result->tm_tick = (time_t)xTaskGetTickCount();
 
-        return result;
-    #endif
+    return result;
+#endif
 }
 
 /*-----------------------------------------------------------*/
 
-int nanosleep( const struct timespec * rqtp,
-               struct timespec * rmtp )
+int nanosleep(const struct timespec *rqtp,
+              struct timespec *rmtp)
 {
     int iStatus = 0;
     TickType_t xSleepTime = 0;
 
     /* Silence warnings about unused parameters. */
-    ( void ) rmtp;
+    (void)rmtp;
 
     /* Check rqtp. */
-    if( UTILS_ValidateTimespec( rqtp ) == false )
+    if (UTILS_ValidateTimespec(rqtp) == false)
     {
         errno = EINVAL;
         iStatus = -1;
     }
 
-    if( iStatus == 0 )
+    if (iStatus == 0)
     {
         /* Convert rqtp to ticks and delay. */
-        if( UTILS_TimespecToTicks( rqtp, &xSleepTime ) == 0 )
+        if (UTILS_TimespecToTicks(rqtp, &xSleepTime) == 0)
         {
-            vTaskDelay( xSleepTime );
+            vTaskDelay(xSleepTime);
         }
     }
 
@@ -279,24 +279,24 @@ int nanosleep( const struct timespec * rqtp,
 
 /*-----------------------------------------------------------*/
 
-size_t strftime( char * s,
-                 size_t maxsize,
-                 const char * format,
-                 const struct tm * timeptr )
+size_t strftime(char *s,
+                size_t maxsize,
+                const char *format,
+                const struct tm *timeptr)
 {
     int iStatus = 0;
     size_t bytesPrinted = 0;
 
     /* Silence warnings about unused parameters. */
-    ( void ) format;
+    (void)format;
 
     /* Print the time in the buffer. */
-    iStatus = snprintf( s, maxsize, "%ld", ( long int ) timeptr->tm_tick );
+    iStatus = snprintf(s, maxsize, "%ld", (long int)timeptr->tm_tick);
 
     /* Check for encoding and size errors. */
-    if( ( iStatus > 0 ) && ( ( size_t ) iStatus < maxsize ) )
+    if ((iStatus > 0) && ((size_t)iStatus < maxsize))
     {
-        bytesPrinted = ( size_t ) iStatus;
+        bytesPrinted = (size_t)iStatus;
     }
 
     return bytesPrinted;
@@ -304,13 +304,13 @@ size_t strftime( char * s,
 
 /*-----------------------------------------------------------*/
 
-time_t time( time_t * tloc )
+time_t time(time_t *tloc)
 {
     /* Read the current FreeRTOS tick count and convert it to seconds. */
-    time_t xCurrentTime = ( time_t ) ( xTaskGetTickCount() / configTICK_RATE_HZ );
+    time_t xCurrentTime = (time_t)(xTaskGetTickCount() / configTICK_RATE_HZ);
 
     /* Set the output parameter if provided. */
-    if( tloc != NULL )
+    if (tloc != NULL)
     {
         *tloc = xCurrentTime;
     }

@@ -17,45 +17,45 @@ extern "C"
 }
 void Wire_begin(void)
 {
-  Wire.begin();
+    Wire.begin();
 }
 
 void Wire_end(void)
 {
-  Wire.end();
+    Wire.end();
 }
 
 void Wire_setClock(uint32_t speed)
 {
-  Wire.setClock(speed);
+    Wire.setClock(speed);
 }
 
 void Wire_beginTransmission(int addr)
 {
-  Wire.beginTransmission(addr);
+    Wire.beginTransmission(addr);
 }
 
 uint8_t Wire_endTransmission(void)
 {
-  return Wire.endTransmission();
+    return Wire.endTransmission();
 }
 
 size_t Wire_write(uint8_t val)
 {
-  return Wire.write(val);
+    return Wire.write(val);
 }
 
 int Wire_read(void)
 {
-  return Wire.read();
+    return Wire.read();
 }
 
 uint8_t Wire_requestFrom(uint8_t addr, uint8_t num)
 {
-  return Wire.requestFrom(addr, num);
+    return Wire.requestFrom(addr, num);
 }
 
 int Wire_available(void)
 {
-  return Wire.available();
+    return Wire.available();
 }
