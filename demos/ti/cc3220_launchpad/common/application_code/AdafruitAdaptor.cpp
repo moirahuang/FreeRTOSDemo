@@ -7,11 +7,15 @@
 extern "C"
 {
 #include <stdlib.h>
+#include <stdio.h>
+#include "FreeRTOS.h"
 #include "iot_i2c.h"
 #include "aws_hello_world.h"
 #include "AdafruitAdaptor.h"
 #include "Adafruit_TMP006.h"
 #include "Serial.h"
+#include "queue.h"
+#include "FreeRTOSConfig.h"
 }
 
 extern void vStartMQTTEchoDemo(void);
@@ -56,5 +60,4 @@ void loop(void)
 
   //  delay(4000); // 4 seconds per reading for 16 samples per reading
 }
-
 

@@ -150,25 +150,28 @@ uint8_t TwoWire::endTransmission(uint8_t stop)
     {
         if (stop == 1)
         {
-            int status = iot_i2c_write_async(transactionContext.handle, transactionContext.writeBuffer, transactionContext.writeAvailable);
+            if (transactionContext.writeAvailable > 0 && transactionContext.writeBuffer != NULL)
+            {
+                int status = iot_i2c_write_sync(transactionContext.handle, transactionContext.writeBuffer, transactionContext.writeAvailable);
 
-            if (status == IOT_I2C_SUCCESS)
-            {
-                if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(DEFAULT_WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
+                if (status == IOT_I2C_SUCCESS)
                 {
-                    vPortFree(transactionContext.writeBuffer);
-                    transactionContext.writeBuffer = NULL;
-                    transactionContext.writeBufferSize = 0;
-                    transactionContext.writeAvailable = 0;
+    //                if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(DEFAULT_WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
+    //                {
+                        vPortFree(transactionContext.writeBuffer);
+                        transactionContext.writeBuffer = NULL;
+                        transactionContext.writeBufferSize = 0;
+                        transactionContext.writeAvailable = 0;
+    //                }
                 }
-            }
-            if (status == IOT_I2C_NACK)
-            {
-                return 2;
-            }
-            if (status == IOT_I2C_WRITE_FAILED)
-            {
-                return 3;
+                if (status == IOT_I2C_NACK)
+                {
+                    return 2;
+                }
+                if (status == IOT_I2C_WRITE_FAILED)
+                {
+                    return 3;
+                }
             }
         }
         else if (stop == 0)
@@ -213,15 +216,15 @@ uint8_t TwoWire::requestFrom(uint8_t addr, uint8_t num, uint32_t iaddress, uint8
         {
             transactionContext.readBufferSize = num;
 
-            int status = iot_i2c_read_async(transactionContext.handle, transactionContext.readBuffer, num);
+            int status = iot_i2c_read_sync(transactionContext.handle, transactionContext.readBuffer, num);
 
             if (status == IOT_I2C_SUCCESS)
             {
-                if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(DEFAULT_WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
-                {
+//                if (xSemaphoreTake(transactionContext.semaphore, pdMS_TO_TICKS(DEFAULT_WIRE_TRANSACTION_TIMEOUT)) == pdTRUE)
+//                {
                     transactionContext.readAvailable = num;
                     return num;
-                }
+//                }
             }
         }
     }

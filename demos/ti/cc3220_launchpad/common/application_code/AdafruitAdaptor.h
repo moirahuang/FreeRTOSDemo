@@ -25,6 +25,7 @@ extern "C"
 #endif
     void setup(void);
     void loop(void);
+    void SensorsLoop( void * context );
 #ifdef __cplusplus
 }
 #endif

@@ -481,7 +481,7 @@ static void prvMQTTConnectAndPublishTask( void * pvParameters, char* message, do
 
    while(true)
     {
-
+       sleep(1);
     }
 
     /* Disconnect the client. */

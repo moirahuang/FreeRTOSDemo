@@ -24,15 +24,10 @@
  * http://www.FreeRTOS.org
  */
 
-/**
- * @file iot_i2c.c
- * @brief file containing the implementation of UART APIs calling STM drivers.
- */
 #include "iot_i2c.h"
 #include "Board.h"
-/**
- * @brief The I2C descriptor type defined in the source file.
- */
+#include <unistd.h>
+
 typedef struct IotI2CDescriptor
 {
         uint32_t instance;
@@ -40,16 +35,36 @@ typedef struct IotI2CDescriptor
         I2C_Params params;
         I2C_Transaction transaction;
         IotI2CCallback_t userCallback;
+        void * userContext;
         bool busy;
-//        bool transactionInProgress; toggle in the callback
+        volatile bool transactionDone;
+
 } IotI2CDescriptor_t;
 
 #define I2C_INSTANCES (2)
 
-IotI2CDescriptor_t i2cInstances[I2C_INSTANCES] = {0, NULL, {I2C_MODE_BLOCKING}, {0}, NULL, NULL, false};
-/**
- * The internal callback from native driver implementation.
- */
+IotI2CDescriptor_t i2cInstances[I2C_INSTANCES] = {0, NULL, {I2C_MODE_CALLBACK}, {0}, NULL, NULL, false, false};
+
+void I2C_Blocking_Callback (I2C_Handle handle, I2C_Transaction *transaction, bool transferStatus)
+{
+    IotI2CHandle_t pDescriptor = NULL;
+
+    uint32_t i = 0;
+
+    for (i = 0; i < I2C_INSTANCES; i++)
+    {
+           if (i2cInstances[i].handle == handle)
+           {
+                   pDescriptor = &i2cInstances[i];
+           }
+    }
+
+    if (pDescriptor != NULL)
+    {
+           pDescriptor->transactionDone = true;
+    }
+}
+
 static void I2C_CallbackInternal(I2C_Handle handle, I2C_Transaction *transaction, bool transferStatus)
 {
         IotI2CHandle_t pDescriptor = NULL;
@@ -58,30 +73,20 @@ static void I2C_CallbackInternal(I2C_Handle handle, I2C_Transaction *transaction
 
         for (i = 0; i < I2C_INSTANCES; i++)
         {
-                if (i2cInstances[i].handle == handle)
-                {
-                        pDescriptor = &i2cInstances[i];
-                }
+            if (i2cInstances[i].handle == handle)
+            {
+                pDescriptor = &i2cInstances[i];
+            }
         }
 
         if (pDescriptor != NULL && pDescriptor->userCallback)
         {
-                pDescriptor->userCallback(NULL, pDescriptor->userCallback);
+            pDescriptor->userCallback(transferStatus == true ? eI2CCompleted : eI2CMasterTimeout, pDescriptor->userContext);
         }
 }
 
-/**
- * Translated between frequency and internal representation by picking the closest floor value.
- */
 static I2C_BitRate FrequencyToBitRate(uint32_t frequency);
 
-/**
- * @brief Initiates the I2C bus as master.
- *
- * @lI2CInstance The instance of I2C to initialize.
- *
- * @return The handle to the I2C port if SUCCESS else NULL.
- */
 IotI2CHandle_t iot_i2c_open(int32_t I2CInstance)
 {
         IotI2CHandle_t pDescriptor;
@@ -94,7 +99,7 @@ IotI2CHandle_t iot_i2c_open(int32_t I2CInstance)
         pDescriptor = &i2cInstances[I2CInstance];
 
         pDescriptor->instance = I2CInstance;
-        pDescriptor->params.transferCallbackFxn = I2C_CallbackInternal;
+        pDescriptor->params.transferCallbackFxn = I2C_Blocking_Callback;
         pDescriptor->params.bitRate = I2C_100kHz;
         pDescriptor->params.transferMode = I2C_MODE_CALLBACK;
         pDescriptor->params.custom = NULL;
@@ -103,12 +108,6 @@ IotI2CHandle_t iot_i2c_open(int32_t I2CInstance)
         return &i2cInstances[I2CInstance];
 }
 
-/**
- * @brief Sets the application callback to be called on completion of an operation.
- *
- * @param[in] pxI2CPeripheral The I2C peripheral handle returned in the open() call.
- * @param[in] xCallback The callback function to be called on completion of transaction.
- */
 void iot_i2c_set_callback(IotI2CHandle_t const pxI2CPeripheral,
                           IotI2CCallback_t xCallback,
                           void *pvUserContext)
@@ -116,19 +115,10 @@ void iot_i2c_set_callback(IotI2CHandle_t const pxI2CPeripheral,
         IotI2CHandle_t pDescriptor = pxI2CPeripheral;
 
         pDescriptor->userCallback = xCallback;
+
+        pDescriptor->userContext = pvUserContext;
 }
 
-/**
- * @brief Starts the I2C master read operation in blocking mode.
- *
- * @param[in] pxI2CPeripheral The I2C handle returned in open() call.
- * @param[out] pvBuffer The receive buffer to read the data into
- * @param[in] xBytes The number of bytes to read.
- *
- * @return ACK = IOT_I2C_SUCCESS,
- *         NACK = IOT_I2C_NACK,
- *         Driver_Error = IOT_I2C_READ_FAILED,
- */
 int32_t iot_i2c_read_sync(IotI2CHandle_t const pxI2CPeripheral,
                           uint8_t *const pvBuffer,
                           size_t xBytes)
@@ -140,33 +130,35 @@ int32_t iot_i2c_read_sync(IotI2CHandle_t const pxI2CPeripheral,
         pxI2CPeripheral->transaction.writeCount = 0;
         pxI2CPeripheral->transaction.readBuf = pvBuffer;
         pxI2CPeripheral->transaction.readCount = xBytes;
+        pxI2CPeripheral->transactionDone = false;
+
+        //Save callback/context to install a new callback/context. When the new callback completes, we will reinstall the previous one. The implication is that this API is not thread safe, which is nevertheless the contract of all of Common IO's API.
+        I2C_CallbackFxn oldCallback = pxI2CPeripheral->params.transferCallbackFxn;
+        pxI2CPeripheral->params.transferCallbackFxn = I2C_Blocking_Callback;
 
         status = I2C_transfer(pxI2CPeripheral->handle, &pxI2CPeripheral->transaction);
 
+        while(! pxI2CPeripheral->transactionDone)
+        {
+            sleep(1);
+        }
+
         if (status == false)
         {
-                readStatus = IOT_I2C_NACK;
+            readStatus = IOT_I2C_NACK;
         }
+
         else
         {
-                readStatus = IOT_I2C_SUCCESS;
+            readStatus = IOT_I2C_SUCCESS;
         }
+
+        pxI2CPeripheral->transactionDone = false;
+        pxI2CPeripheral->params.transferCallbackFxn = oldCallback;
 
         return readStatus;
 }
 
-/**
- * @brief Starts the I2C master write operation in blocking mode.
- *
- * @param[in] pxI2CPeripheral The I2C handle returned in open() call.
- * @param[in] pvBuffer The transmit buffer containing the data to be written.
- * @param[in] xBytes The number of bytes to write.
- *
- * @return ACK = IOT_I2C_SUCCESS,
- *         NACK = IOT_I2C_NACK,
- *         Driver_Error = IOT_I2C_WRITE_FAILED,
- *
- */
 int32_t iot_i2c_write_sync(IotI2CHandle_t const pxI2CPeripheral,
                            uint8_t *const pvBuffer,
                            size_t xBytes)
@@ -179,32 +171,35 @@ int32_t iot_i2c_write_sync(IotI2CHandle_t const pxI2CPeripheral,
         pxI2CPeripheral->transaction.writeCount = xBytes;
         pxI2CPeripheral->transaction.readBuf = NULL;
         pxI2CPeripheral->transaction.readCount = 0;
+        pxI2CPeripheral->transactionDone = false;
+
+        //Save callback/context to install a new callback/context. When the new callback completes, we will reinstall the previous one. The implication is that this API is not thread safe, which is nevertheless the contract of all of Common IO's API.
+        I2C_CallbackFxn oldCallback = pxI2CPeripheral->params.transferCallbackFxn;
+        pxI2CPeripheral->params.transferCallbackFxn = I2C_Blocking_Callback;
 
         status = I2C_transfer(pxI2CPeripheral->handle, &pxI2CPeripheral->transaction);
-        //semaphore to wait until done and then return
+
+        while(! pxI2CPeripheral->transactionDone)
+        {
+            sleep(1);
+        }
 
         if (status == false)
         {
-                writeStatus = IOT_I2C_NACK;
+            writeStatus = IOT_I2C_NACK;
         }
+
         else
         {
-                writeStatus = IOT_I2C_SUCCESS;
+            writeStatus = IOT_I2C_SUCCESS;
         }
+
+        pxI2CPeripheral->transactionDone = false;
+        pxI2CPeripheral->params.transferCallbackFxn = oldCallback;
 
         return writeStatus;
 }
 
-/**
- * @brief Starts the I2C master read operation in non-blocking mode.
- *
- * @param[in] pxI2CPeripheral The I2C handle returned in open() call.
- * @param[out] pvBuffer The receive buffer to read the data into
- * @param[in] xBytes The number of bytes to read.
- *
- * @return SUCCESS = IOT_I2C_SUCCESS,
- *         FAILED = IOT_I2C_INVALID_VALUE
- */
 int32_t iot_i2c_read_async(IotI2CHandle_t const pxI2CPeripheral,
                            uint8_t *const pvBuffer,
                            size_t xBytes)
@@ -229,16 +224,6 @@ int32_t iot_i2c_read_async(IotI2CHandle_t const pxI2CPeripheral,
         return readStatus;
 }
 
-/**
- * @brief Starts the I2C master write operation in non-blocking mode.
- *
- * @param[in] pxI2CPeripheral The I2C handle returned in open() call.
- * @param[in] pvBuffer The transmit buffer containing the data to be written.
- * @param[in] xBytes The number of bytes to write.
- *
- * @return SUCCESS = IOT_I2C_SUCCESS,
- *         FAILED = IOT_I2C_INVALID_VALUE
- */
 int32_t iot_i2c_write_async(IotI2CHandle_t const pxI2CPeripheral,
                             uint8_t *const pvBuffer,
                             size_t xBytes)
@@ -266,17 +251,6 @@ int32_t iot_i2c_write_async(IotI2CHandle_t const pxI2CPeripheral,
         return writeStatus;
 }
 
-/**
- * @brief Configures the I2C master with user configuration.
- *
- * @param[in] pxI2CPeripheral The I2C handle returned in open() call.
- * @param[in] xI2CRequest Should be one of I2C_Ioctl_Request_t.
- * @param[in,out] pvBuffer The configuration values for the IOCTL request.
- *
- * @return SUCCESS = IOT_I2C_SUCCESS,
- *         FAILED = IOT_I2C_FUNCTION_NOT_SUPPORTED,
- *         Busy(For eGetBusState, eSetSlaveAddrWrite/Read, eSendStop) = IOT_I2C_BUSY,
- */
 int32_t iot_i2c_ioctl(IotI2CHandle_t const pxI2CPeripheral,
                       IotI2CIoctlRequest_t xI2CRequest,
                       void *const pvBuffer)
@@ -340,14 +314,6 @@ int32_t iot_i2c_ioctl(IotI2CHandle_t const pxI2CPeripheral,
         return ioctlStatus;
 }
 
-/**
- * @brief Stops the ongoing operation and de-initializes the I2C peripheral.
- *
- * @param[in] pxI2CPeripheral The I2C handle returned in open() call.
- *
- * @return SUCCESS = IOT_I2C_SUCCESS,
- *         FAILED = IOT_I2C_INVALID_VALUE,
- */
 int32_t iot_i2c_close(IotI2CHandle_t const pxI2CPeripheral)
 {
         I2C_close(pxI2CPeripheral->handle);
@@ -355,24 +321,10 @@ int32_t iot_i2c_close(IotI2CHandle_t const pxI2CPeripheral)
         return IOT_I2C_SUCCESS;
 }
 
-/**
- * @brief This function is used to cancel the current operation in progress
- * if possible.
- *
- * @param[in] pxI2CPeripheral The I2C handle returned in open() call.
- *
- * @return SUCCESS = IOT_I2C_SUCCESS,
- *          FAILED = IOT_I2C_FUNCTION_INVALID_VALUE
- *          or IOT_I2C_FUNCTION_NOT_SUPPORTED, IOT_I2C_NOTHING_TO_CANCEL
- */
 int32_t iot_i2c_cancel(IotI2CHandle_t const pxI2CPeripheral)
 {
         return IOT_I2C_INVALID_VALUE;
 }
-/**
- * @}
- */
-/* end of group iot_i2c */
 
 /*
  * -----------------------------------------------------------------------------------

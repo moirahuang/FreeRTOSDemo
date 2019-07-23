@@ -22,37 +22,21 @@
  * http://aws.amazon.com/freertos
  * http://www.FreeRTOS.org
  */
-
-#include "FreeRTOS.h"
-#include "task.h"
 #include "aws_demo_runner.h"
-
 #include <stddef.h>
-// Import I2C Driver definitions
-#include <ti/drivers/I2C.h>
-// Define name for an index of an I2C bus
-#define SENSORS 0
-// Define the slave address of device on the SENSORS bus
-#define OPT_ADDR 0x18
-
 #include "AdafruitAdaptor.h"
 #include "aws_hello_world.h"
-
-/* Demo declarations. */
-extern void vStartMQTTEchoDemo( void );
-
-/*-----------------------------------------------------------*/
+#include "FreeRTOS.h"
 
 void SensorsLoop( void * context )
 {
     setup(); //breakpoint
     for (; ;) {
         loop();
-        vTaskDelay( 500 );
+        vTaskDelay(500);
     }
-
-    vTaskDelete(NULL);
 }
+
 
 /**
  * @brief Runs demos in the system.
