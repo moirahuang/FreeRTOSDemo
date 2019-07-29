@@ -7,15 +7,11 @@
 extern "C"
 {
 #include <stdlib.h>
-#include <stdio.h>
-#include "FreeRTOS.h"
-#include "iot_i2c.h"
+#include <unistd.h>
 #include "aws_hello_world.h"
 #include "AdafruitAdaptor.h"
 #include "Adafruit_TMP006.h"
 #include "Serial.h"
-#include "queue.h"
-#include "FreeRTOSConfig.h"
 }
 
 extern void vStartMQTTEchoDemo(void);
@@ -23,7 +19,7 @@ SerialOutput Serial = SerialOutput();
 
 TwoWire Wire = TwoWire();
 //Adafruit_TMP006 tmp006;
-Adafruit_TMP006 tmp006(0x41); // start with a diferent i2c address!
+Adafruit_TMP006 tmp006(0x41); // start with a different i2c address!
 
 void setup(void)
 {
@@ -59,4 +55,14 @@ void loop(void)
     prvPublishNextMessage("Die Temperature: %lf'\r\n", diet);
 
     //  delay(4000); // 4 seconds per reading for 16 samples per reading
+}
+
+void SensorsLoop( void * context )
+{
+    setup();
+    for (; ;)
+    {
+        loop();
+        sleep(1);
+    }
 }

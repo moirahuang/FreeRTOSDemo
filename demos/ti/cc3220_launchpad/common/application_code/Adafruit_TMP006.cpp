@@ -15,15 +15,6 @@
  ****************************************************/
 
 #include "Adafruit_TMP006.h"
-#include "Serial.h"
-/* FreeRTOS includes. */
-#include "FreeRTOS.h"
-#include "task.h"
-#include "queue.h"
-
-/* Logging includes. */
-#include "aws_logging_task.h"
-/* Standard includes. */
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>

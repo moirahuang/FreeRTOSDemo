@@ -50,7 +50,9 @@ void I2C_Blocking_Callback(I2C_Handle handle, I2C_Transaction *transaction, bool
 {
     IotI2CHandle_t pDescriptor = NULL;
 
-    for (int i = 0; i < I2C_INSTANCES; i++)
+    int i = 0;
+
+    for (i = 0; i < I2C_INSTANCES; i++)
     {
         if (i2cInstances[i].handle == handle)
         {
@@ -69,7 +71,9 @@ static void I2C_CallbackInternal(I2C_Handle handle, I2C_Transaction *transaction
 {
     IotI2CHandle_t pDescriptor = NULL;
 
-    for (int i = 0; i < I2C_INSTANCES; i++)
+    int i = 0;
+
+    for (i = 0; i < I2C_INSTANCES; i++)
     {
         if (i2cInstances[i].handle == handle)
         {

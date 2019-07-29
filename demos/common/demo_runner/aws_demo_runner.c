@@ -23,21 +23,8 @@
  * http://www.FreeRTOS.org
  */
 #include "aws_demo_runner.h"
-#include <stddef.h>
 #include "AdafruitAdaptor.h"
-#include "aws_hello_world.h"
 #include "FreeRTOS.h"
-
-void SensorsLoop( void * context )
-{
-    setup(); //breakpoint
-    for (; ;) {
-        loop();
-        vTaskDelay(500);
-    }
-}
-
-
 /**
  * @brief Runs demos in the system.
  */
