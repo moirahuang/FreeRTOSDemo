@@ -270,6 +270,7 @@ int32_t iot_i2c_ioctl(IotI2CHandle_t const pxI2CPeripheral,
         pDescriptor->params.bitRate = FrequencyToBitRate(config->ulBusFreq);
 
         I2C_Handle i2cHandle = NULL;
+
         if (pDescriptor->busy == false)
         {
             i2cHandle = I2C_open(pDescriptor->instance, &pDescriptor->params);
