@@ -42,6 +42,7 @@ typedef struct IotI2CDescriptor
 
 } IotI2CDescriptor_t;
 
+//TI only has 1 I2C instance but wrote as an array for easy modification
 #define I2C_INSTANCES (1)
 
 IotI2CDescriptor_t i2cInstances[I2C_INSTANCES] = {0, NULL, {I2C_MODE_CALLBACK}, {0}, NULL, NULL, false, false, false};
@@ -49,8 +50,9 @@ IotI2CDescriptor_t i2cInstances[I2C_INSTANCES] = {0, NULL, {I2C_MODE_CALLBACK}, 
 static void I2C_CallbackInternal(I2C_Handle handle, I2C_Transaction *transaction, bool transferStatus)
 {
     IotI2CHandle_t pDescriptor = NULL;
-    int i = 0;
 
+    //for cases with more than 1 I2C instance
+    int i = 0;
     for (i = 0; i < I2C_INSTANCES; i++)
     {
         if (i2cInstances[i].handle == handle)
@@ -65,11 +67,13 @@ static void I2C_CallbackInternal(I2C_Handle handle, I2C_Transaction *transaction
     {
         if (pDescriptor != NULL)
         {
-            //async or sync boolean
+            //pDescriptor->sync is the async or sync boolean
+            //if sync, just toggle the boolean when the transaction is done
             if (pDescriptor->sync)
             {
                 pDescriptor->transactionDone = true;
             }
+            //if async, call the callback
             else
             {
                 pDescriptor->userCallback(transferStatus == true ? eI2CCompleted : eI2CMasterTimeout, pDescriptor->userContext);
@@ -100,6 +104,7 @@ IotI2CHandle_t iot_i2c_open(int32_t I2CInstance)
     pDescriptor->params.transferMode = I2C_MODE_CALLBACK;
     pDescriptor->params.custom = NULL;
     pDescriptor->handle = NULL;
+    //need to know when open() has been called for the specific case where user calls open() and then close() without calling the ioctl and actually opening the handle (specificaly need to be able to error out when close() is called when open() is not called before)
     pDescriptor->openCalled = true;
 
     return &i2cInstances[I2CInstance];
@@ -143,6 +148,7 @@ int32_t iot_i2c_read_sync(IotI2CHandle_t const pxI2CPeripheral,
 
     status = I2C_transfer(pxI2CPeripheral->handle, &pxI2CPeripheral->transaction);
 
+    //wait for boolean to be toggled in callback
     while (!pxI2CPeripheral->transactionDone)
     {
         sleep(1);
@@ -186,6 +192,7 @@ int32_t iot_i2c_write_sync(IotI2CHandle_t const pxI2CPeripheral,
 
     status = I2C_transfer(pxI2CPeripheral->handle, &pxI2CPeripheral->transaction);
 
+    //wait for boolean to be toggled in callback
     while (!pxI2CPeripheral->transactionDone)
     {
         sleep(1);
@@ -277,7 +284,7 @@ int32_t iot_i2c_write_async(IotI2CHandle_t const pxI2CPeripheral,
 
     return writeStatus;
 }
-//put under open
+
 int32_t iot_i2c_ioctl(IotI2CHandle_t const pxI2CPeripheral,
                       IotI2CIoctlRequest_t xI2CRequest,
                       void *const pvBuffer)
