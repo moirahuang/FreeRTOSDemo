@@ -158,22 +158,16 @@ size_t SerialOutput::print(unsigned long n, int base)
     return sizeof(n);
 }
 
-size_t SerialOutput::print(float n, int base)
-{
-    return print((double)n, base);
-}
-
 size_t SerialOutput::print(double n, int base)
 {
+    return print((float)n, base);
+}
+
+size_t SerialOutput::print(float n, int places)
+{
     char buffer[33] = {0};
-    if (base != 10)
-    {
-        sprintf(buffer, "Only support float type for decimal.\n");
-    }
-    else if (base == 10)
-    {
-        sprintf(buffer, "%lf", n);
-    }
+
+    sprintf(buffer, "%0.2f", n);
 
     configPRINT_STRING((buffer));
 

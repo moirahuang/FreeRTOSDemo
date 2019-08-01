@@ -312,9 +312,9 @@ int32_t iot_i2c_ioctl(IotI2CHandle_t const pxI2CPeripheral,
                 {
                     pDescriptor->handle = i2cHandle;
                 }
-
-                ioctlStatus = IOT_I2C_SUCCESS;
             }
+
+            ioctlStatus = IOT_I2C_SUCCESS;
         }
         break;
         case eI2CSetSlaveAddrWrite:
