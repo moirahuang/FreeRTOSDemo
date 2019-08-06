@@ -171,15 +171,14 @@ void bmploop()
 
 void SensorsLoop(void *context)
 {
-//    adasetup();
-//    int i = 0;
-//    for (i = 0; i < 10; i++)
-//    {
-//       adaloop();
-//       sleep(1);
-//    }
-    bmpsetup();
+    adasetup();
     int i = 0;
+    for (i = 0; i < 10; i++)
+    {
+       adaloop();
+       sleep(1);
+    }
+    bmpsetup();
     for (i = 0; i < 50; i++)
     {
         bmploop();
