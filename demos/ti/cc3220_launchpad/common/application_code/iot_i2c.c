@@ -76,7 +76,8 @@ static void I2C_CallbackInternal(I2C_Handle handle, I2C_Transaction *transaction
             //if async, call the callback
             else
             {
-                pDescriptor->userCallback(transferStatus == true ? eI2CCompleted : eI2CMasterTimeout, pDescriptor->userContext);
+                pDescriptor->userCallback(NULL, pDescriptor->userContext);
+//                pDescriptor->userCallback(transferStatus == true ? eI2CCompleted : eI2CMasterTimeout, pDescriptor->userContext);
             }
         }
     }

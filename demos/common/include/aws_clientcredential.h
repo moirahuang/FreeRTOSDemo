@@ -55,12 +55,12 @@ static const char clientcredentialMQTT_BROKER_ENDPOINT[] = "a3bl899qy9xyqv-ats.i
 /*
  * Wi-Fi network to join.
  */
-#define clientcredentialWIFI_SSID       "Guest"
+#define clientcredentialWIFI_SSID       "AFR-Libraries-24"
 
 /*
  * Password needed to join Wi-Fi network.
  */
-#define clientcredentialWIFI_PASSWORD   ""
+#define clientcredentialWIFI_PASSWORD   "FreeRTOS"
 
 /**
  * @brief Security type
