@@ -18,15 +18,15 @@ extern "C"
 
 typedef struct I2CTrasanctionContext
 {
-    IotI2CHandle_t handle;
+    uint32_t readBufferSize;
+    uint32_t readAvailable;
+    uint32_t writeBufferSize;
+    uint32_t writeAvailable;
     uint8_t OPT_ADDR;
     uint8_t error;
     uint8_t *readBuffer;
-    uint32_t readBufferSize;
-    uint32_t readAvailable;
     uint8_t *writeBuffer;
-    uint32_t writeBufferSize;
-    uint32_t writeAvailable;
+    IotI2CHandle_t handle;
     SemaphoreHandle_t semaphore;
     StaticSemaphore_t semaphoreBuffer;
 

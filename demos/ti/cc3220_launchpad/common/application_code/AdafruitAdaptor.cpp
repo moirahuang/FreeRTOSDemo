@@ -18,11 +18,12 @@ extern "C"
 #include "Wire.h"
 }
 #include <BMP280.h>
-//extern void vStartMQTTEchoDemo(void);
 SerialOutput Serial = SerialOutput();
-//BMI160Class BMI160
 TwoWire Wire = TwoWire();
-//////Adafruit_TMP006 tmp006;
+
+/** ---------------------------
+ * TMP006 DEMO RUNNER CODE
+ */
 Adafruit_TMP006 tmp006(0x41); // start with a different i2c address!
 
 void adasetup(void)
@@ -60,70 +61,67 @@ void adaloop(void)
 
     //  delay(4000); // 4 seconds per reading for 16 samples per reading
 }
-//
-///*
-// * Copyright (c) 2016 Intel Corporation.  All rights reserved.
-// * See the bottom of this file for the license terms.
-// */
-//
-///*
-//   This sketch example demonstrates how the BMI160 on the
-//   Intel(R) Curie(TM) module can be used to read gyroscope data
-//*/
-//
-//float convertRawGyro(int gRaw)
-//{
-//    // since we are using 250 degrees/seconds range
-//    // -250 maps to a raw value of -32768
-//    // +250 maps to a raw value of 32767
-//
-//    float g = (gRaw * 250.0) / 32768.0;
-//
-//    return g;
-//}
-//
-//void bmisetup()
-//{
-//    Serial.begin(9600); // initialize Serial communication
-//                        //  while (!Serial);    // wait for the serial port to open
-//
-//    // initialize device
-//    Serial.println("Initializing IMU device...");
-//    //  BMI160.begin(BMI160GenClass::SPI_MODE, /* SS pin# = */10);
-//    BMI160.begin(BMI160GenClass::I2C_MODE);
-//    uint8_t dev_id = BMI160.getDeviceID();
-//    Serial.print("DEVICE ID: ");
-//    Serial.println(dev_id, HEX);
-//
-//    // Set the accelerometer range to 250 degrees/second
-//    BMI160.setGyroRange(250);
-//    Serial.println("Initializing IMU device...done.");
-//}
-//
-//void bmiloop()
-//{
-//    int gxRaw, gyRaw, gzRaw; // raw gyro values
-//    float gx, gy, gz;
-//
-//    // read raw gyro measurements from device
-//    BMI160.readGyro(gxRaw, gyRaw, gzRaw);
-//
-//    // convert the raw gyro data to degrees/second
-//    gx = convertRawGyro((int)gxRaw);
-//    gy = convertRawGyro((int)gyRaw);
-//    gz = convertRawGyro((int)gzRaw);
-//
-//    // display tab-separated gyro x/y/z values
-//    Serial.print("g:\t");
-//    Serial.print(gx);
-//    Serial.print("\t");
-//    Serial.print(gy);
-//    Serial.print("\t");
-//    Serial.print(gz);
-//    Serial.println();
-//
-//    //  delay(500);
-//}
+
+/** ---------------------------
+ * BMI180 DEMO RUNNER CODE
+ */
+float convertRawGyro(int gRaw)
+{
+    // since we are using 250 degrees/seconds range
+    // -250 maps to a raw value of -32768
+    // +250 maps to a raw value of 32767
+
+    float g = (gRaw * 250.0) / 32768.0;
+
+    return g;
+}
+
+void bmisetup()
+{
+    Serial.begin(9600); // initialize Serial communication
+                        //  while (!Serial);    // wait for the serial port to open
+
+    // initialize device
+    Serial.println("Initializing IMU device...");
+    //  BMI160.begin(BMI160GenClass::SPI_MODE, /* SS pin# = */10);
+    BMI160.begin(BMI160GenClass::I2C_MODE);
+    uint8_t dev_id = BMI160.getDeviceID();
+    Serial.print("DEVICE ID: ");
+    Serial.println(dev_id, HEX);
+
+    // Set the accelerometer range to 250 degrees/second
+    BMI160.setGyroRange(250);
+    Serial.println("Initializing IMU device...done.");
+}
+
+void bmiloop()
+{
+    int gxRaw, gyRaw, gzRaw; // raw gyro values
+    float gx, gy, gz;
+
+    // read raw gyro measurements from device
+    BMI160.readGyro(gxRaw, gyRaw, gzRaw);
+
+    // convert the raw gyro data to degrees/second
+    gx = convertRawGyro((int)gxRaw);
+    gy = convertRawGyro((int)gyRaw);
+    gz = convertRawGyro((int)gzRaw);
+
+    // display tab-separated gyro x/y/z values
+    Serial.print("g:\t");
+    Serial.print(gx);
+    Serial.print("\t");
+    Serial.print(gy);
+    Serial.print("\t");
+    Serial.print(gz);
+    Serial.println();
+
+    //  delay(500);
+}
+
+/** ---------------------------
+ * BMP280 DEMO RUNNER CODE
+ */
 #include "BMP280.h"
 #include "Wire.h"
 #define P0 1013.25
@@ -131,6 +129,8 @@ BMP280 bmp;
 void bmpsetup()
 {
   Serial.begin(9600);
+  vStartMQTTEchoDemo();
+
   if(!bmp.begin()){
     Serial.println("BMP init failed!");
     while(1);
@@ -154,8 +154,11 @@ void bmploop()
         double A = bmp.altitude(P,P0);
 
         Serial.print("T = \t");Serial.print(T,2); Serial.print(" degC\t");
+        prvPublishNextMessage("Temperature: %lf\r\n", T);
         Serial.print("P = \t");Serial.print(P,2); Serial.print(" mBar\t");
+        prvPublishNextMessage("Pressure: %lf\r\n", P);
         Serial.print("A = \t");Serial.print(A,2); Serial.println(" m");
+        prvPublishNextMessage("Altitude: %lf\r\n", A);
 
       }
       else {
@@ -171,23 +174,28 @@ void bmploop()
 
 void SensorsLoop(void *context)
 {
-    adasetup();
-    int i = 0;
-    for (i = 0; i < 10; i++)
-    {
-       adaloop();
-       sleep(1);
-    }
+//UNCOMMENT TO RUN TMP006 DEMO
+//    adasetup();
+//    for (;;)
+//    {
+//       adaloop();
+//       sleep(1);
+//    }
+
+//UNCOMMENT TO RUN BMI180 DEMO
+//    bmisetup();
+//    int i = 0;
+//    for (;;)
+//    {
+//       bmiloop();
+//       sleep(1);
+//    }
+
+//UNCOMMENT TO RUN BMP280 DEMO
     bmpsetup();
-    for (i = 0; i < 50; i++)
+    for (;;)
     {
         bmploop();
         sleep(1);
     }
-//    adasetup();
-//    for (;;)
-//       {
-//           adaloop();
-//           sleep(1);
-//       }
 }

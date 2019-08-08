@@ -106,7 +106,7 @@
  * @brief Dimension of the character array buffers used to hold data (strings in
  * this case) that is published to and received from the MQTT broker (in the cloud).
  */
-#define echoMAX_DATA_LENGTH      25
+#define echoMAX_DATA_LENGTH      105
 
 /**
  * @brief A block time of 0 simply means "don't block".
@@ -268,7 +268,7 @@ void prvPublishNextMessage( const char* message, double val )
 
     if( xReturned == eMQTTAgentSuccess )
     {
-        configPRINTF( ( "Echo successfully published '%s'\r\n", cDataBuffer ) );
+//        configPRINTF( ( "Echo successfully published '%s'\r\n", cDataBuffer ) );
     }
     else
     {
